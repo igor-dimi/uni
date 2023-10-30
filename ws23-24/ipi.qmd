@@ -1,7 +1,0 @@
----
-title: IPI
----
-
-* weekly summary
-* notes
-* solutions

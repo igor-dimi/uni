@@ -1,0 +1,8 @@
+---
+title: IPI
+---
+
+* [weekly summary](./sum.qmd)
+* notes
+* solutions
+* [course website](https://aip.ifi.uni-heidelberg.de/teaching/winter-2023/2024)

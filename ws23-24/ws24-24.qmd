@@ -10,5 +10,5 @@ title: WS 23/24
 
 ## Courses
 
-* [Num](./num.qmd)
-* [IPI](./ipi.qmd)
+* [Num](./num/num.qmd)
+* [IPI](./ipi/ipi.qmd)

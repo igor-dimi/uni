@@ -2,7 +2,7 @@
 title: Numerics 0
 ---
 
-* weekly summary
+* [weekly summary](./sum.qmd)
 * notes
 * solutions
 
