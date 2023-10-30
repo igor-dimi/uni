@@ -3,6 +3,6 @@ title: Numerics 0
 ---
 
 * [weekly summary](./sum.qmd)
-* notes
-* solutions
+* [notes](https://igor-dimi.github.io/num-ws23-notes/)
+* [solutions](https://igor-dimi.github.io/num-ws23-sol/)
 

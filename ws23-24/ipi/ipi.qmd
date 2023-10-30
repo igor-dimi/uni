@@ -3,6 +3,6 @@ title: IPI
 ---
 
 * [weekly summary](./sum.qmd)
-* notes
-* solutions
+* [notes](https://igor-dimi.github.io/ipi-ws23-notes/)
+* [solutions](https://igor-dimi.github.io/ipi-ws23-sol/)
 * [course website](https://aip.ifi.uni-heidelberg.de/teaching/winter-2023/2024)
