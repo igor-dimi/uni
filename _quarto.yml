@@ -1,8 +1,11 @@
 project:
   type: website
+  render: 
+    - "*.qmd"
+    - "!ws23-24/zeitplan/"
 
 website:
-  title: "website2"
+  title: "My Uni Notes"
   navbar:
     left:
       - href: index.qmd

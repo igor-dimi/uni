@@ -1,8 +1,14 @@
-# WS 23/24
+---
+title: WS 23/24
+---
 
 ## Schedule 
 
+```{=html}
+<iframe width="780" height="405" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRCpSl49uECWNNdMjy261Mg6BPk9obbRMo6IK27sq-0ykITZgiUhcqQXR2wmG3qCtHDt6s1GsR6xsI-/pubhtml?widget=true&amp;headers=false"></iframe>
+```
+
 ## Courses
 
-* Num
-* IPI 
+* [Num](./num.qmd)
+* [IPI](./ipi.qmd)
