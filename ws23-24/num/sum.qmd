@@ -2,15 +2,15 @@
 title: Num Weekly Summary
 ---
 
-* **W01/~**
+* **W01/VL01**
   * **date**: 
   * **summary**: 
-* **W01/~**
+* **W01/VL02**
   * **date**:
   * **summary**:
-* **W02/VL01**
+* **W02/VL03**
   * **date**:
   * **summary**:
-* **W02/VL02**:
+* **W02/VL04**:
   * **date**:
   * **summary**:

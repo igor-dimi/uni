@@ -2,15 +2,15 @@
 title: IPI Weekly Summary
 ---
 
-* **Week 1/VL 1**
+* **Week 1/~**
   * **date**: 
   * **summary**: 
-* **Week 1/VL 2**
+* **Week 1/~**
   * **date**:
   * **summary**:
-* **Week 2/VL 3**
+* **Week 2/VL 1**
   * **date**:
   * **summary**:
-* **Week 2/VL 4**:
+* **Week 2/VL 2**:
   * **date**:
   * **summary**:
