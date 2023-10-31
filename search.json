@@ -53,6 +53,6 @@
     "href": "ws23-24/num/sum.html",
     "title": "Num Weekly Summary",
     "section": "",
-    "text": "W01/VL01\n\ndate:\nsummary:\n\nW01/VL02\n\ndate:\nsummary:\n\nW02/VL03\n\ndate:\nsummary:\n\nW02/VL04:\n\ndate:\nsummary:"
+    "text": "W01/VL01\n\ndate:\nsummary:\n\nW01/VL02\n\ndate:\nsummary:\n\nW02/VL03\n\ndate:\nsummary:\n\nW02/VL04:\n\ndate:\nsummary:\n\nW03/VL05\n\ndate: 10/31/2023, Tue\nsummary: \\(LR\\)-Decomposition, uniqueness, existence, algorithm, complexity, error analysis\n\nScript pages: 21 (satz 2.5) -\nLR Zerlegung ist eindeutig\nProduct of two triangular matrices is also triangular (left or right)\nInverse of a triangular matrix is triangular (left or right)\nProduct of two left-triangular matrices with \\(a_{ii} = 1\\) is also a left-triangular matrix with \\(\\tilde{a}_{ii} = 1\\)\n\\(LR\\)-Decomposition method using Gauss decomposition (Alg 2.7) (?).\nExistence of the \\(LR\\)-decomposition (Satz 2.8)\nPractical version of \\(LR\\)-decomposition Algorithm (not Alg 2.7) saves space (Alg 2.9).\nComplexity of Alg 2.9 and solving a LSE (De: LGS)\nError analysis of \\(LR\\)-Decomposition."
   }
 ]
