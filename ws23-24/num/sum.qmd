@@ -17,7 +17,7 @@ title: Num Weekly Summary
 * **W03/VL05**
   * **date**: 10/31/2023, Tue
   * **summary**: $LR$-Decomposition, uniqueness, existence, algorithm, complexity, error analysis
-    * Script pages: 21 (satz 2.5) -
+    * Script pages: 21 (satz 2.5) - 28 (2.3 Error Analysis of LR)
     * LR Zerlegung ist eindeutig
     * Product of two triangular matrices is also triangular (left or right)
     * Inverse of a triangular matrix is triangular (left or right)
