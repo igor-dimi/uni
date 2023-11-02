@@ -27,3 +27,11 @@ title: Num Weekly Summary
     * Practical version of $LR$-decomposition Algorithm (not Alg 2.7) saves space (Alg 2.9).
     * Complexity of Alg 2.9 and solving a LSE (De: LGS)
     * Error analysis of $LR$-Decomposition.
+* **W03/VL06**
+  * **date**: 02/11/23, Thu
+  * **summary**: Script 28 - 33. Error estimation of Alg 2.9, forwards and backwards error, conditioning of a function, conditioning number. 
+    * Error estimation of Alg 2.9 with proof (Lemma 2.13 & Satz 2.14)
+    * Aposteriori error estimation of Alg 2.9 (Satz 2.16)
+    * relationship between backwards and forwards error, a python example demonstrating that they aren't necessarily related (?)
+    * Conditioning of a function (Ch 2.4.1). 
+    * Conditioning number
