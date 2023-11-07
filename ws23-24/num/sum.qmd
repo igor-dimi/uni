@@ -15,7 +15,7 @@ title: Num Weekly Summary
   * **date**:
   * **summary**:
 * **W03/VL05**
-  * **date**: 10/31/2023, Tue
+  * **date**: 31/10/2023, Tue
   * **summary**: $LR$-Decomposition, uniqueness, existence, algorithm, complexity, error analysis
     * Script pages: 21 (satz 2.5) - 28 (2.3 Error Analysis of LR)
     * LR Zerlegung ist eindeutig
@@ -35,3 +35,16 @@ title: Num Weekly Summary
     * relationship between backwards and forwards error, a python example demonstrating that they aren't necessarily related (?)
     * Conditioning of a function (Ch 2.4.1). 
     * Conditioning number
+* **W04/VL07**
+  * **date**: 07/11/23, Tue
+  * **summary**: Script 33 - . 
+    * *Question*: How much effect does the error in $A$ & $b$ have on the solutuion of an LEQ/LGS? 
+    * Conditioning of a matrix & its proof. (Prop 2.20)
+    * Error analysis of LEQ/LGS's (Ch 2.4.3)
+    * Convergent Matrix sequences and  matrix series (Ch 2.4.4.)
+      * **Neumann Series** (2.4.9, P:37)
+      * **Spectral radius** of a matrix
+    * Convergent Matrix sequences are used in the proof of error estimation of LEQ/LGS's. Proof of 2.2.1
+    * **Pivoting Strategies** to increase $LR$-decomposition algorithm stability (Ch. 2.5) via exchanging rows during the steps of the algorithm.
+      * **Permutation Matrix** (Def 2.25)
+      * 
