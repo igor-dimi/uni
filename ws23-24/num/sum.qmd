@@ -37,7 +37,7 @@ title: Num Weekly Summary
     * Conditioning number
 * **W04/VL07**
   * **date**: 07/11/23, Tue
-  * **summary**: Script 33 - 41. 
+  * **summary**: Script 33 - 42. 
     * *Question*: How much effect does the error in $A$ & $b$ have on the solutuion of an LEQ/LGS? 
     * Conditioning of a matrix & its proof. (Prop 2.20)
     * Error analysis of LEQ/LGS's (Ch 2.4.3)
@@ -47,4 +47,30 @@ title: Num Weekly Summary
     * Convergent Matrix sequences are used in the proof of error estimation of LEQ/LGS's. Proof of 2.2.1
     * **Pivoting Strategies** to increase $LR$-decomposition algorithm stability (Ch. 2.5) via exchanging rows during the steps of the algorithm.
       * **Permutation Matrix** (Def 2.25)
-      * 
+* **W04/VL08**
+  * **date**: 09/11/23, Thu
+  * **summary**: Script 43 - 
+    * **note**: *numbering shifted 1 up, due to a new example*
+    * Alg. 2.27: $LR$-Decomposition with column pivot search. 
+      * Satz 2.30: $\forall$ regular matrix $A \in \mathbb{R}^{n\times n}\, \exists$ a Permutations matrix $P_{\pi}$, s.t $LR = P_{\pi}A$ and its proof.
+      * A problematic matrix for this method: Wilkinson matrix. Such problems can be avoided with "Full Pivot Search/Vollpivotsuche". 
+      * But fullpivot search has the disatvantageous complexity $\mathcal{O}(n^3)$
+    * **Cholesky Decomposition**: An efficient method for Symmetric Positive Definite (SPD) Matrices.
+      * Definition & Properties of SPD matrices. (Def 2.32 & Satz 2.33)
+      * Satz 3.34: $A\in\mathbb{R}^{n\times n} \text{\, SPD \, }\Rightarrow \exists \text{\, upper triangular} \, R\in \mathbb{R}^{n\times n} \text{\, s.t.\, } A = R^TR$ (Cholesky decomposition) 
+      * Proof of Satz 3.34
+      * Algorithm for Cholesky Decomposition (Alg 2.35) and its complexity ($\frac{n^3}{3} + \mathcal{O}(n^2)$). (2 times more efficient than usual decommposition)
+    * **$LR$-Decomposition for Band-matrices**
+      * Sparce matrices (schwach besetzte matrix) $\approx$ many entries are 0. 
+      * how sparce matrices are stored efficiently: For example
+
+      ```{text}
+      A = 0 5 0    C = (2, 3) {non-nul columns}
+          0 0 0    R = (1, 3) {non-null rows}
+          0 0 7    X = (5, 7) {actual entries in these coordinates}
+      ```
+
+      * Definition of a band matrix (Def 2.38)
+      * $LR$-decomposition for Band matrices. 
+
+        
