@@ -49,7 +49,7 @@ title: Num Weekly Summary
       * **Permutation Matrix** (Def 2.25)
 * **W04/VL08**
   * **date**: 09/11/23, Thu
-  * **summary**: Script 43 - 
+  * **summary**: Script 43 - 51
     * **note**: *numbering shifted 1 up, due to a new example*
     * Alg. 2.27: $LR$-Decomposition with column pivot search. 
       * Satz 2.30: $\forall$ regular matrix $A \in \mathbb{R}^{n\times n}\, \exists$ a Permutations matrix $P_{\pi}$, s.t $LR = P_{\pi}A$ and its proof.
@@ -72,5 +72,17 @@ title: Num Weekly Summary
 
       * Definition of a band matrix (Def 2.38)
       * $LR$-decomposition for Band matrices. 
-
-        
+* **W05/VL09**
+  * **date**: 14.11.23, Tue
+  * **summary**: Skript 51 - 
+    * Review of some LA topics (from Appendix): 
+      * Def of **orthogonal matrix**
+      * Def of **unitary matrix**
+      * **Lemma A.57/Satz A.58**: Singular value decomposition (SVD) and its proof. 
+      * Programming example demonstrating uses of SVD for image compression.
+      * **Prop A.61** regarding SVD (?)
+    * Intro to new Ch **3 - Interpolation & Approximation**
+      * Overview of different types of interpolating functions: polynomial, rational (polynomial), spline, neural network
+      * Intro Polynomial Interpolation:
+        * Def of vector space of polynomials of degree $n$:  $\mathbb{P}_n$. 
+        * Def 3.1: Lagrange Interpolation Polynomials
