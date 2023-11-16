@@ -74,7 +74,7 @@ title: Num Weekly Summary
       * $LR$-decomposition for Band matrices. 
 * **W05/VL09**
   * **date**: 14.11.23, Tue
-  * **summary**: Skript 51 - 
+  * **summary**: Skript 51 - 55 (togehter with topics form appendix)
     * Review of some LA topics (from Appendix): 
       * Def of **orthogonal matrix**
       * Def of **unitary matrix**
@@ -86,3 +86,11 @@ title: Num Weekly Summary
       * Intro Polynomial Interpolation:
         * Def of vector space of polynomials of degree $n$:  $\mathbb{P}_n$. 
         * Def 3.1: Lagrange Interpolation Polynomials
+* **W05/VL10**
+  * **date**: 16.11.23, Thu
+  * **summary**: Skript: 55 - 
+    * Lagrange interpolation
+      * Lagrange polynomials $\{l_i\}_{i=0\dots n}$ Form a basis for $\mathbb{P}_n$ & its proof.
+    * General interpolation with a general basis $\{b_i\}_{i=0\dots n}$ $\Rightarrow$ Vandermonde Matrix. *note*:  Vandermonde matrix for Lagrange Basis is simply the identity matrix. Vandermonde matrix is very badly conditioned for the monomial basis $\{x^i\}_{i=0}^n$
+    * Error analysis of Lagrange interpolation. Certain properties of the function that is to be interpolated determine the precision of the error analysis (like the smoothness of the function.) (**Satz 3.6**)
+    * Neville's Schema 
