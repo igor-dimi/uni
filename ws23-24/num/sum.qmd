@@ -88,9 +88,19 @@ title: Num Weekly Summary
         * Def 3.1: Lagrange Interpolation Polynomials
 * **W05/VL10**
   * **date**: 16.11.23, Thu
-  * **summary**: Skript: 55 - 
+  * **summary**: Skript: 55 - 64
     * Lagrange interpolation
       * Lagrange polynomials $\{l_i\}_{i=0\dots n}$ Form a basis for $\mathbb{P}_n$ & its proof.
     * General interpolation with a general basis $\{b_i\}_{i=0\dots n}$ $\Rightarrow$ Vandermonde Matrix. *note*:  Vandermonde matrix for Lagrange Basis is simply the identity matrix. Vandermonde matrix is very badly conditioned for the monomial basis $\{x^i\}_{i=0}^n$
     * Error analysis of Lagrange interpolation. Certain properties of the function that is to be interpolated determine the precision of the error analysis (like the smoothness of the function.) (**Satz 3.6**)
-    * Neville's Schema 
+    * Neville's Schema
+* **W06/VL11**
+  * **date**: 21.11.23, Tue
+  * **summary**: Skript 64 - 
+    * Newton Interpolation (Ch 3.5)
+      * Dividierende Differenzen
+      * Lemma 3.11 and its proof via induction.
+      * Intepolation error
+      * Hermite Interpolation 
+      * (3.7 is skipped)
+      * 3.8 Conditioning and Approximation
