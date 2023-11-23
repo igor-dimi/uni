@@ -96,11 +96,30 @@ title: Num Weekly Summary
     * Neville's Schema
 * **W06/VL11**
   * **date**: 21.11.23, Tue
-  * **summary**: Skript 64 - 
+  * **summary**: Skript 64 - 71
     * Newton Interpolation (Ch 3.5)
       * Dividierende Differenzen
       * Lemma 3.11 and its proof via induction.
-      * Intepolation error
-      * Hermite Interpolation 
-      * (3.7 is skipped)
-      * 3.8 Conditioning and Approximation
+    * Intepolation error
+    * Hermite Interpolation 
+    * (3.7 is skipped)
+    * 3.8 Conditioning and Approximation
+    * Weierstrass Theorem (3.25)
+* **W06/VL12**
+  * **date**: 23.11.23, Thu
+  * **summary**: Skript 71 - 81
+    * review of error of polynomial interpolation: Bsp 3.21, 3.22. 
+    * Runge Phenomenon
+    * Weierstrass Theorem (3.25) and its relationship to polynomial interpolation.
+    * Error of the best approximation (Satz 3.26)
+      * Def 3.23: Lebesgue Constant $\Lambda_n$
+    * Conditioning of the interpolation, what happens when we interpolate $f + \delta$ instead of $f$? 
+    * If the function is only known to be continuous (but not necessarily differentiable), there is another measure for how strong a function "fluctuates": Modulus of continuity (Stetigkeitsmodul) (Def 3.27)
+    * Jackson's Theorem (3.28) given without proof. 
+    * Corollary (3.29) - its proof. 
+    * How to keep $\Lambda_n$ small? $\rightarrow$ Chebyshev Interpolation, Chebyshev Points
+      * Goal: find appropriate points $\{x_i\}_{i=1\dots n}$ s.t. $\Lambda_n$ is minimal. 
+      * Definition of Chebyshev Points (Def 3.30): $x_i^{(n + 1)} = \cos{(\frac{2i + 1}{2n + 2}\pi)}$
+![chebyshev-points](./imgs/chebyshev-points.png)
+      * Definition of Chebyshev Polynomials (Def 3.32)
+      * Lemma 3.33 - some properties of chebyshev polynomials
