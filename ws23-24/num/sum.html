@@ -269,16 +269,42 @@ ul.task-list li input[type="checkbox"] {
 <li><strong>W06/VL11</strong>
 <ul>
 <li><strong>date</strong>: 21.11.23, Tue</li>
-<li><strong>summary</strong>: Skript 64 -
+<li><strong>summary</strong>: Skript 64 - 71
 <ul>
 <li>Newton Interpolation (Ch 3.5)
 <ul>
 <li>Dividierende Differenzen</li>
 <li>Lemma 3.11 and its proof via induction.</li>
+</ul></li>
 <li>Intepolation error</li>
 <li>Hermite Interpolation</li>
 <li>(3.7 is skipped)</li>
 <li>3.8 Conditioning and Approximation</li>
+<li>Weierstrass Theorem (3.25)</li>
+</ul></li>
+</ul></li>
+<li><strong>W06/VL12</strong>
+<ul>
+<li><strong>date</strong>: 23.11.23, Thu</li>
+<li><strong>summary</strong>: Skript 71 - 81
+<ul>
+<li>review of error of polynomial interpolation: Bsp 3.21, 3.22.</li>
+<li>Runge Phenomenon</li>
+<li>Weierstrass Theorem (3.25) and its relationship to polynomial interpolation.</li>
+<li>Error of the best approximation (Satz 3.26)
+<ul>
+<li>Def 3.23: Lebesgue Constant <span class="math inline">\(\Lambda_n\)</span></li>
+</ul></li>
+<li>Conditioning of the interpolation, what happens when we interpolate <span class="math inline">\(f + \delta\)</span> instead of <span class="math inline">\(f\)</span>?</li>
+<li>If the function is only known to be continuous (but not necessarily differentiable), there is another measure for how strong a function “fluctuates”: Modulus of continuity (Stetigkeitsmodul) (Def 3.27)</li>
+<li>Jackson’s Theorem (3.28) given without proof.</li>
+<li>Corollary (3.29) - its proof.</li>
+<li>How to keep <span class="math inline">\(\Lambda_n\)</span> small? <span class="math inline">\(\rightarrow\)</span> Chebyshev Interpolation, Chebyshev Points
+<ul>
+<li>Goal: find appropriate points <span class="math inline">\(\{x_i\}_{i=1\dots n}\)</span> s.t. <span class="math inline">\(\Lambda_n\)</span> is minimal.</li>
+<li>Definition of Chebyshev Points (Def 3.30): <span class="math inline">\(x_i^{(n + 1)} = \cos{(\frac{2i + 1}{2n + 2}\pi)}\)</span> <img src="./imgs/chebyshev-points.png" class="img-fluid" alt="chebyshev-points"></li>
+<li>Definition of Chebyshev Polynomials (Def 3.32)</li>
+<li>Lemma 3.33 - some properties of chebyshev polynomials</li>
 </ul></li>
 </ul></li>
 </ul></li>
