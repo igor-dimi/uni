@@ -123,3 +123,14 @@ title: Num Weekly Summary
 ![chebyshev-points](./imgs/chebyshev-points.png)
       * Definition of Chebyshev Polynomials (Def 3.32)
       * Lemma 3.33 - some properties of chebyshev polynomials
+* **W07/VL13**
+  * **date**: 28.11.23
+  * **summary**: Skript 81 - 96 (some pages were skipped)
+    * Clenshaw-Curtis points
+    * **Satz 3.34**
+    * Proofs regarding Lebesgue Constats are skipped.
+    * **Lemma 3.40**: 
+    * Skip until Spline Interpolation
+    * **Spline Interpolation**:  
+      * Error of spline interpolation
+      * Cubic splines
