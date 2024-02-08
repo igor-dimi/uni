@@ -1,0 +1,50 @@
+---
+title: Plan
+---
+
+## To Do, as of SS 24
+
+
+* **Pflicht** (**total** = 54LP)
+  - [ ] Alda 8LP
+  - [ ] IBN 8LP
+  - [ ] ISW 8LP
+  - [ ] BS (4LP + 2UK) 6LP
+  - [ ] FP 8LP
+  - [ ] BA 12LP
+  - [ ] BK 4LP
+* **WM** (**total** = 22LP)
+  - [ ] WM-I 8LP
+  - [ ] WM-II 8LP
+  - [ ] WM-III 6LP 
+* **FUK** (**total** = 4LP)
+  - [ ] FUK-I (2UK) 2LP
+  - [ ] FUK-II (2UK) 2LP
+* **AG** (**total**: 8LP)
+  - [ ] TheoPhys-II 8LP
+
+**sum total**: 88LP
+
+### Semesters Plan
+
+**Version 1**
+
+* **SS 24** (*total*: 18LP)
+  - [ ] Alda 8LP
+  - [ ] AG: TheoPhys-II 8LP
+  - [ ] FUK-I (2UK) 2LP
+* **WS 24/25** (*total*: 18LP)
+  - [ ] ISW 8LP
+  - [ ] WM-I 8LP
+  - [ ] FUK-II (2UK) 2LP
+* **SS 25** (*total*: 22LP)
+  - [ ] FP 8LP
+  - [ ] IBN 8LP 
+  - [ ] WM-II 6LP
+* **WS 25/26** (*total*: 14LP)
+  - [ ] WM-III 8LP
+  - [ ] BS 6LP 
+* **SS 26** (*total*: 16LP)
+  - [ ] BA 12LP
+  - [ ] BK 4LP
+

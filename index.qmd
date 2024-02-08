@@ -2,6 +2,10 @@
 title: "Uni Notes"
 ---
 
+## Plan
+
+* [Plan](./plan.qmd)
+
 ## Semesters 
 
 * [WS 23/24](ws23-24/ws24-24.qmd)
