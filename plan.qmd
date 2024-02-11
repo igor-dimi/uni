@@ -30,20 +30,20 @@ title: Plan
 
 **Version 1**
 
-* **SS 24** (*total*: 18LP)
+* **SS 24** (*total*: 16LP)
   - [ ] Alda 8LP
-  - [ ] WM-I 8LP
+  - [ ] WM-I 6LP
   - [ ] FUK-I (2UK) 2LP
 * **WS 24/25** (*total*: 18LP)
   - [ ] ISW 8LP
   - [ ] WM-II 8LP
   - [ ] FUK-II (2UK) 2LP
-* **SS 25** (*total*: 22LP)
+* **SS 25** (*total*: 24LP)
   - [ ] FP 8LP
   - [ ] IBN 8LP 
-  - [ ] WM-III 6LP
-* **WS 25/26** (*total*: 14LP)
   - [ ] AG: TheoPhys-II 8LP
+* **WS 25/26** (*total*: 14LP)
+  - [ ] WM-III 8LP
   - [ ] BS 6LP 
 * **SS 26** (*total*: 16LP)
   - [ ] BA 12LP
