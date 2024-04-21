@@ -8,9 +8,29 @@ website:
   title: "My Uni Notes"
   navbar:
     left:
-      - href: index.qmd
-        text: Home
+      - sidebar:semester
       - about.qmd
+
+  sidebar:
+    - id: semester
+      title: "Semesters"
+      style: "docked"
+      contents:
+        - ws23-24/index.qmd
+        - ss24/index.qmd
+
+    - title: "WS 23/24"
+      style: "docked"
+      contents:
+        - ws23-24/ipi/ipi.qmd
+        - ws23-24/num/num.qmd
+
+    - title: "SS 24"
+      contents:
+        - ss24/alda/index.qmd
+        - ss24/r/index.qmd
+        - ss24/oop/index.qmd
+        
 
 format:
   html:

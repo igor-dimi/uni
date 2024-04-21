@@ -1,0 +1,15 @@
+---
+title: SS 24
+---
+
+## Schedule
+
+```{=html}
+<iframe width="780" height="440" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTTNJAKNcKtLFMa5VfMUKpdxwkkAO_WJP6pX6voXAKQyFmJOb_MoloO5RjLYUKdZyq543U_bvSJDeap/pubhtml?widget=true&amp;headers=false"></iframe>
+```
+
+## Courses 
+
+* [Alda](./alda/index.qmd)
+* [R](./r/index.qmd)
+* [OOP](./oop/index.qmd)

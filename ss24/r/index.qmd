@@ -1,0 +1,9 @@
+---
+title: R Programming
+---
+
+R Programming and its Applications to Stochastic
+
+## 
+
+* [weekly summary](./sum.qmd)

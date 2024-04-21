@@ -6,4 +6,5 @@ title: "Uni Notes"
 
 ## Semesters 
 
-* [WS 23/24](ws23-24/ws24-24.qmd)
+* [WS 23/24](ws23-24/index.qmd)
+* [SS 24](ss24/index.qmd)

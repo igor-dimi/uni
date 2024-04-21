@@ -1,0 +1,9 @@
+---
+title: Alda 
+---
+
+Algorithms and Data Structures
+
+##
+
+* [weekly summary](./sum.qmd)
