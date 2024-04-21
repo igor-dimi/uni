@@ -16,8 +16,10 @@ website:
       title: "Semesters"
       style: "docked"
       contents:
-        - ws23-24/index.qmd
-        - ss24/index.qmd
+        - section: "Bachelor"
+          contents: 
+            - ws23-24/index.qmd
+            - ss24/index.qmd
 
     - title: "WS 23/24"
       style: "docked"
