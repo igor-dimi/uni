@@ -18,51 +18,35 @@
     "href": "ws23-24/index.html#courses",
     "title": "WS 23/24",
     "section": "Courses",
-    "text": "Courses\n\nNum\nIPI",
-    "crumbs": [
-      "Bachelor",
-      "WS 23/24"
-    ]
+    "text": "Courses\n\nNum\nIPI"
   },
   {
     "objectID": "ss24/r/index.html",
     "href": "ss24/r/index.html",
     "title": "R Programming",
     "section": "",
-    "text": "R Programming and its Applications to Stochastic",
-    "crumbs": [
-      "R Programming"
-    ]
+    "text": "R Programming and its Applications to Stochastic"
   },
   {
     "objectID": "ss24/r/index.html#section",
     "href": "ss24/r/index.html#section",
     "title": "R Programming",
     "section": "",
-    "text": "weekly summary",
-    "crumbs": [
-      "R Programming"
-    ]
+    "text": "weekly summary"
   },
   {
     "objectID": "ss24/oop/index.html",
     "href": "ss24/oop/index.html",
     "title": "OOP Sci",
     "section": "",
-    "text": "Object Oriented Programming for Scientific Computing",
-    "crumbs": [
-      "OOP Sci"
-    ]
+    "text": "Object Oriented Programming for Scientific Computing"
   },
   {
     "objectID": "ss24/oop/index.html#section",
     "href": "ss24/oop/index.html#section",
     "title": "OOP Sci",
     "section": "",
-    "text": "weekly summary",
-    "crumbs": [
-      "OOP Sci"
-    ]
+    "text": "weekly summary"
   },
   {
     "objectID": "ss24/alda/sum.html",
@@ -216,31 +200,21 @@
     "href": "ss24/alda/index.html",
     "title": "Alda",
     "section": "",
-    "text": "Algorithms and Data Structures",
-    "crumbs": [
-      "Alda"
-    ]
+    "text": "Algorithms and Data Structures"
   },
   {
     "objectID": "ss24/alda/index.html#section",
     "href": "ss24/alda/index.html#section",
     "title": "Alda",
     "section": "",
-    "text": "weekly summary",
-    "crumbs": [
-      "Alda"
-    ]
+    "text": "weekly summary"
   },
   {
     "objectID": "ss24/index.html#courses",
     "href": "ss24/index.html#courses",
     "title": "SS 24",
     "section": "Courses",
-    "text": "Courses\n\nAlda\nR\nOOP",
-    "crumbs": [
-      "Bachelor",
-      "SS 24"
-    ]
+    "text": "Courses\n\nAlda\nR\nOOP"
   },
   {
     "objectID": "ss24/oop/sum.html",
@@ -369,6 +343,13 @@
     "text": "date:\n\n\n\ndate:"
   },
   {
+    "objectID": "ss24/r/sum.html#week-2",
+    "href": "ss24/r/sum.html#week-2",
+    "title": "Weekly Summary",
+    "section": "Week 2",
+    "text": "Week 2\n\nLecture 3\ndate: 22/4/24\n\nresources for R\n\nadvanced R ~ hadley wickham link\nr graphics cookbook link\ntidyverse\n\npackages\n\ninstalling and removing packages, package dependencies; shiny, learnr\nnamespaces and name collisions;\ndatasets package for learning; mtcars, iris\n\nfunction return value and print side effect\nclearing variables with rm(x)\nplotting\n\nbasic data plotting with plot\nbasic function plotting with plot and curve\n\n\n\n\nLecture 2\ndate:"
+  },
+  {
     "objectID": "ss24/r/sum.html#week-1-1",
     "href": "ss24/r/sum.html#week-1-1",
     "title": "Weekly Summary",
@@ -460,30 +441,17 @@
     "text": "Week 1\n\nLecture 1\ndate:\n\n\nLecture 2\ndate:"
   },
   {
-    "objectID": "ss24/r/sum.html#week-1-14",
-    "href": "ss24/r/sum.html#week-1-14",
-    "title": "Weekly Summary",
-    "section": "Week 1",
-    "text": "Week 1\n\nLecture 1\ndate:\n\n\nLecture 2\ndate:"
-  },
-  {
     "objectID": "ws23-24/ipi/ipi.html",
     "href": "ws23-24/ipi/ipi.html",
     "title": "IPI",
     "section": "",
-    "text": "weekly summary\nnotes\nsolutions\ncourse website",
-    "crumbs": [
-      "IPI"
-    ]
+    "text": "weekly summary\nnotes\nsolutions\ncourse website"
   },
   {
     "objectID": "ws23-24/num/num.html",
     "href": "ws23-24/num/num.html",
     "title": "Numerics 0",
     "section": "",
-    "text": "weekly summary\nnotes\nsolutions",
-    "crumbs": [
-      "Numerics 0"
-    ]
+    "text": "weekly summary\nnotes\nsolutions"
   }
 ]
