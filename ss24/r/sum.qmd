@@ -13,11 +13,25 @@ title: Weekly Summary
 
 **date**:
 
-## Week 1
+## Week 2
 
-### Lecture 1
+### Lecture 3
 
-**date**: 
+**date**: 22/4/24
+
+* resources for R
+  * advanced R ~ hadley wickham [link](https://adv-r.hadley.nz/)
+  * r graphics cookbook [link](https://r-graphics.org/)
+  * tidyverse
+* packages 
+    * installing and removing packages, package dependencies; shiny, learnr
+    * namespaces and name collisions;
+    * datasets package for learning; mtcars, iris
+* function return value and print side effect
+* clearing variables with `rm(x)`
+* plotting
+    * basic data plotting with `plot` 
+    * basic function plotting with `plot` and `curve`
 
 ### Lecture 2
 
