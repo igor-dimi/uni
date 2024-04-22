@@ -7,3 +7,5 @@ R Programming and its Applications to Stochastic
 ## 
 
 * [weekly summary](./sum.qmd)
+* [notes](https://igor-dimi.github.io/r-notes-ss24/)
+* [solutions](https://igor-dimi.github.io/r-sol-ss24/)
