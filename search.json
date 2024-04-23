@@ -63,6 +63,27 @@
     "text": "date:\n\n\n\ndate:"
   },
   {
+    "objectID": "ss24/alda/sum.html#week-2",
+    "href": "ss24/alda/sum.html#week-2",
+    "title": "Weekly Summary",
+    "section": "Week 2",
+    "text": "Week 2\n\nLecture 1\ndate:\n\n\nLecture 2\ndate: 23/04/24\n\nfachschaft\n\nstapel\nkaffeklatsch\nLernraum - time & place tba (instagram, whatsapp groups)\nRoom: INF 205 Mathematikon\nwebsite\n\ncompiler explorer\nSmall assembly example; modern compilers are very clever at optimizing\nassertions, pre- and post conditions, invariants.\nfast power algorithm, it’s correctness proof\nrules for calculating time complexity of sequential programs\na common reccurence relation pattern that comes up often,\n\n\\[\\begin{align}\nR(n) &= a, &&\\text{if n = 1} \\\\\n     &= cn + d\\cdot R(n/b) &&\\text{if n &gt; 1, divide and conquer}\n\\end{align}\\]\n\ncomplexity of this reccurence relation and its proof\nIntro to Graphs, basic definitions"
+  },
+  {
+    "objectID": "ss24/alda/sum.html#week-3",
+    "href": "ss24/alda/sum.html#week-3",
+    "title": "Weekly Summary",
+    "section": "Week 3",
+    "text": "Week 3\n\nLecture 1\ndate:\n\n\nLecture 2\ndate:"
+  },
+  {
+    "objectID": "ss24/alda/sum.html#week-4",
+    "href": "ss24/alda/sum.html#week-4",
+    "title": "Weekly Summary",
+    "section": "Week 4",
+    "text": "Week 4\n\nLecture 1\ndate:\n\n\nLecture 2\ndate:"
+  },
+  {
     "objectID": "ss24/alda/sum.html#week-1-1",
     "href": "ss24/alda/sum.html#week-1-1",
     "title": "Weekly Summary",
@@ -135,27 +156,6 @@
   {
     "objectID": "ss24/alda/sum.html#week-1-11",
     "href": "ss24/alda/sum.html#week-1-11",
-    "title": "Weekly Summary",
-    "section": "Week 1",
-    "text": "Week 1\n\nLecture 1\ndate:\n\n\nLecture 2\ndate:"
-  },
-  {
-    "objectID": "ss24/alda/sum.html#week-1-12",
-    "href": "ss24/alda/sum.html#week-1-12",
-    "title": "Weekly Summary",
-    "section": "Week 1",
-    "text": "Week 1\n\nLecture 1\ndate:\n\n\nLecture 2\ndate:"
-  },
-  {
-    "objectID": "ss24/alda/sum.html#week-1-13",
-    "href": "ss24/alda/sum.html#week-1-13",
-    "title": "Weekly Summary",
-    "section": "Week 1",
-    "text": "Week 1\n\nLecture 1\ndate:\n\n\nLecture 2\ndate:"
-  },
-  {
-    "objectID": "ss24/alda/sum.html#week-1-14",
-    "href": "ss24/alda/sum.html#week-1-14",
     "title": "Weekly Summary",
     "section": "Week 1",
     "text": "Week 1\n\nLecture 1\ndate:\n\n\nLecture 2\ndate:"
