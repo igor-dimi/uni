@@ -13,7 +13,42 @@ title: Weekly Summary
 
 **date**:
 
-## Week 1
+## Week 2
+
+### Lecture 1
+
+**date**: 
+
+### Lecture 2
+
+**date**: 23/04/24
+
+* fachschaft 
+  * [stapel]()
+  * kaffeklatsch
+  * Lernraum - time & place tba (instagram, whatsapp groups)
+  * Room: INF 205 Mathematikon
+  * [website](https://mathphys.info)
+
+* [compiler explorer](https://godbolt.org/)
+* Small assembly example; modern compilers are very clever at optimizing
+* assertions, pre- and post conditions, invariants. 
+* fast power algorithm, it's correctness proof
+* rules for calculating time complexity of sequential programs
+* a common reccurence relation pattern that comes up often, 
+
+\begin{align}
+R(n) &= a, &&\text{if n = 1} \\
+     &= cn + d\cdot R(n/b) &&\text{if n > 1, divide and conquer}
+\end{align}
+
+* complexity of this reccurence relation and its proof 
+* Intro to Graphs, basic definitions
+
+
+
+
+## Week 3
 
 ### Lecture 1
 
@@ -23,17 +58,7 @@ title: Weekly Summary
 
 **date**:
 
-## Week 1
-
-### Lecture 1
-
-**date**: 
-
-### Lecture 2
-
-**date**:
-
-## Week 1
+## Week 4
 
 ### Lecture 1
 
