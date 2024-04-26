@@ -231,6 +231,13 @@
     "text": "date:\n\n\n\ndate:"
   },
   {
+    "objectID": "ss24/oop/sum.html#week-2",
+    "href": "ss24/oop/sum.html#week-2",
+    "title": "Weekly Summary",
+    "section": "Week 2",
+    "text": "Week 2\n\nLecture 1\ndate:\n\n\nLecture 2\ndate: 25/4/24\n\nslides: 27 -\ntesting with googletests\n\ngoogletests has to be cloned into the project as a submodule and build together with your code.\n\ntemplates\ntemplate templates\nrenaming types with typedef\nclasses and structs\n\nessentially the same thing, only difference being the default visibility: public for struct.\naccess specifiers: private, public, protected\nfriend class\nconstructors (they are a little messy in c++ due to legacy code issues)\n\nmove constructor:\nconverting constructors (implicit type conversions) \\(\\rightarrow\\) hard to find bugs.\nexplicit keyword.\nconversion operators.\ndelegating constructors.\n\ndestructors \\(\\rightarrow\\) RAII (resource acquisition if initialization)\nthe rule of zero or five.\nmutable members\nthe singleton pattern (single source of truth)"
+  },
+  {
     "objectID": "ss24/oop/sum.html#week-1-1",
     "href": "ss24/oop/sum.html#week-1-1",
     "title": "Weekly Summary",
@@ -322,13 +329,6 @@
     "text": "Week 1\n\nLecture 1\ndate:\n\n\nLecture 2\ndate:"
   },
   {
-    "objectID": "ss24/oop/sum.html#week-1-14",
-    "href": "ss24/oop/sum.html#week-1-14",
-    "title": "Weekly Summary",
-    "section": "Week 1",
-    "text": "Week 1\n\nLecture 1\ndate:\n\n\nLecture 2\ndate:"
-  },
-  {
     "objectID": "ss24/r/sum.html",
     "href": "ss24/r/sum.html",
     "title": "Weekly Summary",
@@ -347,7 +347,7 @@
     "href": "ss24/r/sum.html#week-2",
     "title": "Weekly Summary",
     "section": "Week 2",
-    "text": "Week 2\n\nLecture 3\ndate: 22/4/24\n\nresources for R\n\nadvanced R ~ hadley wickham link\nr graphics cookbook link\ntidyverse\n\npackages\n\ninstalling and removing packages, package dependencies; shiny, learnr\nnamespaces and name collisions;\ndatasets package for learning; mtcars, iris\n\nfunction return value and print side effect\nclearing variables with rm(x)\nplotting\n\nbasic data plotting with plot\nbasic function plotting with plot and curve\n\n\n\n\nLecture 2\ndate:"
+    "text": "Week 2\n\nLecture 1\ndate: 22/4/24\n\nresources for R\n\nadvanced R ~ hadley wickham link\nr graphics cookbook link\ntidyverse\n\npackages\n\ninstalling and removing packages, package dependencies; shiny, learnr\nnamespaces and name collisions;\ndatasets package for learning; mtcars, iris\n\nfunction return value and print side effect\nclearing variables with rm(x)\nplotting\n\nbasic data plotting with plot\nbasic function plotting with plot and curve\n\n\n\n\nLecture 2\ndate: 26/4/24\n\ncontent: moodle videos 3 & 4\nr is object oriented - everything is an object\n\nclass vs typeof (small difference)\n\nr is also functional: everything that happens is a function call\n\ndifference between functions and function calls sin vs sin()\n\natomic vectors vs lists\ntype casting\nzero length vectors\nmachine numbers (representation of real numbers in R)\nbig integers - r represents large integers instead of 2’s complement.\nvectors have no dimension, array has one dimension. vectors are not arrays.\nfor data-sets use data-frames like: tibbles, data tables…"
   },
   {
     "objectID": "ss24/r/sum.html#week-1-1",
