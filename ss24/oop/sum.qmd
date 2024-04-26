@@ -13,7 +13,7 @@ title: Weekly Summary
 
 **date**:
 
-## Week 1
+## Week 2
 
 ### Lecture 1
 
@@ -21,7 +21,28 @@ title: Weekly Summary
 
 ### Lecture 2
 
-**date**:
+**date**: 25/4/24
+
+* slides: 27 - 
+* testing with [googletests](https://github.com/google/googletest)
+  * googletests has to be cloned into the project as a submodule and build together with your code.
+* templates
+* template templates 
+* renaming types with `typedef`
+* classes and structs 
+  * essentially  the same thing, only difference being the default visibility: `public` for `struct`. 
+  * access specifiers: `private`, `public`, `protected`
+  * friend class 
+  * constructors (they are a little messy in c++ due to legacy code issues)
+    * move constructor: 
+    * converting constructors (implicit type conversions) $\rightarrow$ hard to find bugs. 
+    * `explicit` keyword.
+    * conversion operators.
+    * delegating constructors. 
+  * destructors $\rightarrow$ RAII (resource acquisition if initialization)
+  * the rule of zero or five. 
+  * mutable members 
+  * the singleton pattern (single source of truth)
 
 ## Week 1
 
