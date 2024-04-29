@@ -238,6 +238,13 @@
     "text": "Week 2\n\nLecture 1\ndate:\n\n\nLecture 2\ndate: 25/4/24\n\nslides: 27 -\ntesting with googletests\n\ngoogletests has to be cloned into the project as a submodule and build together with your code.\n\ntemplates\ntemplate templates\nrenaming types with typedef\nclasses and structs\n\nessentially the same thing, only difference being the default visibility: public for struct.\naccess specifiers: private, public, protected\nfriend class\nconstructors (they are a little messy in c++ due to legacy code issues)\n\nmove constructor:\nconverting constructors (implicit type conversions) \\(\\rightarrow\\) hard to find bugs.\nexplicit keyword.\nconversion operators.\ndelegating constructors.\n\ndestructors \\(\\rightarrow\\) RAII (resource acquisition if initialization)\nthe rule of zero or five.\nmutable members\nthe singleton pattern (single source of truth)"
   },
   {
+    "objectID": "ss24/oop/sum.html#week-3",
+    "href": "ss24/oop/sum.html#week-3",
+    "title": "Weekly Summary",
+    "section": "Week 3",
+    "text": "Week 3\n\nLecture 1\ndate: 29/04/24\n\nbasic cmake concepts\nSheet 2 execises discussion\n\nbasic googletest inclusion - slides are sufficient\n\npresentation proposal should have a presentation date.\n\n\n\nLecture 2\ndate:"
+  },
+  {
     "objectID": "ss24/oop/sum.html#week-1-1",
     "href": "ss24/oop/sum.html#week-1-1",
     "title": "Weekly Summary",
@@ -317,13 +324,6 @@
   {
     "objectID": "ss24/oop/sum.html#week-1-12",
     "href": "ss24/oop/sum.html#week-1-12",
-    "title": "Weekly Summary",
-    "section": "Week 1",
-    "text": "Week 1\n\nLecture 1\ndate:\n\n\nLecture 2\ndate:"
-  },
-  {
-    "objectID": "ss24/oop/sum.html#week-1-13",
-    "href": "ss24/oop/sum.html#week-1-13",
     "title": "Weekly Summary",
     "section": "Week 1",
     "text": "Week 1\n\nLecture 1\ndate:\n\n\nLecture 2\ndate:"
