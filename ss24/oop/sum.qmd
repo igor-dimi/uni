@@ -44,11 +44,16 @@ title: Weekly Summary
   * mutable members 
   * the singleton pattern (single source of truth)
 
-## Week 1
+## Week 3
 
 ### Lecture 1
 
-**date**: 
+**date**: 29/04/24
+
+* basic cmake concepts
+* Sheet 2 execises discussion
+  * basic googletest inclusion - slides are sufficient
+* presentation proposal should have a presentation date.
 
 ### Lecture 2
 
