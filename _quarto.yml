@@ -6,6 +6,7 @@ project:
 
 website:
   title: "My Uni Notes"
+  page-navigation: true
   navbar:
     left:
       - sidebar:semester
