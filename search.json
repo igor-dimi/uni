@@ -74,7 +74,7 @@
     "href": "ss24/alda/sum.html#week-3",
     "title": "Weekly Summary",
     "section": "Week 3",
-    "text": "Week 3\n\nLecture 1\ndate:\n\n\nLecture 2\ndate:"
+    "text": "Week 3\n\nLecture 1\ndate:\n\n\nLecture 2\ndate: 30/04/24\n\nsimply linked list\n\nsplicing\n\narrays\n\nassembly realization of array access via the website compiler explorer link with c++ and rust. Differences between c++ and rust.\nmemory allocation in c++ with alloc() and free()\ntime complexity of array memory allocation in c++ with alloc(): an experiment\npushBack() and popBack() for arrays\n\ntheir realization and (ammortised) complexity"
   },
   {
     "objectID": "ss24/alda/sum.html#week-4",
