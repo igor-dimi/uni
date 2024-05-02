@@ -48,7 +48,7 @@ title: Weekly Summary
 
 ### Lecture 1
 
-**date**: 29/04/24
+**date**: 29/04/24 - Monday
 
 * basic cmake concepts
 * Sheet 2 execises discussion
@@ -57,7 +57,44 @@ title: Weekly Summary
 
 ### Lecture 2
 
-**date**:
+**date**: 02/05/24 - Thursday
+
+* review of past lecture:
+  * templates
+  * typedef
+  * classes & structs
+  * constructors
+  * destructors: deep copy
+* fundamental concepts of c++: inheritence
+  * little inheritence example
+  * deadly diamond of death
+  * composition over inheritence
+  * public vs private/protected inheritence
+  * is-a vs has-a
+  * SOLID principles
+    * discussion of the Liskov Subtitution Principle (LSP)
+* project structure
+  * header files, header guards
+  * source files separate from headers (templates go against this)
+  * namespaces to structure and prevent name clashes
+* c++ standard library: 
+  * overview
+  * standard input/output, standard error
+  * containers and companion classes
+    * sequences $\approx$ arrays: array, vector, deque, list, forward list
+    * container adaptors stack, queue, priority queue
+    * associative containers $\approx$ hash map: set, multiset, map, multimap
+    * unsorted associative contianers: unordered set/multiset/map/multimap
+  * iterators: generalization of **pointer** concept, they can be dereferenced and advanced
+    to show to the subsequent element
+  * algorithms: tailored to dfferent iterator categories, make full use of the capabilities of the 
+    container. 
+    * functional programming examples
+* Error Handling: 
+  * `assert`: Run-time sanity check
+  * `static_assert`: compile check with a similar purpose for **template meta programming**
+  * `exception`: error handling mechanism for situation that should not be the norm
+    * discussion of exceptions
 
 ## Week 1
 
