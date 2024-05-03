@@ -350,6 +350,13 @@
     "text": "Week 2\n\nLecture 1\ndate: 22/4/24\n\nresources for R\n\nadvanced R ~ hadley wickham link\nr graphics cookbook link\ntidyverse\n\npackages\n\ninstalling and removing packages, package dependencies; shiny, learnr\nnamespaces and name collisions;\ndatasets package for learning; mtcars, iris\n\nfunction return value and print side effect\nclearing variables with rm(x)\nplotting\n\nbasic data plotting with plot\nbasic function plotting with plot and curve\n\n\n\n\nLecture 2\ndate: 26/4/24\n\ncontent: moodle videos 3 & 4\nr is object oriented - everything is an object\n\nclass vs typeof (small difference)\n\nr is also functional: everything that happens is a function call\n\ndifference between functions and function calls sin vs sin()\n\natomic vectors vs lists\ntype casting\nzero length vectors\nmachine numbers (representation of real numbers in R)\nbig integers - r represents large integers instead of 2’s complement.\nvectors have no dimension, array has one dimension. vectors are not arrays.\nfor data-sets use data-frames like: tibbles, data tables…"
   },
   {
+    "objectID": "ss24/r/sum.html#week-3",
+    "href": "ss24/r/sum.html#week-3",
+    "title": "Weekly Summary",
+    "section": "Week 3",
+    "text": "Week 3\n\nLecture 1\ndate:\n\n\nLecture 2\ndate: 03/05/24 - Fri\n\nnew features in R\n\nother constructs instead of for loops that are faster\nanonymous functions, lambda notation\ndiscrete probability distributions\nstrings as factors\n.class2 can show all classes to which an object belongs, including implicit classes.\n\nnew features in r 4.1\n\nfactor function behavior\nnative pipe operator, analogous to shell pipes, eliminating the need for magrittr pipes.\nas.vector() removes attributes from a vector, like component names.\ncolon operator precedence.\ntail recursion"
+  },
+  {
     "objectID": "ss24/r/sum.html#week-1-1",
     "href": "ss24/r/sum.html#week-1-1",
     "title": "Weekly Summary",
@@ -429,13 +436,6 @@
   {
     "objectID": "ss24/r/sum.html#week-1-12",
     "href": "ss24/r/sum.html#week-1-12",
-    "title": "Weekly Summary",
-    "section": "Week 1",
-    "text": "Week 1\n\nLecture 1\ndate:\n\n\nLecture 2\ndate:"
-  },
-  {
-    "objectID": "ss24/r/sum.html#week-1-13",
-    "href": "ss24/r/sum.html#week-1-13",
     "title": "Weekly Summary",
     "section": "Week 1",
     "text": "Week 1\n\nLecture 1\ndate:\n\n\nLecture 2\ndate:"
