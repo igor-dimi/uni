@@ -51,7 +51,7 @@ title: Weekly Summary
 * for data-sets use data-frames like: tibbles, data tables... 
 
 
-## Week 1
+## Week 3
 
 ### Lecture 1
 
@@ -59,7 +59,21 @@ title: Weekly Summary
 
 ### Lecture 2
 
-**date**:
+**date**: 03/05/24 - Fri
+
+* new features in R
+  * other constructs instead of for loops that are faster
+  * anonymous functions, lambda notation
+  * discrete probability distributions
+  * strings as factors
+  * `.class2` can show all classes to which an object belongs, including implicit classes.
+* new features in r 4.1
+  * factor function behavior
+  * native pipe operator, analogous to shell pipes, eliminating the need for magrittr pipes.
+  * `as.vector()` removes attributes from a vector, like component names. 
+  * colon operator precedence. 
+  * tail recursion
+
 
 ## Week 1
 
