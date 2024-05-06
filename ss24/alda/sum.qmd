@@ -72,7 +72,12 @@ R(n) &= a, &&\text{if n = 1} \\
 
 ### Lecture 1
 
-**date**: 
+**date**: 6/5/24
+
+* amortized complexity
+* lists vs arrays
+* stacks and queues - introductory discussions
+  * double-ended queues
 
 ### Lecture 2
 
