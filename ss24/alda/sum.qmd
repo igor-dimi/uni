@@ -66,7 +66,7 @@ R(n) &= a, &&\text{if n = 1} \\
   * memory allocation in c++ with `alloc()` and `free()`
   * time complexity of array memory allocation in c++ with `alloc()`: an experiment
   * `pushBack()` and `popBack()` for arrays
-    * their realization and (ammortised) complexity
+    * their realization and complexity
 
 ## Week 4
 
@@ -74,25 +74,61 @@ R(n) &= a, &&\text{if n = 1} \\
 
 **date**: 6/5/24
 
-* amortized complexity
-* lists vs arrays
+* introduction to amortized complexity
+  * amortized complexity analysis of `pushBack()` and `popBack()`
+    operations: both $\mathcal{O}(1)$
 * stacks and queues - introductory discussions
   * double-ended queues
+* ring buffer implementation of a queue
+* introduction to hashing
 
 ### Lecture 2
 
 **date**: 07/05/24
 
-* division operation optimization by the compiler (or assembly) when dividing by a constant
-  this cannot be done if we divide by a variable.
+* division by a constant is optimized by the compiler
+  (this cannot be done for division by a variable)
 * book recommendation: Hacker's Delight
 * Hashing:
-  * introductory discussion
-  * applications: symbol tables for compilers, combinatorial games like chess
-  * pefect hashing functions are over-optimistic and not practical =>
-    usually we have imperfect hashing functions that cause 'collisions'
-  * closed hashing: elements of the table are linked lists. 
-  * birthday collision 'paradox' and how it relates to hashing
+  * intro & some applications
+  * some defs:
+    * $M \subseteq T$. $M$: set of Elements of a certain type $T$, that
+      we want to store (or have stored) in a table and access via their keys.
+    * $m$: number of memory slots. 
+    * $|M|$: total number of elements stored in the table.
+    * $\text{key}: M\rightarrow Key$: Function that maps elements
+      to their key values
+    * $Key = im(key) = key[M]$:
+      the set of key values (the range of the key function)
+    * $h: Key\rightarrow [0, m)$: the **hashing function** that
+      maps key values to memory slots $0\dots m - 1$.
+  * **pefect hashing**: if there are more memory slots than
+    possible key values, $h$ can map each key to a single slot $\Rightarrow$ over-optimistic, we don't have so much memory, since
+    usually $|Key|\gg m$ (Number of possible key values much
+    greater than number of slots). 
+  * **imperfect hashing**: $\exists e_1, e_2\in M$ s.t.
+    $e_1 \neq e_2$ but $h(key(e_1)) = h(key(e_2))$. This is 
+    called **collision**. 
+  * **closed hashing**: an example for imperfect hashing
+    , where the elements of the table are simply linked lists, 
+    supporting the operations:
+    * `insert(e)`. Insert en element $e\in M$
+    * `remove(k)`. Remove an element $e$ whose key is $k$, 
+      returning $e$ 
+    * `find(k)`: Find element $e$ with the key `k`, return $e$
+      if found. 
+    * Time-complexities:
+      * `insert(e)`: $\mathcal{O}(1)$
+      * `remove(k)`: $\mathcal{O}(\text{List length})$
+      * `find(k)`: $\mathcal{O}(\text{List length})$
+      * worst case: bad hash function that maps all keys 
+        to the same slot ! $\Rightarrow \mathcal{O}(|M|)$ 
+    * Stochastic analysis of **random hash functions** & proofs 
+      of (with an introductory discussion of birthday paradox):
+      * theorem: random hash function is likely to be perfect 
+        if $m \in \Omega(n^2)$
+      * theorem: random hash functions lead to lists of length
+        $\mathcal{O}(1)$, if $|M| \in \mathcal{O}(m)$
 
 ## Week 1
 
