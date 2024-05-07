@@ -81,7 +81,7 @@
     "href": "ss24/alda/sum.html#week-4",
     "title": "Weekly Summary",
     "section": "Week 4",
-    "text": "Week 4\n\nLecture 1\ndate: 6/5/24\n\namortized complexity\nlists vs arrays\nstacks and queues - introductory discussions\n\ndouble-ended queues\n\n\n\n\nLecture 2\ndate:"
+    "text": "Week 4\n\nLecture 1\ndate: 6/5/24\n\namortized complexity\nlists vs arrays\nstacks and queues - introductory discussions\n\ndouble-ended queues\n\n\n\n\nLecture 2\ndate: 07/05/24\n\ndivision operation optimization by the compiler (or assembly) when dividing by a constant this cannot be done if we divide by a variable.\nbook recommendation: Hacker’s Delight\nHashing:\n\nhash tables\napplications: symbol tables for compilers, combinatorial games like chess\npefect hashing functions are over-optimistic and not practical =&gt; usually we have hashing functions that cause ‘collisions’\nclosed hashing: components of the table are linked lists.\nbirthday collision ‘paradox’ and how it relates to hashing"
   },
   {
     "objectID": "ss24/alda/sum.html#week-1-1",
