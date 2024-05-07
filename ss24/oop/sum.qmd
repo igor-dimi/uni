@@ -59,6 +59,7 @@ title: Weekly Summary
 
 **date**: 02/05/24 - Thursday
 
+* slides: 02 - standard
 * review of past lecture:
   * templates
   * typedef
@@ -96,11 +97,24 @@ title: Weekly Summary
   * `exception`: error handling mechanism for situation that should not be the norm
     * discussion of exceptions
 
-## Week 1
+## Week 4
 
 ### Lecture 1
 
-**date**: 
+**date**: 06/05/24
+
+* slides: 03 - advanced
+* Inheritence & dynamic polymorphism further discussions.
+* polymorphism
+  * static polymorphism $\approx$ **early binding**
+  * dynamic polymorphism $\approx$ **late binding**
+  * simple c++ illustration with the keyword `virtual`, references etc...  
+  * c++ implementation of dynamic polymorphism using `vtables` (dispatch tables).
+  * cost of polymorphism
+  * copying polymorphic types
+* abstract base class (with a pure vitual function)
+* factory pattern (it is a **creational pattern**)
+* 
 
 ### Lecture 2
 
