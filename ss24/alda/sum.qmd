@@ -87,11 +87,11 @@ R(n) &= a, &&\text{if n = 1} \\
   this cannot be done if we divide by a variable.
 * book recommendation: Hacker's Delight
 * Hashing:
-  * hash tables
+  * introductory discussion
   * applications: symbol tables for compilers, combinatorial games like chess
   * pefect hashing functions are over-optimistic and not practical =>
-    usually we have hashing functions that cause 'collisions'
-  * closed hashing: components of the table are linked lists. 
+    usually we have imperfect hashing functions that cause 'collisions'
+  * closed hashing: elements of the table are linked lists. 
   * birthday collision 'paradox' and how it relates to hashing
 
 ## Week 1
