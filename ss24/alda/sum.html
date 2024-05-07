@@ -284,7 +284,7 @@ R(n) &amp;= a, &amp;&amp;\text{if n = 1} \\
 <li>time complexity of array memory allocation in c++ with <code>alloc()</code>: an experiment</li>
 <li><code>pushBack()</code> and <code>popBack()</code> for arrays
 <ul>
-<li>their realization and (ammortised) complexity</li>
+<li>their realization and complexity</li>
 </ul></li>
 </ul></li>
 </ul>
@@ -296,27 +296,56 @@ R(n) &amp;= a, &amp;&amp;\text{if n = 1} \\
 <h3 class="anchored" data-anchor-id="lecture-1-3">Lecture 1</h3>
 <p><strong>date</strong>: 6/5/24</p>
 <ul>
-<li>amortized complexity</li>
-<li>lists vs arrays</li>
+<li>introduction to amortized complexity
+<ul>
+<li>amortized complexity analysis of <code>pushBack()</code> and <code>popBack()</code> operations: both <span class="math inline">\(\mathcal{O}(1)\)</span></li>
+</ul></li>
 <li>stacks and queues - introductory discussions
 <ul>
 <li>double-ended queues</li>
 </ul></li>
+<li>ring buffer implementation of a queue</li>
+<li>introduction to hashing</li>
 </ul>
 </section>
 <section id="lecture-2-3" class="level3">
 <h3 class="anchored" data-anchor-id="lecture-2-3">Lecture 2</h3>
 <p><strong>date</strong>: 07/05/24</p>
 <ul>
-<li>division operation optimization by the compiler (or assembly) when dividing by a constant this cannot be done if we divide by a variable.</li>
+<li>division by a constant is optimized by the compiler (this cannot be done for division by a variable)</li>
 <li>book recommendation: Hacker’s Delight</li>
 <li>Hashing:
 <ul>
-<li>hash tables</li>
-<li>applications: symbol tables for compilers, combinatorial games like chess</li>
-<li>pefect hashing functions are over-optimistic and not practical =&gt; usually we have hashing functions that cause ‘collisions’</li>
-<li>closed hashing: components of the table are linked lists.</li>
-<li>birthday collision ‘paradox’ and how it relates to hashing</li>
+<li>intro &amp; some applications</li>
+<li>some defs:
+<ul>
+<li><span class="math inline">\(M \subseteq T\)</span>. <span class="math inline">\(M\)</span>: set of Elements of a certain type <span class="math inline">\(T\)</span>, that we want to store in a table and access via their keys.</li>
+<li><span class="math inline">\(m\)</span>: number of memory slots.</li>
+<li><span class="math inline">\(|M|\)</span>: total number of elements we want to store.</li>
+<li><span class="math inline">\(\text{key}: M\rightarrow Key\)</span>: Function that maps elements to their key values</li>
+<li><span class="math inline">\(Key = im(key) = key[M]\)</span>: the set of key values (the range of the key function)</li>
+<li><span class="math inline">\(h: Key\rightarrow [0, m)\)</span>: the <strong>hashing function</strong> that maps key values to memory slots <span class="math inline">\(0\dots m - 1\)</span>.</li>
+</ul></li>
+<li><strong>pefect hashing</strong>: if there are more memory slots than possible key values, <span class="math inline">\(h\)</span> can map each key to a single slot <span class="math inline">\(\Rightarrow\)</span> over-optimistic, we don’t have so much memory, since usually <span class="math inline">\(|Key|\gg m\)</span> (Number of possible key values much greater than number of slots).</li>
+<li><strong>imperfect hashing</strong>: <span class="math inline">\(\exists e_1, e_2\in M\)</span> s.t. <span class="math inline">\(e_1 \neq e_2\)</span> but <span class="math inline">\(h(key(e_1)) = h(key(e_2))\)</span>. This is called <strong>collision</strong>.</li>
+<li><strong>closed hashing</strong>: an example for imperfect hashing , where the elements of the table are simply linked lists, supporting the operations:
+<ul>
+<li><code>insert(e)</code>. Insert en element <span class="math inline">\(e\in M\)</span></li>
+<li><code>remove(k)</code>. Remove an element <span class="math inline">\(e\)</span> whose key is <span class="math inline">\(k\)</span>, returning <span class="math inline">\(e\)</span></li>
+<li><code>find(k)</code>: Find element <span class="math inline">\(e\)</span> with the key <code>k</code>, return <span class="math inline">\(e\)</span> if found.</li>
+<li>Time-complexities:
+<ul>
+<li><code>insert(e)</code>: <span class="math inline">\(\mathcal{O}(1)\)</span></li>
+<li><code>remove(k)</code>: <span class="math inline">\(\mathcal{O}(\text{List length})\)</span></li>
+<li><code>find(k)</code>: <span class="math inline">\(\mathcal{O}(\text{List length})\)</span></li>
+<li>worst case: bad hash function that maps all keys to the same slot ! <span class="math inline">\(\Rightarrow \mathcal{O}(|M|)\)</span></li>
+</ul></li>
+<li>Stochastic analysis of <strong>random hash functions</strong> &amp; proofs of (with an introductory discussion of birthday paradox):
+<ul>
+<li>theorem: random hash function is likely to be perfect if <span class="math inline">\(m \in \Omega(n^2)\)</span></li>
+<li>theorem: random hash functions lead to lists of length <span class="math inline">\(\mathcal{O}(1)\)</span>, if <span class="math inline">\(|M| \in \mathcal{O}(m)\)</span></li>
+</ul></li>
+</ul></li>
 </ul></li>
 </ul>
 </section>
