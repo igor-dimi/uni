@@ -81,7 +81,18 @@ R(n) &= a, &&\text{if n = 1} \\
 
 ### Lecture 2
 
-**date**:
+**date**: 07/05/24
+
+* division operation optimization by the compiler (or assembly) when dividing by a constant
+  this cannot be done if we divide by a variable.
+* book recommendation: Hacker's Delight
+* Hashing:
+  * hash tables
+  * applications: symbol tables for compilers, combinatorial games like chess
+  * pefect hashing functions are over-optimistic and not practical =>
+    usually we have hashing functions that cause 'collisions'
+  * closed hashing: components of the table are linked lists. 
+  * birthday collision 'paradox' and how it relates to hashing
 
 ## Week 1
 
