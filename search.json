@@ -84,6 +84,13 @@
     "text": "Week 4\n\nLecture 1\ndate: 6/5/24\n\nintroduction to amortized complexity\n\namortized complexity analysis of pushBack() and popBack() operations: both \\(\\mathcal{O}(1)\\)\n\nstacks and queues - introductory discussions\n\ndouble-ended queues\n\nring buffer implementation of a queue\nintroduction to hashing\n\n\n\nLecture 2\ndate: 07/05/24\n\ndivision by a constant is optimized by the compiler (this cannot be done for division by a variable)\nbook recommendation: Hacker’s Delight\nHashing:\n\nintro & some applications\nsome defs:\n\n\\(M \\subseteq T\\). \\(M\\): set of Elements of a certain type \\(T\\), that we want to store (or have stored) in a table and access via their keys.\n\\(m\\): number of memory slots.\n\\(|M|\\): total number of elements stored in the table.\n\\(\\text{key}: M\\rightarrow Key\\): Function that maps elements to their key values\n\\(Key = im(key) = key[M]\\): the set of key values (the range of the key function)\n\\(h: Key\\rightarrow [0, m)\\): the hashing function that maps key values to memory slots \\(0\\dots m - 1\\).\n\npefect hashing: if there are more memory slots than possible key values, \\(h\\) can map each key to a single slot \\(\\Rightarrow\\) over-optimistic, we don’t have so much memory, since usually \\(|Key|\\gg m\\) (Number of possible key values much greater than number of slots).\nimperfect hashing: \\(\\exists e_1, e_2\\in M\\) s.t. \\(e_1 \\neq e_2\\) but \\(h(key(e_1)) = h(key(e_2))\\). This is called collision.\nclosed hashing: an example for imperfect hashing , where the elements of the table are simply linked lists, supporting the operations:\n\ninsert(e). Insert en element \\(e\\in M\\)\nremove(k). Remove an element \\(e\\) whose key is \\(k\\), returning \\(e\\)\nfind(k): Find element \\(e\\) with the key k, return \\(e\\) if found.\nTime-complexities:\n\ninsert(e): \\(\\mathcal{O}(1)\\)\nremove(k): \\(\\mathcal{O}(\\text{List length})\\)\nfind(k): \\(\\mathcal{O}(\\text{List length})\\)\nworst case: bad hash function that maps all keys to the same slot ! \\(\\Rightarrow \\mathcal{O}(|M|)\\)\n\nStochastic analysis of random hash functions & proofs of (with an introductory discussion of birthday paradox):\n\ntheorem: random hash function is likely to be perfect if \\(m \\in \\Omega(n^2)\\)\ntheorem: random hash functions lead to lists of length \\(\\mathcal{O}(1)\\), if \\(|M| \\in \\mathcal{O}(m)\\)"
   },
   {
+    "objectID": "ss24/alda/sum.html#week-5",
+    "href": "ss24/alda/sum.html#week-5",
+    "title": "Weekly Summary",
+    "section": "Week 5",
+    "text": "Week 5\n\nLecture 1\ndate: 13/5/24\n\nUniversal hashing functions: definition & Theorem 1 holds also for universal hashing functions\n\nA family of universal hashing functions, proof of theorem 1 for these functions\nanother example for a universal hashing function based on bit matrix multiplication\nexample: tabulation hashing\n\nopen hashing: a different way to resolve collisions, without using linked lists, instead looking for the next free table slot:\n\nadvantage: contigious address values \\(\\Rightarrow\\) less cache misses, faster.\nbounded linear probing:\n\ninsert & find algorithms, invariants.\nremove is more difficult \\(\\Rightarrow\\) its implementation.\n\n\nintro to sorting\n\nintro to insertion sort.\n\n\n\n\nLecture 2\ndate:"
+  },
+  {
     "objectID": "ss24/alda/sum.html#week-1-1",
     "href": "ss24/alda/sum.html#week-1-1",
     "title": "Weekly Summary",
@@ -149,13 +156,6 @@
   {
     "objectID": "ss24/alda/sum.html#week-1-10",
     "href": "ss24/alda/sum.html#week-1-10",
-    "title": "Weekly Summary",
-    "section": "Week 1",
-    "text": "Week 1\n\nLecture 1\ndate:\n\n\nLecture 2\ndate:"
-  },
-  {
-    "objectID": "ss24/alda/sum.html#week-1-11",
-    "href": "ss24/alda/sum.html#week-1-11",
     "title": "Weekly Summary",
     "section": "Week 1",
     "text": "Week 1\n\nLecture 1\ndate:\n\n\nLecture 2\ndate:"
