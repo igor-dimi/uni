@@ -130,11 +130,28 @@ R(n) &= a, &&\text{if n = 1} \\
       * theorem: random hash functions lead to lists of length
         $\mathcal{O}(1)$, if $|M| \in \mathcal{O}(m)$
 
-## Week 1
+## Week 5
 
 ### Lecture 1
 
-**date**: 
+**date**: 13/5/24
+
+* Universal hashing functions: definition & Theorem 1 holds also for universal
+  hashing functions
+  * A family of universal hashing functions, 
+    proof of theorem 1 for these functions
+  * another example for a universal hashing function based on bit matrix 
+    multiplication
+  * example: tabulation hashing
+* **open hashing**: a different way to resolve collisions, without using 
+  linked lists, instead looking for the next free table slot:
+  * advantage: contigious address values $\Rightarrow$ less cache misses, faster.
+  * bounded linear probing: 
+    * insert & find algorithms, invariants. 
+    * remove is more difficult $\Rightarrow$ its implementation.
+* intro to **sorting**
+  * intro to **insertion sort**. 
+
 
 ### Lecture 2
 
