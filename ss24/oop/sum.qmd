@@ -120,11 +120,19 @@ title: Weekly Summary
 
 **date**:
 
-## Week 1
+**holiday**
+
+## Week 5
 
 ### Lecture 1
 
-**date**: 
+**date**: 13/5/24
+
+* solutions to the exercise sheet 2
+* presentations:
+  * git branches & tags
+  * IDE's
+  * valgrind
 
 ### Lecture 2
 
