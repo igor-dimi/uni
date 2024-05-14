@@ -249,7 +249,14 @@
     "href": "ss24/oop/sum.html#week-4",
     "title": "Weekly Summary",
     "section": "Week 4",
-    "text": "Week 4\n\nLecture 1\ndate: 06/05/24\n\nslides: 03 - advanced\nInheritence & dynamic polymorphism further discussions.\npolymorphism\n\nstatic polymorphism \\(\\approx\\) early binding\ndynamic polymorphism \\(\\approx\\) late binding\nsimple c++ illustration with the keyword virtual, references etc…\n\nc++ implementation of dynamic polymorphism using vtables (dispatch tables).\ncost of polymorphism\ncopying polymorphic types\n\nabstract base class (with a pure vitual function)\nfactory pattern (it is a creational pattern)\n\n\n\n\nLecture 2\ndate:"
+    "text": "Week 4\n\nLecture 1\ndate: 06/05/24\n\nslides: 03 - advanced\nInheritence & dynamic polymorphism further discussions.\npolymorphism\n\nstatic polymorphism \\(\\approx\\) early binding\ndynamic polymorphism \\(\\approx\\) late binding\nsimple c++ illustration with the keyword virtual, references etc…\n\nc++ implementation of dynamic polymorphism using vtables (dispatch tables).\ncost of polymorphism\ncopying polymorphic types\n\nabstract base class (with a pure vitual function)\nfactory pattern (it is a creational pattern)\n\n\n\n\nLecture 2\ndate:\nholiday"
+  },
+  {
+    "objectID": "ss24/oop/sum.html#week-5",
+    "href": "ss24/oop/sum.html#week-5",
+    "title": "Weekly Summary",
+    "section": "Week 5",
+    "text": "Week 5\n\nLecture 1\ndate: 13/5/24\n\nsolutions to the exercise sheet 2\npresentations:\n\ngit branches & tags\nIDE’s\nvalgrind\n\n\n\n\nLecture 2\ndate:"
   },
   {
     "objectID": "ss24/oop/sum.html#week-1-1",
@@ -317,13 +324,6 @@
   {
     "objectID": "ss24/oop/sum.html#week-1-10",
     "href": "ss24/oop/sum.html#week-1-10",
-    "title": "Weekly Summary",
-    "section": "Week 1",
-    "text": "Week 1\n\nLecture 1\ndate:\n\n\nLecture 2\ndate:"
-  },
-  {
-    "objectID": "ss24/oop/sum.html#week-1-11",
-    "href": "ss24/oop/sum.html#week-1-11",
     "title": "Weekly Summary",
     "section": "Week 1",
     "text": "Week 1\n\nLecture 1\ndate:\n\n\nLecture 2\ndate:"
