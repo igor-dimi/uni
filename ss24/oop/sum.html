@@ -321,7 +321,7 @@ ul.task-list li input[type="checkbox"] {
 <li>sequences <span class="math inline">\(\approx\)</span> arrays: array, vector, deque, list, forward list</li>
 <li>container adaptors stack, queue, priority queue</li>
 <li>associative containers <span class="math inline">\(\approx\)</span> hash map: set, multiset, map, multimap</li>
-<li>unsorted associative contianers: unordered set/multiset/map/multimap</li>
+<li>unsorted associative containers: unordered set/multiset/map/multimap</li>
 </ul></li>
 <li>iterators: generalization of <strong>pointer</strong> concept, they can be dereferenced and advanced to show to the subsequent element</li>
 <li>algorithms: tailored to dfferent iterator categories, make full use of the capabilities of the container.
@@ -361,7 +361,6 @@ ul.task-list li input[type="checkbox"] {
 </ul></li>
 <li>abstract base class (with a pure vitual function)</li>
 <li>factory pattern (it is a <strong>creational pattern</strong>)</li>
-<li></li>
 </ul>
 </section>
 <section id="lecture-2-3" class="level3">
@@ -387,7 +386,46 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="lecture-2-4" class="level3">
 <h3 class="anchored" data-anchor-id="lecture-2-4">Lecture 2</h3>
-<p><strong>date</strong>:</p>
+<p><strong>date</strong>: 16/5/24</p>
+<ul>
+<li>c++ 11 features: (slide 95)
+<ul>
+<li>automatic type deduction</li>
+<li>trailing return type</li>
+<li>move semantics. Before c++ 11 there were two types of variables:
+<ul>
+<li><strong>values</strong>: assignment creates a new independent entity</li>
+<li><strong>references and pointers</strong>: assignment creates and alias</li>
+<li>copy constructor:
+<ul>
+<li>deep copy <span class="math inline">\(\Rightarrow\)</span> <strong>value semantics</strong></li>
+<li>shallow copy <span class="math inline">\(\Rightarrow\)</span> <strong>reference semantics</strong></li>
+</ul></li>
+<li>c++ 11: third type of semantics: <strong>move semantics</strong></li>
+<li>forwarding references <strong>are not</strong></li>
+</ul></li>
+<li>smart pointers
+<ul>
+<li>unique pointers: <code>unique_ptr</code></li>
+<li>shared pointers: <code>shared_ptr</code></li>
+<li>weak pointers (non-owning): <code>weak_ptr</code></li>
+<li>raw pointer usage should be avoided</li>
+<li>so basically in modern c++ two types of pointers
+<ul>
+<li><strong>owning pointers</strong>: <code>unique_ptr</code>, <code>shared_ptr</code></li>
+<li><strong>non-owning pointers</strong>: <code>weak_ptr</code></li>
+</ul></li>
+<li>pitfalls:</li>
+</ul></li>
+<li>lambda expressions &amp; closures: generalization of functors in c++
+<ul>
+<li>currying: <span class="math inline">\((\mathbb{N} \times \mathbb{N}) \rightarrow \mathbb{N} \equiv \mathbb{N} \rightarrow (\mathbb{N} \rightarrow \mathbb{N})\)</span></li>
+<li>builder pattern with lambda functions</li>
+</ul></li>
+<li>random number generators</li>
+<li>time measurement (slide 123)</li>
+</ul></li>
+</ul>
 </section>
 </section>
 <section id="week-1-1" class="level2">
