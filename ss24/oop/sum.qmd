@@ -85,7 +85,7 @@ title: Weekly Summary
     * sequences $\approx$ arrays: array, vector, deque, list, forward list
     * container adaptors stack, queue, priority queue
     * associative containers $\approx$ hash map: set, multiset, map, multimap
-    * unsorted associative contianers: unordered set/multiset/map/multimap
+    * unsorted associative containers: unordered set/multiset/map/multimap
   * iterators: generalization of **pointer** concept, they can be dereferenced and advanced
     to show to the subsequent element
   * algorithms: tailored to dfferent iterator categories, make full use of the capabilities of the 
@@ -114,7 +114,6 @@ title: Weekly Summary
   * copying polymorphic types
 * abstract base class (with a pure vitual function)
 * factory pattern (it is a **creational pattern**)
-* 
 
 ### Lecture 2
 
@@ -136,7 +135,33 @@ title: Weekly Summary
 
 ### Lecture 2
 
-**date**:
+**date**: 16/5/24
+
+* c++ 11 features: (slide 95)
+  * automatic type deduction 
+  * trailing return type
+  * move semantics. Before c++ 11 there were two types of variables:
+    * **values**: assignment creates a new independent entity
+    * **references and pointers**: assignment creates and alias
+    * copy constructor:
+      * deep copy $\Rightarrow$ **value semantics**
+      * shallow copy $\Rightarrow$ **reference semantics**
+    * c++ 11: third type of semantics: **move semantics**
+    * forwarding references **are not** 
+  * smart pointers
+    * unique pointers: `unique_ptr`
+    * shared pointers: `shared_ptr`
+    * weak pointers (non-owning): `weak_ptr`
+    * raw pointer usage should be avoided
+    * so basically in modern c++ two types of pointers
+      * **owning pointers**: `unique_ptr`, `shared_ptr`
+      * **non-owning pointers**: `weak_ptr`
+    * pitfalls: 
+  * lambda expressions & closures: generalization of functors in c++
+    * currying: $(\mathbb{N} \times \mathbb{N}) \rightarrow \mathbb{N} \equiv \mathbb{N} \rightarrow (\mathbb{N} \rightarrow \mathbb{N})$
+    * builder pattern with lambda functions 
+  * random number generators 
+  * time measurement (slide 123)
 
 ## Week 1
 
