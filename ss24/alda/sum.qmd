@@ -157,15 +157,42 @@ R(n) &= a, &&\text{if n = 1} \\
 
 **date**:
 
-## Week 1
+## Week 6
 
 ### Lecture 1
 
-**date**: 
+**date**: 20/05/24
+
+* online: 
 
 ### Lecture 2
 
-**date**:
+**date**: 21/05/24
+
+* programming example with compiler explorer: 
+  fibonacci iterative and recursive implementation, gcc optimization.
+  (short detour: call stack)
+  compiler can automatically implement **tail recursion**. 
+* insertion algorithms: 
+  * **insertion sort**: pseudo-code implementation.
+  * **merge sort**: 
+    * divide and conquer, 
+    * merging ($\mathcal{O}(n))$)
+    * time-complexity of merge sort: 
+      assuming (without loss of generality) $n = 2^k$ leads to master theorem.
+      (wlog: we can extend a list to be $2^k$)
+  * $\Theta(n\cdot\log(n))$ is the best we can do for **comparison-based sorting**
+    * definition of comparison-based sorting, fundamental operations
+    * any such algorithm must at least be able to differentiate between all $n!$
+      permutations of the list $\Rightarrow$ lower-bound analysis via a comparison tree. 
+
+      ![partial integration](imgs/partial-integral-sorting.png){width="25%"}
+
+  * **quicksort**: divide-and-conquer, but "reversed" 
+    * complexity of quicksort (worst case is $\mathcal{O}(n^2))$
+    * **Pivot** is always the **median** $\Rightarrow$ $\mathcal{O}(n\cdot\log{n})$
+
+
 
 ## Week 1
 
