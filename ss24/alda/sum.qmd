@@ -191,8 +191,11 @@ R(n) &= a, &&\text{if n = 1} \\
   * **quicksort**: divide-and-conquer, but "reversed" 
     * complexity of quicksort (worst case is $\mathcal{O}(n^2))$
     * **Pivot** is always the **median** $\Rightarrow$ $\mathcal{O}(n\cdot\log{n})$
+<<<<<<< HEAD
     * **problem**: finding the median (a good pivot) is not easy. 
     * complexity-analysis: 
+=======
+>>>>>>> e21f2466a3839e44a1101b5d843dc7cba7de17a5
 
 
 
