@@ -18,35 +18,51 @@
     "href": "ws23-24/index.html#courses",
     "title": "WS 23/24",
     "section": "Courses",
-    "text": "Courses\n\nNum\nIPI"
+    "text": "Courses\n\nNum\nIPI",
+    "crumbs": [
+      "Bachelor",
+      "WS 23/24"
+    ]
   },
   {
     "objectID": "ss24/r/index.html",
     "href": "ss24/r/index.html",
     "title": "R Programming",
     "section": "",
-    "text": "R Programming and its Applications to Stochastic"
+    "text": "R Programming and its Applications to Stochastic",
+    "crumbs": [
+      "R Programming"
+    ]
   },
   {
     "objectID": "ss24/r/index.html#section",
     "href": "ss24/r/index.html#section",
     "title": "R Programming",
     "section": "",
-    "text": "weekly summary\nnotes\nsolutions"
+    "text": "weekly summary\nnotes\nsolutions",
+    "crumbs": [
+      "R Programming"
+    ]
   },
   {
     "objectID": "ss24/oop/index.html",
     "href": "ss24/oop/index.html",
     "title": "OOP Sci",
     "section": "",
-    "text": "Object Oriented Programming for Scientific Computing"
+    "text": "Object Oriented Programming for Scientific Computing",
+    "crumbs": [
+      "OOP Sci"
+    ]
   },
   {
     "objectID": "ss24/oop/index.html#section",
     "href": "ss24/oop/index.html#section",
     "title": "OOP Sci",
     "section": "",
-    "text": "weekly summary\nnotes\nsol"
+    "text": "weekly summary\nnotes\nsol",
+    "crumbs": [
+      "OOP Sci"
+    ]
   },
   {
     "objectID": "ss24/alda/sum.html",
@@ -95,7 +111,7 @@
     "href": "ss24/alda/sum.html#week-6",
     "title": "Weekly Summary",
     "section": "Week 6",
-    "text": "Week 6\n\nLecture 1\ndate: 20/05/24\n\nonline:\n\n\n\nLecture 2\ndate: 21/05/24\n\nprogramming example with compiler explorer: fibonacci iterative and recursive implementation, gcc optimization. (short detour: call stack) compiler can automatically implement tail recursion.\ninsertion algorithms:\n\ninsertion sort: pseudo-code implementation.\nmerge sort:\n\ndivide and conquer,\nmerging (\\(\\mathcal{O}(n))\\))\ntime-complexity of merge sort: assuming (without loss of generality) \\(n = 2^k\\) leads to master theorem. (wlog: we can extend a list to be \\(2^k\\))\n\n\\(\\Theta(n\\cdot\\log(n))\\) is the best we can do for comparison-based sorting\n\ndefinition of comparison-based sorting, fundamental operations\nany such algorithm must at least be able to differentiate between all \\(n!\\) permutations of the list \\(\\Rightarrow\\) lower-bound analysis via a comparison tree.\n\n\n\npartial integration\n\n\n\nquicksort: divide-and-conquer, but “reversed”\n\ncomplexity of quicksort (worst case is \\(\\mathcal{O}(n^2))\\)\nPivot is always the median \\(\\Rightarrow\\) \\(\\mathcal{O}(n\\cdot\\log{n})\\) &lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD\nproblem: finding the median (a good pivot) is not easy.\ncomplexity-analysis:\n\n\n\n\n\n\n\ne21f2466a3839e44a1101b5d843dc7cba7de17a5"
+    "text": "Week 6\n\nLecture 1\ndate: 20/05/24\n\nonline:\n\n\n\nLecture 2\ndate: 21/05/24\n\nprogramming example with compiler explorer: fibonacci iterative and recursive implementation, gcc optimization. (short detour: call stack) compiler can automatically implement tail recursion.\ninsertion algorithms:\n\ninsertion sort: pseudo-code implementation.\nmerge sort:\n\ndivide and conquer,\nmerging (\\(\\mathcal{O}(n))\\))\ntime-complexity of merge sort: assuming (without loss of generality) \\(n = 2^k\\) leads to master theorem. (wlog: we can extend a list to be \\(2^k\\))\n\n\\(\\Theta(n\\cdot\\log(n))\\) is the best we can do for comparison-based sorting\n\ndefinition of comparison-based sorting, fundamental operations\nany such algorithm must at least be able to differentiate between all \\(n!\\) permutations of the list \\(\\Rightarrow\\) lower-bound analysis via a comparison tree.\n\n\n\npartial integration\n\n\n\nquicksort: divide-and-conquer, but “reversed”\n\ncomplexity of quicksort (worst case is \\(\\mathcal{O}(n^2))\\)\nPivot is always the median \\(\\Rightarrow\\) \\(\\mathcal{O}(n\\cdot\\log{n})\\)\nproblem: finding the median (a good pivot) is not easy.\ncomplexity-analysis:"
   },
   {
     "objectID": "ss24/alda/sum.html#week-1-1",
@@ -200,21 +216,31 @@
     "href": "ss24/alda/index.html",
     "title": "Alda",
     "section": "",
-    "text": "Algorithms and Data Structures"
+    "text": "Algorithms and Data Structures",
+    "crumbs": [
+      "Alda"
+    ]
   },
   {
     "objectID": "ss24/alda/index.html#section",
     "href": "ss24/alda/index.html#section",
     "title": "Alda",
     "section": "",
-    "text": "weekly summary\nnotes\nsolutions"
+    "text": "weekly summary\nnotes\nsolutions",
+    "crumbs": [
+      "Alda"
+    ]
   },
   {
     "objectID": "ss24/index.html#courses",
     "href": "ss24/index.html#courses",
     "title": "SS 24",
     "section": "Courses",
-    "text": "Courses\n\nAlda\nR\nOOP"
+    "text": "Courses\n\nAlda\nR\nOOP",
+    "crumbs": [
+      "Bachelor",
+      "SS 24"
+    ]
   },
   {
     "objectID": "ss24/oop/sum.html",
@@ -445,13 +471,19 @@
     "href": "ws23-24/ipi/ipi.html",
     "title": "IPI",
     "section": "",
-    "text": "weekly summary\nnotes\nsolutions\ncourse website"
+    "text": "weekly summary\nnotes\nsolutions\ncourse website",
+    "crumbs": [
+      "IPI"
+    ]
   },
   {
     "objectID": "ws23-24/num/num.html",
     "href": "ws23-24/num/num.html",
     "title": "Numerics 0",
     "section": "",
-    "text": "weekly summary\nnotes\nsolutions"
+    "text": "weekly summary\nnotes\nsolutions",
+    "crumbs": [
+      "Numerics 0"
+    ]
   }
 ]
