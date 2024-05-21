@@ -91,6 +91,13 @@
     "text": "Week 5\n\nLecture 1\ndate: 13/5/24\n\nUniversal hashing functions: definition & Theorem 1 holds also for universal hashing functions\n\nA family of universal hashing functions, proof of theorem 1 for these functions\nanother example for a universal hashing function based on bit matrix multiplication\nexample: tabulation hashing\n\nopen hashing: a different way to resolve collisions, without using linked lists, instead looking for the next free table slot:\n\nadvantage: contigious address values \\(\\Rightarrow\\) less cache misses, faster.\nbounded linear probing:\n\ninsert & find algorithms, invariants.\nremove is more difficult \\(\\Rightarrow\\) its implementation.\n\n\nintro to sorting\n\nintro to insertion sort.\n\n\n\n\nLecture 2\ndate:"
   },
   {
+    "objectID": "ss24/alda/sum.html#week-6",
+    "href": "ss24/alda/sum.html#week-6",
+    "title": "Weekly Summary",
+    "section": "Week 6",
+    "text": "Week 6\n\nLecture 1\ndate: 20/05/24\n\nonline:\n\n\n\nLecture 2\ndate: 21/05/24\n\nprogramming example with compiler explorer: fibonacci iterative and recursive implementation, gcc optimization. (short detour: call stack) compiler can automatically implement tail recursion.\ninsertion algorithms:\n\ninsertion sort: pseudo-code implementation.\nmerge sort:\n\ndivide and conquer,\nmerging (\\(\\mathcal{O}(n))\\))\ntime-complexity of merge sort: assuming (without loss of generality) \\(n = 2^k\\) leads to master theorem. (wlog: we can extend a list to be \\(2^k\\))\n\n\\(\\Theta(n\\cdot\\log(n))\\) is the best we can do for comparison-based sorting\n\ndefinition of comparison-based sorting, fundamental operations\nany such algorithm must at least be able to differentiate between all \\(n!\\) permutations of the list \\(\\Rightarrow\\) lower-bound analysis via a comparison tree.\n\n\n\npartial integration\n\n\n\nquicksort: divide-and-conquer, but “reversed”\n\ncomplexity of quicksort (worst case is \\(\\mathcal{O}(n^2))\\)\nPivot is always the median \\(\\Rightarrow\\) \\(\\mathcal{O}(n\\cdot\\log{n})\\)"
+  },
+  {
     "objectID": "ss24/alda/sum.html#week-1-1",
     "href": "ss24/alda/sum.html#week-1-1",
     "title": "Weekly Summary",
@@ -149,13 +156,6 @@
   {
     "objectID": "ss24/alda/sum.html#week-1-9",
     "href": "ss24/alda/sum.html#week-1-9",
-    "title": "Weekly Summary",
-    "section": "Week 1",
-    "text": "Week 1\n\nLecture 1\ndate:\n\n\nLecture 2\ndate:"
-  },
-  {
-    "objectID": "ss24/alda/sum.html#week-1-10",
-    "href": "ss24/alda/sum.html#week-1-10",
     "title": "Weekly Summary",
     "section": "Week 1",
     "text": "Week 1\n\nLecture 1\ndate:\n\n\nLecture 2\ndate:"
@@ -259,6 +259,13 @@
     "text": "Week 5\n\nLecture 1\ndate: 13/5/24\n\nsolutions to the exercise sheet 2\npresentations:\n\ngit branches & tags\nIDE’s\nvalgrind\n\n\n\n\nLecture 2\ndate: 16/5/24\n\nc++ 11 features: (slide 95)\n\nautomatic type deduction\ntrailing return type\nmove semantics. Before c++ 11 there were two types of variables:\n\nvalues: assignment creates a new independent entity\nreferences and pointers: assignment creates and alias\ncopy constructor:\n\ndeep copy \\(\\Rightarrow\\) value semantics\nshallow copy \\(\\Rightarrow\\) reference semantics\n\nc++ 11: third type of semantics: move semantics\nforwarding references are not\n\nsmart pointers\n\nunique pointers: unique_ptr\nshared pointers: shared_ptr\nweak pointers (non-owning): weak_ptr\nraw pointer usage should be avoided\nso basically in modern c++ two types of pointers\n\nowning pointers: unique_ptr, shared_ptr\nnon-owning pointers: weak_ptr\n\npitfalls:\n\nlambda expressions & closures: generalization of functors in c++\n\ncurrying: \\((\\mathbb{N} \\times \\mathbb{N}) \\rightarrow \\mathbb{N} \\equiv \\mathbb{N} \\rightarrow (\\mathbb{N} \\rightarrow \\mathbb{N})\\)\nbuilder pattern with lambda functions\n\nrandom number generators\ntime measurement (slide 123)"
   },
   {
+    "objectID": "ss24/oop/sum.html#week-6",
+    "href": "ss24/oop/sum.html#week-6",
+    "title": "Weekly Summary",
+    "section": "Week 6",
+    "text": "Week 6\n\nLecture 1\ndate: 20/05/24\n\nonline\n\n\n\nLecture 2\ndate: 21/05/24\n\nprogramming example with compiler explorer: fibonacci iterative and recursive implementation, gcc optimization. (short detour: call stack) compiler can automatically implement tail recursion.\ninsertion algorithms:\n\ninsertion sort: pseudo-code implementation.\nmerge sort:\n\ndivide and conquer,\nmerging (\\(\\mathcal{O}(n))\\))\ntime-complexity of merge sort: assuming (without loss of generality) \\(n = 2^k\\) leads to master theorem. (wlog: we can extend a list to be \\(2^k\\))"
+  },
+  {
     "objectID": "ss24/oop/sum.html#week-1-1",
     "href": "ss24/oop/sum.html#week-1-1",
     "title": "Weekly Summary",
@@ -317,13 +324,6 @@
   {
     "objectID": "ss24/oop/sum.html#week-1-9",
     "href": "ss24/oop/sum.html#week-1-9",
-    "title": "Weekly Summary",
-    "section": "Week 1",
-    "text": "Week 1\n\nLecture 1\ndate:\n\n\nLecture 2\ndate:"
-  },
-  {
-    "objectID": "ss24/oop/sum.html#week-1-10",
-    "href": "ss24/oop/sum.html#week-1-10",
     "title": "Weekly Summary",
     "section": "Week 1",
     "text": "Week 1\n\nLecture 1\ndate:\n\n\nLecture 2\ndate:"
