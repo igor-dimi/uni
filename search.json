@@ -95,7 +95,7 @@
     "href": "ss24/alda/sum.html#week-6",
     "title": "Weekly Summary",
     "section": "Week 6",
-    "text": "Week 6\n\nLecture 1\ndate: 20/05/24\n\nonline:\n\n\n\nLecture 2\ndate: 21/05/24\n\nprogramming example with compiler explorer: fibonacci iterative and recursive implementation, gcc optimization. (short detour: call stack) compiler can automatically implement tail recursion.\ninsertion algorithms:\n\ninsertion sort: pseudo-code implementation.\nmerge sort:\n\ndivide and conquer,\nmerging (\\(\\mathcal{O}(n))\\))\ntime-complexity of merge sort: assuming (without loss of generality) \\(n = 2^k\\) leads to master theorem. (wlog: we can extend a list to be \\(2^k\\))\n\n\\(\\Theta(n\\cdot\\log(n))\\) is the best we can do for comparison-based sorting\n\ndefinition of comparison-based sorting, fundamental operations\nany such algorithm must at least be able to differentiate between all \\(n!\\) permutations of the list \\(\\Rightarrow\\) lower-bound analysis via a comparison tree.\n\n\n\npartial integration\n\n\n\nquicksort: divide-and-conquer, but “reversed”\n\ncomplexity of quicksort (worst case is \\(\\mathcal{O}(n^2))\\)\nPivot is always the median \\(\\Rightarrow\\) \\(\\mathcal{O}(n\\cdot\\log{n})\\)"
+    "text": "Week 6\n\nLecture 1\ndate: 20/05/24\n\nonline:\n\n\n\nLecture 2\ndate: 21/05/24\n\nprogramming example with compiler explorer: fibonacci iterative and recursive implementation, gcc optimization. (short detour: call stack) compiler can automatically implement tail recursion.\ninsertion algorithms:\n\ninsertion sort: pseudo-code implementation.\nmerge sort:\n\ndivide and conquer,\nmerging (\\(\\mathcal{O}(n))\\))\ntime-complexity of merge sort: assuming (without loss of generality) \\(n = 2^k\\) leads to master theorem. (wlog: we can extend a list to be \\(2^k\\))\n\n\\(\\Theta(n\\cdot\\log(n))\\) is the best we can do for comparison-based sorting\n\ndefinition of comparison-based sorting, fundamental operations\nany such algorithm must at least be able to differentiate between all \\(n!\\) permutations of the list \\(\\Rightarrow\\) lower-bound analysis via a comparison tree.\n\n\n\npartial integration\n\n\n\nquicksort: divide-and-conquer, but “reversed”\n\ncomplexity of quicksort (worst case is \\(\\mathcal{O}(n^2))\\)\nPivot is always the median \\(\\Rightarrow\\) \\(\\mathcal{O}(n\\cdot\\log{n})\\) &lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD\nproblem: finding the median (a good pivot) is not easy.\ncomplexity-analysis:\n\n\n\n\n\n\n\ne21f2466a3839e44a1101b5d843dc7cba7de17a5"
   },
   {
     "objectID": "ss24/alda/sum.html#week-1-1",
@@ -263,7 +263,7 @@
     "href": "ss24/oop/sum.html#week-6",
     "title": "Weekly Summary",
     "section": "Week 6",
-    "text": "Week 6\n\nLecture 1\ndate: 20/05/24\n\nonline\n\n\n\nLecture 2\ndate: 21/05/24\n\nprogramming example with compiler explorer: fibonacci iterative and recursive implementation, gcc optimization. (short detour: call stack) compiler can automatically implement tail recursion.\ninsertion algorithms:\n\ninsertion sort: pseudo-code implementation.\nmerge sort:\n\ndivide and conquer,\nmerging (\\(\\mathcal{O}(n))\\))\ntime-complexity of merge sort: assuming (without loss of generality) \\(n = 2^k\\) leads to master theorem. (wlog: we can extend a list to be \\(2^k\\))"
+    "text": "Week 6\n\nLecture 1\ndate: 20/05/24\n\nholiday\n\n\n\nLecture 2\ndate: 23/05/24"
   },
   {
     "objectID": "ss24/oop/sum.html#week-1-1",
