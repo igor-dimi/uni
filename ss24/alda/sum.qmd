@@ -163,7 +163,7 @@ R(n) &= a, &&\text{if n = 1} \\
 
 **date**: 20/05/24
 
-* online: 
+* online: Heap data structure
 
 ### Lecture 2
 
@@ -200,11 +200,28 @@ R(n) &= a, &&\text{if n = 1} \\
 
 ### Lecture 1
 
-**date**: 
+**date**: 27/05/24
+
+* 
 
 ### Lecture 2
 
-**date**:
+**date**: 28/05/24
+
+* example: the c++ compiler optimizes calculation of middle value by generating assembly for r + (r - l) / 2
+  instead of (l + r) / 2, in order to reduce chance of overflow.
+* quicksort with tail-recursion to reduce stack depth (revisiion of the previous lecture)
+* quickselect algorithm from quicksort: 
+  can be used to determine the median of a sequence in $\mathcal{O}(n)$.
+* sorting faster than $\mathcal{\Omega}(n\log(n))$ (without comparisons): 
+  * KSort (**Bucketsort**), array implementation of bucketsort (in-place).
+  * $K^d$ Sort: Least Significant Digit **Radix Sorting**. 
+* **binary search**
+  * intermezzo: insertion sort in $\mathcal{O}(\log(n)\cdot n)$:
+    library sort [link](https://www3.cs.stonybrook.edu/~bender/newpub/BenderFaMo06-librarysort.pdf)
+
+
+
 
 ## Week 1
 
