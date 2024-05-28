@@ -175,14 +175,33 @@ title: Weekly Summary
 
 **date**: 23/05/24
 
+* solutions & presentations
 
-
-
-## Week 1
+## Week 7
 
 ### Lecture 1
 
-**date**: 
+**date**: 05/27/24
+
+* review of c++ 11 features from previews lectures:
+  * `auto` keyword: when to use it. 
+  * move constructors and move assignment
+  * shared pointers, weak pointers, unique pointers.
+  * lambda expressions, functors.
+  * random number generators
+* range based loops
+* advanced topics:
+  * inheritance and dynamic polymorphism
+  * resource acquisition is initialization (RAII)
+  * template specialization:
+    * function template specialization, vs
+    * class template specialization
+  * templates vs inheritance 
+    * achieving the same effect as dynamic polymorphism 
+      with static polymorphisdm $\Rightarrow$ **CRTP**
+      (curiously recurring template pattern)
+    * 
+
 
 ### Lecture 2
 
