@@ -111,14 +111,14 @@
     "href": "ss24/alda/sum.html#week-6",
     "title": "Weekly Summary",
     "section": "Week 6",
-    "text": "Week 6\n\nLecture 1\ndate: 20/05/24\n\nonline:\n\n\n\nLecture 2\ndate: 21/05/24\n\nprogramming example with compiler explorer: fibonacci iterative and recursive implementation, gcc optimization. (short detour: call stack) compiler can automatically implement tail recursion.\ninsertion algorithms:\n\ninsertion sort: pseudo-code implementation.\nmerge sort:\n\ndivide and conquer,\nmerging (\\(\\mathcal{O}(n))\\))\ntime-complexity of merge sort: assuming (without loss of generality) \\(n = 2^k\\) leads to master theorem. (wlog: we can extend a list to be \\(2^k\\))\n\n\\(\\Theta(n\\cdot\\log(n))\\) is the best we can do for comparison-based sorting\n\ndefinition of comparison-based sorting, fundamental operations\nany such algorithm must at least be able to differentiate between all \\(n!\\) permutations of the list \\(\\Rightarrow\\) lower-bound analysis via a comparison tree.\n\n\n\npartial integration\n\n\n\nquicksort: divide-and-conquer, but “reversed”\n\ncomplexity of quicksort (worst case is \\(\\mathcal{O}(n^2))\\)\nPivot is always the median \\(\\Rightarrow\\) \\(\\mathcal{O}(n\\cdot\\log{n})\\)\nproblem: finding the median (a good pivot) is not easy.\ncomplexity-analysis:"
+    "text": "Week 6\n\nLecture 1\ndate: 20/05/24\n\nonline: Heap data structure\n\n\n\nLecture 2\ndate: 21/05/24\n\nprogramming example with compiler explorer: fibonacci iterative and recursive implementation, gcc optimization. (short detour: call stack) compiler can automatically implement tail recursion.\ninsertion algorithms:\n\ninsertion sort: pseudo-code implementation.\nmerge sort:\n\ndivide and conquer,\nmerging (\\(\\mathcal{O}(n))\\))\ntime-complexity of merge sort: assuming (without loss of generality) \\(n = 2^k\\) leads to master theorem. (wlog: we can extend a list to be \\(2^k\\))\n\n\\(\\Theta(n\\cdot\\log(n))\\) is the best we can do for comparison-based sorting\n\ndefinition of comparison-based sorting, fundamental operations\nany such algorithm must at least be able to differentiate between all \\(n!\\) permutations of the list \\(\\Rightarrow\\) lower-bound analysis via a comparison tree.\n\n\n\npartial integration\n\n\n\nquicksort: divide-and-conquer, but “reversed”\n\ncomplexity of quicksort (worst case is \\(\\mathcal{O}(n^2))\\)\nPivot is always the median \\(\\Rightarrow\\) \\(\\mathcal{O}(n\\cdot\\log{n})\\)\nproblem: finding the median (a good pivot) is not easy.\ncomplexity-analysis:"
   },
   {
     "objectID": "ss24/alda/sum.html#week-1-1",
     "href": "ss24/alda/sum.html#week-1-1",
     "title": "Weekly Summary",
     "section": "Week 1",
-    "text": "Week 1\n\nLecture 1\ndate:\n\n\nLecture 2\ndate:"
+    "text": "Week 1\n\nLecture 1\ndate: 27/05/24\n\n\n\n\n\nLecture 2\ndate: 28/05/24\n\nexample: the c++ compiler optimizes calculation of middle value by generating assembly for r + (r - l) / 2 instead of (l + r) / 2, in order to reduce chance of overflow.\nquicksort with tail-recursion to reduce stack depth (revisiion of the previous lecture)\nquickselect algorithm from quicksort: can be used to determine the median of a sequence in \\(\\mathcal{O}(n)\\).\nsorting faster than \\(\\mathcal{\\Omega}(n\\log(n))\\) (without comparisons):\n\nKSort (Bucketsort), array implementation of bucketsort (in-place).\n\\(K^d\\) Sort: Least Significant Digit Radix Sorting.\n\nbinary search\n\nintermezzo: insertion sort in \\(\\mathcal{O}(\\log(n)\\cdot n)\\): library sort link"
   },
   {
     "objectID": "ss24/alda/sum.html#week-1-2",
@@ -289,7 +289,14 @@
     "href": "ss24/oop/sum.html#week-6",
     "title": "Weekly Summary",
     "section": "Week 6",
-    "text": "Week 6\n\nLecture 1\ndate: 20/05/24\n\nholiday\n\n\n\nLecture 2\ndate: 23/05/24"
+    "text": "Week 6\n\nLecture 1\ndate: 20/05/24\n\nholiday\n\n\n\nLecture 2\ndate: 23/05/24\n\nsolutions & presentations"
+  },
+  {
+    "objectID": "ss24/oop/sum.html#week-7",
+    "href": "ss24/oop/sum.html#week-7",
+    "title": "Weekly Summary",
+    "section": "Week 7",
+    "text": "Week 7\n\nLecture 1\ndate: 05/27/24\n\nreview of c++ 11 features from previews lectures:\n\nauto keyword: when to use it.\nmove constructors and move assignment\nshared pointers, weak pointers, unique pointers.\nlambda expressions, functors.\nrandom number generators\n\nrange based loops\nadvanced topics:\n\ninheritance and dynamic polymorphism\nresource acquisition is initialization (RAII)\ntemplate specialization:\n\nfunction template specialization, vs\nclass template specialization\n\ntemplates vs inheritance\n\nachieving the same effect as dynamic polymorphism with static polymorphisdm \\(\\Rightarrow\\) CRTP (curiously recurring template pattern)\n\n\n\n\n\n\nLecture 2\ndate:"
   },
   {
     "objectID": "ss24/oop/sum.html#week-1-1",
@@ -343,13 +350,6 @@
   {
     "objectID": "ss24/oop/sum.html#week-1-8",
     "href": "ss24/oop/sum.html#week-1-8",
-    "title": "Weekly Summary",
-    "section": "Week 1",
-    "text": "Week 1\n\nLecture 1\ndate:\n\n\nLecture 2\ndate:"
-  },
-  {
-    "objectID": "ss24/oop/sum.html#week-1-9",
-    "href": "ss24/oop/sum.html#week-1-9",
     "title": "Weekly Summary",
     "section": "Week 1",
     "text": "Week 1\n\nLecture 1\ndate:\n\n\nLecture 2\ndate:"
