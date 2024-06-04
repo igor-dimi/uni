@@ -18,51 +18,35 @@
     "href": "ws23-24/index.html#courses",
     "title": "WS 23/24",
     "section": "Courses",
-    "text": "Courses\n\nNum\nIPI",
-    "crumbs": [
-      "Bachelor",
-      "WS 23/24"
-    ]
+    "text": "Courses\n\nNum\nIPI"
   },
   {
     "objectID": "ss24/r/index.html",
     "href": "ss24/r/index.html",
     "title": "R Programming",
     "section": "",
-    "text": "R Programming and its Applications to Stochastic",
-    "crumbs": [
-      "R Programming"
-    ]
+    "text": "R Programming and its Applications to Stochastic"
   },
   {
     "objectID": "ss24/r/index.html#section",
     "href": "ss24/r/index.html#section",
     "title": "R Programming",
     "section": "",
-    "text": "weekly summary\nnotes\nsolutions",
-    "crumbs": [
-      "R Programming"
-    ]
+    "text": "weekly summary\nnotes\nsolutions"
   },
   {
     "objectID": "ss24/oop/index.html",
     "href": "ss24/oop/index.html",
     "title": "OOP Sci",
     "section": "",
-    "text": "Object Oriented Programming for Scientific Computing",
-    "crumbs": [
-      "OOP Sci"
-    ]
+    "text": "Object Oriented Programming for Scientific Computing"
   },
   {
     "objectID": "ss24/oop/index.html#section",
     "href": "ss24/oop/index.html#section",
     "title": "OOP Sci",
     "section": "",
-    "text": "weekly summary\nnotes\nsol",
-    "crumbs": [
-      "OOP Sci"
-    ]
+    "text": "weekly summary\nnotes\nsol"
   },
   {
     "objectID": "ss24/alda/sum.html",
@@ -114,11 +98,25 @@
     "text": "Week 6\n\nLecture 1\ndate: 20/05/24\n\nonline: Heap data structure\n\n\n\nLecture 2\ndate: 21/05/24\n\nprogramming example with compiler explorer: fibonacci iterative and recursive implementation, gcc optimization. (short detour: call stack) compiler can automatically implement tail recursion.\ninsertion algorithms:\n\ninsertion sort: pseudo-code implementation.\nmerge sort:\n\ndivide and conquer,\nmerging (\\(\\mathcal{O}(n))\\))\ntime-complexity of merge sort: assuming (without loss of generality) \\(n = 2^k\\) leads to master theorem. (wlog: we can extend a list to be \\(2^k\\))\n\n\\(\\Theta(n\\cdot\\log(n))\\) is the best we can do for comparison-based sorting\n\ndefinition of comparison-based sorting, fundamental operations\nany such algorithm must at least be able to differentiate between all \\(n!\\) permutations of the list \\(\\Rightarrow\\) lower-bound analysis via a comparison tree.\n\n\n\npartial integration\n\n\n\nquicksort: divide-and-conquer, but “reversed”\n\ncomplexity of quicksort (worst case is \\(\\mathcal{O}(n^2))\\)\nPivot is always the median \\(\\Rightarrow\\) \\(\\mathcal{O}(n\\cdot\\log{n})\\)\nproblem: finding the median (a good pivot) is not easy.\ncomplexity-analysis:"
   },
   {
+    "objectID": "ss24/alda/sum.html#week-7",
+    "href": "ss24/alda/sum.html#week-7",
+    "title": "Weekly Summary",
+    "section": "Week 7",
+    "text": "Week 7\n\nLecture 1\ndate: 27/05/24\n\n\n\n\n\nLecture 2\ndate: 28/05/24\n\nexample: the c++ compiler optimizes calculation of middle value by generating assembly for r + (r - l) / 2 instead of (l + r) / 2, in order to reduce chance of overflow.\nquicksort with tail-recursion to reduce stack depth (revisiion of the previous lecture)\nquickselect algorithm from quicksort: can be used to determine the median of a sequence in \\(\\mathcal{O}(n)\\).\nsorting faster than \\(\\mathcal{\\Omega}(n\\log(n))\\) (without comparisons):\n\nKSort (Bucketsort), array implementation of bucketsort (in-place).\n\\(K^d\\) Sort: Least Significant Digit Radix Sorting.\n\nbinary search\n\nintermezzo: insertion sort in \\(\\mathcal{O}(\\log(n)\\cdot n)\\): library sort link"
+  },
+  {
+    "objectID": "ss24/alda/sum.html#week-8",
+    "href": "ss24/alda/sum.html#week-8",
+    "title": "Weekly Summary",
+    "section": "Week 8",
+    "text": "Week 8\n\nLecture 1\ndate:\n\n\nLecture 2\ndate: 06/04/24\n\nc++ unique pointer implementation and move semantics\n(a, b) Trees - inserting"
+  },
+  {
     "objectID": "ss24/alda/sum.html#week-1-1",
     "href": "ss24/alda/sum.html#week-1-1",
     "title": "Weekly Summary",
     "section": "Week 1",
-    "text": "Week 1\n\nLecture 1\ndate: 27/05/24\n\n\n\n\n\nLecture 2\ndate: 28/05/24\n\nexample: the c++ compiler optimizes calculation of middle value by generating assembly for r + (r - l) / 2 instead of (l + r) / 2, in order to reduce chance of overflow.\nquicksort with tail-recursion to reduce stack depth (revisiion of the previous lecture)\nquickselect algorithm from quicksort: can be used to determine the median of a sequence in \\(\\mathcal{O}(n)\\).\nsorting faster than \\(\\mathcal{\\Omega}(n\\log(n))\\) (without comparisons):\n\nKSort (Bucketsort), array implementation of bucketsort (in-place).\n\\(K^d\\) Sort: Least Significant Digit Radix Sorting.\n\nbinary search\n\nintermezzo: insertion sort in \\(\\mathcal{O}(\\log(n)\\cdot n)\\): library sort link"
+    "text": "Week 1\n\nLecture 1\ndate:\n\n\nLecture 2\ndate:"
   },
   {
     "objectID": "ss24/alda/sum.html#week-1-2",
@@ -163,20 +161,6 @@
     "text": "Week 1\n\nLecture 1\ndate:\n\n\nLecture 2\ndate:"
   },
   {
-    "objectID": "ss24/alda/sum.html#week-1-8",
-    "href": "ss24/alda/sum.html#week-1-8",
-    "title": "Weekly Summary",
-    "section": "Week 1",
-    "text": "Week 1\n\nLecture 1\ndate:\n\n\nLecture 2\ndate:"
-  },
-  {
-    "objectID": "ss24/alda/sum.html#week-1-9",
-    "href": "ss24/alda/sum.html#week-1-9",
-    "title": "Weekly Summary",
-    "section": "Week 1",
-    "text": "Week 1\n\nLecture 1\ndate:\n\n\nLecture 2\ndate:"
-  },
-  {
     "objectID": "plan.html",
     "href": "plan.html",
     "title": "Plan",
@@ -216,31 +200,21 @@
     "href": "ss24/alda/index.html",
     "title": "Alda",
     "section": "",
-    "text": "Algorithms and Data Structures",
-    "crumbs": [
-      "Alda"
-    ]
+    "text": "Algorithms and Data Structures"
   },
   {
     "objectID": "ss24/alda/index.html#section",
     "href": "ss24/alda/index.html#section",
     "title": "Alda",
     "section": "",
-    "text": "weekly summary\nnotes\nsolutions",
-    "crumbs": [
-      "Alda"
-    ]
+    "text": "weekly summary\nnotes\nsolutions"
   },
   {
     "objectID": "ss24/index.html#courses",
     "href": "ss24/index.html#courses",
     "title": "SS 24",
     "section": "Courses",
-    "text": "Courses\n\nAlda\nR\nOOP",
-    "crumbs": [
-      "Bachelor",
-      "SS 24"
-    ]
+    "text": "Courses\n\nAlda\nR\nOOP"
   },
   {
     "objectID": "ss24/oop/sum.html",
@@ -471,19 +445,13 @@
     "href": "ws23-24/ipi/ipi.html",
     "title": "IPI",
     "section": "",
-    "text": "weekly summary\nnotes\nsolutions\ncourse website",
-    "crumbs": [
-      "IPI"
-    ]
+    "text": "weekly summary\nnotes\nsolutions\ncourse website"
   },
   {
     "objectID": "ws23-24/num/num.html",
     "href": "ws23-24/num/num.html",
     "title": "Numerics 0",
     "section": "",
-    "text": "weekly summary\nnotes\nsolutions",
-    "crumbs": [
-      "Numerics 0"
-    ]
+    "text": "weekly summary\nnotes\nsolutions"
   }
 ]
