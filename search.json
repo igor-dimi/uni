@@ -1,5 +1,12 @@
 [
   {
+    "objectID": "ss24/time/index.html",
+    "href": "ss24/time/index.html",
+    "title": "Time Log",
+    "section": "",
+    "text": "calendar (with week numbers) pertaining to this semester:\n\n!cal -w -n 4 2024-07-01\n\n       Juli 2024               August 2024             September 2024    \n   Mo Di Mi Do Fr Sa So     Mo Di Mi Do Fr Sa So     Mo Di Mi Do Fr Sa So\n27  1  2  3  4  5  6  7  31           1  2  3  4  35                    1\n28  8  9 10 11 12 13 14  32  5  6  7  8  9 10 11  36  2  3  4  5  6  7  8\n29 15 16 17 18 19 20 21  33 12 13 14 15 16 17 18  37  9 10 11 12 13 14 15\n30 22 23 24 25 26 27 28  34 19 20 21 22 23 24 25  38 16 17 18 19 20 21 22\n31 29 30 31              35 26 27 28 29 30 31     39 23 24 25 26 27 28 29\n                                                  40 30                  \n      Oktober 2024     \n   Mo Di Mi Do Fr Sa So\n40     1  2  3  4  5  6\n41  7  8  9 10 11 12 13\n42 14 15 16 17 18 19 20\n43 21 22 23 24 25 26 27\n44 28 29 30 31         \n                       \n\n\n\n\n                       Total\n2024 Jul    Tue 30.     5h5m\n            Wed 31.       5h\n     Aug    Thu  1.    4h10m\n            Fri  2.    1h30m\n                    ========\n                      15h45m\n\n\n\n!paste &lt;(klog report --tag=alda '08-august.klg') &lt;(klog report --tag='sci-oop' '08-august.klg')\n\n                       Total                           Total\n2024 Jul    Tue 30.    1h15m    2024 Jul    Tue 30.    3h50m\n            Wed 31.       4h                Wed 31.       1h\n     Aug    Thu  1.    2h25m         Aug    Thu  1.    1h45m\n                    ========                Fri  2.    1h30m\n                       7h40m                        ========\n                            8h5m\n\n\n\n!klog report --aggregate=week '08-august.klg'\n\n                 Total\n2024  Week 31   15h45m\n              ========\n                15h45m\n\n\n\n!klog print '08-august.klg'\n\n\n2024-07-30 (6h!)\n#study #exam\n    10:45 - 12:45 #sci-oop video reviews on moodle, Vid 1\n    -10m Break (#sci-oop)\n    14:00 - 15:45 #sci-oop video reviews on moodle, Vid 2\n    16:15 - 16:30 #sci-oop video reviews on moodle, Vid 2 \n        range based loops\n    16:30 - 17:45 #alda big #cpp sorting & serching\n\n2024-07-31\n#study #exam\n    10:05 - 12:05 #alda big #cpp binary search ch 12\n    14:05 - 16:05 #alda big #cpp most frequent element ch 12\n        implemented most frequent element\n    16:35 - 17:35 #sci-oop move semantics ~ josuttis #cpp\n\n2024-08-01\n#study #exam\n    10:35 - 13:15 #alda tutor notes, probleklausur\n    -15m Break (#alda)\n    14:45 - 16:45 #sci-oop move semantics ~ josuttis\n    -15m Break (#sci-oop)\n\n2024-08-02\n#study #exam\n    10:45 - 12:45 #sci-oop move semantics ~ josuttis\n        finished ch 1.1\n    -30m Break (#sci-oop)\n\n\n\n\nprint(f\"\\033[1;31;40m An error occurred while verifying alerts: \\033[0m\")\n\n An error occurred while verifying alerts:"
+  },
+  {
     "objectID": "ws23-24/index.html#courses",
     "href": "ws23-24/index.html#courses",
     "title": "WS 23/24",
@@ -474,6 +481,17 @@
     "title": "SS 24",
     "section": "Courses",
     "text": "Courses\n\nAlda\nR\nOOP",
+    "crumbs": [
+      "Bachelor",
+      "SS 24"
+    ]
+  },
+  {
+    "objectID": "ss24/index.html#time",
+    "href": "ss24/index.html#time",
+    "title": "SS 24",
+    "section": "Time",
+    "text": "Time\n\ntimes",
     "crumbs": [
       "Bachelor",
       "SS 24"
