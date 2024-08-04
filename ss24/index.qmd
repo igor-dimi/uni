@@ -13,3 +13,7 @@ title: SS 24
 * [Alda](./alda/index.qmd)
 * [R](./r/index.qmd)
 * [OOP](./oop/index.qmd)
+
+## Time
+
+* [times](./time/index.qmd)
