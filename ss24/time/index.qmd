@@ -24,7 +24,7 @@ Two main tags:
 * total times:  
 ```{python}
 #| echo: false
-!klog report --aggregate=week 'times.klg'
+!klog report --aggregate=week --tag=study times.klg
 ```
 
 * algorithms and data structures (`#alda`) and oop for scientific computing (`#sci-oop`):

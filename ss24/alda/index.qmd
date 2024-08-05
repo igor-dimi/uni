@@ -9,30 +9,3 @@ Algorithms and Data Structures
 * [weekly summary](./sum.qmd)
 * [notes](https://igor-dimi.github.io/alda-notes-ss24/)
 * [solutions](https://igor-dimi.github.io/alda-sol-ss24/)
-
-```{python}
-3 + 3
-```
-
-```{r}
-3 + 3
-```
-
-```{r}
-#| label: fig-airquality
-#| fig-cap: "Temperature and ozone level."
-#| warning: false
-
-library(ggplot2)
-ggplot(airquality, aes(Temp, Ozone)) + 
-  geom_point() + 
-  geom_smooth(method = "loess")
-```
-
-```{bash}
-cal
-```
-
-```{bash}
-klog total ../time/08-august.klg
-```
