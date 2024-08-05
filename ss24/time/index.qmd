@@ -1,32 +1,63 @@
 ---
 title: Time Log
 code-block-bg: true
+format: html
+css: style.css
+engine: jupyter
 ---
+
 
 calendar (with week numbers) pertaining to this semester:
 ```{python}
-!cal -w -n 4 2024-07-01
+#| echo: false
+!cal -w -n 6 2024-05-01
+```
+
+ 
+Two main tags:
+
+* `#alda`: algorithms and data structrures
+* `#sci-oop`: object oriented scientific computing with c++.
+
+## Weekly
+
+* total times:  
+```{python}
+#| echo: false
+!klog report --aggregate=week '08-august.klg'
+```
+
+* algorithms and data structures (`#alda`) and oop for scientific computing (`#sci-oop`):
+```{python}
+#| echo: false
+!paste <(klog report --aggregate=week --tag=alda '08-august.klg') <(klog report --aggregate=week\
+--tag=sci-oop '08-august.klg')
 ```
 
 
+
+## Daily
+
+* total:
 ```{python}
 #| echo: false
 !klog report --tag=study '08-august.klg'
 ```
 
+* `#alda` and `#sci-oop` side by side;
 ```{python}
+#| echo: false
 !paste <(klog report --tag=alda '08-august.klg') <(klog report --tag='sci-oop' '08-august.klg')
 ```
 
 
-```{python}
-!klog report --aggregate=week '08-august.klg'
-```
+## Entries
+
+
+Time log entries: 
 
 ```{python}
+#| echo: false
 !klog print '08-august.klg'
 ```
 
-```{python}
-print(f"\033[1;31;40m An error occurred while verifying alerts: \033[0m")
-```
