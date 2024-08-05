@@ -24,14 +24,14 @@ Two main tags:
 * total times:  
 ```{python}
 #| echo: false
-!klog report --aggregate=week '08-august.klg'
+!klog report --aggregate=week 'times.klg'
 ```
 
 * algorithms and data structures (`#alda`) and oop for scientific computing (`#sci-oop`):
 ```{python}
 #| echo: false
-!paste <(klog report --aggregate=week --tag=alda '08-august.klg') <(klog report --aggregate=week\
---tag=sci-oop '08-august.klg')
+!paste <(klog report --aggregate=week --tag=alda 'times.klg') <(klog report --aggregate=week\
+--tag=sci-oop 'times.klg')
 ```
 
 
@@ -41,13 +41,13 @@ Two main tags:
 * total:
 ```{python}
 #| echo: false
-!klog report --tag=study '08-august.klg'
+!klog report --tag=study 'times.klg'
 ```
 
 * `#alda` and `#sci-oop` side by side;
 ```{python}
 #| echo: false
-!paste <(klog report --tag=alda '08-august.klg') <(klog report --tag='sci-oop' '08-august.klg')
+!paste <(klog report --tag=alda 'times.klg') <(klog report --tag='sci-oop' 'times.klg')
 ```
 
 
@@ -58,6 +58,6 @@ Time log entries:
 
 ```{python}
 #| echo: false
-!klog print '08-august.klg'
+!klog print 'times.klg'
 ```
 
