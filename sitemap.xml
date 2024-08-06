@@ -2,31 +2,31 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://igor-dimi.github.io/uni/ss24/time/index.html</loc>
-    <lastmod>2024-08-05T19:19:13.131Z</lastmod>
+    <lastmod>2024-08-05T23:39:10.880Z</lastmod>
   </url>
   <url>
-    <loc>https://igor-dimi.github.io/uni/ws23-24/num/sum.html</loc>
-    <lastmod>2024-02-08T22:27:14.647Z</lastmod>
-  </url>
-  <url>
-    <loc>https://igor-dimi.github.io/uni/ss24/index.html</loc>
-    <lastmod>2024-08-04T12:32:58.150Z</lastmod>
-  </url>
-  <url>
-    <loc>https://igor-dimi.github.io/uni/ws23-24/ipi/sum.html</loc>
+    <loc>https://igor-dimi.github.io/uni/ws23-24/index.html</loc>
     <lastmod>2023-10-31T16:37:31.325Z</lastmod>
   </url>
   <url>
-    <loc>https://igor-dimi.github.io/uni/ss24/r/sum.html</loc>
-    <lastmod>2024-05-21T22:28:48.217Z</lastmod>
+    <loc>https://igor-dimi.github.io/uni/ws23-24/num/num.html</loc>
+    <lastmod>2023-10-31T16:37:31.325Z</lastmod>
   </url>
   <url>
-    <loc>https://igor-dimi.github.io/uni/ss24/oop/sum.html</loc>
-    <lastmod>2024-05-28T21:23:59.297Z</lastmod>
+    <loc>https://igor-dimi.github.io/uni/ws23-24/ipi/ipi.html</loc>
+    <lastmod>2023-10-31T16:37:31.325Z</lastmod>
   </url>
   <url>
-    <loc>https://igor-dimi.github.io/uni/ss24/alda/sum.html</loc>
-    <lastmod>2024-08-02T22:25:22.941Z</lastmod>
+    <loc>https://igor-dimi.github.io/uni/ss24/r/index.html</loc>
+    <lastmod>2024-04-22T16:41:40.161Z</lastmod>
+  </url>
+  <url>
+    <loc>https://igor-dimi.github.io/uni/ss24/oop/index.html</loc>
+    <lastmod>2024-04-22T16:41:40.161Z</lastmod>
+  </url>
+  <url>
+    <loc>https://igor-dimi.github.io/uni/ss24/alda/plan.html</loc>
+    <lastmod>2024-08-02T17:24:00.058Z</lastmod>
   </url>
   <url>
     <loc>https://igor-dimi.github.io/uni/plan.html</loc>
@@ -41,31 +41,31 @@
     <lastmod>2024-08-04T11:06:39.766Z</lastmod>
   </url>
   <url>
-    <loc>https://igor-dimi.github.io/uni/ss24/alda/plan.html</loc>
-    <lastmod>2024-08-02T17:24:00.058Z</lastmod>
-  </url>
-  <url>
-    <loc>https://igor-dimi.github.io/uni/ss24/oop/index.html</loc>
-    <lastmod>2024-04-22T16:41:40.161Z</lastmod>
-  </url>
-  <url>
-    <loc>https://igor-dimi.github.io/uni/ss24/r/index.html</loc>
-    <lastmod>2024-04-22T16:41:40.161Z</lastmod>
-  </url>
-  <url>
-    <loc>https://igor-dimi.github.io/uni/ws23-24/ipi/ipi.html</loc>
-    <lastmod>2023-10-31T16:37:31.325Z</lastmod>
-  </url>
-  <url>
-    <loc>https://igor-dimi.github.io/uni/ws23-24/num/num.html</loc>
-    <lastmod>2023-10-31T16:37:31.325Z</lastmod>
-  </url>
-  <url>
-    <loc>https://igor-dimi.github.io/uni/ws23-24/index.html</loc>
-    <lastmod>2023-10-31T16:37:31.325Z</lastmod>
-  </url>
-  <url>
     <loc>https://igor-dimi.github.io/uni/ss24/alda/index.html</loc>
-    <lastmod>2024-08-05T19:35:48.521Z</lastmod>
+    <lastmod>2024-08-05T23:55:51.332Z</lastmod>
+  </url>
+  <url>
+    <loc>https://igor-dimi.github.io/uni/ss24/alda/sum.html</loc>
+    <lastmod>2024-08-02T22:25:22.941Z</lastmod>
+  </url>
+  <url>
+    <loc>https://igor-dimi.github.io/uni/ss24/oop/sum.html</loc>
+    <lastmod>2024-05-28T21:23:59.297Z</lastmod>
+  </url>
+  <url>
+    <loc>https://igor-dimi.github.io/uni/ss24/r/sum.html</loc>
+    <lastmod>2024-05-21T22:28:48.217Z</lastmod>
+  </url>
+  <url>
+    <loc>https://igor-dimi.github.io/uni/ws23-24/ipi/sum.html</loc>
+    <lastmod>2023-10-31T16:37:31.325Z</lastmod>
+  </url>
+  <url>
+    <loc>https://igor-dimi.github.io/uni/ss24/index.html</loc>
+    <lastmod>2024-08-04T12:32:58.150Z</lastmod>
+  </url>
+  <url>
+    <loc>https://igor-dimi.github.io/uni/ws23-24/num/sum.html</loc>
+    <lastmod>2024-02-08T22:27:14.647Z</lastmod>
   </url>
 </urlset>
