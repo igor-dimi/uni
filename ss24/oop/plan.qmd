@@ -1,0 +1,23 @@
+---
+title: Study Plan
+---
+
+## 
+
+## Reading List
+
+* Basic, General, Intro: 
+    1. Big C++. *Cay Horstmann*
+    6. Programming Principles & Practice with C++. *Stroustrup*. 
+    5. A Tour of C++. *Stroustrup*
+    1. C++ Crash Course. *Josh Lospinoso*
+    7. C++ Primer. *Lippmann*
+* Modern, General, Scientific: 
+    10. C++ STL. *Josuttis*
+    11. Discovering Modern C++ 2nd ed. *Gottschild*.
+* Modern, Specific:
+    3. Functional Programming in C++. *Cukic*
+    4. Move Semantics. *Josuttis*
+    8. C++ Templates. *Vandervoorde* 
+* Other: 
+    9. OOP in C++. *Josuttis*

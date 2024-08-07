@@ -1,4 +1,58 @@
 ---
-title: Exam Study Plan
+title:  Study Plan
 ---
 
+## 
+
+## Reading List
+
+### Algorithms
+
+* Basic:
+    1. Understanding Algorithms. *Brunskill*
+    2. Algorithms Unlocked. *Cormen*
+    4. First Course in Algorithms Through Puzzles. *Ryuhei Uehara*
+    5. Grokking Algorithms. *Aditya Bhargava*
+* Intermediate:
+    1. Design and Analysis of Algorithms. *Jeffrey Smith*
+    7. Algorithms. *Jeff Erickson*
+    8. How to Think About Algorithms. *Jeff Edmonds*
+    9. Problems on Algorithmics. *Ian Perberry*
+    10. Fundamentals of Algorithmics. *Brassard, Bratley*.
+    11. Algorithmen & Datenstrukturen - Grundwerkzeuge. *Kurt Melhorn*
+    12. Lecture Notes on Algorithms. *Ian Perberry*
+    13. Algorithm Design. *Kleinberg, Tardos*
+    14. Algorithms Illuminated. *Roughgarden*
+    15. Compared to What. *G. J. E. Rawlins*
+    16. Data Structurese & Their Algorithms. *Harry Lewis, Larry Denenberg*
+    17. Algorithms + Data Structures = Programs. *Niklaus Wirth*
+    18. Computer Algorithms. *Baase*
+* C++: 
+    1. Data Structures & Problem Solving Using C++. *M. A. Weiss*
+    2. Data Structures & Algorithm Analysis in C++. *M. A. Weiss*
+    3. Data & Algorithms in C++. *Drozdek*. 
+    4. Data Structures other Objects using C++. *Walter Savitch*
+    5. Principles of Algorithmic Problem Solving. *Johan Sannemo*
+    6. Guide to Competitive Programming. *Antti Laaksonen*
+* C: 
+    1. Algorithms and Data Structures - An Approach in C. *Bowman*
+    2. Foundations of Computer Science. *Aho, Ullman*
+    3. Programs and Datastructures in C. *Ameraal*
+* Python:
+    1. Data Structures and Algorithms Using Python. *Rance D. Necaise*. 
+    2. Data Structures & Algorithms in Python. *Canning, Broder, Lafore*
+    3. Competitive Programaming with Python. *Duerr, Vie*
+    4. Problem Solving with Algorithms and Data Structures Using Python. *Franklin, Beedle*
+
+### Graph Theory and Discrete Mathematics
+
+* General Discrete Mathematics:
+    1. Mathematical Structures for Computer Science. *Judith Gersting*
+    2. Discrete & Combinatorial Mathematics. *Grimaldi*
+    3. Concrete Mathematics *Knuth*
+    4. Diskerte Mathematik fuer Einsteiger. *Beutelspacher*
+    5. Discrete Mathematics in Computer Science. *Golovnev, Kulikov*
+* Graph Theory Specific
+    1. Graph Theory - A Poblem Oriented Approach. *Daniel A. Marcus*
+    2. Algorithmic Graph Theory. *Alan M. Gibbons*
+    3. Sets, Puzzles & Postmen. *Higgins*
