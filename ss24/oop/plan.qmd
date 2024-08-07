@@ -13,8 +13,8 @@ title: Study Plan
     1. C++ Crash Course. *Josh Lospinoso*
     7. C++ Primer. *Lippmann*
 * Modern, General, Scientific: 
-    10. C++ STL. *Josuttis*
     11. Discovering Modern C++ 2nd ed. *Gottschild*.
+    10. C++ STL. *Josuttis*
 * Modern, Specific:
     3. Functional Programming in C++. *Cukic*
     4. Move Semantics. *Josuttis*

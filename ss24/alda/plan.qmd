@@ -24,8 +24,10 @@ title:  Study Plan
     13. Algorithm Design. *Kleinberg, Tardos*
     14. Algorithms Illuminated. *Roughgarden*
     15. Compared to What. *G. J. E. Rawlins*
+    15. Foundations of Algorithms. *Richard Neapolitan*
     16. Data Structurese & Their Algorithms. *Harry Lewis, Larry Denenberg*
     17. Algorithms + Data Structures = Programs. *Niklaus Wirth*
+    18. Algorithms and Data Structures - Design, Correctness, Analysis. *Jeffrey H. Kingston*
     18. Computer Algorithms. *Baase*
 * C++: 
     1. Data Structures & Problem Solving Using C++. *M. A. Weiss*
