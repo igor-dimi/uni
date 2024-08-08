@@ -10,3 +10,4 @@ Object Oriented Programming for Scientific Computing
 * [notes](https://igor-dimi.github.io/oop-notes-ss24/)
 * [sol](https://igor-dimi.github.io/oop-sol-ss24/)
 * [plan](./plan.qmd)
+* [exam](./exam1.qmd)
