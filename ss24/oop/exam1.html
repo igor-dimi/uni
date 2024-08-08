@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>My Uni Notes - Num Weekly Summary</title>
+<title>My Uni Notes</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -149,233 +149,99 @@ window.Quarto = {
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#oop-for-scientific-computing-first-exam" id="toc-oop-for-scientific-computing-first-exam" class="nav-link active" data-scroll-target="#oop-for-scientific-computing-first-exam">OOP for Scientific Computing First Exam</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">Num Weekly Summary</h1>
+
+
+
+<section id="oop-for-scientific-computing-first-exam" class="level3">
+<h3 class="anchored" data-anchor-id="oop-for-scientific-computing-first-exam">OOP for Scientific Computing First Exam</h3>
+<p>points:</p>
+<table class="table">
+<thead>
+<tr class="header">
+<th>1</th>
+<th>2</th>
+<th>3</th>
+<th>4</th>
+<th>5</th>
+<th><span class="math inline">\(\Sigma\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>15</td>
+<td>20</td>
+<td>10</td>
+<td>10</td>
+<td>10</td>
+<td>65</td>
+</tr>
+</tbody>
+</table>
+<p>Following was asked in the exam:</p>
+<ol type="1">
+<li><p>Explain following aspects of C++ :</p>
+<ol type="a">
+<li><code>class</code> vs <code>struct</code>?</li>
+<li><code>namespace</code>. What is it, when &amp; why is it used?</li>
+<li><code>private</code> vs <code>protected</code>?</li>
+<li>copy elision?</li>
+<li>header guards. What, why?</li>
+<li>rule of five vs fule of zero?</li>
+<li>temporaries? literals?</li>
+<li>how does a shared pointer work?</li>
+<li>SFINAE?</li>
+<li>SOLID?</li>
+</ol></li>
+<li><p>Short code snippets were given and asked to explain &amp; extend. With following topics:</p>
+<ol type="a">
+<li>default function args</li>
+<li>concepts</li>
+<li>template parameters, default template parameters</li>
+<li>Constructor, copy constructor, copy assignment operator, move constructor, move assignment operator, overloaded constructor.</li>
+<li>Lambda expression, functional programming</li>
+<li>Compile time branching</li>
+<li>CRTP</li>
+<li>Inheritence. How to improve the given implementation</li>
+</ol></li>
+<li><p>Horner Schema: Variadic templates, recursion with templates(?), template metaprogramming</p></li>
+<li><p>An incomplete implementation of an OOP system was given that was supposed to implement a simulation a prey-predator dynamic system, modeled by the Lotka-Volterra differential equations:</p>
+<p><span class="math display">\[\begin{align*}
+&amp;\frac{dx}{dt} = \alpha x - \beta xy, \\
+&amp;\frac{dy}{dt} = \gamma y - \delta xy
+\end{align*}\]</span></p>
+<p>The incomplete OOP system had the following basic structure:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./imgs/lotka-volterra-system.png" class="img-fluid figure-img" style="width:80.0%"></p>
+<figcaption>Lotka-Volterra OOP System</figcaption>
+</figure>
 </div>
+<ol type="a">
+<li>Implement the <code>PreyPredatorData Simulate(int steps, double dt)</code> that creates a <code>PreyPredatorData</code> object, populates its members with the simulation data based on the Lotka-Volterra difference equations and returns the object:</li>
+</ol>
+<p><span class="math display">\[\begin{align*}
+&amp;X_{n + 1} = X_n + \Delta t (\alpha x_n - \beta x_ny_n) \\
+&amp;Y_{n + 1} = Y_n + \Delta t (\delta x_ny_n- \gamma y_n)
+\end{align*}\]</span></p>
+<ol start="2" type="a">
+<li>?</li>
+</ol></li>
+<li><p>?</p></li>
+</ol>
 
 
-
-<div class="quarto-title-meta">
-
-    
-  
-    
-  </div>
-  
-
-
-</header>
-
-
-<ul>
-<li><strong>W01/VL01</strong>
-<ul>
-<li><strong>date</strong>:</li>
-<li><strong>summary</strong>:</li>
-</ul></li>
-<li><strong>W01/VL02</strong>
-<ul>
-<li><strong>date</strong>:</li>
-<li><strong>summary</strong>:</li>
-</ul></li>
-<li><strong>W02/VL03</strong>
-<ul>
-<li><strong>date</strong>:</li>
-<li><strong>summary</strong>:</li>
-</ul></li>
-<li><strong>W02/VL04</strong>:
-<ul>
-<li><strong>date</strong>:</li>
-<li><strong>summary</strong>:</li>
-</ul></li>
-<li><strong>W03/VL05</strong>
-<ul>
-<li><strong>date</strong>: 31/10/2023, Tue</li>
-<li><strong>summary</strong>: <span class="math inline">\(LR\)</span>-Decomposition, uniqueness, existence, algorithm, complexity, error analysis
-<ul>
-<li>Script pages: 21 (satz 2.5) - 28 (2.3 Error Analysis of LR)</li>
-<li>LR Zerlegung ist eindeutig</li>
-<li>Product of two triangular matrices is also triangular (left or right)</li>
-<li>Inverse of a triangular matrix is triangular (left or right)</li>
-<li>Product of two left-triangular matrices with <span class="math inline">\(a_{ii} = 1\)</span> is also a left-triangular matrix with <span class="math inline">\(\tilde{a}_{ii} = 1\)</span></li>
-<li><span class="math inline">\(LR\)</span>-Decomposition method using Gauss decomposition (Alg 2.7) (?).</li>
-<li>Existence of the <span class="math inline">\(LR\)</span>-decomposition (Satz 2.8)</li>
-<li>Practical version of <span class="math inline">\(LR\)</span>-decomposition Algorithm (not Alg 2.7) saves space (Alg 2.9).</li>
-<li>Complexity of Alg 2.9 and solving a LSE (De: LGS)</li>
-<li>Error analysis of <span class="math inline">\(LR\)</span>-Decomposition.</li>
-</ul></li>
-</ul></li>
-<li><strong>W03/VL06</strong>
-<ul>
-<li><strong>date</strong>: 02/11/23, Thu</li>
-<li><strong>summary</strong>: Script 28 - 33. Error estimation of Alg 2.9, forwards and backwards error, conditioning of a function, conditioning number.
-<ul>
-<li>Error estimation of Alg 2.9 with proof (Lemma 2.13 &amp; Satz 2.14)</li>
-<li>Aposteriori error estimation of Alg 2.9 (Satz 2.16)</li>
-<li>relationship between backwards and forwards error, a python example demonstrating that they aren’t necessarily related (?)</li>
-<li>Conditioning of a function (Ch 2.4.1).</li>
-<li>Conditioning number</li>
-</ul></li>
-</ul></li>
-<li><strong>W04/VL07</strong>
-<ul>
-<li><strong>date</strong>: 07/11/23, Tue</li>
-<li><strong>summary</strong>: Script 33 - 42.
-<ul>
-<li><em>Question</em>: How much effect does the error in <span class="math inline">\(A\)</span> &amp; <span class="math inline">\(b\)</span> have on the solutuion of an LEQ/LGS?</li>
-<li>Conditioning of a matrix &amp; its proof. (Prop 2.20)</li>
-<li>Error analysis of LEQ/LGS’s (Ch 2.4.3)</li>
-<li>Convergent Matrix sequences and matrix series (Ch 2.4.4.)
-<ul>
-<li><strong>Neumann Series</strong> (2.4.9, P:37)</li>
-<li><strong>Spectral radius</strong> of a matrix</li>
-</ul></li>
-<li>Convergent Matrix sequences are used in the proof of error estimation of LEQ/LGS’s. Proof of 2.2.1</li>
-<li><strong>Pivoting Strategies</strong> to increase <span class="math inline">\(LR\)</span>-decomposition algorithm stability (Ch. 2.5) via exchanging rows during the steps of the algorithm.
-<ul>
-<li><strong>Permutation Matrix</strong> (Def 2.25)</li>
-</ul></li>
-</ul></li>
-</ul></li>
-<li><strong>W04/VL08</strong>
-<ul>
-<li><strong>date</strong>: 09/11/23, Thu</li>
-<li><strong>summary</strong>: Script 43 - 51
-<ul>
-<li><strong>note</strong>: <em>numbering shifted 1 up, due to a new example</em></li>
-<li>Alg. 2.27: <span class="math inline">\(LR\)</span>-Decomposition with column pivot search.
-<ul>
-<li>Satz 2.30: <span class="math inline">\(\forall\)</span> regular matrix <span class="math inline">\(A \in \mathbb{R}^{n\times n}\, \exists\)</span> a Permutations matrix <span class="math inline">\(P_{\pi}\)</span>, s.t <span class="math inline">\(LR = P_{\pi}A\)</span> and its proof.</li>
-<li>A problematic matrix for this method: Wilkinson matrix. Such problems can be avoided with “Full Pivot Search/Vollpivotsuche”.</li>
-<li>But fullpivot search has the disatvantageous complexity <span class="math inline">\(\mathcal{O}(n^3)\)</span></li>
-</ul></li>
-<li><strong>Cholesky Decomposition</strong>: An efficient method for Symmetric Positive Definite (SPD) Matrices.
-<ul>
-<li>Definition &amp; Properties of SPD matrices. (Def 2.32 &amp; Satz 2.33)</li>
-<li>Satz 3.34: <span class="math inline">\(A\in\mathbb{R}^{n\times n} \text{\, SPD \, }\Rightarrow \exists \text{\, upper triangular} \, R\in \mathbb{R}^{n\times n} \text{\, s.t.\, } A = R^TR\)</span> (Cholesky decomposition)</li>
-<li>Proof of Satz 3.34</li>
-<li>Algorithm for Cholesky Decomposition (Alg 2.35) and its complexity (<span class="math inline">\(\frac{n^3}{3} + \mathcal{O}(n^2)\)</span>). (2 times more efficient than usual decommposition)</li>
-</ul></li>
-<li><strong><span class="math inline">\(LR\)</span>-Decomposition for Band-matrices</strong>
-<ul>
-<li>Sparce matrices (schwach besetzte matrix) <span class="math inline">\(\approx\)</span> many entries are 0.</li>
-<li>how sparce matrices are stored efficiently: For example</li>
-</ul>
-<pre class="{text}"><code>A = 0 5 0    C = (2, 3) {non-nul columns}
-    0 0 0    R = (1, 3) {non-null rows}
-    0 0 7    X = (5, 7) {actual entries in these coordinates}</code></pre>
-<ul>
-<li>Definition of a band matrix (Def 2.38)</li>
-<li><span class="math inline">\(LR\)</span>-decomposition for Band matrices.</li>
-</ul></li>
-</ul></li>
-</ul></li>
-<li><strong>W05/VL09</strong>
-<ul>
-<li><strong>date</strong>: 14.11.23, Tue</li>
-<li><strong>summary</strong>: Skript 51 - 55 (togehter with topics form appendix)
-<ul>
-<li>Review of some LA topics (from Appendix):
-<ul>
-<li>Def of <strong>orthogonal matrix</strong></li>
-<li>Def of <strong>unitary matrix</strong></li>
-<li><strong>Lemma A.57/Satz A.58</strong>: Singular value decomposition (SVD) and its proof.</li>
-<li>Programming example demonstrating uses of SVD for image compression.</li>
-<li><strong>Prop A.61</strong> regarding SVD (?)</li>
-</ul></li>
-<li>Intro to new Ch <strong>3 - Interpolation &amp; Approximation</strong>
-<ul>
-<li>Overview of different types of interpolating functions: polynomial, rational (polynomial), spline, neural network</li>
-<li>Intro Polynomial Interpolation:
-<ul>
-<li>Def of vector space of polynomials of degree <span class="math inline">\(n\)</span>: <span class="math inline">\(\mathbb{P}_n\)</span>.</li>
-<li>Def 3.1: Lagrange Interpolation Polynomials</li>
-</ul></li>
-</ul></li>
-</ul></li>
-</ul></li>
-<li><strong>W05/VL10</strong>
-<ul>
-<li><strong>date</strong>: 16.11.23, Thu</li>
-<li><strong>summary</strong>: Skript: 55 - 64
-<ul>
-<li>Lagrange interpolation
-<ul>
-<li>Lagrange polynomials <span class="math inline">\(\{l_i\}_{i=0\dots n}\)</span> Form a basis for <span class="math inline">\(\mathbb{P}_n\)</span> &amp; its proof.</li>
-</ul></li>
-<li>General interpolation with a general basis <span class="math inline">\(\{b_i\}_{i=0\dots n}\)</span> <span class="math inline">\(\Rightarrow\)</span> Vandermonde Matrix. <em>note</em>: Vandermonde matrix for Lagrange Basis is simply the identity matrix. Vandermonde matrix is very badly conditioned for the monomial basis <span class="math inline">\(\{x^i\}_{i=0}^n\)</span></li>
-<li>Error analysis of Lagrange interpolation. Certain properties of the function that is to be interpolated determine the precision of the error analysis (like the smoothness of the function.) (<strong>Satz 3.6</strong>)</li>
-<li>Neville’s Schema</li>
-</ul></li>
-</ul></li>
-<li><strong>W06/VL11</strong>
-<ul>
-<li><strong>date</strong>: 21.11.23, Tue</li>
-<li><strong>summary</strong>: Skript 64 - 71
-<ul>
-<li>Newton Interpolation (Ch 3.5)
-<ul>
-<li>Dividierende Differenzen</li>
-<li>Lemma 3.11 and its proof via induction.</li>
-</ul></li>
-<li>Intepolation error</li>
-<li>Hermite Interpolation</li>
-<li>(3.7 is skipped)</li>
-<li>3.8 Conditioning and Approximation</li>
-<li>Weierstrass Theorem (3.25)</li>
-</ul></li>
-</ul></li>
-<li><strong>W06/VL12</strong>
-<ul>
-<li><strong>date</strong>: 23.11.23, Thu</li>
-<li><strong>summary</strong>: Skript 71 - 81
-<ul>
-<li>review of error of polynomial interpolation: Bsp 3.21, 3.22.</li>
-<li>Runge Phenomenon</li>
-<li>Weierstrass Theorem (3.25) and its relationship to polynomial interpolation.</li>
-<li>Error of the best approximation (Satz 3.26)
-<ul>
-<li>Def 3.23: Lebesgue Constant <span class="math inline">\(\Lambda_n\)</span></li>
-</ul></li>
-<li>Conditioning of the interpolation, what happens when we interpolate <span class="math inline">\(f + \delta\)</span> instead of <span class="math inline">\(f\)</span>?</li>
-<li>If the function is only known to be continuous (but not necessarily differentiable), there is another measure for how strong a function “fluctuates”: Modulus of continuity (Stetigkeitsmodul) (Def 3.27)</li>
-<li>Jackson’s Theorem (3.28) given without proof.</li>
-<li>Corollary (3.29) - its proof.</li>
-<li>How to keep <span class="math inline">\(\Lambda_n\)</span> small? <span class="math inline">\(\rightarrow\)</span> Chebyshev Interpolation, Chebyshev Points
-<ul>
-<li>Goal: find appropriate points <span class="math inline">\(\{x_i\}_{i=1\dots n}\)</span> s.t. <span class="math inline">\(\Lambda_n\)</span> is minimal.</li>
-<li>Definition of Chebyshev Points (Def 3.30): <span class="math inline">\(x_i^{(n + 1)} = \cos{(\frac{2i + 1}{2n + 2}\pi)}\)</span> <img src="./imgs/chebyshev-points.png" class="img-fluid" alt="chebyshev-points"></li>
-<li>Definition of Chebyshev Polynomials (Def 3.32)</li>
-<li>Lemma 3.33 - some properties of chebyshev polynomials</li>
-</ul></li>
-</ul></li>
-</ul></li>
-<li><strong>W07/VL13</strong>
-<ul>
-<li><strong>date</strong>: 28.11.23</li>
-<li><strong>summary</strong>: Skript 81 - 96 (some pages were skipped)
-<ul>
-<li>Clenshaw-Curtis points</li>
-<li><strong>Satz 3.34</strong></li>
-<li>Proofs regarding Lebesgue Constats are skipped.</li>
-<li><strong>Lemma 3.40</strong>:</li>
-<li>Skip until Spline Interpolation</li>
-<li><strong>Spline Interpolation</strong>:
-<ul>
-<li>Error of spline interpolation</li>
-<li>Cubic splines</li>
-</ul></li>
-</ul></li>
-</ul></li>
-</ul>
-
-
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
