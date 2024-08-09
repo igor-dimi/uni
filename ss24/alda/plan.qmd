@@ -58,3 +58,21 @@ title:  Study Plan
     1. Graph Theory - A Poblem Oriented Approach. *Daniel A. Marcus*
     2. Algorithmic Graph Theory. *Alan M. Gibbons*
     3. Sets, Puzzles & Postmen. *Higgins*
+    
+Specifically:
+
+* Gersting: 
+  * 3: Recurrence relations & analysis of algorithms
+  * 5: Graphs & Trees
+  * 7: Graph algorithms
+* Rosen:
+  * 3: Algorithms
+  * 5: Induction & Recursion
+  * 8: Advancerd Counting: recurrence relations
+  * 10: Graphs 
+  * 11: Trees
+* Grimaldi: 
+  * 4: Mathematical induction
+  * 5.7, 5.8: Analysis of Algorithms
+  * 10: Recurrence relations
+  * 11, 12, 13: Graph Theory
