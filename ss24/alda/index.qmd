@@ -10,3 +10,4 @@ Algorithms and Data Structures
 * [notes](https://igor-dimi.github.io/alda-notes-ss24/)
 * [solutions](https://igor-dimi.github.io/alda-sol-ss24/)
 * [plan](./plan.qmd)
+* [exam](./exam1.qmd)

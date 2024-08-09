@@ -1,0 +1,42 @@
+---
+format:
+    html: default
+    pdf: default
+---
+
+## ALDA SoSe 24 1st Exam
+
+
+what was asked on the exam:
+
+1. Adjacency Matrix $A$ of a graph $G$: 
+   a) write the pseudocode for an optimal algorithm that determines 
+      the total number of nodes in the graph with equal in- and out-degrees. 
+   b) Analyze the complexity of your algorithm and prove optimality
+2. Heaps
+3. Hashing
+   a) Open hashing. Insert a sequence of elements
+   b) Open hashing. Delete a sequence of elements
+4. Standard questions for comparing functions asymptotically, determining growth rate of reccurence relations
+   with and without applications of the master theorem, analyzing complexity of short pseudocode algorithms like
+
+   ```default
+   read(t)
+   k := 1
+   i : = 1
+   while (k <= t) :
+       i := i + 1
+       k := k + i
+   ```
+5. Short proofs of statements regarding (a, b) trees and graphs
+6. Simple proof by induction problem
+7. Dijkstra shortest path algorithm 
+
+wasn't asked:
+
+- sorting
+- problems specifically for divide & conquer / recursion
+- problems specifically for dynamic programming
+- linear programming
+- approximation / heuristic algorithms
+- algorithms on strings 
