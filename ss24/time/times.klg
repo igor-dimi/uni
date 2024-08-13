@@ -80,5 +80,7 @@
 2024-08-13 (4h!)
 #study #uni #exam
     12:25 - 13:20 #sci-oop josuttis #cpp move semantics
-        h3.1 - Move semantics in in ordinary classes 
+        ch3.1 - Move semantics in ordinary classes 
     -10m Break #sci-oop #cpp
+    14:35 - 15:25 #sci-oop josuttis #cpp move semantics 
+        ch3.2 - Implementing special copy/move member functions
