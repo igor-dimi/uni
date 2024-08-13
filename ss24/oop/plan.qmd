@@ -16,7 +16,7 @@ title: Study Plan
     1. Discovering Modern C++ 2nd ed. *Gottschild*.
     2. Modern C++ Programming Techniques for Scientific Computing - Lecture Notes. *Ole Klein*
 * Modern, Specific:
-    3. Functional Programming in C++. *Cukic*
+    1. Functional Programming in C++. *Cukic*
     4. Move Semantics. *Josuttis*
     8. C++ Templates. *Vandervoorde* 
     10. C++ STL. *Josuttis*

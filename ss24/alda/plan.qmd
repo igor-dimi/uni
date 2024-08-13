@@ -12,7 +12,10 @@ title:  Study Plan
     1. Understanding Algorithms. *Brunskill*
     2. Algorithms Unlocked. *Cormen*
     4. First Course in Algorithms Through Puzzles. *Ryuhei Uehara*
+    5. Algorithmic Thinking. *Daniel Zingaro*
+    6. Principes of Algorithmic Problem Solving. *Johan Sannemo*
     5. Grokking Algorithms. *Aditya Bhargava*
+    
 * Intermediate:
     1. Design and Analysis of Algorithms. *Jeffrey Smith*
     7. Algorithms. *Jeff Erickson*
