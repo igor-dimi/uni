@@ -1,0 +1,15 @@
+---
+title: WS 24/25
+---
+
+## Schedule 
+
+<iframe width="780" height="440" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTp8v1t8SqSErTRBtEtajEClWI_QofC-V6yflj6d380ttOa6B9TFsE3J_hTPQeIHi5OvXYZFvM-r-Sf/pubhtml?widget=true&amp;headers=false"></iframe>
+
+
+## Courses 
+
+* [ITS](./its/index.qmd)
+* [ISW](./isw/index.qmd)
+* [DS](./ds/index.qmd)
+

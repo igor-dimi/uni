@@ -1,0 +1,9 @@
+---
+title: IT-Security
+---
+
+## 
+
+* [weekly summary](./sum.qmd)
+* [notes](https://igor-dimi.github.io/its-notes-ws24/)
+* [solutions](https://igor-dimi.github.io/its-sol-ws24/)

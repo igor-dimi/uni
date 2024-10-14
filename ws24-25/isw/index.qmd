@@ -1,0 +1,9 @@
+---
+title: Software Engineering
+---
+
+## 
+
+* [weekly summary](./sum.qmd)
+* [notes](https://igor-dimi.github.io/isw-notes-ws24/)
+* [solutions]()

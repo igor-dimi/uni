@@ -1,0 +1,9 @@
+---
+title: Discrete Structures
+---
+
+## 
+
+* [weekly summary](./sum.qmd)
+* [notes]()
+* [solutions]()
