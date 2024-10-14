@@ -4,8 +4,26 @@ title: Weekly Summary
 
 ## Week 1
 
-* **date**: 
-
+* **date**: 14/10/24 
+* massive increases in cyber-attacks in last 2-3 years. 
+  who is carrying out the attacks? how to find out? 
+  Is AI responsible for the increase? 
+* Intro & infos:
+  * Lernziele:
+  * Organisational:
+    * [website](https://emcl.iwr.uni-heidelberg.de)
+    * all informations/materials on **moodle**. 
+* ransomware (check out the wiki article)
+* Information security vs IT-Security: former is a subset of
+  the latter. IT-Security is information security in the realm
+  of electronic information.
+* General 3 goals of Information security - CIA: 
+  * **C**onfidentiality
+  * **I**ntegrity
+  * **A**vailability
+* Castle analogy. Thick walls can protect, what about the gates?
+  How to determine who belongs to the castle, who doesn't? 
+  Increasing security measures can directly cause new vulnerabilities. 
 
 ## Week 2
 
