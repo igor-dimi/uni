@@ -2,11 +2,20 @@
 
 ### Lecture 1
 
-* **date**: 
+* **date**: 15/10/24
+* Intro
+    * LOC = lines of code. 
+    * Development time - quality
+    * SWE at-large vs at-small
+    * Activities and design decisions
+* organisatory: moodle pass isw2425
+* [acrasia](https://www.wikiwand.com/en/articles/Akrasia)
 
-### Lecture 2
+### Lecture 2 (tech)
 
-* **date**: 
+* **date**:  15/10/24
+* organisatory infos
+* java overview
 
 ## Week 2
 
