@@ -4,6 +4,8 @@ title: Weekly Summary
 
 ## Week 1
 
+### Lecture
+
 * **date**: 14/10/24 
 * massive increases in cyber-attacks in last 2-3 years. 
   who is carrying out the attacks? how to find out? 
@@ -24,6 +26,13 @@ title: Weekly Summary
 * Castle analogy. Thick walls can protect, what about the gates?
   How to determine who belongs to the castle, who doesn't? 
   Increasing security measures can directly cause new vulnerabilities. 
+
+### Tutorium
+
+* **date**: 15/10/24
+* organisatory infos:
+  * 6 Assignment sheets, 50% for the exam. 
+  * tutorials on heico. 
 
 ## Week 2
 
