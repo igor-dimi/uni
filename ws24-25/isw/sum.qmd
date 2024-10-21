@@ -17,6 +17,11 @@
 * organisatory infos
 * java overview
 
+### Tutorial (L. Moritz)
+
+* **date**: 16/10/24
+* 
+
 ## Week 2
 
 ### Lecture 1

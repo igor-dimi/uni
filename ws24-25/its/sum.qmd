@@ -36,8 +36,24 @@ title: Weekly Summary
 
 ## Week 2
 
-* **date**: 
+### Lecture
 
+* **date**: 21/10/24
+* how effective is security by obscurity? (not at all)
+  in fact, open protocols and algorithms enhance security
+* ISO/OSI Reference modell. 
+  * Physical layer: not part of the lecture
+  * data link layer
+  * network layer
+  * transport layer 
+  * session layer
+  * presentation layer
+  * application layer
+    * smtp(insecure), ftp, http
+* Protocols 
+  * ARP: ARP-spoofing, ARP-poisoning (MITM: Man in the Middle)
+
+### Tutorium
 
 ## Week 3
 
