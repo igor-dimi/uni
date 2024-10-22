@@ -55,6 +55,26 @@ title: Weekly Summary
 
 ### Tutorium
 
+* **date**: 22/10/24
+* SANS penetration testing
+* **Schwachstelle/Weakness**: Any error oder weakness that violates the
+  CIA principles.  
+  * e.g: 
+* **Bedrohung/Threat**: Actor, that takes advantage of a weakness
+* **Risiko/Risk**: Damage, that can occur due to a weakness. 
+* **Exploit**: The actual code or the actual process that takes advantage of the weakness.
+* **Penetration Test**: 
+  * Scope: IP adress space
+  * Recon (Reconessence) $\rightarrow$ Scanning & initial access space $\rightarrow$ Exploitation $\rightarrow$ Post-exploitation
+  * `nmap`: 
+    * TCP:
+      * Syn-pakete
+        1. open
+        2. closed
+        3. filtered
+        4. filtered 
+  * `masscan`:  
+
 ## Week 3
 
 * **date**: 

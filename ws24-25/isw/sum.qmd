@@ -26,9 +26,24 @@
 
 ### Lecture 1
 
-* **date**: 
+* **date**: 22/10/24
+* Process & Project 
+* Team organisation
+* Extreme programming 
+* software development tools like git
+* requirements engineering
+* GenAI (Uni Heidelberg => Yoki)
 
-### Lecture 2
+### Lecture 2 (tech)
+
+* **date**: 22/10/24
+* java review 2:
+  * Inheritence
+  * Object construction and types casts
+  * parameter passing: primitive types as value, objects as reference
+* git review:
+* chatGPT overview
+
 
 * **date**: 
 
