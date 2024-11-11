@@ -45,27 +45,57 @@
 * chatGPT overview
 
 
-* **date**: 
-
 ## Week 3
 
 ### Lecture 1
 
-* **date**: 
+* **date**: 29/10/24
+* Requirements Engineering
+  * Usage/User Description
+  * Task and FuncArrayListtion Description
+  * GUI Description
 
-### Lecture 2
+### Lecture 2 (tech)
 
-* **date**: 
+* **date**: 29/10/24
+* git 
+* issue tracking
+* android basics
+
+
+### Tutorium
+
+* Questions:
+* A.3.1:
+  * how exactly combat score?
+    * 
+* A.3.2:
+  * Arbeitsbereich?
+  * UI-Struktur-Diagramm? 
+  * konkrete Sicht / virtual Windows ? 
+  * excel datei selbst erstellen oder ist sie auf confluence? 
+* A.3.3:
+  * is `MainActivity` a UI class or a data class?
+  * What are 
+    * `RecyclerView` ? 
+    * `Adapter` ?
+    * `ViewHolder` ?
+    * `import de.uhd.ifi.pokemonmanager.R` ?
+  * **Layout Ressourcen** fuer `MainActivity` und `RecyclerView`?  
 
 ## Week 4
 
 ### Lecture 1
 
-* **date**: 
+* **date**: 05/11/24
+* ui-design principles
+* usability
 
-### Lecture 2
 
-* **date**: 
+### Lecture 2 (tech)
+
+* **date**: 05/11/24
+* some advanced java stuff
 
 ## Week 5
 

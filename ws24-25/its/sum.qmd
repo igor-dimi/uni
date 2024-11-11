@@ -77,12 +77,63 @@ title: Weekly Summary
 
 ## Week 3
 
-* **date**: 
+### Lecture
 
+* **date**: 28/10/24  
+Crytpographic methods  
+* basic definitions of cryptology, cryptography
+  encryption, decryption, signing data
+* Classification of cryptographic algorithms:
+  * crypotgraphic hash-functions
+  * symmetric cryptographic algorithms
+  * asymmetric cryptographic algorithms
+* Cryptogrpahic check values. 
+  * Difference to Information/Coding theory: Coding theory random errors  
+* cyrptographic hash functions:
+  * compression
+  * ease of computation
+  * ... 
+  * md5, sha-1, sha-2 families
+
+### Tutorium
+
+* **date**: 29/10/24
+lecture review:  
+* MAC is used for authentication:
+  * `MAC(K, msg) = Sha256(k || msg)`
+* `ct = Enc(k, pt)` ct == cypher-text. pt == plain-text.
+* Even more securer: `ct = Enc(MAC || Enc(pt, K))`
+* strong collision resistence implies weak collision resistency. 
+* x' collides with x iff h(x) = h(x').
 
 ## Week 4
 
-* **date**: 
+### Lecture
+
+* **date**: 04/11/24  
+lecture review:    
+* MDC (Modification Detection Code) (Integrity)
+* MAC (Message Authentification Code) (authenticity)
+  * MAC is a cryptographic checksum.
+* Birthday paradox - relation to hashing. 
+* SHA
+* Passwords 
+  * shouldn't be plain text
+  * Salt & Pepper (?)
+* Brute-froce attack
+  * hydra 
+
+
+### Tutorium
+
+* **date**: 05/11/24
+* websites cryptography / cryptoanalhysis challenges:
+  * [cryptohack](https://www.cryptohack.org)
+  * cryptopals
+  * juiceshop
+  * hackthebox
+  * ctftime.org
+
 
 
 ## Week 5
