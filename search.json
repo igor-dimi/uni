@@ -1,154 +1,24 @@
 [
   {
-    "objectID": "ss24/time/index.html",
-    "href": "ss24/time/index.html",
-    "title": "Time Log",
+    "objectID": "ws24-25/sum.html",
+    "href": "ws24-25/sum.html",
+    "title": "My Uni Notes",
     "section": "",
-    "text": "calendar (with week numbers) pertaining to this semester:\nMai 2024                Juni 2024                Juli 2024       \n   Mo Di Mi Do Fr Sa So     Mo Di Mi Do Fr Sa So     Mo Di Mi Do Fr Sa So\n18        1  2  3  4  5  22                 1  2  27  1  2  3  4  5  6  7\n19  6  7  8  9 10 11 12  23  3  4  5  6  7  8  9  28  8  9 10 11 12 13 14\n20 13 14 15 16 17 18 19  24 10 11 12 13 14 15 16  29 15 16 17 18 19 20 21\n21 20 21 22 23 24 25 26  25 17 18 19 20 21 22 23  30 22 23 24 25 26 27 28\n22 27 28 29 30 31        26 24 25 26 27 28 29 30  31 29 30 31            \n                                                                         \n      August 2024             September 2024            Oktober 2024     \n   Mo Di Mi Do Fr Sa So     Mo Di Mi Do Fr Sa So     Mo Di Mi Do Fr Sa So\n31           1  2  3  4  35                    1  40     1  2  3  4  5  6\n32  5  6  7  8  9 10 11  36  2  3  4  5  6  7  8  41  7  8  9 10 11 12 13\n33 12 13 14 15 16 17 18  37  9 10 11 12 13 14 15  42 14 15 16 17 18 19 20\n34 19 20 21 22 23 24 25  38 16 17 18 19 20 21 22  43 21 22 23 24 25 26 27\n35 26 27 28 29 30 31     39 23 24 25 26 27 28 29  44 28 29 30 31         \n                         40 30\nTwo main tags:"
+    "text": "##Week 1\n###Lecture 1\n\ndate:\n\n###Lecture 2\n\ndate:\n\n##Week 2\n###Lecture 1\n\ndate:\n\n###Lecture 2\n\ndate:\n\n##Week 3\n###Lecture 1\n\ndate:\n\n###Lecture 2\n\ndate:\n\n##Week 4\n###Lecture 1\n\ndate:\n\n###Lecture 2\n\ndate:\n\n##Week 5\n###Lecture 1\n\ndate:\n\n###Lecture 2\n\ndate:\n\n##Week 6\n###Lecture 1\n\ndate:\n\n###Lecture 2\n\ndate:\n\n##Week 7\n###Lecture 1\n\ndate:\n\n###Lecture 2\n\ndate:\n\n##Week 8\n###Lecture 1\n\ndate:\n\n###Lecture 2\n\ndate:\n\n##Week 9\n###Lecture 1\n\ndate:\n\n###Lecture 2\n\ndate:\n\n##Week 10\n###Lecture 1\n\ndate:\n\n###Lecture 2\n\ndate:\n\n##Week 11\n###Lecture 1\n\ndate:\n\n###Lecture 2\n\ndate:\n\n##Week 12\n###Lecture 1\n\ndate:\n\n###Lecture 2\n\ndate:\n\n##Week 13\n###Lecture 1\n\ndate:\n\n###Lecture 2\n\ndate:\n\n##Week 14\n###Lecture 1\n\ndate:\n\n###Lecture 2\n\ndate:\n\n##Week 15\n###Lecture 1\n\ndate:\n\n###Lecture 2\n\ndate:"
   },
   {
-    "objectID": "ss24/time/index.html#weekly",
-    "href": "ss24/time/index.html#weekly",
-    "title": "Time Log",
-    "section": "Weekly",
-    "text": "Weekly\n\ntotal times:\n\n\n\n                 Total\n2024  Week 31   15h45m\n      Week 32   14h10m\n      Week 33    3h30m\n      Week 35    1h20m\n      Week 37    5h10m\n      Week 38    3h35m\n              ========\n                43h30m\n\n\n\nalgorithms and data structures (#alda) and oop for scientific computing (#sci-oop):\n\n\n\n                 Total                   Total\n2024  Week 31    7h40m  2024  Week 31     8h5m\n      Week 32   10h25m        Week 32    4h15m\n      Week 37    5h10m        Week 33    3h30m\n      Week 38    3h50m        Week 35    1h20m\n              ========                ========\n                 27h5m                  17h10m"
-  },
-  {
-    "objectID": "ss24/time/index.html#daily",
-    "href": "ss24/time/index.html#daily",
-    "title": "Time Log",
-    "section": "Daily",
-    "text": "Daily\n\ntotal:\n\n\n\n                       Total\n2024 Jul    Tue 30.     5h5m\n            Wed 31.       5h\n     Aug    Thu  1.    4h10m\n            Fri  2.    1h30m\n            Mon  5.    2h30m\n            Tue  6.    5h35m\n            Wed  7.    3h25m\n            Thu  8.    2h40m\n            Tue 13.    1h35m\n            Wed 14.    1h55m\n            Mon 26.       1h\n            Tue 27.      20m\n     Sep    Tue 10.    2h30m\n            Fri 13.    2h40m\n            Mon 16.    3h35m\n                    ========\n                      43h30m\n\n\n\n#alda and #sci-oop side by side;\n\n\n\n                       Total                           Total\n2024 Jul    Tue 30.    1h15m    2024 Jul    Tue 30.    3h50m\n            Wed 31.       4h                Wed 31.       1h\n     Aug    Thu  1.    2h25m         Aug    Thu  1.    1h45m\n            Mon  5.    2h30m                Fri  2.    1h30m\n            Tue  6.    2h50m                Tue  6.    2h45m\n            Wed  7.    3h25m                Thu  8.    1h30m\n            Thu  8.    1h10m                Tue 13.    1h35m\n            Fri  9.      30m                Wed 14.    1h55m\n     Sep    Tue 10.    2h30m                Mon 26.       1h\n            Fri 13.    2h40m                Tue 27.      20m\n            Mon 16.    3h50m                        ========\n                    ========                          17h10m\n                       27h5m"
-  },
-  {
-    "objectID": "ss24/time/index.html#entries",
-    "href": "ss24/time/index.html#entries",
-    "title": "Time Log",
-    "section": "Entries",
-    "text": "Entries\nTime log entries:\n\n\n\n2024-07-30 (6h!)\n#study #uni #exam\n    10:45 - 12:45 #sci-oop video reviews on moodle, Vid 1\n    -10m Break (#sci-oop)\n    14:00 - 15:45 #sci-oop video reviews on moodle, Vid 2\n    16:15 - 16:30 #sci-oop video reviews on moodle, Vid 2 \n        range based loops\n    16:30 - 17:45 #alda big #cpp sorting & serching\n\n2024-07-31 (6h!)\n#study #uni #exam\n    10:05 - 12:05 #alda big #cpp binary search ch 12\n    14:05 - 16:05 #alda big #cpp most frequent element ch 12\n        implemented most frequent element\n    16:35 - 17:35 #sci-oop move semantics ~ josuttis #cpp\n\n2024-08-01 (6h!)\n#study #uni #exam\n    10:35 - 13:15 #alda tutor notes, probleklausur\n    -15m Break (#alda)\n    14:45 - 16:45 #sci-oop move semantics ~ josuttis\n    -15m Break (#sci-oop)\n\n2024-08-02 (6h!)\n#study #uni #exam\n    10:45 - 12:45 #sci-oop move semantics ~ josuttis\n        finished ch 1.1\n    -30m Break (#sci-oop)\n\n2024-08-05 (6h!)\n#study #uni #exam\n    12:05 - 13:10 #alda big #cpp shell sort\n    -15m (#alda #cpp) Break\n    15:30 - 17:40 #alda big #cpp shell sort\n        implemented shell sort\n    -30m (#alda #cpp) Break\n\n2024-08-06\n    &lt;23:30 - 2:00 klog documentation\n    -45m Break & Distractions\n\n2024-08-06 (6h!)\n#study #uni #exam\n    9:45 - 11:15 #sci-oop move semantics \n        ch 1.2 - 1.5, 5p\n    11:35 - 12:50 #sci-oop move semantics ch 2\n        finished until summary chapter, 6p\n    14:45 - 15:35 #alda foundations of algorithms ~ neapolitan\n        preface & ch 1.0  \n    16:00 - 18:40 #alda foundations of algoroithms ~ neapolitan\n        ch 1.1 excluding matrix multiplication example\n    -40m #alda Break & Distractions\n\n2024-08-07 (5h30m!)\n#study #uni #exam\n    10:25 - 12:50 #alda foundations of algorithms ~ neapolitan\n        matrix multiplication example & ch 1.1\n        implemented & tested binary search\n    -20m #alda Break & Distractions\n    0m organized reading lists for ALDA and SCI-OOP \n        around 3.5 hours\n    18:00 - 19:20 #alda foundations of algorithms ~ neapolitan\n        ch1.2 fibonacci recursive and dynamic, impl and runtime\n\n2024-08-08 (4h!)\n#study #uni #exam\n    11:20 - 12:30 #alda implemented merge and mergesort\n        with proofs of correctness \n    0m sci-oop exam 14:20 - 16:00\n    17:00 - 18:30 #sci-oop typeset exam questions\n        and published them to the website\n\n2024-08-09\n    11:30 - 12:00 #alda typesetting first exam questions\n\n2024-08-13\n    10:10 - 12:05 quarto documentation, pdf options\n\n2024-08-13 (4h!)\n#study #uni #exam\n    12:25 - 13:20 #sci-oop josuttis #cpp move semantics\n        ch3.1 - Move semantics in ordinary classes \n    -10m Break #sci-oop #cpp\n    14:35 - 15:25 #sci-oop josuttis #cpp move semantics \n        ch3.2 - Implementing special copy/move member functions\n\n2024-08-13\n    19:15 - 20:15 #sports bodyshape fitness\n\n2024-08-14 (4h!)\n#study #uni #exam\n    10:45 - 12:55 #sci-oop josuttis #cpp move semantics \n        ch 3.3 - Special member functions\n    -15m Break #sci-oop #cpp\n\n2024-08-26 (3h30m!)\n#study #uni #exam\n    11:50 - 13:05 #sci-oop josuttis #cpp move semantics\n        revise ch 3\n    -15m Break #sci-oop #cpp\n\n2024-08-27 (3h!)\n#study #uni #exam\n    13:00 - 13:30 #sci-oop josuttis #cpp move semantics\n        ch 3.1.1 - \n    -10m Break #sci-oop #cpp\n\n2024-09-10 (5h!)\n#study #uni #exam\n    12:15 - 13:05 #alda gersting ch3 Recurrence\n        p. 157 - 159\n    15:30 - 17:30 #alda gersting ch3 recurrence relation\n        p. 159 - 163 until ex 7\n    -20m Break #alda\n\n2024-09-13 (4h!)\n#study #uni #exam\n    13:55 - 14:50 #alda gersting ch3 recurrence relations\n        p.163 - 165 \n    15:25 - 16:10 #alda gerstin ch3 recurrence relations\n        p.165 - 168 until Example 11\n    16:40 - 17:40 #alda \n        until p.169, implemented selection sort both iterative\n        and recursive versions\n\n2024-09-16 (4h!)\n#study #uni #exam\n    11:10 - 12:40 #alda gersting ch3 recurrence relations\n        p.169 - 171 implemented recursive & iterative binary search \n    -15m Break #alda\n    14:50 - 16:30 #alda gersting ch3 recurrence relations\n        p.171 - 171 Exercises 1, 2\n    -15m Break \n    17:00 - 17:55 #alda gersting ch3 recurrence relations\n        p.171 - 172 Exercises 2 - 12\n\n2024-09-20 (5h!)\n#self-study \n    10:35 - 13:30 #finance Beancount docs\n        command line accounting in context: custom scripting - end of chpater\n        finished chapter\n    -35m Break #finance \n    16:05 - 19:00 #finance Beancount docs\n        DE Counting Method Intro - types of accounts \n        read two chapters\n\n2024-09-24 (4h!)\n#self-study\n    12:10 - 13:40 #finance Beancount docs\n        DE Counting method: types of accounts - income statement\n    15:15 - 16:15 #finance Beancount docs\n        DE Counting method: clearing income - Balance Sheet \n    16:45 - 17:30 #finance Beancount docs\n        DE Coumting method: Summarizing - 17:30\n\n2024-09-30 (4h!)\n#self-study\n    11:45 - 12:45 #finance Beancount docs\n        DE Counting method: trial balance\n    15:15 - 16:00 #finance Beancount docs\n        DE Counting method: Balance Sheet\n    16:20 - 18:50 #finance Beancount docs\n        DE Counting method: Period Reporting - Chart of Accounts(excl)\n    -50m Break\n\n2024-10-01 (4h30m!)\n#self-study\n    10:25 - 11:40 Business and finance books glean\n    11:50 - 12:45 #finance Beancount docs\n        DE CM: Period reporting - plain-text accounting (excl)\n    14:10 - 14:40 #finance Beancount docs\n        DE CM: Plain-text accounting - the table perspective\n        Distracting a lot - gleaning productivity books"
-  },
-  {
-    "objectID": "ws23-24/index.html#courses",
-    "href": "ws23-24/index.html#courses",
-    "title": "WS 23/24",
-    "section": "Courses",
-    "text": "Courses\n\nNum\nIPI",
-    "crumbs": [
-      "Bachelor",
-      "WS 23/24"
-    ]
-  },
-  {
-    "objectID": "ws24-25/its/sum.html",
-    "href": "ws24-25/its/sum.html",
-    "title": "Weekly Summary",
+    "objectID": "ws24-25/its/index.html",
+    "href": "ws24-25/its/index.html",
+    "title": "IT-Security",
     "section": "",
-    "text": "date: 14/10/24\nmassive increases in cyber-attacks in last 2-3 years. who is carrying out the attacks? how to find out? Is AI responsible for the increase?\nIntro & infos:\n\nLernziele:\nOrganisational:\n\nwebsite\nall informations/materials on moodle.\n\n\nransomware (check out the wiki article)\nInformation security vs IT-Security: former is a subset of the latter. IT-Security is information security in the realm of electronic information.\nGeneral 3 goals of Information security - CIA:\n\nConfidentiality\nIntegrity\nAvailability\n\nCastle analogy. Thick walls can protect, what about the gates? How to determine who belongs to the castle, who doesn’t? Increasing security measures can directly cause new vulnerabilities.\n\n\n\n\n\ndate: 15/10/24\norganisatory infos:\n\n6 Assignment sheets, 50% for the exam.\ntutorials on heico."
+    "text": "weekly summary\nnotes\nsolutions"
   },
   {
-    "objectID": "ws24-25/its/sum.html#week-1",
-    "href": "ws24-25/its/sum.html#week-1",
-    "title": "Weekly Summary",
+    "objectID": "ws24-25/its/index.html#section",
+    "href": "ws24-25/its/index.html#section",
+    "title": "IT-Security",
     "section": "",
-    "text": "date: 14/10/24\nmassive increases in cyber-attacks in last 2-3 years. who is carrying out the attacks? how to find out? Is AI responsible for the increase?\nIntro & infos:\n\nLernziele:\nOrganisational:\n\nwebsite\nall informations/materials on moodle.\n\n\nransomware (check out the wiki article)\nInformation security vs IT-Security: former is a subset of the latter. IT-Security is information security in the realm of electronic information.\nGeneral 3 goals of Information security - CIA:\n\nConfidentiality\nIntegrity\nAvailability\n\nCastle analogy. Thick walls can protect, what about the gates? How to determine who belongs to the castle, who doesn’t? Increasing security measures can directly cause new vulnerabilities.\n\n\n\n\n\ndate: 15/10/24\norganisatory infos:\n\n6 Assignment sheets, 50% for the exam.\ntutorials on heico."
-  },
-  {
-    "objectID": "ws24-25/its/sum.html#week-2",
-    "href": "ws24-25/its/sum.html#week-2",
-    "title": "Weekly Summary",
-    "section": "Week 2",
-    "text": "Week 2\n\ndate:"
-  },
-  {
-    "objectID": "ws24-25/its/sum.html#week-3",
-    "href": "ws24-25/its/sum.html#week-3",
-    "title": "Weekly Summary",
-    "section": "Week 3",
-    "text": "Week 3\n\ndate:"
-  },
-  {
-    "objectID": "ws24-25/its/sum.html#week-4",
-    "href": "ws24-25/its/sum.html#week-4",
-    "title": "Weekly Summary",
-    "section": "Week 4",
-    "text": "Week 4\n\ndate:"
-  },
-  {
-    "objectID": "ws24-25/its/sum.html#week-5",
-    "href": "ws24-25/its/sum.html#week-5",
-    "title": "Weekly Summary",
-    "section": "Week 5",
-    "text": "Week 5\n\ndate:"
-  },
-  {
-    "objectID": "ws24-25/its/sum.html#week-6",
-    "href": "ws24-25/its/sum.html#week-6",
-    "title": "Weekly Summary",
-    "section": "Week 6",
-    "text": "Week 6\n\ndate:"
-  },
-  {
-    "objectID": "ws24-25/its/sum.html#week-7",
-    "href": "ws24-25/its/sum.html#week-7",
-    "title": "Weekly Summary",
-    "section": "Week 7",
-    "text": "Week 7\n\ndate:"
-  },
-  {
-    "objectID": "ws24-25/its/sum.html#week-8",
-    "href": "ws24-25/its/sum.html#week-8",
-    "title": "Weekly Summary",
-    "section": "Week 8",
-    "text": "Week 8\n\ndate:"
-  },
-  {
-    "objectID": "ws24-25/its/sum.html#week-9",
-    "href": "ws24-25/its/sum.html#week-9",
-    "title": "Weekly Summary",
-    "section": "Week 9",
-    "text": "Week 9\n\ndate:"
-  },
-  {
-    "objectID": "ws24-25/its/sum.html#week-10",
-    "href": "ws24-25/its/sum.html#week-10",
-    "title": "Weekly Summary",
-    "section": "Week 10",
-    "text": "Week 10\n\ndate:"
-  },
-  {
-    "objectID": "ws24-25/its/sum.html#week-11",
-    "href": "ws24-25/its/sum.html#week-11",
-    "title": "Weekly Summary",
-    "section": "Week 11",
-    "text": "Week 11\n\ndate:"
-  },
-  {
-    "objectID": "ws24-25/its/sum.html#week-12",
-    "href": "ws24-25/its/sum.html#week-12",
-    "title": "Weekly Summary",
-    "section": "Week 12",
-    "text": "Week 12\n\ndate:"
-  },
-  {
-    "objectID": "ws24-25/its/sum.html#week-13",
-    "href": "ws24-25/its/sum.html#week-13",
-    "title": "Weekly Summary",
-    "section": "Week 13",
-    "text": "Week 13\n\ndate:"
-  },
-  {
-    "objectID": "ws24-25/its/sum.html#week-14",
-    "href": "ws24-25/its/sum.html#week-14",
-    "title": "Weekly Summary",
-    "section": "Week 14",
-    "text": "Week 14\n\ndate:"
-  },
-  {
-    "objectID": "ws24-25/its/sum.html#week-15",
-    "href": "ws24-25/its/sum.html#week-15",
-    "title": "Weekly Summary",
-    "section": "Week 15",
-    "text": "Week 15\n\ndate:"
+    "text": "weekly summary\nnotes\nsolutions"
   },
   {
     "objectID": "ws24-25/isw/index.html",
@@ -165,18 +35,123 @@
     "text": "weekly summary\nnotes\nsolutions"
   },
   {
-    "objectID": "ws24-25/ds/index.html",
-    "href": "ws24-25/ds/index.html",
-    "title": "Discrete Structures",
+    "objectID": "ws24-25/ds/sum.html",
+    "href": "ws24-25/ds/sum.html",
+    "title": "My Uni Notes",
     "section": "",
-    "text": "weekly summary\nnotes\nsolutions"
+    "text": "date:\n\n\n\n\n\ndate:"
   },
   {
-    "objectID": "ws24-25/ds/index.html#section",
-    "href": "ws24-25/ds/index.html#section",
-    "title": "Discrete Structures",
+    "objectID": "ws24-25/ds/sum.html#week-1",
+    "href": "ws24-25/ds/sum.html#week-1",
+    "title": "My Uni Notes",
     "section": "",
-    "text": "weekly summary\nnotes\nsolutions"
+    "text": "date:\n\n\n\n\n\ndate:"
+  },
+  {
+    "objectID": "ws24-25/ds/sum.html#week-2",
+    "href": "ws24-25/ds/sum.html#week-2",
+    "title": "My Uni Notes",
+    "section": "Week 2",
+    "text": "Week 2\n\nLecture 1\n\ndate:\n\n\n\nLecture 2\n\ndate:"
+  },
+  {
+    "objectID": "ws24-25/ds/sum.html#week-3",
+    "href": "ws24-25/ds/sum.html#week-3",
+    "title": "My Uni Notes",
+    "section": "Week 3",
+    "text": "Week 3\n\nLecture 1\n\ndate:\n\n\n\nLecture 2\n\ndate:"
+  },
+  {
+    "objectID": "ws24-25/ds/sum.html#week-4",
+    "href": "ws24-25/ds/sum.html#week-4",
+    "title": "My Uni Notes",
+    "section": "Week 4",
+    "text": "Week 4\n\nLecture 1\n\ndate:\n\n\n\nLecture 2\n\ndate:"
+  },
+  {
+    "objectID": "ws24-25/ds/sum.html#week-5",
+    "href": "ws24-25/ds/sum.html#week-5",
+    "title": "My Uni Notes",
+    "section": "Week 5",
+    "text": "Week 5\n\nLecture 1\n\ndate:\n\n\n\nLecture 2\n\ndate:"
+  },
+  {
+    "objectID": "ws24-25/ds/sum.html#week-6",
+    "href": "ws24-25/ds/sum.html#week-6",
+    "title": "My Uni Notes",
+    "section": "Week 6",
+    "text": "Week 6\n\nLecture 1\n\ndate:\n\n\n\nLecture 2\n\ndate:"
+  },
+  {
+    "objectID": "ws24-25/ds/sum.html#week-7",
+    "href": "ws24-25/ds/sum.html#week-7",
+    "title": "My Uni Notes",
+    "section": "Week 7",
+    "text": "Week 7\n\nLecture 1\n\ndate:\n\n\n\nLecture 2\n\ndate:"
+  },
+  {
+    "objectID": "ws24-25/ds/sum.html#week-8",
+    "href": "ws24-25/ds/sum.html#week-8",
+    "title": "My Uni Notes",
+    "section": "Week 8",
+    "text": "Week 8\n\nLecture 1\n\ndate:\n\n\n\nLecture 2\n\ndate:"
+  },
+  {
+    "objectID": "ws24-25/ds/sum.html#week-9",
+    "href": "ws24-25/ds/sum.html#week-9",
+    "title": "My Uni Notes",
+    "section": "Week 9",
+    "text": "Week 9\n\nLecture 1\n\ndate:\n\n\n\nLecture 2\n\ndate:"
+  },
+  {
+    "objectID": "ws24-25/ds/sum.html#week-10",
+    "href": "ws24-25/ds/sum.html#week-10",
+    "title": "My Uni Notes",
+    "section": "Week 10",
+    "text": "Week 10\n\nLecture 1\n\ndate:\n\n\n\nLecture 2\n\ndate:"
+  },
+  {
+    "objectID": "ws24-25/ds/sum.html#week-11",
+    "href": "ws24-25/ds/sum.html#week-11",
+    "title": "My Uni Notes",
+    "section": "Week 11",
+    "text": "Week 11\n\nLecture 1\n\ndate:\n\n\n\nLecture 2\n\ndate:"
+  },
+  {
+    "objectID": "ws24-25/ds/sum.html#week-12",
+    "href": "ws24-25/ds/sum.html#week-12",
+    "title": "My Uni Notes",
+    "section": "Week 12",
+    "text": "Week 12\n\nLecture 1\n\ndate:\n\n\n\nLecture 2\n\ndate:"
+  },
+  {
+    "objectID": "ws24-25/ds/sum.html#week-13",
+    "href": "ws24-25/ds/sum.html#week-13",
+    "title": "My Uni Notes",
+    "section": "Week 13",
+    "text": "Week 13\n\nLecture 1\n\ndate:\n\n\n\nLecture 2\n\ndate:"
+  },
+  {
+    "objectID": "ws24-25/ds/sum.html#week-14",
+    "href": "ws24-25/ds/sum.html#week-14",
+    "title": "My Uni Notes",
+    "section": "Week 14",
+    "text": "Week 14\n\nLecture 1\n\ndate:\n\n\n\nLecture 2\n\ndate:"
+  },
+  {
+    "objectID": "ws24-25/ds/sum.html#week-15",
+    "href": "ws24-25/ds/sum.html#week-15",
+    "title": "My Uni Notes",
+    "section": "Week 15",
+    "text": "Week 15\n\nLecture 1\n\ndate:\n\n\n\nLecture 2\n\ndate:"
+  },
+  {
+    "objectID": "ws23-24/num/sum.html",
+    "href": "ws23-24/num/sum.html",
+    "title": "Num Weekly Summary",
+    "section": "",
+    "text": "W01/VL01\n\ndate:\nsummary:\n\nW01/VL02\n\ndate:\nsummary:\n\nW02/VL03\n\ndate:\nsummary:\n\nW02/VL04:\n\ndate:\nsummary:\n\nW03/VL05\n\ndate: 31/10/2023, Tue\nsummary: \\(LR\\)-Decomposition, uniqueness, existence, algorithm, complexity, error analysis\n\nScript pages: 21 (satz 2.5) - 28 (2.3 Error Analysis of LR)\nLR Zerlegung ist eindeutig\nProduct of two triangular matrices is also triangular (left or right)\nInverse of a triangular matrix is triangular (left or right)\nProduct of two left-triangular matrices with \\(a_{ii} = 1\\) is also a left-triangular matrix with \\(\\tilde{a}_{ii} = 1\\)\n\\(LR\\)-Decomposition method using Gauss decomposition (Alg 2.7) (?).\nExistence of the \\(LR\\)-decomposition (Satz 2.8)\nPractical version of \\(LR\\)-decomposition Algorithm (not Alg 2.7) saves space (Alg 2.9).\nComplexity of Alg 2.9 and solving a LSE (De: LGS)\nError analysis of \\(LR\\)-Decomposition.\n\n\nW03/VL06\n\ndate: 02/11/23, Thu\nsummary: Script 28 - 33. Error estimation of Alg 2.9, forwards and backwards error, conditioning of a function, conditioning number.\n\nError estimation of Alg 2.9 with proof (Lemma 2.13 & Satz 2.14)\nAposteriori error estimation of Alg 2.9 (Satz 2.16)\nrelationship between backwards and forwards error, a python example demonstrating that they aren’t necessarily related (?)\nConditioning of a function (Ch 2.4.1).\nConditioning number\n\n\nW04/VL07\n\ndate: 07/11/23, Tue\nsummary: Script 33 - 42.\n\nQuestion: How much effect does the error in \\(A\\) & \\(b\\) have on the solutuion of an LEQ/LGS?\nConditioning of a matrix & its proof. (Prop 2.20)\nError analysis of LEQ/LGS’s (Ch 2.4.3)\nConvergent Matrix sequences and matrix series (Ch 2.4.4.)\n\nNeumann Series (2.4.9, P:37)\nSpectral radius of a matrix\n\nConvergent Matrix sequences are used in the proof of error estimation of LEQ/LGS’s. Proof of 2.2.1\nPivoting Strategies to increase \\(LR\\)-decomposition algorithm stability (Ch. 2.5) via exchanging rows during the steps of the algorithm.\n\nPermutation Matrix (Def 2.25)\n\n\n\nW04/VL08\n\ndate: 09/11/23, Thu\nsummary: Script 43 - 51\n\nnote: numbering shifted 1 up, due to a new example\nAlg. 2.27: \\(LR\\)-Decomposition with column pivot search.\n\nSatz 2.30: \\(\\forall\\) regular matrix \\(A \\in \\mathbb{R}^{n\\times n}\\, \\exists\\) a Permutations matrix \\(P_{\\pi}\\), s.t \\(LR = P_{\\pi}A\\) and its proof.\nA problematic matrix for this method: Wilkinson matrix. Such problems can be avoided with “Full Pivot Search/Vollpivotsuche”.\nBut fullpivot search has the disatvantageous complexity \\(\\mathcal{O}(n^3)\\)\n\nCholesky Decomposition: An efficient method for Symmetric Positive Definite (SPD) Matrices.\n\nDefinition & Properties of SPD matrices. (Def 2.32 & Satz 2.33)\nSatz 3.34: \\(A\\in\\mathbb{R}^{n\\times n} \\text{\\, SPD \\, }\\Rightarrow \\exists \\text{\\, upper triangular} \\, R\\in \\mathbb{R}^{n\\times n} \\text{\\, s.t.\\, } A = R^TR\\) (Cholesky decomposition)\nProof of Satz 3.34\nAlgorithm for Cholesky Decomposition (Alg 2.35) and its complexity (\\(\\frac{n^3}{3} + \\mathcal{O}(n^2)\\)). (2 times more efficient than usual decommposition)\n\n\\(LR\\)-Decomposition for Band-matrices\n\nSparce matrices (schwach besetzte matrix) \\(\\approx\\) many entries are 0.\nhow sparce matrices are stored efficiently: For example\n\nA = 0 5 0    C = (2, 3) {non-nul columns}\n    0 0 0    R = (1, 3) {non-null rows}\n    0 0 7    X = (5, 7) {actual entries in these coordinates}\n\nDefinition of a band matrix (Def 2.38)\n\\(LR\\)-decomposition for Band matrices.\n\n\n\nW05/VL09\n\ndate: 14.11.23, Tue\nsummary: Skript 51 - 55 (togehter with topics form appendix)\n\nReview of some LA topics (from Appendix):\n\nDef of orthogonal matrix\nDef of unitary matrix\nLemma A.57/Satz A.58: Singular value decomposition (SVD) and its proof.\nProgramming example demonstrating uses of SVD for image compression.\nProp A.61 regarding SVD (?)\n\nIntro to new Ch 3 - Interpolation & Approximation\n\nOverview of different types of interpolating functions: polynomial, rational (polynomial), spline, neural network\nIntro Polynomial Interpolation:\n\nDef of vector space of polynomials of degree \\(n\\): \\(\\mathbb{P}_n\\).\nDef 3.1: Lagrange Interpolation Polynomials\n\n\n\n\nW05/VL10\n\ndate: 16.11.23, Thu\nsummary: Skript: 55 - 64\n\nLagrange interpolation\n\nLagrange polynomials \\(\\{l_i\\}_{i=0\\dots n}\\) Form a basis for \\(\\mathbb{P}_n\\) & its proof.\n\nGeneral interpolation with a general basis \\(\\{b_i\\}_{i=0\\dots n}\\) \\(\\Rightarrow\\) Vandermonde Matrix. note: Vandermonde matrix for Lagrange Basis is simply the identity matrix. Vandermonde matrix is very badly conditioned for the monomial basis \\(\\{x^i\\}_{i=0}^n\\)\nError analysis of Lagrange interpolation. Certain properties of the function that is to be interpolated determine the precision of the error analysis (like the smoothness of the function.) (Satz 3.6)\nNeville’s Schema\n\n\nW06/VL11\n\ndate: 21.11.23, Tue\nsummary: Skript 64 - 71\n\nNewton Interpolation (Ch 3.5)\n\nDividierende Differenzen\nLemma 3.11 and its proof via induction.\n\nIntepolation error\nHermite Interpolation\n(3.7 is skipped)\n3.8 Conditioning and Approximation\nWeierstrass Theorem (3.25)\n\n\nW06/VL12\n\ndate: 23.11.23, Thu\nsummary: Skript 71 - 81\n\nreview of error of polynomial interpolation: Bsp 3.21, 3.22.\nRunge Phenomenon\nWeierstrass Theorem (3.25) and its relationship to polynomial interpolation.\nError of the best approximation (Satz 3.26)\n\nDef 3.23: Lebesgue Constant \\(\\Lambda_n\\)\n\nConditioning of the interpolation, what happens when we interpolate \\(f + \\delta\\) instead of \\(f\\)?\nIf the function is only known to be continuous (but not necessarily differentiable), there is another measure for how strong a function “fluctuates”: Modulus of continuity (Stetigkeitsmodul) (Def 3.27)\nJackson’s Theorem (3.28) given without proof.\nCorollary (3.29) - its proof.\nHow to keep \\(\\Lambda_n\\) small? \\(\\rightarrow\\) Chebyshev Interpolation, Chebyshev Points\n\nGoal: find appropriate points \\(\\{x_i\\}_{i=1\\dots n}\\) s.t. \\(\\Lambda_n\\) is minimal.\nDefinition of Chebyshev Points (Def 3.30): \\(x_i^{(n + 1)} = \\cos{(\\frac{2i + 1}{2n + 2}\\pi)}\\) \nDefinition of Chebyshev Polynomials (Def 3.32)\nLemma 3.33 - some properties of chebyshev polynomials\n\n\n\nW07/VL13\n\ndate: 28.11.23\nsummary: Skript 81 - 96 (some pages were skipped)\n\nClenshaw-Curtis points\nSatz 3.34\nProofs regarding Lebesgue Constats are skipped.\nLemma 3.40:\nSkip until Spline Interpolation\nSpline Interpolation:\n\nError of spline interpolation\nCubic splines"
   },
   {
     "objectID": "ws23-24/ipi/sum.html",
@@ -184,6 +159,17 @@
     "title": "IPI Weekly Summary",
     "section": "",
     "text": "Week 1/~\n\ndate:\nsummary:\n\nWeek 1/~\n\ndate:\nsummary:\n\nWeek 2/VL 1\n\ndate:\nsummary:\n\nWeek 2/VL 2:\n\ndate:\nsummary:"
+  },
+  {
+    "objectID": "ws23-24/index.html#courses",
+    "href": "ws23-24/index.html#courses",
+    "title": "WS 23/24",
+    "section": "Courses",
+    "text": "Courses\n\nNum\nIPI",
+    "crumbs": [
+      "Bachelor",
+      "WS 23/24"
+    ]
   },
   {
     "objectID": "ss24/r/sum.html",
@@ -430,6 +416,104 @@
     ]
   },
   {
+    "objectID": "ss24/index.html#courses",
+    "href": "ss24/index.html#courses",
+    "title": "SS 24",
+    "section": "Courses",
+    "text": "Courses\n\nAlda\nR\nOOP",
+    "crumbs": [
+      "Bachelor",
+      "SS 24"
+    ]
+  },
+  {
+    "objectID": "ss24/index.html#time",
+    "href": "ss24/index.html#time",
+    "title": "SS 24",
+    "section": "Time",
+    "text": "Time\n\ntimes",
+    "crumbs": [
+      "Bachelor",
+      "SS 24"
+    ]
+  },
+  {
+    "objectID": "ss24/alda/plan.html#reading-list",
+    "href": "ss24/alda/plan.html#reading-list",
+    "title": "Study Plan",
+    "section": "Reading List",
+    "text": "Reading List\n\nAlgorithms\n\nBasic:\n\nUnderstanding Algorithms. Brunskill\nAlgorithms Unlocked. Cormen\nFirst Course in Algorithms Through Puzzles. Ryuhei Uehara\nAlgorithmic Thinking. Daniel Zingaro\nPrincipes of Algorithmic Problem Solving. Johan Sannemo\nGrokking Algorithms. Aditya Bhargava\n\nIntermediate:\n\nDesign and Analysis of Algorithms. Jeffrey Smith\nAlgorithms. Jeff Erickson\nHow to Think About Algorithms. Jeff Edmonds\nProblems on Algorithmics. Ian Perberry\nFundamentals of Algorithmics. Brassard, Bratley.\nAlgorithmen & Datenstrukturen - Grundwerkzeuge. Kurt Melhorn\nLecture Notes on Algorithms. Ian Perberry\nAlgorithm Design. Kleinberg, Tardos\nAlgorithms Illuminated. Roughgarden\nCompared to What. G. J. E. Rawlins\nFoundations of Algorithms. Richard Neapolitan\nData Structurese & Their Algorithms. Harry Lewis, Larry Denenberg\nAlgorithms + Data Structures = Programs. Niklaus Wirth\nAlgorithms and Data Structures - Design, Correctness, Analysis. Jeffrey H. Kingston\nComputer Algorithms. Baase\n\nC++:\n\nData Structures & Problem Solving Using C++. M. A. Weiss\nData Structures & Algorithm Analysis in C++. M. A. Weiss\nData & Algorithms in C++. Drozdek.\nData Structures other Objects using C++. Walter Savitch\nPrinciples of Algorithmic Problem Solving. Johan Sannemo\nGuide to Competitive Programming. Antti Laaksonen\n\nC:\n\nAlgorithms and Data Structures - An Approach in C. Bowman\nFoundations of Computer Science. Aho, Ullman\nPrograms and Datastructures in C. Ameraal\n\nPython:\n\nData Structures and Algorithms Using Python. Rance D. Necaise.\nData Structures & Algorithms in Python. Canning, Broder, Lafore\nCompetitive Programaming with Python. Duerr, Vie\nProblem Solving with Algorithms and Data Structures Using Python. Franklin, Beedle\n\n\n\n\nGraph Theory and Discrete Mathematics\n\nGeneral Discrete Mathematics:\n\nMathematical Structures for Computer Science. Judith Gersting\nDiscrete & Combinatorial Mathematics. Grimaldi\nConcrete Mathematics Knuth\nDiskerte Mathematik fuer Einsteiger. Beutelspacher\nDiscrete Mathematics in Computer Science. Golovnev, Kulikov\n\nGraph Theory Specific\n\nGraph Theory - A Poblem Oriented Approach. Daniel A. Marcus\nAlgorithmic Graph Theory. Alan M. Gibbons\nSets, Puzzles & Postmen. Higgins\n\n\nSpecifically:\n\nGersting:\n\n3: Recurrence relations & analysis of algorithms\n5: Graphs & Trees\n7: Graph algorithms\n\nRosen:\n\n3: Algorithms\n5: Induction & Recursion\n8: Advancerd Counting: recurrence relations\n10: Graphs\n11: Trees\n\nGrimaldi:\n\n4: Mathematical induction\n5.7, 5.8: Analysis of Algorithms\n10: Recurrence relations\n11, 12, 13: Graph Theory"
+  },
+  {
+    "objectID": "ss24/alda/exam1.html",
+    "href": "ss24/alda/exam1.html",
+    "title": "My Uni Notes",
+    "section": "",
+    "text": "what was asked on the exam:\n\nAdjacency Matrix \\(A\\) of a graph \\(G\\):\n\nwrite the pseudocode for an optimal algorithm that determines the total number of nodes in the graph with equal in- and out-degrees.\nAnalyze the complexity of your algorithm and prove optimality\n\nHeaps\nHashing\n\nOpen hashing. Insert a sequence of elements\nOpen hashing. Delete a sequence of elements\n\nStandard questions for comparing functions asymptotically, determining growth rate of reccurence relations with and without applications of the master theorem, analyzing complexity of short pseudocode algorithms like\nread(t)\nk := 1\ni : = 1\nwhile (k &lt;= t) :\n    i := i + 1\n    k := k + i\nShort proofs of statements regarding (a, b) trees and graphs\nSimple proof by induction problem\nDijkstra shortest path algorithm\n\nwasn’t asked:\n\nsorting\nproblems specifically for divide & conquer / recursion\nproblems specifically for dynamic programming\nlinear programming\napproximation / heuristic algorithms\nalgorithms on strings"
+  },
+  {
+    "objectID": "ss24/alda/exam1.html#alda-sose-24-1st-exam",
+    "href": "ss24/alda/exam1.html#alda-sose-24-1st-exam",
+    "title": "My Uni Notes",
+    "section": "",
+    "text": "what was asked on the exam:\n\nAdjacency Matrix \\(A\\) of a graph \\(G\\):\n\nwrite the pseudocode for an optimal algorithm that determines the total number of nodes in the graph with equal in- and out-degrees.\nAnalyze the complexity of your algorithm and prove optimality\n\nHeaps\nHashing\n\nOpen hashing. Insert a sequence of elements\nOpen hashing. Delete a sequence of elements\n\nStandard questions for comparing functions asymptotically, determining growth rate of reccurence relations with and without applications of the master theorem, analyzing complexity of short pseudocode algorithms like\nread(t)\nk := 1\ni : = 1\nwhile (k &lt;= t) :\n    i := i + 1\n    k := k + i\nShort proofs of statements regarding (a, b) trees and graphs\nSimple proof by induction problem\nDijkstra shortest path algorithm\n\nwasn’t asked:\n\nsorting\nproblems specifically for divide & conquer / recursion\nproblems specifically for dynamic programming\nlinear programming\napproximation / heuristic algorithms\nalgorithms on strings"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Uni Notes",
+    "section": "",
+    "text": "Plan"
+  },
+  {
+    "objectID": "index.html#semesters",
+    "href": "index.html#semesters",
+    "title": "Uni Notes",
+    "section": "Semesters",
+    "text": "Semesters\n\nWS 23/24\nSS 24\nWS 24/25"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "My uni notes & resources"
+  },
+  {
+    "objectID": "plan.html",
+    "href": "plan.html",
+    "title": "Plan",
+    "section": "",
+    "text": "Pflicht (total = 54LP)\n\nAlda 8LP\nIBN 8LP\nISW 8LP\nBS (4LP + 2UK) 6LP\nFP 8LP\nBA 12LP\nBK 4LP\n\nWM (total = 22LP)\n\nWM-I 8LP\nWM-II 8LP\nWM-III 6LP\n\nFUK (total = 4LP)\n\nFUK-I (2UK) 2LP\nFUK-II (2UK) 2LP\n\nAG (total: 8LP)\n\nTheoPhys-II 8LP\n\n\nsum total: 88LP\nprogress: 92/180 \\(\\approx\\) 51%\n\n\nVersion 1\n\nSS 24 (total: 16LP)\n\nAlda 8LP\nWM-I 6LP\nFUK-I (2UK) 2LP\n\nWS 24/25 (total: 18LP)\n\nISW 8LP\nWM-II 8LP\nFUK-II (2UK) 2LP\n\nSS 25 (total: 24LP)\n\nFP 8LP\nIBN 8LP\nAG: TheoPhys-II 8LP\n\nWS 25/26 (total: 14LP)\n\nWM-III 8LP\nBS 6LP\n\nSS 26 (total: 16LP)\n\nBA 12LP\nBK 4LP"
+  },
+  {
+    "objectID": "plan.html#to-do-as-of-ss-24",
+    "href": "plan.html#to-do-as-of-ss-24",
+    "title": "Plan",
+    "section": "",
+    "text": "Pflicht (total = 54LP)\n\nAlda 8LP\nIBN 8LP\nISW 8LP\nBS (4LP + 2UK) 6LP\nFP 8LP\nBA 12LP\nBK 4LP\n\nWM (total = 22LP)\n\nWM-I 8LP\nWM-II 8LP\nWM-III 6LP\n\nFUK (total = 4LP)\n\nFUK-I (2UK) 2LP\nFUK-II (2UK) 2LP\n\nAG (total: 8LP)\n\nTheoPhys-II 8LP\n\n\nsum total: 88LP\nprogress: 92/180 \\(\\approx\\) 51%\n\n\nVersion 1\n\nSS 24 (total: 16LP)\n\nAlda 8LP\nWM-I 6LP\nFUK-I (2UK) 2LP\n\nWS 24/25 (total: 18LP)\n\nISW 8LP\nWM-II 8LP\nFUK-II (2UK) 2LP\n\nSS 25 (total: 24LP)\n\nFP 8LP\nIBN 8LP\nAG: TheoPhys-II 8LP\n\nWS 25/26 (total: 14LP)\n\nWM-III 8LP\nBS 6LP\n\nSS 26 (total: 16LP)\n\nBA 12LP\nBK 4LP"
+  },
+  {
+    "objectID": "ss24/alda/index.html",
+    "href": "ss24/alda/index.html",
+    "title": "Alda",
+    "section": "",
+    "text": "Algorithms and Data Structures",
+    "crumbs": [
+      "Alda"
+    ]
+  },
+  {
+    "objectID": "ss24/alda/index.html#section",
+    "href": "ss24/alda/index.html#section",
+    "title": "Alda",
+    "section": "",
+    "text": "weekly summary\nnotes\nsolutions\nplan\nexam",
+    "crumbs": [
+      "Alda"
+    ]
+  },
+  {
     "objectID": "ss24/alda/sum.html",
     "href": "ss24/alda/sum.html",
     "title": "Weekly Summary",
@@ -542,80 +626,142 @@
     "text": "Week 1\n\nLecture 1\ndate:\n\n\nLecture 2\ndate:"
   },
   {
-    "objectID": "ss24/alda/index.html",
-    "href": "ss24/alda/index.html",
-    "title": "Alda",
+    "objectID": "ss24/oop/exam1.html",
+    "href": "ss24/oop/exam1.html",
+    "title": "My Uni Notes",
     "section": "",
-    "text": "Algorithms and Data Structures",
+    "text": "OOP for Scientific Computing First Exam\npoints:\n\n\n\n1\n2\n3\n4\n5\n\\(\\Sigma\\)\n\n\n\n\n15\n20\n10\n10\n10\n65\n\n\n\nFollowing was asked in the exam:\n\nExplain following aspects of C++ :\n\nclass vs struct?\nnamespace. What is it, when & why is it used?\nprivate vs protected?\ncopy elision?\nheader guards. What, why?\nrule of five vs fule of zero?\ntemporaries? literals?\nhow does a shared pointer work?\nSFINAE?\nSOLID?\n\nShort code snippets were given and asked to explain & extend. With following topics:\n\ndefault function args\nconcepts\ntemplate parameters, default template parameters\nConstructor, copy constructor, copy assignment operator, move constructor, move assignment operator, overloaded constructor.\nLambda expression, functional programming\nCompile time branching\nCRTP\nInheritence. How to improve the given implementation\n\nHorner Schema: Variadic templates, recursion with templates(?), template metaprogramming\nAn incomplete implementation of an OOP system was given that was supposed to implement a simulation a prey-predator dynamic system, modeled by the Lotka-Volterra differential equations:\n\\[\\begin{align*}\n&\\frac{dx}{dt} = \\alpha x - \\beta xy, \\\\\n&\\frac{dy}{dt} = \\gamma y - \\delta xy\n\\end{align*}\\]\nThe incomplete OOP system had the following basic structure:\n\n\n\nLotka-Volterra OOP System\n\n\n\nImplement the PreyPredatorData Simulate(int steps, double dt) that creates a PreyPredatorData object, populates its members with the simulation data based on the Lotka-Volterra difference equations and returns the object:\n\n\\[\\begin{align*}\n&X_{n + 1} = X_n + \\Delta t (\\alpha x_n - \\beta x_ny_n) \\\\\n&Y_{n + 1} = Y_n + \\Delta t (\\delta x_ny_n- \\gamma y_n)\n\\end{align*}\\]\n\n?\n\n?"
+  },
+  {
+    "objectID": "ss24/oop/plan.html#reading-list",
+    "href": "ss24/oop/plan.html#reading-list",
+    "title": "Study Plan",
+    "section": "Reading List",
+    "text": "Reading List\n\nBasic, General, Intro:\n\nBig C++. Cay Horstmann\nProgramming Principles & Practice with C++. Stroustrup.\nA Tour of C++. Stroustrup\nC++ Crash Course. Josh Lospinoso\nC++ Primer. Lippmann\n\nModern, General, Scientific:\n\nDiscovering Modern C++ 2nd ed. Gottschild.\nModern C++ Programming Techniques for Scientific Computing - Lecture Notes. Ole Klein\n\nModern, Specific:\n\nFunctional Programming in C++. Cukic\nMove Semantics. Josuttis\nC++ Templates. Vandervoorde\nC++ STL. Josuttis\nOOP in C++. Josuttis"
+  },
+  {
+    "objectID": "ss24/r/index.html",
+    "href": "ss24/r/index.html",
+    "title": "R Programming",
+    "section": "",
+    "text": "R Programming and its Applications to Stochastic",
     "crumbs": [
-      "Alda"
+      "R Programming"
     ]
   },
   {
-    "objectID": "ss24/alda/index.html#section",
-    "href": "ss24/alda/index.html#section",
-    "title": "Alda",
+    "objectID": "ss24/r/index.html#section",
+    "href": "ss24/r/index.html#section",
+    "title": "R Programming",
     "section": "",
-    "text": "weekly summary\nnotes\nsolutions\nplan\nexam",
+    "text": "weekly summary\nnotes\nsolutions",
     "crumbs": [
-      "Alda"
+      "R Programming"
     ]
   },
   {
-    "objectID": "plan.html",
-    "href": "plan.html",
-    "title": "Plan",
+    "objectID": "ss24/time/index.html",
+    "href": "ss24/time/index.html",
+    "title": "Time Log",
     "section": "",
-    "text": "Pflicht (total = 54LP)\n\nAlda 8LP\nIBN 8LP\nISW 8LP\nBS (4LP + 2UK) 6LP\nFP 8LP\nBA 12LP\nBK 4LP\n\nWM (total = 22LP)\n\nWM-I 8LP\nWM-II 8LP\nWM-III 6LP\n\nFUK (total = 4LP)\n\nFUK-I (2UK) 2LP\nFUK-II (2UK) 2LP\n\nAG (total: 8LP)\n\nTheoPhys-II 8LP\n\n\nsum total: 88LP\nprogress: 92/180 \\(\\approx\\) 51%\n\n\nVersion 1\n\nSS 24 (total: 16LP)\n\nAlda 8LP\nWM-I 6LP\nFUK-I (2UK) 2LP\n\nWS 24/25 (total: 18LP)\n\nISW 8LP\nWM-II 8LP\nFUK-II (2UK) 2LP\n\nSS 25 (total: 24LP)\n\nFP 8LP\nIBN 8LP\nAG: TheoPhys-II 8LP\n\nWS 25/26 (total: 14LP)\n\nWM-III 8LP\nBS 6LP\n\nSS 26 (total: 16LP)\n\nBA 12LP\nBK 4LP"
+    "text": "calendar (with week numbers) pertaining to this semester:\nUsage: cal [general options] [-jy] [[month] year]\n       cal [general options] [-j] [-m month] [year]\n       ncal -C [general options] [-jy] [[month] year]\n       ncal -C [general options] [-j] [-m month] [year]\n       ncal [general options] [-bhJjpwySM] [-H yyyy-mm-dd] [-s country_code] [-W number of days] [[month] year]\n       ncal [general options] [-Jeo] [year]\nGeneral options: [-31] [-A months] [-B months] [-d yyyy-mm]\nTwo main tags:"
   },
   {
-    "objectID": "plan.html#to-do-as-of-ss-24",
-    "href": "plan.html#to-do-as-of-ss-24",
-    "title": "Plan",
-    "section": "",
-    "text": "Pflicht (total = 54LP)\n\nAlda 8LP\nIBN 8LP\nISW 8LP\nBS (4LP + 2UK) 6LP\nFP 8LP\nBA 12LP\nBK 4LP\n\nWM (total = 22LP)\n\nWM-I 8LP\nWM-II 8LP\nWM-III 6LP\n\nFUK (total = 4LP)\n\nFUK-I (2UK) 2LP\nFUK-II (2UK) 2LP\n\nAG (total: 8LP)\n\nTheoPhys-II 8LP\n\n\nsum total: 88LP\nprogress: 92/180 \\(\\approx\\) 51%\n\n\nVersion 1\n\nSS 24 (total: 16LP)\n\nAlda 8LP\nWM-I 6LP\nFUK-I (2UK) 2LP\n\nWS 24/25 (total: 18LP)\n\nISW 8LP\nWM-II 8LP\nFUK-II (2UK) 2LP\n\nSS 25 (total: 24LP)\n\nFP 8LP\nIBN 8LP\nAG: TheoPhys-II 8LP\n\nWS 25/26 (total: 14LP)\n\nWM-III 8LP\nBS 6LP\n\nSS 26 (total: 16LP)\n\nBA 12LP\nBK 4LP"
+    "objectID": "ss24/time/index.html#weekly",
+    "href": "ss24/time/index.html#weekly",
+    "title": "Time Log",
+    "section": "Weekly",
+    "text": "Weekly\n\ntotal times:\n\n\n\n                 Total\n2024  Week 31   15h45m\n      Week 32   14h10m\n      Week 33    3h30m\n      Week 35    1h20m\n      Week 37    5h10m\n      Week 38    3h35m\n              ========\n                43h30m\n\n\n\nalgorithms and data structures (#alda) and oop for scientific computing (#sci-oop):\n\n\n\n                 Total                   Total\n2024  Week 31    7h40m  2024  Week 31     8h5m\n      Week 32   10h25m        Week 32    4h15m\n      Week 37    5h10m        Week 33    3h30m\n      Week 38    3h50m        Week 35    1h20m\n              ========                ========\n                 27h5m                  17h10m"
   },
   {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
+    "objectID": "ss24/time/index.html#daily",
+    "href": "ss24/time/index.html#daily",
+    "title": "Time Log",
+    "section": "Daily",
+    "text": "Daily\n\ntotal:\n\n\n\n                       Total\n2024 Jul    Tue 30.     5h5m\n            Wed 31.       5h\n     Aug    Thu  1.    4h10m\n            Fri  2.    1h30m\n            Mon  5.    2h30m\n            Tue  6.    5h35m\n            Wed  7.    3h25m\n            Thu  8.    2h40m\n            Tue 13.    1h35m\n            Wed 14.    1h55m\n            Mon 26.       1h\n            Tue 27.      20m\n     Sep    Tue 10.    2h30m\n            Fri 13.    2h40m\n            Mon 16.    3h35m\n                    ========\n                      43h30m\n\n\n\n#alda and #sci-oop side by side;\n\n\n\n                       Total                           Total\n2024 Jul    Tue 30.    1h15m    2024 Jul    Tue 30.    3h50m\n            Wed 31.       4h                Wed 31.       1h\n     Aug    Thu  1.    2h25m         Aug    Thu  1.    1h45m\n            Mon  5.    2h30m                Fri  2.    1h30m\n            Tue  6.    2h50m                Tue  6.    2h45m\n            Wed  7.    3h25m                Thu  8.    1h30m\n            Thu  8.    1h10m                Tue 13.    1h35m\n            Fri  9.      30m                Wed 14.    1h55m\n     Sep    Tue 10.    2h30m                Mon 26.       1h\n            Fri 13.    2h40m                Tue 27.      20m\n            Mon 16.    3h50m                        ========\n                    ========                          17h10m\n                       27h5m"
+  },
+  {
+    "objectID": "ss24/time/index.html#entries",
+    "href": "ss24/time/index.html#entries",
+    "title": "Time Log",
+    "section": "Entries",
+    "text": "Entries\nTime log entries:\n\n\n\n2024-07-30 (6h!)\n#study #uni #exam\n    10:45 - 12:45 #sci-oop video reviews on moodle, Vid 1\n    -10m Break (#sci-oop)\n    14:00 - 15:45 #sci-oop video reviews on moodle, Vid 2\n    16:15 - 16:30 #sci-oop video reviews on moodle, Vid 2 \n        range based loops\n    16:30 - 17:45 #alda big #cpp sorting & serching\n\n2024-07-31 (6h!)\n#study #uni #exam\n    10:05 - 12:05 #alda big #cpp binary search ch 12\n    14:05 - 16:05 #alda big #cpp most frequent element ch 12\n        implemented most frequent element\n    16:35 - 17:35 #sci-oop move semantics ~ josuttis #cpp\n\n2024-08-01 (6h!)\n#study #uni #exam\n    10:35 - 13:15 #alda tutor notes, probleklausur\n    -15m Break (#alda)\n    14:45 - 16:45 #sci-oop move semantics ~ josuttis\n    -15m Break (#sci-oop)\n\n2024-08-02 (6h!)\n#study #uni #exam\n    10:45 - 12:45 #sci-oop move semantics ~ josuttis\n        finished ch 1.1\n    -30m Break (#sci-oop)\n\n2024-08-05 (6h!)\n#study #uni #exam\n    12:05 - 13:10 #alda big #cpp shell sort\n    -15m (#alda #cpp) Break\n    15:30 - 17:40 #alda big #cpp shell sort\n        implemented shell sort\n    -30m (#alda #cpp) Break\n\n2024-08-06\n    &lt;23:30 - 2:00 klog documentation\n    -45m Break & Distractions\n\n2024-08-06 (6h!)\n#study #uni #exam\n    9:45 - 11:15 #sci-oop move semantics \n        ch 1.2 - 1.5, 5p\n    11:35 - 12:50 #sci-oop move semantics ch 2\n        finished until summary chapter, 6p\n    14:45 - 15:35 #alda foundations of algorithms ~ neapolitan\n        preface & ch 1.0  \n    16:00 - 18:40 #alda foundations of algoroithms ~ neapolitan\n        ch 1.1 excluding matrix multiplication example\n    -40m #alda Break & Distractions\n\n2024-08-07 (5h30m!)\n#study #uni #exam\n    10:25 - 12:50 #alda foundations of algorithms ~ neapolitan\n        matrix multiplication example & ch 1.1\n        implemented & tested binary search\n    -20m #alda Break & Distractions\n    0m organized reading lists for ALDA and SCI-OOP \n        around 3.5 hours\n    18:00 - 19:20 #alda foundations of algorithms ~ neapolitan\n        ch1.2 fibonacci recursive and dynamic, impl and runtime\n\n2024-08-08 (4h!)\n#study #uni #exam\n    11:20 - 12:30 #alda implemented merge and mergesort\n        with proofs of correctness \n    0m sci-oop exam 14:20 - 16:00\n    17:00 - 18:30 #sci-oop typeset exam questions\n        and published them to the website\n\n2024-08-09\n    11:30 - 12:00 #alda typesetting first exam questions\n\n2024-08-13\n    10:10 - 12:05 quarto documentation, pdf options\n\n2024-08-13 (4h!)\n#study #uni #exam\n    12:25 - 13:20 #sci-oop josuttis #cpp move semantics\n        ch3.1 - Move semantics in ordinary classes \n    -10m Break #sci-oop #cpp\n    14:35 - 15:25 #sci-oop josuttis #cpp move semantics \n        ch3.2 - Implementing special copy/move member functions\n\n2024-08-13\n    19:15 - 20:15 #sports bodyshape fitness\n\n2024-08-14 (4h!)\n#study #uni #exam\n    10:45 - 12:55 #sci-oop josuttis #cpp move semantics \n        ch 3.3 - Special member functions\n    -15m Break #sci-oop #cpp\n\n2024-08-26 (3h30m!)\n#study #uni #exam\n    11:50 - 13:05 #sci-oop josuttis #cpp move semantics\n        revise ch 3\n    -15m Break #sci-oop #cpp\n\n2024-08-27 (3h!)\n#study #uni #exam\n    13:00 - 13:30 #sci-oop josuttis #cpp move semantics\n        ch 3.1.1 - \n    -10m Break #sci-oop #cpp\n\n2024-09-10 (5h!)\n#study #uni #exam\n    12:15 - 13:05 #alda gersting ch3 Recurrence\n        p. 157 - 159\n    15:30 - 17:30 #alda gersting ch3 recurrence relation\n        p. 159 - 163 until ex 7\n    -20m Break #alda\n\n2024-09-13 (4h!)\n#study #uni #exam\n    13:55 - 14:50 #alda gersting ch3 recurrence relations\n        p.163 - 165 \n    15:25 - 16:10 #alda gerstin ch3 recurrence relations\n        p.165 - 168 until Example 11\n    16:40 - 17:40 #alda \n        until p.169, implemented selection sort both iterative\n        and recursive versions\n\n2024-09-16 (4h!)\n#study #uni #exam\n    11:10 - 12:40 #alda gersting ch3 recurrence relations\n        p.169 - 171 implemented recursive & iterative binary search \n    -15m Break #alda\n    14:50 - 16:30 #alda gersting ch3 recurrence relations\n        p.171 - 171 Exercises 1, 2\n    -15m Break \n    17:00 - 17:55 #alda gersting ch3 recurrence relations\n        p.171 - 172 Exercises 2 - 12\n\n2024-09-20 (5h!)\n#self-study \n    10:35 - 13:30 #finance Beancount docs\n        command line accounting in context: custom scripting - end of chpater\n        finished chapter\n    -35m Break #finance \n    16:05 - 19:00 #finance Beancount docs\n        DE Counting Method Intro - types of accounts \n        read two chapters\n\n2024-09-24 (4h!)\n#self-study\n    12:10 - 13:40 #finance Beancount docs\n        DE Counting method: types of accounts - income statement\n    15:15 - 16:15 #finance Beancount docs\n        DE Counting method: clearing income - Balance Sheet \n    16:45 - 17:30 #finance Beancount docs\n        DE Coumting method: Summarizing - 17:30\n\n2024-09-30 (4h!)\n#self-study\n    11:45 - 12:45 #finance Beancount docs\n        DE Counting method: trial balance\n    15:15 - 16:00 #finance Beancount docs\n        DE Counting method: Balance Sheet\n    16:20 - 18:50 #finance Beancount docs\n        DE Counting method: Period Reporting - Chart of Accounts(excl)\n    -50m Break\n\n2024-10-01 (4h30m!)\n#self-study\n    10:25 - 11:40 Business and finance books glean\n    11:50 - 12:45 #finance Beancount docs\n        DE CM: Period reporting - plain-text accounting (excl)\n    14:10 - 14:40 #finance Beancount docs\n        DE CM: Plain-text accounting - the table perspective\n        Distracting a lot - gleaning productivity books"
+  },
+  {
+    "objectID": "ws23-24/ipi/ipi.html",
+    "href": "ws23-24/ipi/ipi.html",
+    "title": "IPI",
     "section": "",
-    "text": "My uni notes & resources"
+    "text": "weekly summary\nnotes\nsolutions\ncourse website",
+    "crumbs": [
+      "IPI"
+    ]
+  },
+  {
+    "objectID": "ws23-24/num/num.html",
+    "href": "ws23-24/num/num.html",
+    "title": "Numerics 0",
+    "section": "",
+    "text": "weekly summary\nnotes\nsolutions",
+    "crumbs": [
+      "Numerics 0"
+    ]
+  },
+  {
+    "objectID": "ws24-25/ds/index.html",
+    "href": "ws24-25/ds/index.html",
+    "title": "Discrete Structures",
+    "section": "",
+    "text": "weekly summary\nnotes\nsolutions"
+  },
+  {
+    "objectID": "ws24-25/ds/index.html#section",
+    "href": "ws24-25/ds/index.html#section",
+    "title": "Discrete Structures",
+    "section": "",
+    "text": "weekly summary\nnotes\nsolutions"
+  },
+  {
+    "objectID": "ws24-25/index.html#courses",
+    "href": "ws24-25/index.html#courses",
+    "title": "WS 24/25",
+    "section": "Courses",
+    "text": "Courses\n\nITS\nISW\nDS"
   },
   {
     "objectID": "ws24-25/isw/sum.html",
     "href": "ws24-25/isw/sum.html",
     "title": "My Uni Notes",
     "section": "",
-    "text": "date: 15/10/24\nIntro\n\nLOC = lines of code.\nDevelopment time - quality\nSWE at-large vs at-small\nActivities and design decisions\n\norganisatory: moodle pass isw2425\nacrasia\n\n\n\n\n\ndate: 15/10/24\norganisatory infos\njava overview"
+    "text": "date: 15/10/24\nIntro\n\nLOC = lines of code.\nDevelopment time - quality\nSWE at-large vs at-small\nActivities and design decisions\n\norganisatory: moodle pass isw2425\nacrasia\n\n\n\n\n\ndate: 15/10/24\norganisatory infos\njava overview\n\n\n\n\n\ndate: 16/10/24"
   },
   {
     "objectID": "ws24-25/isw/sum.html#week-1",
     "href": "ws24-25/isw/sum.html#week-1",
     "title": "My Uni Notes",
     "section": "",
-    "text": "date: 15/10/24\nIntro\n\nLOC = lines of code.\nDevelopment time - quality\nSWE at-large vs at-small\nActivities and design decisions\n\norganisatory: moodle pass isw2425\nacrasia\n\n\n\n\n\ndate: 15/10/24\norganisatory infos\njava overview"
+    "text": "date: 15/10/24\nIntro\n\nLOC = lines of code.\nDevelopment time - quality\nSWE at-large vs at-small\nActivities and design decisions\n\norganisatory: moodle pass isw2425\nacrasia\n\n\n\n\n\ndate: 15/10/24\norganisatory infos\njava overview\n\n\n\n\n\ndate: 16/10/24"
   },
   {
     "objectID": "ws24-25/isw/sum.html#week-2",
     "href": "ws24-25/isw/sum.html#week-2",
     "title": "My Uni Notes",
     "section": "Week 2",
-    "text": "Week 2\n\nLecture 1\n\ndate:\n\n\n\nLecture 2\n\ndate:"
+    "text": "Week 2\n\nLecture 1\n\ndate: 22/10/24\nProcess & Project\nTeam organisation\nExtreme programming\nsoftware development tools like git\nrequirements engineering\nGenAI (Uni Heidelberg =&gt; Yoki)\n\n\n\nLecture 2 (tech)\n\ndate: 22/10/24\njava review 2:\n\nInheritence\nObject construction and types casts\nparameter passing: primitive types as value, objects as reference\n\ngit review:\nchatGPT overview"
   },
   {
     "objectID": "ws24-25/isw/sum.html#week-3",
     "href": "ws24-25/isw/sum.html#week-3",
     "title": "My Uni Notes",
     "section": "Week 3",
-    "text": "Week 3\n\nLecture 1\n\ndate:\n\n\n\nLecture 2\n\ndate:"
+    "text": "Week 3\n\nLecture 1\n\ndate: 29/10/24\nRequirements Engineering\n\nUsage/User Description\nTask and FuncArrayListtion Description\nGUI Description\n\n\n\n\nLecture 2 (tech)\n\ndate: 29/10/24\ngit\nissue tracking\nandroid basics\n\n\n\nTutorium\n\nQuestions:\nA.3.1:\n\nhow exactly combat score?\n\n\n\n\nA.3.2:\n\nArbeitsbereich?\nUI-Struktur-Diagramm?\nkonkrete Sicht / virtual Windows ?\nexcel datei selbst erstellen oder ist sie auf confluence?\n\nA.3.3:\n\nis MainActivity a UI class or a data class?\nWhat are\n\nRecyclerView ?\nAdapter ?\nViewHolder ?\nimport de.uhd.ifi.pokemonmanager.R ?\n\nLayout Ressourcen fuer MainActivity und RecyclerView?"
   },
   {
     "objectID": "ws24-25/isw/sum.html#week-4",
     "href": "ws24-25/isw/sum.html#week-4",
     "title": "My Uni Notes",
     "section": "Week 4",
-    "text": "Week 4\n\nLecture 1\n\ndate:\n\n\n\nLecture 2\n\ndate:"
+    "text": "Week 4\n\nLecture 1\n\ndate: 05/11/24\nui-design principles\nusability\n\n\n\nLecture 2 (tech)\n\ndate: 05/11/24\nsome advanced java stuff"
   },
   {
     "objectID": "ws24-25/isw/sum.html#week-5",
@@ -695,261 +841,115 @@
     "text": "Week 15\n\nLecture 1\n\ndate:\n\n\n\nLecture 2\n\ndate:"
   },
   {
-    "objectID": "ws24-25/ds/sum.html",
-    "href": "ws24-25/ds/sum.html",
-    "title": "My Uni Notes",
+    "objectID": "ws24-25/its/sum.html",
+    "href": "ws24-25/its/sum.html",
+    "title": "Weekly Summary",
     "section": "",
-    "text": "date:\n\n\n\n\n\ndate:"
+    "text": "date: 14/10/24\nmassive increases in cyber-attacks in last 2-3 years. who is carrying out the attacks? how to find out? Is AI responsible for the increase?\nIntro & infos:\n\nLernziele:\nOrganisational:\n\nwebsite\nall informations/materials on moodle.\n\n\nransomware (check out the wiki article)\nInformation security vs IT-Security: former is a subset of the latter. IT-Security is information security in the realm of electronic information.\nGeneral 3 goals of Information security - CIA:\n\nConfidentiality\nIntegrity\nAvailability\n\nCastle analogy. Thick walls can protect, what about the gates? How to determine who belongs to the castle, who doesn’t? Increasing security measures can directly cause new vulnerabilities.\n\n\n\n\n\ndate: 15/10/24\norganisatory infos:\n\n6 Assignment sheets, 50% for the exam.\ntutorials on heico."
   },
   {
-    "objectID": "ws24-25/ds/sum.html#week-1",
-    "href": "ws24-25/ds/sum.html#week-1",
-    "title": "My Uni Notes",
+    "objectID": "ws24-25/its/sum.html#week-1",
+    "href": "ws24-25/its/sum.html#week-1",
+    "title": "Weekly Summary",
     "section": "",
-    "text": "date:\n\n\n\n\n\ndate:"
+    "text": "date: 14/10/24\nmassive increases in cyber-attacks in last 2-3 years. who is carrying out the attacks? how to find out? Is AI responsible for the increase?\nIntro & infos:\n\nLernziele:\nOrganisational:\n\nwebsite\nall informations/materials on moodle.\n\n\nransomware (check out the wiki article)\nInformation security vs IT-Security: former is a subset of the latter. IT-Security is information security in the realm of electronic information.\nGeneral 3 goals of Information security - CIA:\n\nConfidentiality\nIntegrity\nAvailability\n\nCastle analogy. Thick walls can protect, what about the gates? How to determine who belongs to the castle, who doesn’t? Increasing security measures can directly cause new vulnerabilities.\n\n\n\n\n\ndate: 15/10/24\norganisatory infos:\n\n6 Assignment sheets, 50% for the exam.\ntutorials on heico."
   },
   {
-    "objectID": "ws24-25/ds/sum.html#week-2",
-    "href": "ws24-25/ds/sum.html#week-2",
-    "title": "My Uni Notes",
+    "objectID": "ws24-25/its/sum.html#week-2",
+    "href": "ws24-25/its/sum.html#week-2",
+    "title": "Weekly Summary",
     "section": "Week 2",
-    "text": "Week 2\n\nLecture 1\n\ndate:\n\n\n\nLecture 2\n\ndate:"
+    "text": "Week 2\n\nLecture\n\ndate: 21/10/24\nhow effective is security by obscurity? (not at all) in fact, open protocols and algorithms enhance security\nISO/OSI Reference modell.\n\nPhysical layer: not part of the lecture\ndata link layer\nnetwork layer\ntransport layer\nsession layer\npresentation layer\napplication layer\n\nsmtp(insecure), ftp, http\n\n\nProtocols\n\nARP: ARP-spoofing, ARP-poisoning (MITM: Man in the Middle)\n\n\n\n\nTutorium\n\ndate: 22/10/24\nSANS penetration testing\nSchwachstelle/Weakness: Any error oder weakness that violates the CIA principles.\n\ne.g:\n\nBedrohung/Threat: Actor, that takes advantage of a weakness\nRisiko/Risk: Damage, that can occur due to a weakness.\nExploit: The actual code or the actual process that takes advantage of the weakness.\nPenetration Test:\n\nScope: IP adress space\nRecon (Reconessence) \\(\\rightarrow\\) Scanning & initial access space \\(\\rightarrow\\) Exploitation \\(\\rightarrow\\) Post-exploitation\nnmap:\n\nTCP:\n\nSyn-pakete\n\nopen\nclosed\nfiltered\nfiltered\n\n\n\nmasscan:"
   },
   {
-    "objectID": "ws24-25/ds/sum.html#week-3",
-    "href": "ws24-25/ds/sum.html#week-3",
-    "title": "My Uni Notes",
+    "objectID": "ws24-25/its/sum.html#week-3",
+    "href": "ws24-25/its/sum.html#week-3",
+    "title": "Weekly Summary",
     "section": "Week 3",
-    "text": "Week 3\n\nLecture 1\n\ndate:\n\n\n\nLecture 2\n\ndate:"
+    "text": "Week 3\n\nLecture\n\ndate: 28/10/24\nCrytpographic methods\n\nbasic definitions of cryptology, cryptography encryption, decryption, signing data\nClassification of cryptographic algorithms:\n\ncrypotgraphic hash-functions\nsymmetric cryptographic algorithms\nasymmetric cryptographic algorithms\n\nCryptogrpahic check values.\n\nDifference to Information/Coding theory: Coding theory random errors\n\n\ncyrptographic hash functions:\n\ncompression\nease of computation\n…\nmd5, sha-1, sha-2 families\n\n\n\n\nTutorium\n\ndate: 29/10/24 lecture review:\n\nMAC is used for authentication:\n\nMAC(K, msg) = Sha256(k || msg)\n\nct = Enc(k, pt) ct == cypher-text. pt == plain-text.\nEven more securer: ct = Enc(MAC || Enc(pt, K))\nstrong collision resistence implies weak collision resistency.\nx’ collides with x iff h(x) = h(x’)."
   },
   {
-    "objectID": "ws24-25/ds/sum.html#week-4",
-    "href": "ws24-25/ds/sum.html#week-4",
-    "title": "My Uni Notes",
+    "objectID": "ws24-25/its/sum.html#week-4",
+    "href": "ws24-25/its/sum.html#week-4",
+    "title": "Weekly Summary",
     "section": "Week 4",
-    "text": "Week 4\n\nLecture 1\n\ndate:\n\n\n\nLecture 2\n\ndate:"
+    "text": "Week 4\n\nLecture\n\ndate: 04/11/24\nlecture review:\n\nMDC (Modification Detection Code) (Integrity)\nMAC (Message Authentification Code) (authenticity)\n\nMAC is a cryptographic checksum.\n\nBirthday paradox - relation to hashing.\nSHA\nPasswords\n\nshouldn’t be plain text\nSalt & Pepper (?)\n\nBrute-froce attack\n\nhydra\n\n\n\n\nTutorium\n\ndate: 05/11/24\nwebsites cryptography / cryptoanalhysis challenges:\n\ncryptohack\ncryptopals\njuiceshop\nhackthebox\nctftime.org"
   },
   {
-    "objectID": "ws24-25/ds/sum.html#week-5",
-    "href": "ws24-25/ds/sum.html#week-5",
-    "title": "My Uni Notes",
+    "objectID": "ws24-25/its/sum.html#week-5",
+    "href": "ws24-25/its/sum.html#week-5",
+    "title": "Weekly Summary",
     "section": "Week 5",
-    "text": "Week 5\n\nLecture 1\n\ndate:\n\n\n\nLecture 2\n\ndate:"
+    "text": "Week 5\n\ndate:"
   },
   {
-    "objectID": "ws24-25/ds/sum.html#week-6",
-    "href": "ws24-25/ds/sum.html#week-6",
-    "title": "My Uni Notes",
+    "objectID": "ws24-25/its/sum.html#week-6",
+    "href": "ws24-25/its/sum.html#week-6",
+    "title": "Weekly Summary",
     "section": "Week 6",
-    "text": "Week 6\n\nLecture 1\n\ndate:\n\n\n\nLecture 2\n\ndate:"
+    "text": "Week 6\n\ndate:"
   },
   {
-    "objectID": "ws24-25/ds/sum.html#week-7",
-    "href": "ws24-25/ds/sum.html#week-7",
-    "title": "My Uni Notes",
+    "objectID": "ws24-25/its/sum.html#week-7",
+    "href": "ws24-25/its/sum.html#week-7",
+    "title": "Weekly Summary",
     "section": "Week 7",
-    "text": "Week 7\n\nLecture 1\n\ndate:\n\n\n\nLecture 2\n\ndate:"
+    "text": "Week 7\n\ndate:"
   },
   {
-    "objectID": "ws24-25/ds/sum.html#week-8",
-    "href": "ws24-25/ds/sum.html#week-8",
-    "title": "My Uni Notes",
+    "objectID": "ws24-25/its/sum.html#week-8",
+    "href": "ws24-25/its/sum.html#week-8",
+    "title": "Weekly Summary",
     "section": "Week 8",
-    "text": "Week 8\n\nLecture 1\n\ndate:\n\n\n\nLecture 2\n\ndate:"
+    "text": "Week 8\n\ndate:"
   },
   {
-    "objectID": "ws24-25/ds/sum.html#week-9",
-    "href": "ws24-25/ds/sum.html#week-9",
-    "title": "My Uni Notes",
+    "objectID": "ws24-25/its/sum.html#week-9",
+    "href": "ws24-25/its/sum.html#week-9",
+    "title": "Weekly Summary",
     "section": "Week 9",
-    "text": "Week 9\n\nLecture 1\n\ndate:\n\n\n\nLecture 2\n\ndate:"
+    "text": "Week 9\n\ndate:"
   },
   {
-    "objectID": "ws24-25/ds/sum.html#week-10",
-    "href": "ws24-25/ds/sum.html#week-10",
-    "title": "My Uni Notes",
+    "objectID": "ws24-25/its/sum.html#week-10",
+    "href": "ws24-25/its/sum.html#week-10",
+    "title": "Weekly Summary",
     "section": "Week 10",
-    "text": "Week 10\n\nLecture 1\n\ndate:\n\n\n\nLecture 2\n\ndate:"
+    "text": "Week 10\n\ndate:"
   },
   {
-    "objectID": "ws24-25/ds/sum.html#week-11",
-    "href": "ws24-25/ds/sum.html#week-11",
-    "title": "My Uni Notes",
+    "objectID": "ws24-25/its/sum.html#week-11",
+    "href": "ws24-25/its/sum.html#week-11",
+    "title": "Weekly Summary",
     "section": "Week 11",
-    "text": "Week 11\n\nLecture 1\n\ndate:\n\n\n\nLecture 2\n\ndate:"
+    "text": "Week 11\n\ndate:"
   },
   {
-    "objectID": "ws24-25/ds/sum.html#week-12",
-    "href": "ws24-25/ds/sum.html#week-12",
-    "title": "My Uni Notes",
+    "objectID": "ws24-25/its/sum.html#week-12",
+    "href": "ws24-25/its/sum.html#week-12",
+    "title": "Weekly Summary",
     "section": "Week 12",
-    "text": "Week 12\n\nLecture 1\n\ndate:\n\n\n\nLecture 2\n\ndate:"
+    "text": "Week 12\n\ndate:"
   },
   {
-    "objectID": "ws24-25/ds/sum.html#week-13",
-    "href": "ws24-25/ds/sum.html#week-13",
-    "title": "My Uni Notes",
+    "objectID": "ws24-25/its/sum.html#week-13",
+    "href": "ws24-25/its/sum.html#week-13",
+    "title": "Weekly Summary",
     "section": "Week 13",
-    "text": "Week 13\n\nLecture 1\n\ndate:\n\n\n\nLecture 2\n\ndate:"
+    "text": "Week 13\n\ndate:"
   },
   {
-    "objectID": "ws24-25/ds/sum.html#week-14",
-    "href": "ws24-25/ds/sum.html#week-14",
-    "title": "My Uni Notes",
+    "objectID": "ws24-25/its/sum.html#week-14",
+    "href": "ws24-25/its/sum.html#week-14",
+    "title": "Weekly Summary",
     "section": "Week 14",
-    "text": "Week 14\n\nLecture 1\n\ndate:\n\n\n\nLecture 2\n\ndate:"
+    "text": "Week 14\n\ndate:"
   },
   {
-    "objectID": "ws24-25/ds/sum.html#week-15",
-    "href": "ws24-25/ds/sum.html#week-15",
-    "title": "My Uni Notes",
+    "objectID": "ws24-25/its/sum.html#week-15",
+    "href": "ws24-25/its/sum.html#week-15",
+    "title": "Weekly Summary",
     "section": "Week 15",
-    "text": "Week 15\n\nLecture 1\n\ndate:\n\n\n\nLecture 2\n\ndate:"
-  },
-  {
-    "objectID": "ws24-25/sum.html",
-    "href": "ws24-25/sum.html",
-    "title": "My Uni Notes",
-    "section": "",
-    "text": "##Week 1\n###Lecture 1\n\ndate:\n\n###Lecture 2\n\ndate:\n\n##Week 2\n###Lecture 1\n\ndate:\n\n###Lecture 2\n\ndate:\n\n##Week 3\n###Lecture 1\n\ndate:\n\n###Lecture 2\n\ndate:\n\n##Week 4\n###Lecture 1\n\ndate:\n\n###Lecture 2\n\ndate:\n\n##Week 5\n###Lecture 1\n\ndate:\n\n###Lecture 2\n\ndate:\n\n##Week 6\n###Lecture 1\n\ndate:\n\n###Lecture 2\n\ndate:\n\n##Week 7\n###Lecture 1\n\ndate:\n\n###Lecture 2\n\ndate:\n\n##Week 8\n###Lecture 1\n\ndate:\n\n###Lecture 2\n\ndate:\n\n##Week 9\n###Lecture 1\n\ndate:\n\n###Lecture 2\n\ndate:\n\n##Week 10\n###Lecture 1\n\ndate:\n\n###Lecture 2\n\ndate:\n\n##Week 11\n###Lecture 1\n\ndate:\n\n###Lecture 2\n\ndate:\n\n##Week 12\n###Lecture 1\n\ndate:\n\n###Lecture 2\n\ndate:\n\n##Week 13\n###Lecture 1\n\ndate:\n\n###Lecture 2\n\ndate:\n\n##Week 14\n###Lecture 1\n\ndate:\n\n###Lecture 2\n\ndate:\n\n##Week 15\n###Lecture 1\n\ndate:\n\n###Lecture 2\n\ndate:"
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Uni Notes",
-    "section": "",
-    "text": "Plan"
-  },
-  {
-    "objectID": "index.html#semesters",
-    "href": "index.html#semesters",
-    "title": "Uni Notes",
-    "section": "Semesters",
-    "text": "Semesters\n\nWS 23/24\nSS 24\nWS 24/25"
-  },
-  {
-    "objectID": "ss24/alda/exam1.html",
-    "href": "ss24/alda/exam1.html",
-    "title": "My Uni Notes",
-    "section": "",
-    "text": "what was asked on the exam:\n\nAdjacency Matrix \\(A\\) of a graph \\(G\\):\n\nwrite the pseudocode for an optimal algorithm that determines the total number of nodes in the graph with equal in- and out-degrees.\nAnalyze the complexity of your algorithm and prove optimality\n\nHeaps\nHashing\n\nOpen hashing. Insert a sequence of elements\nOpen hashing. Delete a sequence of elements\n\nStandard questions for comparing functions asymptotically, determining growth rate of reccurence relations with and without applications of the master theorem, analyzing complexity of short pseudocode algorithms like\nread(t)\nk := 1\ni : = 1\nwhile (k &lt;= t) :\n    i := i + 1\n    k := k + i\nShort proofs of statements regarding (a, b) trees and graphs\nSimple proof by induction problem\nDijkstra shortest path algorithm\n\nwasn’t asked:\n\nsorting\nproblems specifically for divide & conquer / recursion\nproblems specifically for dynamic programming\nlinear programming\napproximation / heuristic algorithms\nalgorithms on strings"
-  },
-  {
-    "objectID": "ss24/alda/exam1.html#alda-sose-24-1st-exam",
-    "href": "ss24/alda/exam1.html#alda-sose-24-1st-exam",
-    "title": "My Uni Notes",
-    "section": "",
-    "text": "what was asked on the exam:\n\nAdjacency Matrix \\(A\\) of a graph \\(G\\):\n\nwrite the pseudocode for an optimal algorithm that determines the total number of nodes in the graph with equal in- and out-degrees.\nAnalyze the complexity of your algorithm and prove optimality\n\nHeaps\nHashing\n\nOpen hashing. Insert a sequence of elements\nOpen hashing. Delete a sequence of elements\n\nStandard questions for comparing functions asymptotically, determining growth rate of reccurence relations with and without applications of the master theorem, analyzing complexity of short pseudocode algorithms like\nread(t)\nk := 1\ni : = 1\nwhile (k &lt;= t) :\n    i := i + 1\n    k := k + i\nShort proofs of statements regarding (a, b) trees and graphs\nSimple proof by induction problem\nDijkstra shortest path algorithm\n\nwasn’t asked:\n\nsorting\nproblems specifically for divide & conquer / recursion\nproblems specifically for dynamic programming\nlinear programming\napproximation / heuristic algorithms\nalgorithms on strings"
-  },
-  {
-    "objectID": "ss24/alda/plan.html#reading-list",
-    "href": "ss24/alda/plan.html#reading-list",
-    "title": "Study Plan",
-    "section": "Reading List",
-    "text": "Reading List\n\nAlgorithms\n\nBasic:\n\nUnderstanding Algorithms. Brunskill\nAlgorithms Unlocked. Cormen\nFirst Course in Algorithms Through Puzzles. Ryuhei Uehara\nAlgorithmic Thinking. Daniel Zingaro\nPrincipes of Algorithmic Problem Solving. Johan Sannemo\nGrokking Algorithms. Aditya Bhargava\n\nIntermediate:\n\nDesign and Analysis of Algorithms. Jeffrey Smith\nAlgorithms. Jeff Erickson\nHow to Think About Algorithms. Jeff Edmonds\nProblems on Algorithmics. Ian Perberry\nFundamentals of Algorithmics. Brassard, Bratley.\nAlgorithmen & Datenstrukturen - Grundwerkzeuge. Kurt Melhorn\nLecture Notes on Algorithms. Ian Perberry\nAlgorithm Design. Kleinberg, Tardos\nAlgorithms Illuminated. Roughgarden\nCompared to What. G. J. E. Rawlins\nFoundations of Algorithms. Richard Neapolitan\nData Structurese & Their Algorithms. Harry Lewis, Larry Denenberg\nAlgorithms + Data Structures = Programs. Niklaus Wirth\nAlgorithms and Data Structures - Design, Correctness, Analysis. Jeffrey H. Kingston\nComputer Algorithms. Baase\n\nC++:\n\nData Structures & Problem Solving Using C++. M. A. Weiss\nData Structures & Algorithm Analysis in C++. M. A. Weiss\nData & Algorithms in C++. Drozdek.\nData Structures other Objects using C++. Walter Savitch\nPrinciples of Algorithmic Problem Solving. Johan Sannemo\nGuide to Competitive Programming. Antti Laaksonen\n\nC:\n\nAlgorithms and Data Structures - An Approach in C. Bowman\nFoundations of Computer Science. Aho, Ullman\nPrograms and Datastructures in C. Ameraal\n\nPython:\n\nData Structures and Algorithms Using Python. Rance D. Necaise.\nData Structures & Algorithms in Python. Canning, Broder, Lafore\nCompetitive Programaming with Python. Duerr, Vie\nProblem Solving with Algorithms and Data Structures Using Python. Franklin, Beedle\n\n\n\n\nGraph Theory and Discrete Mathematics\n\nGeneral Discrete Mathematics:\n\nMathematical Structures for Computer Science. Judith Gersting\nDiscrete & Combinatorial Mathematics. Grimaldi\nConcrete Mathematics Knuth\nDiskerte Mathematik fuer Einsteiger. Beutelspacher\nDiscrete Mathematics in Computer Science. Golovnev, Kulikov\n\nGraph Theory Specific\n\nGraph Theory - A Poblem Oriented Approach. Daniel A. Marcus\nAlgorithmic Graph Theory. Alan M. Gibbons\nSets, Puzzles & Postmen. Higgins\n\n\nSpecifically:\n\nGersting:\n\n3: Recurrence relations & analysis of algorithms\n5: Graphs & Trees\n7: Graph algorithms\n\nRosen:\n\n3: Algorithms\n5: Induction & Recursion\n8: Advancerd Counting: recurrence relations\n10: Graphs\n11: Trees\n\nGrimaldi:\n\n4: Mathematical induction\n5.7, 5.8: Analysis of Algorithms\n10: Recurrence relations\n11, 12, 13: Graph Theory"
-  },
-  {
-    "objectID": "ss24/oop/exam1.html",
-    "href": "ss24/oop/exam1.html",
-    "title": "My Uni Notes",
-    "section": "",
-    "text": "OOP for Scientific Computing First Exam\npoints:\n\n\n\n1\n2\n3\n4\n5\n\\(\\Sigma\\)\n\n\n\n\n15\n20\n10\n10\n10\n65\n\n\n\nFollowing was asked in the exam:\n\nExplain following aspects of C++ :\n\nclass vs struct?\nnamespace. What is it, when & why is it used?\nprivate vs protected?\ncopy elision?\nheader guards. What, why?\nrule of five vs fule of zero?\ntemporaries? literals?\nhow does a shared pointer work?\nSFINAE?\nSOLID?\n\nShort code snippets were given and asked to explain & extend. With following topics:\n\ndefault function args\nconcepts\ntemplate parameters, default template parameters\nConstructor, copy constructor, copy assignment operator, move constructor, move assignment operator, overloaded constructor.\nLambda expression, functional programming\nCompile time branching\nCRTP\nInheritence. How to improve the given implementation\n\nHorner Schema: Variadic templates, recursion with templates(?), template metaprogramming\nAn incomplete implementation of an OOP system was given that was supposed to implement a simulation a prey-predator dynamic system, modeled by the Lotka-Volterra differential equations:\n\\[\\begin{align*}\n&\\frac{dx}{dt} = \\alpha x - \\beta xy, \\\\\n&\\frac{dy}{dt} = \\gamma y - \\delta xy\n\\end{align*}\\]\nThe incomplete OOP system had the following basic structure:\n\n\n\nLotka-Volterra OOP System\n\n\n\nImplement the PreyPredatorData Simulate(int steps, double dt) that creates a PreyPredatorData object, populates its members with the simulation data based on the Lotka-Volterra difference equations and returns the object:\n\n\\[\\begin{align*}\n&X_{n + 1} = X_n + \\Delta t (\\alpha x_n - \\beta x_ny_n) \\\\\n&Y_{n + 1} = Y_n + \\Delta t (\\delta x_ny_n- \\gamma y_n)\n\\end{align*}\\]\n\n?\n\n?"
-  },
-  {
-    "objectID": "ss24/oop/plan.html#reading-list",
-    "href": "ss24/oop/plan.html#reading-list",
-    "title": "Study Plan",
-    "section": "Reading List",
-    "text": "Reading List\n\nBasic, General, Intro:\n\nBig C++. Cay Horstmann\nProgramming Principles & Practice with C++. Stroustrup.\nA Tour of C++. Stroustrup\nC++ Crash Course. Josh Lospinoso\nC++ Primer. Lippmann\n\nModern, General, Scientific:\n\nDiscovering Modern C++ 2nd ed. Gottschild.\nModern C++ Programming Techniques for Scientific Computing - Lecture Notes. Ole Klein\n\nModern, Specific:\n\nFunctional Programming in C++. Cukic\nMove Semantics. Josuttis\nC++ Templates. Vandervoorde\nC++ STL. Josuttis\nOOP in C++. Josuttis"
-  },
-  {
-    "objectID": "ss24/r/index.html",
-    "href": "ss24/r/index.html",
-    "title": "R Programming",
-    "section": "",
-    "text": "R Programming and its Applications to Stochastic",
-    "crumbs": [
-      "R Programming"
-    ]
-  },
-  {
-    "objectID": "ss24/r/index.html#section",
-    "href": "ss24/r/index.html#section",
-    "title": "R Programming",
-    "section": "",
-    "text": "weekly summary\nnotes\nsolutions",
-    "crumbs": [
-      "R Programming"
-    ]
-  },
-  {
-    "objectID": "ws23-24/ipi/ipi.html",
-    "href": "ws23-24/ipi/ipi.html",
-    "title": "IPI",
-    "section": "",
-    "text": "weekly summary\nnotes\nsolutions\ncourse website",
-    "crumbs": [
-      "IPI"
-    ]
-  },
-  {
-    "objectID": "ws23-24/num/num.html",
-    "href": "ws23-24/num/num.html",
-    "title": "Numerics 0",
-    "section": "",
-    "text": "weekly summary\nnotes\nsolutions",
-    "crumbs": [
-      "Numerics 0"
-    ]
-  },
-  {
-    "objectID": "ws24-25/index.html#courses",
-    "href": "ws24-25/index.html#courses",
-    "title": "WS 24/25",
-    "section": "Courses",
-    "text": "Courses\n\nITS\nISW\nDS"
-  },
-  {
-    "objectID": "ws24-25/its/index.html",
-    "href": "ws24-25/its/index.html",
-    "title": "IT-Security",
-    "section": "",
-    "text": "weekly summary\nnotes\nsolutions"
-  },
-  {
-    "objectID": "ws24-25/its/index.html#section",
-    "href": "ws24-25/its/index.html#section",
-    "title": "IT-Security",
-    "section": "",
-    "text": "weekly summary\nnotes\nsolutions"
-  },
-  {
-    "objectID": "ss24/index.html#courses",
-    "href": "ss24/index.html#courses",
-    "title": "SS 24",
-    "section": "Courses",
-    "text": "Courses\n\nAlda\nR\nOOP",
-    "crumbs": [
-      "Bachelor",
-      "SS 24"
-    ]
-  },
-  {
-    "objectID": "ss24/index.html#time",
-    "href": "ss24/index.html#time",
-    "title": "SS 24",
-    "section": "Time",
-    "text": "Time\n\ntimes",
-    "crumbs": [
-      "Bachelor",
-      "SS 24"
-    ]
-  },
-  {
-    "objectID": "ws23-24/num/sum.html",
-    "href": "ws23-24/num/sum.html",
-    "title": "Num Weekly Summary",
-    "section": "",
-    "text": "W01/VL01\n\ndate:\nsummary:\n\nW01/VL02\n\ndate:\nsummary:\n\nW02/VL03\n\ndate:\nsummary:\n\nW02/VL04:\n\ndate:\nsummary:\n\nW03/VL05\n\ndate: 31/10/2023, Tue\nsummary: \\(LR\\)-Decomposition, uniqueness, existence, algorithm, complexity, error analysis\n\nScript pages: 21 (satz 2.5) - 28 (2.3 Error Analysis of LR)\nLR Zerlegung ist eindeutig\nProduct of two triangular matrices is also triangular (left or right)\nInverse of a triangular matrix is triangular (left or right)\nProduct of two left-triangular matrices with \\(a_{ii} = 1\\) is also a left-triangular matrix with \\(\\tilde{a}_{ii} = 1\\)\n\\(LR\\)-Decomposition method using Gauss decomposition (Alg 2.7) (?).\nExistence of the \\(LR\\)-decomposition (Satz 2.8)\nPractical version of \\(LR\\)-decomposition Algorithm (not Alg 2.7) saves space (Alg 2.9).\nComplexity of Alg 2.9 and solving a LSE (De: LGS)\nError analysis of \\(LR\\)-Decomposition.\n\n\nW03/VL06\n\ndate: 02/11/23, Thu\nsummary: Script 28 - 33. Error estimation of Alg 2.9, forwards and backwards error, conditioning of a function, conditioning number.\n\nError estimation of Alg 2.9 with proof (Lemma 2.13 & Satz 2.14)\nAposteriori error estimation of Alg 2.9 (Satz 2.16)\nrelationship between backwards and forwards error, a python example demonstrating that they aren’t necessarily related (?)\nConditioning of a function (Ch 2.4.1).\nConditioning number\n\n\nW04/VL07\n\ndate: 07/11/23, Tue\nsummary: Script 33 - 42.\n\nQuestion: How much effect does the error in \\(A\\) & \\(b\\) have on the solutuion of an LEQ/LGS?\nConditioning of a matrix & its proof. (Prop 2.20)\nError analysis of LEQ/LGS’s (Ch 2.4.3)\nConvergent Matrix sequences and matrix series (Ch 2.4.4.)\n\nNeumann Series (2.4.9, P:37)\nSpectral radius of a matrix\n\nConvergent Matrix sequences are used in the proof of error estimation of LEQ/LGS’s. Proof of 2.2.1\nPivoting Strategies to increase \\(LR\\)-decomposition algorithm stability (Ch. 2.5) via exchanging rows during the steps of the algorithm.\n\nPermutation Matrix (Def 2.25)\n\n\n\nW04/VL08\n\ndate: 09/11/23, Thu\nsummary: Script 43 - 51\n\nnote: numbering shifted 1 up, due to a new example\nAlg. 2.27: \\(LR\\)-Decomposition with column pivot search.\n\nSatz 2.30: \\(\\forall\\) regular matrix \\(A \\in \\mathbb{R}^{n\\times n}\\, \\exists\\) a Permutations matrix \\(P_{\\pi}\\), s.t \\(LR = P_{\\pi}A\\) and its proof.\nA problematic matrix for this method: Wilkinson matrix. Such problems can be avoided with “Full Pivot Search/Vollpivotsuche”.\nBut fullpivot search has the disatvantageous complexity \\(\\mathcal{O}(n^3)\\)\n\nCholesky Decomposition: An efficient method for Symmetric Positive Definite (SPD) Matrices.\n\nDefinition & Properties of SPD matrices. (Def 2.32 & Satz 2.33)\nSatz 3.34: \\(A\\in\\mathbb{R}^{n\\times n} \\text{\\, SPD \\, }\\Rightarrow \\exists \\text{\\, upper triangular} \\, R\\in \\mathbb{R}^{n\\times n} \\text{\\, s.t.\\, } A = R^TR\\) (Cholesky decomposition)\nProof of Satz 3.34\nAlgorithm for Cholesky Decomposition (Alg 2.35) and its complexity (\\(\\frac{n^3}{3} + \\mathcal{O}(n^2)\\)). (2 times more efficient than usual decommposition)\n\n\\(LR\\)-Decomposition for Band-matrices\n\nSparce matrices (schwach besetzte matrix) \\(\\approx\\) many entries are 0.\nhow sparce matrices are stored efficiently: For example\n\nA = 0 5 0    C = (2, 3) {non-nul columns}\n    0 0 0    R = (1, 3) {non-null rows}\n    0 0 7    X = (5, 7) {actual entries in these coordinates}\n\nDefinition of a band matrix (Def 2.38)\n\\(LR\\)-decomposition for Band matrices.\n\n\n\nW05/VL09\n\ndate: 14.11.23, Tue\nsummary: Skript 51 - 55 (togehter with topics form appendix)\n\nReview of some LA topics (from Appendix):\n\nDef of orthogonal matrix\nDef of unitary matrix\nLemma A.57/Satz A.58: Singular value decomposition (SVD) and its proof.\nProgramming example demonstrating uses of SVD for image compression.\nProp A.61 regarding SVD (?)\n\nIntro to new Ch 3 - Interpolation & Approximation\n\nOverview of different types of interpolating functions: polynomial, rational (polynomial), spline, neural network\nIntro Polynomial Interpolation:\n\nDef of vector space of polynomials of degree \\(n\\): \\(\\mathbb{P}_n\\).\nDef 3.1: Lagrange Interpolation Polynomials\n\n\n\n\nW05/VL10\n\ndate: 16.11.23, Thu\nsummary: Skript: 55 - 64\n\nLagrange interpolation\n\nLagrange polynomials \\(\\{l_i\\}_{i=0\\dots n}\\) Form a basis for \\(\\mathbb{P}_n\\) & its proof.\n\nGeneral interpolation with a general basis \\(\\{b_i\\}_{i=0\\dots n}\\) \\(\\Rightarrow\\) Vandermonde Matrix. note: Vandermonde matrix for Lagrange Basis is simply the identity matrix. Vandermonde matrix is very badly conditioned for the monomial basis \\(\\{x^i\\}_{i=0}^n\\)\nError analysis of Lagrange interpolation. Certain properties of the function that is to be interpolated determine the precision of the error analysis (like the smoothness of the function.) (Satz 3.6)\nNeville’s Schema\n\n\nW06/VL11\n\ndate: 21.11.23, Tue\nsummary: Skript 64 - 71\n\nNewton Interpolation (Ch 3.5)\n\nDividierende Differenzen\nLemma 3.11 and its proof via induction.\n\nIntepolation error\nHermite Interpolation\n(3.7 is skipped)\n3.8 Conditioning and Approximation\nWeierstrass Theorem (3.25)\n\n\nW06/VL12\n\ndate: 23.11.23, Thu\nsummary: Skript 71 - 81\n\nreview of error of polynomial interpolation: Bsp 3.21, 3.22.\nRunge Phenomenon\nWeierstrass Theorem (3.25) and its relationship to polynomial interpolation.\nError of the best approximation (Satz 3.26)\n\nDef 3.23: Lebesgue Constant \\(\\Lambda_n\\)\n\nConditioning of the interpolation, what happens when we interpolate \\(f + \\delta\\) instead of \\(f\\)?\nIf the function is only known to be continuous (but not necessarily differentiable), there is another measure for how strong a function “fluctuates”: Modulus of continuity (Stetigkeitsmodul) (Def 3.27)\nJackson’s Theorem (3.28) given without proof.\nCorollary (3.29) - its proof.\nHow to keep \\(\\Lambda_n\\) small? \\(\\rightarrow\\) Chebyshev Interpolation, Chebyshev Points\n\nGoal: find appropriate points \\(\\{x_i\\}_{i=1\\dots n}\\) s.t. \\(\\Lambda_n\\) is minimal.\nDefinition of Chebyshev Points (Def 3.30): \\(x_i^{(n + 1)} = \\cos{(\\frac{2i + 1}{2n + 2}\\pi)}\\) \nDefinition of Chebyshev Polynomials (Def 3.32)\nLemma 3.33 - some properties of chebyshev polynomials\n\n\n\nW07/VL13\n\ndate: 28.11.23\nsummary: Skript 81 - 96 (some pages were skipped)\n\nClenshaw-Curtis points\nSatz 3.34\nProofs regarding Lebesgue Constats are skipped.\nLemma 3.40:\nSkip until Spline Interpolation\nSpline Interpolation:\n\nError of spline interpolation\nCubic splines"
+    "text": "Week 15\n\ndate:"
   }
 ]

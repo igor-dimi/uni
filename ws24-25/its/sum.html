@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.5.57">
+<meta name="generator" content="quarto-1.4.553">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Weekly Summary – My Uni Notes</title>
+<title>My Uni Notes - Weekly Summary</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -67,6 +67,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="../../styles.css">
 </head>
@@ -83,13 +112,13 @@ ul.task-list li input[type="checkbox"] {
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-semesters" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-semesters" role="button" data-bs-toggle="dropdown" aria-expanded="false">
  <span class="menu-text">Semesters</span>
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-semesters">    
@@ -110,7 +139,7 @@ ul.task-list li input[type="checkbox"] {
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
-            <div class="quarto-navbar-tools">
+          <div class="quarto-navbar-tools">
 </div>
       </div> <!-- /container-fluid -->
     </nav>
@@ -129,9 +158,21 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#lecture" id="toc-lecture" class="nav-link" data-scroll-target="#lecture">Lecture</a></li>
   <li><a href="#tutorium" id="toc-tutorium" class="nav-link" data-scroll-target="#tutorium">Tutorium</a></li>
   </ul></li>
-  <li><a href="#week-2" id="toc-week-2" class="nav-link" data-scroll-target="#week-2">Week 2</a></li>
-  <li><a href="#week-3" id="toc-week-3" class="nav-link" data-scroll-target="#week-3">Week 3</a></li>
-  <li><a href="#week-4" id="toc-week-4" class="nav-link" data-scroll-target="#week-4">Week 4</a></li>
+  <li><a href="#week-2" id="toc-week-2" class="nav-link" data-scroll-target="#week-2">Week 2</a>
+  <ul class="collapse">
+  <li><a href="#lecture-1" id="toc-lecture-1" class="nav-link" data-scroll-target="#lecture-1">Lecture</a></li>
+  <li><a href="#tutorium-1" id="toc-tutorium-1" class="nav-link" data-scroll-target="#tutorium-1">Tutorium</a></li>
+  </ul></li>
+  <li><a href="#week-3" id="toc-week-3" class="nav-link" data-scroll-target="#week-3">Week 3</a>
+  <ul class="collapse">
+  <li><a href="#lecture-2" id="toc-lecture-2" class="nav-link" data-scroll-target="#lecture-2">Lecture</a></li>
+  <li><a href="#tutorium-2" id="toc-tutorium-2" class="nav-link" data-scroll-target="#tutorium-2">Tutorium</a></li>
+  </ul></li>
+  <li><a href="#week-4" id="toc-week-4" class="nav-link" data-scroll-target="#week-4">Week 4</a>
+  <ul class="collapse">
+  <li><a href="#lecture-3" id="toc-lecture-3" class="nav-link" data-scroll-target="#lecture-3">Lecture</a></li>
+  <li><a href="#tutorium-3" id="toc-tutorium-3" class="nav-link" data-scroll-target="#tutorium-3">Tutorium</a></li>
+  </ul></li>
   <li><a href="#week-5" id="toc-week-5" class="nav-link" data-scroll-target="#week-5">Week 5</a></li>
   <li><a href="#week-6" id="toc-week-6" class="nav-link" data-scroll-target="#week-6">Week 6</a></li>
   <li><a href="#week-7" id="toc-week-7" class="nav-link" data-scroll-target="#week-7">Week 7</a></li>
@@ -209,21 +250,149 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="week-2" class="level2">
 <h2 class="anchored" data-anchor-id="week-2">Week 2</h2>
+<section id="lecture-1" class="level3">
+<h3 class="anchored" data-anchor-id="lecture-1">Lecture</h3>
 <ul>
-<li><strong>date</strong>:</li>
+<li><strong>date</strong>: 21/10/24</li>
+<li>how effective is security by obscurity? (not at all) in fact, open protocols and algorithms enhance security</li>
+<li>ISO/OSI Reference modell.
+<ul>
+<li>Physical layer: not part of the lecture</li>
+<li>data link layer</li>
+<li>network layer</li>
+<li>transport layer</li>
+<li>session layer</li>
+<li>presentation layer</li>
+<li>application layer
+<ul>
+<li>smtp(insecure), ftp, http</li>
+</ul></li>
+</ul></li>
+<li>Protocols
+<ul>
+<li>ARP: ARP-spoofing, ARP-poisoning (MITM: Man in the Middle)</li>
+</ul></li>
 </ul>
+</section>
+<section id="tutorium-1" class="level3">
+<h3 class="anchored" data-anchor-id="tutorium-1">Tutorium</h3>
+<ul>
+<li><strong>date</strong>: 22/10/24</li>
+<li>SANS penetration testing</li>
+<li><strong>Schwachstelle/Weakness</strong>: Any error oder weakness that violates the CIA principles.
+<ul>
+<li>e.g:</li>
+</ul></li>
+<li><strong>Bedrohung/Threat</strong>: Actor, that takes advantage of a weakness</li>
+<li><strong>Risiko/Risk</strong>: Damage, that can occur due to a weakness.</li>
+<li><strong>Exploit</strong>: The actual code or the actual process that takes advantage of the weakness.</li>
+<li><strong>Penetration Test</strong>:
+<ul>
+<li>Scope: IP adress space</li>
+<li>Recon (Reconessence) <span class="math inline">\(\rightarrow\)</span> Scanning &amp; initial access space <span class="math inline">\(\rightarrow\)</span> Exploitation <span class="math inline">\(\rightarrow\)</span> Post-exploitation</li>
+<li><code>nmap</code>:
+<ul>
+<li>TCP:
+<ul>
+<li>Syn-pakete
+<ol type="1">
+<li>open</li>
+<li>closed</li>
+<li>filtered</li>
+<li>filtered</li>
+</ol></li>
+</ul></li>
+</ul></li>
+<li><code>masscan</code>:</li>
+</ul></li>
+</ul>
+</section>
 </section>
 <section id="week-3" class="level2">
 <h2 class="anchored" data-anchor-id="week-3">Week 3</h2>
+<section id="lecture-2" class="level3">
+<h3 class="anchored" data-anchor-id="lecture-2">Lecture</h3>
 <ul>
-<li><strong>date</strong>:</li>
+<li><strong>date</strong>: 28/10/24<br>
+Crytpographic methods<br>
+</li>
+<li>basic definitions of cryptology, cryptography encryption, decryption, signing data</li>
+<li>Classification of cryptographic algorithms:
+<ul>
+<li>crypotgraphic hash-functions</li>
+<li>symmetric cryptographic algorithms</li>
+<li>asymmetric cryptographic algorithms</li>
+</ul></li>
+<li>Cryptogrpahic check values.
+<ul>
+<li>Difference to Information/Coding theory: Coding theory random errors<br>
+</li>
+</ul></li>
+<li>cyrptographic hash functions:
+<ul>
+<li>compression</li>
+<li>ease of computation</li>
+<li>…</li>
+<li>md5, sha-1, sha-2 families</li>
+</ul></li>
 </ul>
+</section>
+<section id="tutorium-2" class="level3">
+<h3 class="anchored" data-anchor-id="tutorium-2">Tutorium</h3>
+<ul>
+<li><strong>date</strong>: 29/10/24 lecture review:<br>
+</li>
+<li>MAC is used for authentication:
+<ul>
+<li><code>MAC(K, msg) = Sha256(k || msg)</code></li>
+</ul></li>
+<li><code>ct = Enc(k, pt)</code> ct == cypher-text. pt == plain-text.</li>
+<li>Even more securer: <code>ct = Enc(MAC || Enc(pt, K))</code></li>
+<li>strong collision resistence implies weak collision resistency.</li>
+<li>x’ collides with x iff h(x) = h(x’).</li>
+</ul>
+</section>
 </section>
 <section id="week-4" class="level2">
 <h2 class="anchored" data-anchor-id="week-4">Week 4</h2>
+<section id="lecture-3" class="level3">
+<h3 class="anchored" data-anchor-id="lecture-3">Lecture</h3>
 <ul>
-<li><strong>date</strong>:</li>
+<li><strong>date</strong>: 04/11/24<br>
+lecture review:<br>
+</li>
+<li>MDC (Modification Detection Code) (Integrity)</li>
+<li>MAC (Message Authentification Code) (authenticity)
+<ul>
+<li>MAC is a cryptographic checksum.</li>
+</ul></li>
+<li>Birthday paradox - relation to hashing.</li>
+<li>SHA</li>
+<li>Passwords
+<ul>
+<li>shouldn’t be plain text</li>
+<li>Salt &amp; Pepper (?)</li>
+</ul></li>
+<li>Brute-froce attack
+<ul>
+<li>hydra</li>
+</ul></li>
 </ul>
+</section>
+<section id="tutorium-3" class="level3">
+<h3 class="anchored" data-anchor-id="tutorium-3">Tutorium</h3>
+<ul>
+<li><strong>date</strong>: 05/11/24</li>
+<li>websites cryptography / cryptoanalhysis challenges:
+<ul>
+<li><a href="https://www.cryptohack.org">cryptohack</a></li>
+<li>cryptopals</li>
+<li>juiceshop</li>
+<li>hackthebox</li>
+<li>ctftime.org</li>
+</ul></li>
+</ul>
+</section>
 </section>
 <section id="week-5" class="level2">
 <h2 class="anchored" data-anchor-id="week-5">Week 5</h2>
@@ -330,7 +499,18 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
     return false;
   }
-  const onCopySuccess = function(e) {
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
     // button target
     const button = e.trigger;
     // don't keep focus
@@ -362,29 +542,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }, 1000);
     // clear code selection
     e.clearSelection();
-  }
-  const getTextToCopy = function(trigger) {
-      const codeEl = trigger.previousElementSibling.cloneNode(true);
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
-        }
-      }
-      return codeEl.innerText;
-  }
-  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
-    text: getTextToCopy
   });
-  clipboard.on('success', onCopySuccess);
-  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
-    // For code content inside modals, clipBoardJS needs to be initialized with a container option
-    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
-    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
-      text: getTextToCopy,
-      container: window.document.getElementById('quarto-embedded-source-code-modal')
-    });
-    clipboardModal.on('success', onCopySuccess);
-  }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
       var filterRegex = new RegExp("https:\/\/igor-dimi\.github\.io\/uni\/");
@@ -392,7 +550,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }
     // Inspect non-navigation links and adorn them if external
- 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
     for (var i=0; i<links.length; i++) {
       const link = links[i];
       if (!isInternal(link.href)) {
