@@ -21,6 +21,7 @@ website:
           contents: 
             - ws23-24/index.qmd
             - ss24/index.qmd
+            - ws24-25/index.qmd
 
     - title: "WS 23/24"
       style: "docked"
@@ -33,6 +34,10 @@ website:
         - ss24/alda/index.qmd
         - ss24/r/index.qmd
         - ss24/oop/index.qmd
+
+    - title: "WS 24/25"
+      contents:
+        - ws24-25/isw/index.qmd
         
 
 format:
