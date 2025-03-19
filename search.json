@@ -25,14 +25,20 @@
     "href": "ws24-25/isw/index.html",
     "title": "Software Engineering",
     "section": "",
-    "text": "weekly summary\nnotes\nsolutions"
+    "text": "weekly summary\nnotes\nsolutions",
+    "crumbs": [
+      "Software Engineering"
+    ]
   },
   {
     "objectID": "ws24-25/isw/index.html#section",
     "href": "ws24-25/isw/index.html#section",
     "title": "Software Engineering",
     "section": "",
-    "text": "weekly summary\nnotes\nsolutions"
+    "text": "weekly summary\nnotes\nsolutions",
+    "crumbs": [
+      "Software Engineering"
+    ]
   },
   {
     "objectID": "ws24-25/ds/sum.html",
@@ -664,28 +670,28 @@
     "href": "ss24/time/index.html",
     "title": "Time Log",
     "section": "",
-    "text": "calendar (with week numbers) pertaining to this semester:\nUsage: cal [general options] [-jy] [[month] year]\n       cal [general options] [-j] [-m month] [year]\n       ncal -C [general options] [-jy] [[month] year]\n       ncal -C [general options] [-j] [-m month] [year]\n       ncal [general options] [-bhJjpwySM] [-H yyyy-mm-dd] [-s country_code] [-W number of days] [[month] year]\n       ncal [general options] [-Jeo] [year]\nGeneral options: [-31] [-A months] [-B months] [-d yyyy-mm]\nTwo main tags:"
+    "text": "calendar (with week numbers) pertaining to this semester:\nMai 2024                Juni 2024                Juli 2024       \n   Mo Di Mi Do Fr Sa So     Mo Di Mi Do Fr Sa So     Mo Di Mi Do Fr Sa So\n18        1  2  3  4  5  22                 1  2  27  1  2  3  4  5  6  7\n19  6  7  8  9 10 11 12  23  3  4  5  6  7  8  9  28  8  9 10 11 12 13 14\n20 13 14 15 16 17 18 19  24 10 11 12 13 14 15 16  29 15 16 17 18 19 20 21\n21 20 21 22 23 24 25 26  25 17 18 19 20 21 22 23  30 22 23 24 25 26 27 28\n22 27 28 29 30 31        26 24 25 26 27 28 29 30  31 29 30 31            \n                                                                         \n      August 2024             September 2024            Oktober 2024     \n   Mo Di Mi Do Fr Sa So     Mo Di Mi Do Fr Sa So     Mo Di Mi Do Fr Sa So\n31           1  2  3  4  35                    1  40     1  2  3  4  5  6\n32  5  6  7  8  9 10 11  36  2  3  4  5  6  7  8  41  7  8  9 10 11 12 13\n33 12 13 14 15 16 17 18  37  9 10 11 12 13 14 15  42 14 15 16 17 18 19 20\n34 19 20 21 22 23 24 25  38 16 17 18 19 20 21 22  43 21 22 23 24 25 26 27\n35 26 27 28 29 30 31     39 23 24 25 26 27 28 29  44 28 29 30 31         \n                         40 30\nTwo main tags:"
   },
   {
     "objectID": "ss24/time/index.html#weekly",
     "href": "ss24/time/index.html#weekly",
     "title": "Time Log",
     "section": "Weekly",
-    "text": "Weekly\n\ntotal times:\n\n\n\n                 Total\n2024  Week 31   15h45m\n      Week 32   14h10m\n      Week 33    3h30m\n      Week 35    1h20m\n      Week 37    5h10m\n      Week 38    3h35m\n              ========\n                43h30m\n\n\n\nalgorithms and data structures (#alda) and oop for scientific computing (#sci-oop):\n\n\n\n                 Total                   Total\n2024  Week 31    7h40m  2024  Week 31     8h5m\n      Week 32   10h25m        Week 32    4h15m\n      Week 37    5h10m        Week 33    3h30m\n      Week 38    3h50m        Week 35    1h20m\n              ========                ========\n                 27h5m                  17h10m"
+    "text": "Weekly\n\ntotal times:\n\n\n\n/bin/bash: line 1: klog: command not found\n\n\n\nalgorithms and data structures (#alda) and oop for scientific computing (#sci-oop):\n\n\n\n/bin/bash: line 1: klog: command not found\n/bin/bash: line 1: klog: command not found"
   },
   {
     "objectID": "ss24/time/index.html#daily",
     "href": "ss24/time/index.html#daily",
     "title": "Time Log",
     "section": "Daily",
-    "text": "Daily\n\ntotal:\n\n\n\n                       Total\n2024 Jul    Tue 30.     5h5m\n            Wed 31.       5h\n     Aug    Thu  1.    4h10m\n            Fri  2.    1h30m\n            Mon  5.    2h30m\n            Tue  6.    5h35m\n            Wed  7.    3h25m\n            Thu  8.    2h40m\n            Tue 13.    1h35m\n            Wed 14.    1h55m\n            Mon 26.       1h\n            Tue 27.      20m\n     Sep    Tue 10.    2h30m\n            Fri 13.    2h40m\n            Mon 16.    3h35m\n                    ========\n                      43h30m\n\n\n\n#alda and #sci-oop side by side;\n\n\n\n                       Total                           Total\n2024 Jul    Tue 30.    1h15m    2024 Jul    Tue 30.    3h50m\n            Wed 31.       4h                Wed 31.       1h\n     Aug    Thu  1.    2h25m         Aug    Thu  1.    1h45m\n            Mon  5.    2h30m                Fri  2.    1h30m\n            Tue  6.    2h50m                Tue  6.    2h45m\n            Wed  7.    3h25m                Thu  8.    1h30m\n            Thu  8.    1h10m                Tue 13.    1h35m\n            Fri  9.      30m                Wed 14.    1h55m\n     Sep    Tue 10.    2h30m                Mon 26.       1h\n            Fri 13.    2h40m                Tue 27.      20m\n            Mon 16.    3h50m                        ========\n                    ========                          17h10m\n                       27h5m"
+    "text": "Daily\n\ntotal:\n\n\n\n/bin/bash: line 1: klog: command not found\n\n\n\n#alda and #sci-oop side by side;\n\n\n\n/bin/bash: line 1: klog: command not found\n/bin/bash: line 1: klog: command not found"
   },
   {
     "objectID": "ss24/time/index.html#entries",
     "href": "ss24/time/index.html#entries",
     "title": "Time Log",
     "section": "Entries",
-    "text": "Entries\nTime log entries:\n\n\n\n2024-07-30 (6h!)\n#study #uni #exam\n    10:45 - 12:45 #sci-oop video reviews on moodle, Vid 1\n    -10m Break (#sci-oop)\n    14:00 - 15:45 #sci-oop video reviews on moodle, Vid 2\n    16:15 - 16:30 #sci-oop video reviews on moodle, Vid 2 \n        range based loops\n    16:30 - 17:45 #alda big #cpp sorting & serching\n\n2024-07-31 (6h!)\n#study #uni #exam\n    10:05 - 12:05 #alda big #cpp binary search ch 12\n    14:05 - 16:05 #alda big #cpp most frequent element ch 12\n        implemented most frequent element\n    16:35 - 17:35 #sci-oop move semantics ~ josuttis #cpp\n\n2024-08-01 (6h!)\n#study #uni #exam\n    10:35 - 13:15 #alda tutor notes, probleklausur\n    -15m Break (#alda)\n    14:45 - 16:45 #sci-oop move semantics ~ josuttis\n    -15m Break (#sci-oop)\n\n2024-08-02 (6h!)\n#study #uni #exam\n    10:45 - 12:45 #sci-oop move semantics ~ josuttis\n        finished ch 1.1\n    -30m Break (#sci-oop)\n\n2024-08-05 (6h!)\n#study #uni #exam\n    12:05 - 13:10 #alda big #cpp shell sort\n    -15m (#alda #cpp) Break\n    15:30 - 17:40 #alda big #cpp shell sort\n        implemented shell sort\n    -30m (#alda #cpp) Break\n\n2024-08-06\n    &lt;23:30 - 2:00 klog documentation\n    -45m Break & Distractions\n\n2024-08-06 (6h!)\n#study #uni #exam\n    9:45 - 11:15 #sci-oop move semantics \n        ch 1.2 - 1.5, 5p\n    11:35 - 12:50 #sci-oop move semantics ch 2\n        finished until summary chapter, 6p\n    14:45 - 15:35 #alda foundations of algorithms ~ neapolitan\n        preface & ch 1.0  \n    16:00 - 18:40 #alda foundations of algoroithms ~ neapolitan\n        ch 1.1 excluding matrix multiplication example\n    -40m #alda Break & Distractions\n\n2024-08-07 (5h30m!)\n#study #uni #exam\n    10:25 - 12:50 #alda foundations of algorithms ~ neapolitan\n        matrix multiplication example & ch 1.1\n        implemented & tested binary search\n    -20m #alda Break & Distractions\n    0m organized reading lists for ALDA and SCI-OOP \n        around 3.5 hours\n    18:00 - 19:20 #alda foundations of algorithms ~ neapolitan\n        ch1.2 fibonacci recursive and dynamic, impl and runtime\n\n2024-08-08 (4h!)\n#study #uni #exam\n    11:20 - 12:30 #alda implemented merge and mergesort\n        with proofs of correctness \n    0m sci-oop exam 14:20 - 16:00\n    17:00 - 18:30 #sci-oop typeset exam questions\n        and published them to the website\n\n2024-08-09\n    11:30 - 12:00 #alda typesetting first exam questions\n\n2024-08-13\n    10:10 - 12:05 quarto documentation, pdf options\n\n2024-08-13 (4h!)\n#study #uni #exam\n    12:25 - 13:20 #sci-oop josuttis #cpp move semantics\n        ch3.1 - Move semantics in ordinary classes \n    -10m Break #sci-oop #cpp\n    14:35 - 15:25 #sci-oop josuttis #cpp move semantics \n        ch3.2 - Implementing special copy/move member functions\n\n2024-08-13\n    19:15 - 20:15 #sports bodyshape fitness\n\n2024-08-14 (4h!)\n#study #uni #exam\n    10:45 - 12:55 #sci-oop josuttis #cpp move semantics \n        ch 3.3 - Special member functions\n    -15m Break #sci-oop #cpp\n\n2024-08-26 (3h30m!)\n#study #uni #exam\n    11:50 - 13:05 #sci-oop josuttis #cpp move semantics\n        revise ch 3\n    -15m Break #sci-oop #cpp\n\n2024-08-27 (3h!)\n#study #uni #exam\n    13:00 - 13:30 #sci-oop josuttis #cpp move semantics\n        ch 3.1.1 - \n    -10m Break #sci-oop #cpp\n\n2024-09-10 (5h!)\n#study #uni #exam\n    12:15 - 13:05 #alda gersting ch3 Recurrence\n        p. 157 - 159\n    15:30 - 17:30 #alda gersting ch3 recurrence relation\n        p. 159 - 163 until ex 7\n    -20m Break #alda\n\n2024-09-13 (4h!)\n#study #uni #exam\n    13:55 - 14:50 #alda gersting ch3 recurrence relations\n        p.163 - 165 \n    15:25 - 16:10 #alda gerstin ch3 recurrence relations\n        p.165 - 168 until Example 11\n    16:40 - 17:40 #alda \n        until p.169, implemented selection sort both iterative\n        and recursive versions\n\n2024-09-16 (4h!)\n#study #uni #exam\n    11:10 - 12:40 #alda gersting ch3 recurrence relations\n        p.169 - 171 implemented recursive & iterative binary search \n    -15m Break #alda\n    14:50 - 16:30 #alda gersting ch3 recurrence relations\n        p.171 - 171 Exercises 1, 2\n    -15m Break \n    17:00 - 17:55 #alda gersting ch3 recurrence relations\n        p.171 - 172 Exercises 2 - 12\n\n2024-09-20 (5h!)\n#self-study \n    10:35 - 13:30 #finance Beancount docs\n        command line accounting in context: custom scripting - end of chpater\n        finished chapter\n    -35m Break #finance \n    16:05 - 19:00 #finance Beancount docs\n        DE Counting Method Intro - types of accounts \n        read two chapters\n\n2024-09-24 (4h!)\n#self-study\n    12:10 - 13:40 #finance Beancount docs\n        DE Counting method: types of accounts - income statement\n    15:15 - 16:15 #finance Beancount docs\n        DE Counting method: clearing income - Balance Sheet \n    16:45 - 17:30 #finance Beancount docs\n        DE Coumting method: Summarizing - 17:30\n\n2024-09-30 (4h!)\n#self-study\n    11:45 - 12:45 #finance Beancount docs\n        DE Counting method: trial balance\n    15:15 - 16:00 #finance Beancount docs\n        DE Counting method: Balance Sheet\n    16:20 - 18:50 #finance Beancount docs\n        DE Counting method: Period Reporting - Chart of Accounts(excl)\n    -50m Break\n\n2024-10-01 (4h30m!)\n#self-study\n    10:25 - 11:40 Business and finance books glean\n    11:50 - 12:45 #finance Beancount docs\n        DE CM: Period reporting - plain-text accounting (excl)\n    14:10 - 14:40 #finance Beancount docs\n        DE CM: Plain-text accounting - the table perspective\n        Distracting a lot - gleaning productivity books"
+    "text": "Entries\nTime log entries:\n\n\n/bin/bash: line 1: klog: command not found"
   },
   {
     "objectID": "ws23-24/ipi/ipi.html",
@@ -726,7 +732,11 @@
     "href": "ws24-25/index.html#courses",
     "title": "WS 24/25",
     "section": "Courses",
-    "text": "Courses\n\nITS\nISW\nDS"
+    "text": "Courses\n\nITS\nISW\nDS",
+    "crumbs": [
+      "Bachelor",
+      "WS 24/25"
+    ]
   },
   {
     "objectID": "ws24-25/isw/sum.html",
