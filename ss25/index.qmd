@@ -1,0 +1,18 @@
+---
+title: SS 25
+---
+
+## Schedule
+
+```{=html}
+<iframe width="780" height="440" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQ-tnZaQf_WxJNWKo_DSYoMYZ9eqbmQ-seJxYXIeT3vxh5JpBEjs40VcXaQB-nsxOSBo7GZj4hjRCiS/pubhtml"></iframe>
+```
+
+## Courses 
+
+* ALDA
+* IBN
+* SciComp
+
+
+## Time

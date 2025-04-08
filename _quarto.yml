@@ -22,6 +22,7 @@ website:
             - ws23-24/index.qmd
             - ss24/index.qmd
             - ws24-25/index.qmd
+            - ss25/index.qmd
 
     - title: "WS 23/24"
       style: "docked"
