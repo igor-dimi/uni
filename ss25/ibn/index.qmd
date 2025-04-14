@@ -1,0 +1,6 @@
+---
+title: Operating Systems and Networks
+---
+
+* [notes](https://igor-dimi.github.io/ibn-sose25-notes/)
+* [solutions](https://igor-dimi.github.io/ibn-sose25-sol/)

@@ -12,9 +12,9 @@ title: SS 25
 
 ## Courses 
 
-* ALDA
-* IBN
-* SciComp
+* [ALDA](./alda/index.qmd)
+* [IBN](./ibn//index.qmd)
+* [SciComp](./scicomp/index.qmd)
 
 
 ## Time

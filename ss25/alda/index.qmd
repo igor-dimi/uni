@@ -1,0 +1,6 @@
+---
+title: Algorithms and Data Structures
+---
+
+* [notes](https://igor-dimi.github.io/alda-sose25-notes/)
+* [solutions](https://igor-dimi.github.io/alda-sose25-sol/)

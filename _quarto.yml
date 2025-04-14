@@ -39,7 +39,15 @@ website:
     - title: "WS 24/25"
       contents:
         - ws24-25/isw/index.qmd
-        
+      
+    - title: "SS 25"
+      contents:
+        - text: "alda"
+          href: ss25/alda/index.qmd
+        - text: "ibn"
+          href: ss25/ibn/index.qmd
+        - text: "scicomp"
+          href: ss25/scicomp/index.qmd
 
 format:
   html:
