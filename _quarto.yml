@@ -51,6 +51,9 @@ website:
     
     - title: "Alda VL Notes SS25"
       contents: ss25/alda/sum/
+
+    - title: "IBN VL Notes SS25"
+      contents: ss25/ibn/sum/
         
         
 
