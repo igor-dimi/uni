@@ -1,0 +1,70 @@
+---
+title: Week 1
+---
+
+## VL 1 - 15.04.25
+
+* Heico: Rundmails, Pruefungen
+* MaMPF: VL Skript & Videos, Uebungen
+* Discord: Fragen, Teamfindung
+* Muesli: Uebungspunkte
+* Algorithms and programming with python (python crashcourse next week)
+* [website](https://alda.iwr.uni-heidelberg.de)
+
+### lecture notes:
+
+#### Algorithms and Data Structures
+
+* Algorithmus: 
+
+    1. loest eint bestimmtes (wohldefiniertes) Problem - "Spezifikation"
+    2. loest das Problem in endlich vielen Schritten - "Komplexitaetstheorie"
+    3. Alle Schritte sind elementar (Bekannte einfache Subalgorithmen)
+
+* Problem - Spezifikation:  
+    * formale Beschreibung der Aufgabe
+    * enthaelt nicht die Loesung
+
+* Vorbedingugen: Notwendiger Zustand der "Welt", damit der Algorithmus andwendbar ist.
+(Anforderungen and die Eingaben, evts, auch andere Umbegung)
+
+* Nachbedingen: Zustand der "Welt" am Ende des Algoirhtmus.
+
+* **Bsp**: Quadratwurzel $y = \sqrt{x}$
+
+    * Vorbedingung: $x \in \mathbb{N}$, oder $x \in \mathbb{R}^{\geq 0}$ oder $x \in \mathbb{R}$, if $y \in \mathbb{C}$
+    * Nachbedingung: $y \cdot y == x$, falls Vorbedingung erfuellt, anderfalls, d.h. $x \notin \mathbb{R}$, or $x < 0$, dann
+    **Fehlermeldung**: 
+    * $x \in \texttt{string}$: Type error
+    * $x < 0$: Value error
+
+* Elementare Schritte: 
+  * pragmatische Definition: alles, was die Hardware, Programmierscprahe & Standartbibliothek schoin anbietet. 
+  * formale Definition: Theoretische informatik - spezifikation Elementarer Operationen. 
+    * Beispiel aus der Geometrie: Konstruktionen mit Zirkel und Lineal
+      * Elementare Operationen:
+        1. defniere inen Punkt: (a. beliebig, b. als Schnittpunkt)
+        2. mit Zirkel Abstand zwischen zwei Punkte abgleichen
+        3. mit Zirkel einen Kres um einen geg. Punkt schneiden
+           1. Radius beliebig
+           2. aus 2)
+        4. Mit Lineal Gerade durch zwei Punkte zeichnen. 
+
+* Theoretische Informatik:
+    * Ziel der Theoretischen Informatik: mit moeglischst wenig Regeln (Elementare op.) moeglichst viele Algorithmen. 
+    * $\lambda$-Calculus
+    * Recursive Functions Theory
+    * Turing Machine Computability
+    * While-computability
+    * Ueberraschendes Theorem der Theoretischen Informatik: Die Menge der realisierbaren Algorithmen ist gleich bei allen Systemen
+    (berechenbare Funktionen)
+    * Church-Turing These: Es gibt kein maechtigeres Regelsystemen (model of computability). 
+    * while-programme:
+      * addition einer Konstante
+      * substraktion einer Konstante
+      * nacheinander Ausfuehrung zwei Programme (Anweisungen)
+      * while-schleife
+
+
+
+

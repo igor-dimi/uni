@@ -48,6 +48,12 @@ website:
           href: ss25/ibn/index.qmd
         - text: "scicomp"
           href: ss25/scicomp/index.qmd
+    
+    - title: "Alda VL Notes SS25"
+      contents: ss25/alda/sum/
+        
+        
+
 
 format:
   html:
