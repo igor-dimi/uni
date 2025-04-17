@@ -1,0 +1,59 @@
+---
+title: Week 1
+date: 04/14/2025
+---
+
+## VL 1 - 14.04.25
+
+### Lecture Notes 
+
+* Definition Betriebssystem: Software, die die Computerhardware verwaltet
+* Complexity of an Operating system $\approx$ 10 mil LOC
+* Geschichte der BS:
+   1. Erste Generation 1941 - 55: Z3, Colossus, Mark I, ENIAC
+      * ENIAC: program not stored in memory, rather entered physically by connecting cables.
+      * EDVAC: implementation of the Von Nuemann architecture, where the program data are both stored in the memory space. 
+      * Programs were written in Assembler or later Fortran
+      * Programming via direct manipulation of cables or later punch-cards.
+      * No software that managemes software. Each user/programmer had complete and singular direct use of the hardware, for the time
+        allocated for him/her. 
+   2. 2nd Generation 1955 - 1964
+      * Invention of Transistors => Commercialization of computers.
+      * UNIVAC I (1951). 
+      * usual operation: 
+        * programmer punches his program in chards (either fortran or assembler) and hands them to the operator
+        * oeprator feeds the card deck to the computer system and starts the processing
+        * after the process ends the operator goes to the printer and transfers the output to the output room
+        * innefiencies: 
+          * computer spent long idle time during the output. (the output is performed by other machines and takes long time)
+          * a human operator was necessary to load the program and transfer the output.
+      * batch processing: 
+   3. 3rd generation: Multiprogramming => MULTICS => Unix 
+      * multiprogramming vs multitasking vs time sharing. 
+
+## VL2 - 16.04.25
+
+### Lecture Notes
+
+* primary tasks of an OS:
+  * an extended machine: a comfortable hardware, abstraction => System calls, API
+  * management of resources: processors, I/O devices, memory...
+    * avoiding conflicts in multiprogramming and multitasking
+    * fair allocation of resources
+* Computer architecture crash-course: 
+  * componets of a PC:
+    * CPU, memeory, busses, secondary memory (hard disks), I/O devices, ...
+    * CPU and other components operate asynchronously and largely independently from each other.
+  * Memory hiearachy, categorized w.r.t. speed, latency, capacity
+  * caches = buffer kl
+  * Stack, Stack Pointer, Stack Frames...
+* execution modes:
+  * user mode: some operations are forbidden, restricted access to memory
+  * kernel mode (priviliged mode)
+* CPU types: 
+  * CISC: powerful but possibly slow instructions
+  * RISC: simple but fast instructions
+  * nowadays hybrid, RISC + microcode...
+* System calls: the interface of an OS 
+* Shells, shell scripts 
+   
