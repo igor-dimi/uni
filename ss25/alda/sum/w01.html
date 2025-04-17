@@ -21,6 +21,40 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -280,6 +314,11 @@ window.Quarto = {
   <ul class="collapse">
   <li><a href="#lecture-notes" id="toc-lecture-notes" class="nav-link" data-scroll-target="#lecture-notes">lecture notes:</a></li>
   </ul></li>
+  <li><a href="#vl-2---17.04.25" id="toc-vl-2---17.04.25" class="nav-link" data-scroll-target="#vl-2---17.04.25">VL 2 - 17.04.25</a>
+  <ul class="collapse">
+  <li><a href="#minimal-set-of-elementary-operations" id="toc-minimal-set-of-elementary-operations" class="nav-link" data-scroll-target="#minimal-set-of-elementary-operations">Minimal set of elementary operations</a></li>
+  <li><a href="#data-structures" id="toc-data-structures" class="nav-link" data-scroll-target="#data-structures">Data Structures</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -385,6 +424,81 @@ window.Quarto = {
 </ul></li>
 </ul></li>
 </ul>
+</section>
+</section>
+</section>
+<section id="vl-2---17.04.25" class="level2">
+<h2 class="anchored" data-anchor-id="vl-2---17.04.25">VL 2 - 17.04.25</h2>
+<section id="minimal-set-of-elementary-operations" class="level3">
+<h3 class="anchored" data-anchor-id="minimal-set-of-elementary-operations">Minimal set of elementary operations</h3>
+<section id="while-programs" class="level4">
+<h4 class="anchored" data-anchor-id="while-programs">while-programs:</h4>
+<p>set of operations:</p>
+<ul>
+<li><p>accesing a memory cell, read / write: <code>X[i]</code></p></li>
+<li><p>adding a constant <span class="math inline">\(c\)</span> to a memory cell and storing the result in an arbitary cell: <code>X[j] := X[i] + c</code></p></li>
+<li><p>substracting a constant <span class="math inline">\(c\)</span> from a memory cell: <code>X[j] := X[i] - c</code></p></li>
+<li><p>composition of programs: <span class="math inline">\(P\)</span>, <span class="math inline">\(Q\)</span> programs, then <span class="math inline">\(P;Q\)</span> is a program</p></li>
+<li><p>while loop:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>while x[i] != 0 do</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  P // an arbitrary Program</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>done</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>in this definition such a while program is valid if x[i] eventually becomes 0. (otherwise, infinite loop =&gt; no algorithm)</p></li>
+<li><p><strong>theorem</strong>: with these Elementary operations, all Turing-computable functions can be computed.</p></li>
+<li><p><strong>example</strong>: addition of two cells</p>
+<ul>
+<li><p><strong>precondition</strong>: <code>X[j] &gt;= 0</code></p></li>
+<li><p><strong>poscondition</strong>: <code>X[i]' == X[i] + X[j]</code></p></li>
+<li><p><strong>implementation</strong>:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>read(X[i]);</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>read(X[j]);</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>// X[j] &gt;= 0 &amp;&amp; X[i] + X[j] == X + Y</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>while X[j] &gt; 0 do</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>  X[j] = X[j] - 1;</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>  X[i] = X[i] + 1 </span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>done</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>// X[j] == 0</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+</ul></li>
+</ul>
+<p>Around 1400 there was a disagreement about elementary operations. Two camps: Abacus-oriented vs Algorithm-oriented</p>
+<ul>
+<li>Abacus-oriented: Roman numerals + abacus operations. (Abacus operations were extremely fast with roman numbers)</li>
+<li>Algorithm-oriented: how to compute with indian number, pen and paper - based on the book of Al Quarismi.</li>
+</ul>
+<p>1500 Adam Ries: “Rechnen auf der Federn und Linien” (Pen and Abacus)</p>
+<p>Heute: pragmatic definition of elementary operations based on the capabilities of the CPU, or on the programming language level the basic operations of the programming language.</p>
+</section>
+</section>
+<section id="data-structures" class="level3">
+<h3 class="anchored" data-anchor-id="data-structures">Data Structures</h3>
+<p><strong>Definition</strong>: Storing data in a way that can be found easily and interpreted correctly.<br>
+<strong>Example</strong>: Consider sequence of bits: 1101,0110,0110,1100. The ‘meaning’ of this sequence depends on how<br>
+it is interpreted:</p>
+<ul>
+<li>interpretation as a <strong>positive</strong> binary number.</li>
+<li>interpretation as a binary <strong>integer</strong> =&gt; 2s complement.</li>
+<li>interpreted as a sequence of 8-bit characters:</li>
+<li>imterpreted as a floating point number according to the IEEE standard: <code>S | EEEEE | MMMMMMMMMM</code></li>
+</ul>
+<p>main point: same symbol can be interpreted in various ways, depending on the system.</p>
+<ul>
+<li>programming languages: variables have associated types and the compiler or the interpreter determines what type it is and interprets this accordingly.</li>
+<li>Files:
+<ul>
+<li>ending of the file <code>.jpg</code></li>
+<li>magic number in file”: 255 216 255</li>
+<li>type standards for communication and Operating system.</li>
+</ul></li>
+</ul>
+<section id="data-structure-triangle" class="level4">
+<h4 class="anchored" data-anchor-id="data-structure-triangle">Data-structure Triangle</h4>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./imgs/w01/data-triangle.png" class="img-fluid figure-img" style="width:70.0%"></p>
+<figcaption>data-triangle</figcaption>
+</figure>
+</div>
+<p><strong>ADT</strong>: abstract data type = no implementation is given, no bit sequence is defined. Supported operations and range of values is defined.</p>
 
 
 </section>

@@ -233,11 +233,22 @@
     ]
   },
   {
-    "objectID": "ss25/ibn/sum/w01.html#vl-1---15.04.25",
-    "href": "ss25/ibn/sum/w01.html#vl-1---15.04.25",
+    "objectID": "ss25/ibn/sum/w01.html#vl-1---14.04.25",
+    "href": "ss25/ibn/sum/w01.html#vl-1---14.04.25",
     "title": "Week 1",
     "section": "",
     "text": "Definition Betriebssystem: Software, die die Computerhardware verwaltet\nComplexity of an Operating system \\(\\approx\\) 10 mil LOC\nGeschichte der BS:\n\nErste Generation 1941 - 55: Z3, Colossus, Mark I, ENIAC\n\nENIAC: program not stored in memory, rather entered physically by connecting cables.\nEDVAC: implementation of the Von Nuemann architecture, where the program data are both stored in the memory space.\nPrograms were written in Assembler or later Fortran\nProgramming via direct manipulation of cables or later punch-cards.\nNo software that managemes software. Each user/programmer had complete and singular direct use of the hardware, for the time allocated for him/her.\n\n2nd Generation 1955 - 1964\n\nInvention of Transistors =&gt; Commercialization of computers.\nUNIVAC I (1951).\nusual operation:\n\nprogrammer punches his program in chards (either fortran or assembler) and hands them to the operator\noeprator feeds the card deck to the computer system and starts the processing\nafter the process ends the operator goes to the printer and transfers the output to the output room\ninnefiencies:\n\ncomputer spent long idle time during the output. (the output is performed by other machines and takes long time)\na human operator was necessary to load the program and transfer the output.\n\n\nbatch processing:\n\n3rd generation: Multiprogramming =&gt; MULTICS =&gt; Unix\n\nmultiprogramming vs multitasking vs time sharing.",
+    "crumbs": [
+      "Weekly Summary",
+      "Week 1"
+    ]
+  },
+  {
+    "objectID": "ss25/ibn/sum/w01.html#vl2---16.04.25",
+    "href": "ss25/ibn/sum/w01.html#vl2---16.04.25",
+    "title": "Week 1",
+    "section": "VL2 - 16.04.25",
+    "text": "VL2 - 16.04.25\n\nLecture Notes\n\nprimary tasks of an OS:\n\nan extended machine: a comfortable hardware, abstraction =&gt; System calls, API\nmanagement of resources: processors, I/O devices, memory…\n\navoiding conflicts in multiprogramming and multitasking\nfair allocation of resources\n\n\nComputer architecture crash-course:\n\ncomponets of a PC:\n\nCPU, memeory, busses, secondary memory (hard disks), I/O devices, …\nCPU and other components operate asynchronously and largely independently from each other.\n\nMemory hiearachy, categorized w.r.t. speed, latency, capacity\ncaches = buffer kl\nStack, Stack Pointer, Stack Frames…\n\nexecution modes:\n\nuser mode: some operations are forbidden, restricted access to memory\nkernel mode (priviliged mode)\n\nCPU types:\n\nCISC: powerful but possibly slow instructions\nRISC: simple but fast instructions\nnowadays hybrid, RISC + microcode…\n\nSystem calls: the interface of an OS\nShells, shell scripts",
     "crumbs": [
       "Weekly Summary",
       "Week 1"
@@ -270,6 +281,17 @@
     "title": "Week 1",
     "section": "",
     "text": "Heico: Rundmails, Pruefungen\nMaMPF: VL Skript & Videos, Uebungen\nDiscord: Fragen, Teamfindung\nMuesli: Uebungspunkte\nAlgorithms and programming with python (python crashcourse next week)\nwebsite\n\n\n\n\n\n\nAlgorithmus:\n\nloest eint bestimmtes (wohldefiniertes) Problem - “Spezifikation”\nloest das Problem in endlich vielen Schritten - “Komplexitaetstheorie”\nAlle Schritte sind elementar (Bekannte einfache Subalgorithmen)\n\nProblem - Spezifikation:\n\nformale Beschreibung der Aufgabe\nenthaelt nicht die Loesung\n\nVorbedingugen: Notwendiger Zustand der “Welt”, damit der Algorithmus andwendbar ist. (Anforderungen and die Eingaben, evts, auch andere Umbegung)\nNachbedingen: Zustand der “Welt” am Ende des Algoirhtmus.\nBsp: Quadratwurzel \\(y = \\sqrt{x}\\)\n\nVorbedingung: \\(x \\in \\mathbb{N}\\), oder \\(x \\in \\mathbb{R}^{\\geq 0}\\) oder \\(x \\in \\mathbb{R}\\), if \\(y \\in \\mathbb{C}\\)\nNachbedingung: \\(y \\cdot y == x\\), falls Vorbedingung erfuellt, anderfalls, d.h. \\(x \\notin \\mathbb{R}\\), or \\(x &lt; 0\\), dann Fehlermeldung:\n\\(x \\in \\texttt{string}\\): Type error\n\\(x &lt; 0\\): Value error\n\nElementare Schritte:\n\npragmatische Definition: alles, was die Hardware, Programmierscprahe & Standartbibliothek schoin anbietet.\nformale Definition: Theoretische informatik - spezifikation Elementarer Operationen.\n\nBeispiel aus der Geometrie: Konstruktionen mit Zirkel und Lineal\n\nElementare Operationen:\n\ndefniere inen Punkt: (a. beliebig, b. als Schnittpunkt)\nmit Zirkel Abstand zwischen zwei Punkte abgleichen\nmit Zirkel einen Kres um einen geg. Punkt schneiden\n\nRadius beliebig\naus 2)\n\nMit Lineal Gerade durch zwei Punkte zeichnen.\n\n\n\n\nTheoretische Informatik:\n\nZiel der Theoretischen Informatik: mit moeglischst wenig Regeln (Elementare op.) moeglichst viele Algorithmen.\n\\(\\lambda\\)-Calculus\nRecursive Functions Theory\nTuring Machine Computability\nWhile-computability\nUeberraschendes Theorem der Theoretischen Informatik: Die Menge der realisierbaren Algorithmen ist gleich bei allen Systemen (berechenbare Funktionen)\nChurch-Turing These: Es gibt kein maechtigeres Regelsystemen (model of computability).\nwhile-programme:\n\naddition einer Konstante\nsubstraktion einer Konstante\nnacheinander Ausfuehrung zwei Programme (Anweisungen)\nwhile-schleife",
+    "crumbs": [
+      "Weekly Summary",
+      "Week 1"
+    ]
+  },
+  {
+    "objectID": "ss25/alda/sum/w01.html#vl-2---17.04.25",
+    "href": "ss25/alda/sum/w01.html#vl-2---17.04.25",
+    "title": "Week 1",
+    "section": "VL 2 - 17.04.25",
+    "text": "VL 2 - 17.04.25\n\nMinimal set of elementary operations\n\nwhile-programs:\nset of operations:\n\naccesing a memory cell, read / write: X[i]\nadding a constant \\(c\\) to a memory cell and storing the result in an arbitary cell: X[j] := X[i] + c\nsubstracting a constant \\(c\\) from a memory cell: X[j] := X[i] - c\ncomposition of programs: \\(P\\), \\(Q\\) programs, then \\(P;Q\\) is a program\nwhile loop:\nwhile x[i] != 0 do\n  P // an arbitrary Program\ndone\nin this definition such a while program is valid if x[i] eventually becomes 0. (otherwise, infinite loop =&gt; no algorithm)\ntheorem: with these Elementary operations, all Turing-computable functions can be computed.\nexample: addition of two cells\n\nprecondition: X[j] &gt;= 0\nposcondition: X[i]' == X[i] + X[j]\nimplementation:\nread(X[i]);\nread(X[j]);\n// X[j] &gt;= 0 && X[i] + X[j] == X + Y\nwhile X[j] &gt; 0 do\n  X[j] = X[j] - 1;\n  X[i] = X[i] + 1 \ndone\n// X[j] == 0\n\n\nAround 1400 there was a disagreement about elementary operations. Two camps: Abacus-oriented vs Algorithm-oriented\n\nAbacus-oriented: Roman numerals + abacus operations. (Abacus operations were extremely fast with roman numbers)\nAlgorithm-oriented: how to compute with indian number, pen and paper - based on the book of Al Quarismi.\n\n1500 Adam Ries: “Rechnen auf der Federn und Linien” (Pen and Abacus)\nHeute: pragmatic definition of elementary operations based on the capabilities of the CPU, or on the programming language level the basic operations of the programming language.\n\n\n\nData Structures\nDefinition: Storing data in a way that can be found easily and interpreted correctly.\nExample: Consider sequence of bits: 1101,0110,0110,1100. The ‘meaning’ of this sequence depends on how\nit is interpreted:\n\ninterpretation as a positive binary number.\ninterpretation as a binary integer =&gt; 2s complement.\ninterpreted as a sequence of 8-bit characters:\nimterpreted as a floating point number according to the IEEE standard: S | EEEEE | MMMMMMMMMM\n\nmain point: same symbol can be interpreted in various ways, depending on the system.\n\nprogramming languages: variables have associated types and the compiler or the interpreter determines what type it is and interprets this accordingly.\nFiles:\n\nending of the file .jpg\nmagic number in file”: 255 216 255\ntype standards for communication and Operating system.\n\n\n\nData-structure Triangle\n\n\n\ndata-triangle\n\n\nADT: abstract data type = no implementation is given, no bit sequence is defined. Supported operations and range of values is defined.",
     "crumbs": [
       "Weekly Summary",
       "Week 1"
