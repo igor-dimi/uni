@@ -4,3 +4,4 @@ title: Object Oriented Scientific Computing with C++
 
 * [notes](https://igor-dimi.github.io/oop-notes-ss24/)
 * [solutions](https://igor-dimi.github.io/oop-sol-ss24/)
+* [weekly-summary](./sum/index.qmd)

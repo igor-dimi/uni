@@ -1,3 +1,123 @@
 ---
 title: Week 2
 ---
+
+## VL 3 - 22.04.2025
+
+* review of previous lecture: data-structure triangle
+* for ADTs there's lot's of wiggle room for the concrete representation (the concrete bit sequences)
+  * example: integers
+      1. "unsigned" or "signed"
+      2. the number of allocated bits: uint8, int8 => uint16, int16 => uint32, int32 => uint64, int64 => infinite precision (python) 
+      (faster => slower). Python automatically switches to infinite precision if the numbers get too large.
+         * smaller number of bits => overflow:
+           * overflow in uint8: 
+             * $255_D = 1111,1111_B$
+             * $255_D + 1_D = 256_D = 1,0000,0000_B$
+           * How to react to this? Solutions:
+               1. Increase the number of bits dynamically (python): not practical because not easy to implement in hardware.
+               2. Error warning: not practical because way too frequent. 
+               3. Don't do anything: e.g.: $255_D + 1_D = 255_D$: Associativity doesn't hold anymore $255_D + (1_D - 1_D) = 255_D \neq 254_D =
+                  255_D - 1_D = (255_D + 1_D) - 1_D$
+               4. (Cyclical) Modulo arithmetic, k bits => modulo-$2^k$ (% in python): 
+
+                  $255_D + 1_D = 0_D$
+                  
+                  advantages:
+
+                  1. very efficient in hardware => simply perform the operations where the overflow is ignored
+                  2. algebraic laws of basic operations still hold: associativity and commutativity
+
+### Elementary Operations
+
+Elementary operations are ones that are defined for all data types:
+
+1. constructor: 
+  * create a new instance of a data type & allocate memory to it
+  * the memory is initialized to a valid initial state. (otherwise we can't be sure if operations performed on this object will deliver correct results)
+  * in python the constructor has the same name as the data type:
+    * 
+      ```{python}
+      i = int(); f = float(); a = list()
+      i2 = int(7); f2 = float(10); b = [1, 2]
+      print("i:", i, "f:", f, "a: ", a)
+      print("i2:", i2, "f2:", f2, "b: ", b)
+      ```
+    * constructors for custom-data types (classes): the function `__init__(self, ...)` has to be implemented. 
+2. destructor: deallocating the memory
+3. comparison operator (`==`). Two different equalities:
+   * equal: same value / contents
+   * identical: same object in the memory 
+    * comparing the identity of objects with `id()` or with `is`
+      ```{python}
+      a = [1, 2]
+      b = [1, 2]
+      c = b
+      print("1:", id(a) == id(b))
+      print("2:", id(c) == id(b))
+      print("3:", a == b)
+      print("4:", id(c) == id(b))
+      print("5:", c == b and c == a)
+
+      print("6:", a is b or a is c)
+      print("7:", c is b)
+      ```
+
+      `c` and `b` refer to the same memory location, different from the location of `a`. 
+      all of `a`, `b`, `c` have equal values; `[1, 2]`. 
+
+    * consequense: value-semantics vs reference-semantics (see below)
+      
+#### Value-semantics vs Rerence-semantics
+
+Analogy: Accessing a website:
+
+* value-semantics: store a copy of website.
+  * advantage: we have control over the contents of the copy 
+  * disadvantage: possibly out-of-date.
+* reference-semantics: store the URL of the website
+  * advantage: always up-to-date
+  * disadvantage: no control over the content; possibly deleted.
+
+What does it mean for programming languages, specifically for python:
+
+* value-semantics: data is copied and stored at another location (`==` is `True` and `is` is `False`)
+* reference-semantics: two varibles refer to the same location (both `==` and `is` are `True`)
+* In python all assignments use reference semantics, and in general python uses reference semantics
+  * Example
+    
+    ```{python}
+    a = [1, 2]
+    b = a
+    a[0] = -1
+    print("1:", a, b);
+    print("2:", a is b)
+    ```
+
+    if we want to create another list object with a different identity but same value as `a` we use `.copy()` operator:
+
+    ```{python}
+    a = [1, 2]
+    b = a.copy()
+    print("1:", a == b)
+    print("2:", a is b)
+    b[0] = -1
+    print("3:", a, b)
+    ```
+
+    Elementary data-types like numbers or booleans are immutable by default, which gives the 'illusion' of reference semantics.
+
+    ```{python}
+    a = 1
+    b = a
+    print("1:", a is b)
+    print("2:", a == b)
+    print("3:", a, b)
+    a = 2
+    print("4:", a is b)
+    print("5:", a == b)
+    print("6:", a, b)
+    ```
+
+    
+

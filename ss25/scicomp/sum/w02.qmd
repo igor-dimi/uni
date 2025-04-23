@@ -1,0 +1,10 @@
+---
+title: Week 2
+---
+
+## Lecture 2
+
+* overview of scientific computing
+* supercomputing
+* c++ basic concepts: 
+
