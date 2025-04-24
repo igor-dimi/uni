@@ -1,5 +1,6 @@
 ---
 title: Week 2
+date: 04/22/2025
 ---
 
 ## VL 3 - 22.04.2025
@@ -119,5 +120,113 @@ What does it mean for programming languages, specifically for python:
     print("6:", a, b)
     ```
 
-    
+## VL 4 - 24.04.2025
 
+### Containers - Data types
+
+- Containers **contain** other data. 
+- Efficient & systematic managmeent of large amounts of data
+- Efficient repeated application of the same operation
+- Efficient & simple querrying (seeking) of data 
+- Data structures are constructed hierarchically in all programming languages. (composite)
+  **Ex.**: hierachically composing new structures from simple (atomic) ones
+    1. natural numbers: atomic data type
+    2. 3 numbers: RGBValue 
+    3. 1024 x 1024 RGBValue: Image
+    4. Sequence of Images: Video
+
+#### ADT Array
+
+Array (list in python) is the most important / fundamental container data type:
+
+* **Operation** (pseudocode): `a = new_array(size, initial_value)`
+  * **interpretation**: create an array with `size` elements all of which initially have `initial_value` as value
+  * **axioms**:
+    * **precondition**: -
+    * **postcondition**: `len(a) == size` and `for all i in [0,..., size - 1]: get(a, i) == initial_value`
+  * **python**: 
+    ```{python}
+    a = list() # empty array with size == 0
+    b = [3] * 10
+    c = [-1, 2, 3, 'c']
+    print(a, b, c, sep="\n")
+    ```
+* **Operation** (pseudocode): `k = len(a)`
+  * **interpretation**: number of elements in `a`
+  * **axioms**:
+    * **precondition**: 
+    * **postcondition**: `k == size`
+  * **python**:
+    ```{python}
+    a = [None] * 10
+    len(a)
+    ```
+* **Operation** (pseudocode): `v = get(a, i )`
+  * **interpretation**: get the element at the position i 
+  * **axioms**:
+    * **precondition**: `0 <= i <= size - 1 and v == element of a at position i`
+    * **postcondition**: `len(a) == size` and `for all i in [0,..., size - 1]: get(a, i) == initial_value`
+  * **python**:
+    ```{python}
+    a = [1, 2, 3]
+    v = a.__getitem__(2)
+    v = a[2]
+    print(a)
+    ```
+* **Operation** (pseudocode): `set(a, i, v)`
+  * **interpretation**: 
+  * **axioms**:
+    * **precondition**: `0 <= i <= size - 1`
+    * **postcondition**: `get(a, i) == v`
+  * **python**: 
+    ```{python}
+    a = [-1, 2, 3]
+    a.__setitem__(1, 'c')
+    a[2] = 'd'
+    print(a)
+    ```
+- Arrays store their elements consequtively => more efficient than other container types, since CPU's process consecutive memeory cells faster.
+- python allows `i < 0`: `-size <= i <= size - 1`. Then:
+  - Axiom: `i < 0 => get(a, i) == get(a, len(a) - |i|)`
+
+
+Dyanmic arrays: here we simply give the operations
+
+* **operation**: `append(a, v)`  
+  **python**: `a.append(v) # efficient in pyton` 
+* **operation**: `append(a, other_array)`  
+  **python**: `a.extend(other_array) # efficient`
+* **operation**: `insert(a, i, v)`  inserts and elements after position i  
+  **python**: `a.insert(i) # less efficient`
+* **operation**: `pop(a)`  (remove last eelment)  
+  **python**: `a.pop() # efficient in python` 
+* **operation**: `remove(a, i)`  (remove the ith element)  
+  **python**: `a.pop(i)` or `del a[i]`
+* **operation**: `clear(a)` delete everything   
+  **python**: `a.clear() # now len(a) == 0`
+
+#### Associative Array
+
+Associative arrays are called **dictionary** in python. 
+
+* Main idea of assoc. arrays is that they allow arbitrary data structures as index.  
+  **Ex.**: 
+    * Immatriculation number as index: `students[1234567] => "Alice Smith"`
+    * Strings as index, e.g. Name: `alda_grade['Bob Miller']
+    * In general: any data type that implements a **hash function** can be an nidex
+* Associative arrays are internally implemented as a dynamic array, where the index is computed by the hash function.
+
+#### Stack
+
+In python lists are automatically also stacks. (They can be used as stacks)  
+only the operations and python versions: 
+
+* **Operation**:  `top()`  
+  **python**:  `s[-1]`  
+* **Operation**:  `top()`  
+  **python**:  `s[-1]`  
+* **Operation**:  `pop()`  
+  **python**:  `s.pop()`  
+* **Operation**:  `push(s, v)`  
+  **python**:  `s.append(v)`  
+  
