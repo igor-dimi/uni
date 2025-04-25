@@ -6,6 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="dcterms.date" content="2025-04-22">
 
 <title>My Uni Notes - Week 2</title>
 <style>
@@ -19,6 +20,40 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -69,6 +104,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="../../../styles.css">
 </head>
@@ -242,7 +306,20 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#vl-3---22.04.2025" id="toc-vl-3---22.04.2025" class="nav-link active" data-scroll-target="#vl-3---22.04.2025">VL 3 - 22.04.2025</a>
+  <ul class="collapse">
+  <li><a href="#elementary-operations" id="toc-elementary-operations" class="nav-link" data-scroll-target="#elementary-operations">Elementary Operations</a></li>
+  </ul></li>
+  <li><a href="#vl-4---24.04.2025" id="toc-vl-4---24.04.2025" class="nav-link" data-scroll-target="#vl-4---24.04.2025">VL 4 - 24.04.2025</a>
+  <ul class="collapse">
+  <li><a href="#containers---data-types" id="toc-containers---data-types" class="nav-link" data-scroll-target="#containers---data-types">Containers - Data types</a></li>
+  </ul></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -257,6 +334,12 @@ ul.task-list li input[type="checkbox"] {
 <div class="quarto-title-meta">
 
     
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">April 22, 2025</p>
+    </div>
+  </div>
   
     
   </div>
@@ -266,8 +349,327 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<section id="vl-3---22.04.2025" class="level2">
+<h2 class="anchored" data-anchor-id="vl-3---22.04.2025">VL 3 - 22.04.2025</h2>
+<ul>
+<li>review of previous lecture: data-structure triangle</li>
+<li>for ADTs there’s lot’s of wiggle room for the concrete representation (the concrete bit sequences)
+<ul>
+<li>example: integers
+<ol type="1">
+<li>“unsigned” or “signed”</li>
+<li>the number of allocated bits: uint8, int8 =&gt; uint16, int16 =&gt; uint32, int32 =&gt; uint64, int64 =&gt; infinite precision (python) (faster =&gt; slower). Python automatically switches to infinite precision if the numbers get too large.
+<ul>
+<li>smaller number of bits =&gt; overflow:
+<ul>
+<li>overflow in uint8:
+<ul>
+<li><span class="math inline">\(255_D = 1111,1111_B\)</span></li>
+<li><span class="math inline">\(255_D + 1_D = 256_D = 1,0000,0000_B\)</span></li>
+</ul></li>
+<li>How to react to this? Solutions:
+<ol type="1">
+<li><p>Increase the number of bits dynamically (python): not practical because not easy to implement in hardware.</p></li>
+<li><p>Error warning: not practical because way too frequent.</p></li>
+<li><p>Don’t do anything: e.g.: <span class="math inline">\(255_D + 1_D = 255_D\)</span>: Associativity doesn’t hold anymore <span class="math inline">\(255_D + (1_D - 1_D) = 255_D \neq 254_D =
+255_D - 1_D = (255_D + 1_D) - 1_D\)</span></p></li>
+<li><p>(Cyclical) Modulo arithmetic, k bits =&gt; modulo-<span class="math inline">\(2^k\)</span> (% in python):</p>
+<p><span class="math inline">\(255_D + 1_D = 0_D\)</span></p>
+<p>advantages:</p>
+<ol type="1">
+<li>very efficient in hardware =&gt; simply perform the operations where the overflow is ignored</li>
+<li>algebraic laws of basic operations still hold: associativity and commutativity</li>
+</ol></li>
+</ol></li>
+</ul></li>
+</ul></li>
+</ol></li>
+</ul></li>
+</ul>
+<section id="elementary-operations" class="level3">
+<h3 class="anchored" data-anchor-id="elementary-operations">Elementary Operations</h3>
+<p>Elementary operations are ones that are defined for all data types:</p>
+<ol type="1">
+<li>constructor:</li>
+</ol>
+<ul>
+<li>create a new instance of a data type &amp; allocate memory to it</li>
+<li>the memory is initialized to a valid initial state. (otherwise we can’t be sure if operations performed on this object will deliver correct results)</li>
+<li>in python the constructor has the same name as the data type:
+<ul>
+<li><div id="e46b1db9" class="cell" data-execution_count="1">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>i <span class="op">=</span> <span class="bu">int</span>()<span class="op">;</span> f <span class="op">=</span> <span class="bu">float</span>()<span class="op">;</span> a <span class="op">=</span> <span class="bu">list</span>()</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>i2 <span class="op">=</span> <span class="bu">int</span>(<span class="dv">7</span>)<span class="op">;</span> f2 <span class="op">=</span> <span class="bu">float</span>(<span class="dv">10</span>)<span class="op">;</span> b <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">2</span>]</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"i:"</span>, i, <span class="st">"f:"</span>, f, <span class="st">"a: "</span>, a)</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"i2:"</span>, i2, <span class="st">"f2:"</span>, f2, <span class="st">"b: "</span>, b)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>i: 0 f: 0.0 a:  []
+i2: 7 f2: 10.0 b:  [1, 2]</code></pre>
+</div>
+</div></li>
+<li>constructors for custom-data types (classes): the function <code>__init__(self, ...)</code> has to be implemented.</li>
+</ul></li>
+</ul>
+<ol start="2" type="1">
+<li>destructor: deallocating the memory</li>
+<li>comparison operator (<code>==</code>). Two different equalities:
+<ul>
+<li><p>equal: same value / contents</p></li>
+<li><p>identical: same object in the memory</p></li>
+<li><p>comparing the identity of objects with <code>id()</code> or with <code>is</code></p>
+<div id="628bbeba" class="cell" data-execution_count="2">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">2</span>]</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>b <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">2</span>]</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>c <span class="op">=</span> b</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"1:"</span>, <span class="bu">id</span>(a) <span class="op">==</span> <span class="bu">id</span>(b))</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"2:"</span>, <span class="bu">id</span>(c) <span class="op">==</span> <span class="bu">id</span>(b))</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"3:"</span>, a <span class="op">==</span> b)</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"4:"</span>, <span class="bu">id</span>(c) <span class="op">==</span> <span class="bu">id</span>(b))</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"5:"</span>, c <span class="op">==</span> b <span class="kw">and</span> c <span class="op">==</span> a)</span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"6:"</span>, a <span class="kw">is</span> b <span class="kw">or</span> a <span class="kw">is</span> c)</span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"7:"</span>, c <span class="kw">is</span> b)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>1: False
+2: True
+3: True
+4: True
+5: True
+6: False
+7: True</code></pre>
+</div>
+</div>
+<p><code>c</code> and <code>b</code> refer to the same memory location, different from the location of <code>a</code>. all of <code>a</code>, <code>b</code>, <code>c</code> have equal values; <code>[1, 2]</code>.</p></li>
+<li><p>consequense: value-semantics vs reference-semantics (see below)</p></li>
+</ul></li>
+</ol>
+<section id="value-semantics-vs-rerence-semantics" class="level4">
+<h4 class="anchored" data-anchor-id="value-semantics-vs-rerence-semantics">Value-semantics vs Rerence-semantics</h4>
+<p>Analogy: Accessing a website:</p>
+<ul>
+<li>value-semantics: store a copy of website.
+<ul>
+<li>advantage: we have control over the contents of the copy</li>
+<li>disadvantage: possibly out-of-date.</li>
+</ul></li>
+<li>reference-semantics: store the URL of the website
+<ul>
+<li>advantage: always up-to-date</li>
+<li>disadvantage: no control over the content; possibly deleted.</li>
+</ul></li>
+</ul>
+<p>What does it mean for programming languages, specifically for python:</p>
+<ul>
+<li>value-semantics: data is copied and stored at another location (<code>==</code> is <code>True</code> and <code>is</code> is <code>False</code>)</li>
+<li>reference-semantics: two varibles refer to the same location (both <code>==</code> and <code>is</code> are <code>True</code>)</li>
+<li>In python all assignments use reference semantics, and in general python uses reference semantics
+<ul>
+<li><p>Example</p>
+<div id="10165d2f" class="cell" data-execution_count="3">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">2</span>]</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>b <span class="op">=</span> a</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>a[<span class="dv">0</span>] <span class="op">=</span> <span class="op">-</span><span class="dv">1</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"1:"</span>, a, b)<span class="op">;</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"2:"</span>, a <span class="kw">is</span> b)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>1: [-1, 2] [-1, 2]
+2: True</code></pre>
+</div>
+</div>
+<p>if we want to create another list object with a different identity but same value as <code>a</code> we use <code>.copy()</code> operator:</p>
+<div id="6fe408ca" class="cell" data-execution_count="4">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">2</span>]</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>b <span class="op">=</span> a.copy()</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"1:"</span>, a <span class="op">==</span> b)</span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"2:"</span>, a <span class="kw">is</span> b)</span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>b[<span class="dv">0</span>] <span class="op">=</span> <span class="op">-</span><span class="dv">1</span></span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"3:"</span>, a, b)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>1: True
+2: False
+3: [1, 2] [-1, 2]</code></pre>
+</div>
+</div>
+<p>Elementary data-types like numbers or booleans are immutable by default, which gives the ‘illusion’ of reference semantics.</p>
+<div id="2f6cef6e" class="cell" data-execution_count="5">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> <span class="dv">1</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>b <span class="op">=</span> a</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"1:"</span>, a <span class="kw">is</span> b)</span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"2:"</span>, a <span class="op">==</span> b)</span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"3:"</span>, a, b)</span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> <span class="dv">2</span></span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"4:"</span>, a <span class="kw">is</span> b)</span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"5:"</span>, a <span class="op">==</span> b)</span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"6:"</span>, a, b)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>1: True
+2: True
+3: 1 1
+4: False
+5: False
+6: 2 1</code></pre>
+</div>
+</div></li>
+</ul></li>
+</ul>
+</section>
+</section>
+</section>
+<section id="vl-4---24.04.2025" class="level2">
+<h2 class="anchored" data-anchor-id="vl-4---24.04.2025">VL 4 - 24.04.2025</h2>
+<section id="containers---data-types" class="level3">
+<h3 class="anchored" data-anchor-id="containers---data-types">Containers - Data types</h3>
+<ul>
+<li>Containers <strong>contain</strong> other data.</li>
+<li>Efficient &amp; systematic managmeent of large amounts of data</li>
+<li>Efficient repeated application of the same operation</li>
+<li>Efficient &amp; simple querrying (seeking) of data</li>
+<li>Data structures are constructed hierarchically in all programming languages. (composite) <strong>Ex.</strong>: hierachically composing new structures from simple (atomic) ones
+<ol type="1">
+<li>natural numbers: atomic data type</li>
+<li>3 numbers: RGBValue</li>
+<li>1024 x 1024 RGBValue: Image</li>
+<li>Sequence of Images: Video</li>
+</ol></li>
+</ul>
+<section id="adt-array" class="level4">
+<h4 class="anchored" data-anchor-id="adt-array">ADT Array</h4>
+<p>Array (list in python) is the most important / fundamental container data type:</p>
+<ul>
+<li><strong>Operation</strong> (pseudocode): <code>a = new_array(size, initial_value)</code>
+<ul>
+<li><p><strong>interpretation</strong>: create an array with <code>size</code> elements all of which initially have <code>initial_value</code> as value</p></li>
+<li><p><strong>axioms</strong>:</p>
+<ul>
+<li><strong>precondition</strong>: -</li>
+<li><strong>postcondition</strong>: <code>len(a) == size</code> and <code>for all i in [0,..., size - 1]: get(a, i) == initial_value</code></li>
+</ul></li>
+<li><p><strong>python</strong>:</p>
+<div id="dc5cf182" class="cell" data-execution_count="6">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> <span class="bu">list</span>() <span class="co"># empty array with size == 0</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>b <span class="op">=</span> [<span class="dv">3</span>] <span class="op">*</span> <span class="dv">10</span></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>c <span class="op">=</span> [<span class="op">-</span><span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="st">'c'</span>]</span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(a, b, c, sep<span class="op">=</span><span class="st">"</span><span class="ch">\n</span><span class="st">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[]
+[3, 3, 3, 3, 3, 3, 3, 3, 3, 3]
+[-1, 2, 3, 'c']</code></pre>
+</div>
+</div></li>
+</ul></li>
+<li><strong>Operation</strong> (pseudocode): <code>k = len(a)</code>
+<ul>
+<li><p><strong>interpretation</strong>: number of elements in <code>a</code></p></li>
+<li><p><strong>axioms</strong>:</p>
+<ul>
+<li><strong>precondition</strong>:</li>
+<li><strong>postcondition</strong>: <code>k == size</code></li>
+</ul></li>
+<li><p><strong>python</strong>:</p>
+<div id="faf89304" class="cell" data-execution_count="7">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> [<span class="va">None</span>] <span class="op">*</span> <span class="dv">10</span></span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="bu">len</span>(a)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="7">
+<pre><code>10</code></pre>
+</div>
+</div></li>
+</ul></li>
+<li><strong>Operation</strong> (pseudocode): <code>v = get(a, i )</code>
+<ul>
+<li><p><strong>interpretation</strong>: get the element at the position i</p></li>
+<li><p><strong>axioms</strong>:</p>
+<ul>
+<li><strong>precondition</strong>: <code>0 &lt;= i &lt;= size - 1 and v == element of a at position i</code></li>
+<li><strong>postcondition</strong>: <code>len(a) == size</code> and <code>for all i in [0,..., size - 1]: get(a, i) == initial_value</code></li>
+</ul></li>
+<li><p><strong>python</strong>:</p>
+<div id="05809fc6" class="cell" data-execution_count="8">
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>]</span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>v <span class="op">=</span> a.<span class="fu">__getitem__</span>(<span class="dv">2</span>)</span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>v <span class="op">=</span> a[<span class="dv">2</span>]</span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(a)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1, 2, 3]</code></pre>
+</div>
+</div></li>
+</ul></li>
+<li><strong>Operation</strong> (pseudocode): <code>set(a, i, v)</code>
+<ul>
+<li><p><strong>interpretation</strong>:</p></li>
+<li><p><strong>axioms</strong>:</p>
+<ul>
+<li><strong>precondition</strong>: <code>0 &lt;= i &lt;= size - 1</code></li>
+<li><strong>postcondition</strong>: <code>get(a, i) == v</code></li>
+</ul></li>
+<li><p><strong>python</strong>:</p>
+<div id="ce8f4e3f" class="cell" data-execution_count="9">
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> [<span class="op">-</span><span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>]</span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>a.<span class="fu">__setitem__</span>(<span class="dv">1</span>, <span class="st">'c'</span>)</span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>a[<span class="dv">2</span>] <span class="op">=</span> <span class="st">'d'</span></span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(a)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[-1, 'c', 'd']</code></pre>
+</div>
+</div></li>
+</ul></li>
+<li>Arrays store their elements consequtively =&gt; more efficient than other container types, since CPU’s process consecutive memeory cells faster.</li>
+<li>python allows <code>i &lt; 0</code>: <code>-size &lt;= i &lt;= size - 1</code>. Then:
+<ul>
+<li>Axiom: <code>i &lt; 0 =&gt; get(a, i) == get(a, len(a) - |i|)</code></li>
+</ul></li>
+</ul>
+<p>Dyanmic arrays: here we simply give the operations</p>
+<ul>
+<li><strong>operation</strong>: <code>append(a, v)</code><br>
+<strong>python</strong>: <code>a.append(v) # efficient in pyton</code></li>
+<li><strong>operation</strong>: <code>append(a, other_array)</code><br>
+<strong>python</strong>: <code>a.extend(other_array) # efficient</code></li>
+<li><strong>operation</strong>: <code>insert(a, i, v)</code> inserts and elements after position i<br>
+<strong>python</strong>: <code>a.insert(i) # less efficient</code></li>
+<li><strong>operation</strong>: <code>pop(a)</code> (remove last eelment)<br>
+<strong>python</strong>: <code>a.pop() # efficient in python</code></li>
+<li><strong>operation</strong>: <code>remove(a, i)</code> (remove the ith element)<br>
+<strong>python</strong>: <code>a.pop(i)</code> or <code>del a[i]</code></li>
+<li><strong>operation</strong>: <code>clear(a)</code> delete everything<br>
+<strong>python</strong>: <code>a.clear() # now len(a) == 0</code></li>
+</ul>
+</section>
+<section id="associative-array" class="level4">
+<h4 class="anchored" data-anchor-id="associative-array">Associative Array</h4>
+<p>Associative arrays are called <strong>dictionary</strong> in python.</p>
+<ul>
+<li>Main idea of assoc. arrays is that they allow arbitrary data structures as index.<br>
+<strong>Ex.</strong>:
+<ul>
+<li>Immatriculation number as index: <code>students[1234567] =&gt; "Alice Smith"</code></li>
+<li>Strings as index, e.g.&nbsp;Name: `alda_grade[‘Bob Miller’]</li>
+<li>In general: any data type that implements a <strong>hash function</strong> can be an nidex</li>
+</ul></li>
+<li>Associative arrays are internally implemented as a dynamic array, where the index is computed by the hash function.</li>
+</ul>
+</section>
+<section id="stack" class="level4">
+<h4 class="anchored" data-anchor-id="stack">Stack</h4>
+<p>In python lists are automatically also stacks. (They can be used as stacks)<br>
+only the operations and python versions:</p>
+<ul>
+<li><strong>Operation</strong>: <code>top()</code><br>
+<strong>python</strong>: <code>s[-1]</code><br>
+</li>
+<li><strong>Operation</strong>: <code>top()</code><br>
+<strong>python</strong>: <code>s[-1]</code><br>
+</li>
+<li><strong>Operation</strong>: <code>pop()</code><br>
+<strong>python</strong>: <code>s.pop()</code><br>
+</li>
+<li><strong>Operation</strong>: <code>push(s, v)</code><br>
+<strong>python</strong>: <code>s.append(v)</code></li>
+</ul>
 
 
+</section>
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
