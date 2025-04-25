@@ -35,6 +35,12 @@ title: Week 2
 
 * parent and child processes can be synchonozied with a `wait()` command in conjunction with `fork()`. 
 
-  
+ ## Tutorial
+
+ * overview of bash
+   ```bash
+   greeting="Hello, world!"
+   echo "$greeting"
+   ```
 
 
