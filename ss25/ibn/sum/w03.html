@@ -69,6 +69,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="../../../styles.css">
 </head>
@@ -246,7 +275,10 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#section" id="toc-section" class="nav-link active" data-scroll-target="#section"></a></li>
+  <li><a href="#vl-5---28.04.25" id="toc-vl-5---28.04.25" class="nav-link active" data-scroll-target="#vl-5---28.04.25">VL 5 - 28.04.25</a>
+  <ul class="collapse">
+  <li><a href="#threads" id="toc-threads" class="nav-link" data-scroll-target="#threads">Threads</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -272,10 +304,53 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="section" class="level2">
-<h2 class="anchored" data-anchor-id="section"></h2>
+<section id="vl-5---28.04.25" class="level2">
+<h2 class="anchored" data-anchor-id="vl-5---28.04.25">VL 5 - 28.04.25</h2>
+<section id="threads" class="level3">
+<h3 class="anchored" data-anchor-id="threads">Threads</h3>
+<ul>
+<li>Threads are miniprocesses.</li>
+<li>Main idea: we want concurrency but still retain the recourses of a single process like the data, files and code. (different processes are isolated from each other and don’t share these resources)</li>
+<li>Multithreading is using multiple such threads in a single process <span class="math inline">\(\Rightarrow\)</span> They all use the same PCB (they coexist within the same process)</li>
+<li>Advantages of threads w.r.t processes:
+<ul>
+<li>simple comunication between threads, they share the same resources, and it’s faster to synhronize them.<br>
+(no system calls, no switching to kernel mode) Shared resources:
+<ul>
+<li>code</li>
+<li>data</li>
+<li>files</li>
+</ul></li>
+<li>This makes threads more responsive compared to processes. Different functions of the program can be executed in different threads.</li>
+<li>Threads are more scalabe compared to processes. (There can be much more threads than processes)</li>
+</ul></li>
+<li>two types of threads:
+<ul>
+<li>user threads: threads are managed within the process itself</li>
+<li>kernel threads: threads are managed by os globally.</li>
+<li>how do these two types compare:
+<ul>
+<li>switching between user threads is faster, but since it is not controlled by the os, a blocking thread can slow down the program, whereas in kernel threads the os would issue an interrupt and switch to the next thread. In user threads the os would switch to another process (and switching between processes is in general quite expensive)</li>
+<li>Kernel threads: in Multi-Core CPU’s various threads can be distributed among the cores by the us. (not possible in user threads)</li>
+</ul></li>
+</ul></li>
+<li>mixed models:
+<ul>
+<li>one-to-one</li>
+<li>many-to-many</li>
+<li>many-to-one</li>
+</ul></li>
+<li>threads: threads share state, which enables faster communication, but introduces multitasking-related difficulties, like race conditions. (shared state is both an advantage and a disadvantage of threads)</li>
+<li>processes: they are isolated from each other, but this makes the communication difficult</li>
+<li>POSIX Pthreads: <code>pthread_*</code>. An <strong>API</strong> for creating, deleting and synchronizing threads. (implementation of APIs exist both as user and kernel threads):
+<ul>
+<li></li>
+</ul></li>
+<li>race conditions: lost updates <span class="math inline">\(\Rightarrow\)</span> process synchronization synchronization (how to solve such problems)</li>
+</ul>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->

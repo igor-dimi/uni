@@ -865,6 +865,28 @@
     ]
   },
   {
+    "objectID": "ss25/ibn/sum/w03.html",
+    "href": "ss25/ibn/sum/w03.html",
+    "title": "Week 3",
+    "section": "",
+    "text": "Threads are miniprocesses.\nMain idea: we want concurrency but still retain the recourses of a single process like the data, files and code. (different processes are isolated from each other and don’t share these resources)\nMultithreading is using multiple such threads in a single process \\(\\Rightarrow\\) They all use the same PCB (they coexist within the same process)\nAdvantages of threads w.r.t processes:\n\nsimple comunication between threads, they share the same resources, and it’s faster to synhronize them.\n(no system calls, no switching to kernel mode) Shared resources:\n\ncode\ndata\nfiles\n\nThis makes threads more responsive compared to processes. Different functions of the program can be executed in different threads.\nThreads are more scalabe compared to processes. (There can be much more threads than processes)\n\ntwo types of threads:\n\nuser threads: threads are managed within the process itself\nkernel threads: threads are managed by os globally.\nhow do these two types compare:\n\nswitching between user threads is faster, but since it is not controlled by the os, a blocking thread can slow down the program, whereas in kernel threads the os would issue an interrupt and switch to the next thread. In user threads the os would switch to another process (and switching between processes is in general quite expensive)\nKernel threads: in Multi-Core CPU’s various threads can be distributed among the cores by the us. (not possible in user threads)\n\n\nmixed models:\n\none-to-one\nmany-to-many\nmany-to-one\n\nthreads: threads share state, which enables faster communication, but introduces multitasking-related difficulties, like race conditions. (shared state is both an advantage and a disadvantage of threads)\nprocesses: they are isolated from each other, but this makes the communication difficult\nPOSIX Pthreads: pthread_*. An API for creating, deleting and synchronizing threads. (implementation of APIs exist both as user and kernel threads):\n\n\n\nrace conditions: lost updates \\(\\Rightarrow\\) process synchronization synchronization (how to solve such problems)",
+    "crumbs": [
+      "Weekly Summary",
+      "Week 3"
+    ]
+  },
+  {
+    "objectID": "ss25/ibn/sum/w03.html#vl-5---28.04.25",
+    "href": "ss25/ibn/sum/w03.html#vl-5---28.04.25",
+    "title": "Week 3",
+    "section": "",
+    "text": "Threads are miniprocesses.\nMain idea: we want concurrency but still retain the recourses of a single process like the data, files and code. (different processes are isolated from each other and don’t share these resources)\nMultithreading is using multiple such threads in a single process \\(\\Rightarrow\\) They all use the same PCB (they coexist within the same process)\nAdvantages of threads w.r.t processes:\n\nsimple comunication between threads, they share the same resources, and it’s faster to synhronize them.\n(no system calls, no switching to kernel mode) Shared resources:\n\ncode\ndata\nfiles\n\nThis makes threads more responsive compared to processes. Different functions of the program can be executed in different threads.\nThreads are more scalabe compared to processes. (There can be much more threads than processes)\n\ntwo types of threads:\n\nuser threads: threads are managed within the process itself\nkernel threads: threads are managed by os globally.\nhow do these two types compare:\n\nswitching between user threads is faster, but since it is not controlled by the os, a blocking thread can slow down the program, whereas in kernel threads the os would issue an interrupt and switch to the next thread. In user threads the os would switch to another process (and switching between processes is in general quite expensive)\nKernel threads: in Multi-Core CPU’s various threads can be distributed among the cores by the us. (not possible in user threads)\n\n\nmixed models:\n\none-to-one\nmany-to-many\nmany-to-one\n\nthreads: threads share state, which enables faster communication, but introduces multitasking-related difficulties, like race conditions. (shared state is both an advantage and a disadvantage of threads)\nprocesses: they are isolated from each other, but this makes the communication difficult\nPOSIX Pthreads: pthread_*. An API for creating, deleting and synchronizing threads. (implementation of APIs exist both as user and kernel threads):\n\n\n\nrace conditions: lost updates \\(\\Rightarrow\\) process synchronization synchronization (how to solve such problems)",
+    "crumbs": [
+      "Weekly Summary",
+      "Week 3"
+    ]
+  },
+  {
     "objectID": "ss25/index.html",
     "href": "ss25/index.html",
     "title": "SS 25",
