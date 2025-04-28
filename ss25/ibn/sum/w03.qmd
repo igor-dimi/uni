@@ -2,4 +2,44 @@
 title: Week 3
 ---
 
-## 
+## VL 5 - 28.04.25
+
+### Threads 
+
+* Threads are miniprocesses. 
+* Main idea: we want concurrency but still retain the recourses of a  single process like the data, files and code. 
+  (different processes are isolated from each other and don't share these resources)
+* Multithreading is using multiple such threads in a single process $\Rightarrow$ They all use the same
+  PCB (they coexist within the same process)
+* Advantages of threads w.r.t processes: 
+  * simple comunication between threads, they share the same resources, and it's faster to synhronize them.  
+   (no system calls, no switching to kernel mode)
+    Shared resources:
+    * code
+    * data
+    * files
+  * This makes threads more responsive compared to processes. Different functions of the program can be executed in different 
+    threads. 
+  * Threads are more scalabe compared to processes. (There can be much more threads than processes)
+* two types of threads: 
+  * user threads: threads are managed within the process itself
+  * kernel threads: threads are managed by os globally. 
+  * how do these two types compare:
+    * switching between user threads is faster, but since it is not controlled by the os, a blocking thread can
+      slow down the program, whereas in kernel threads the os would issue an interrupt and switch to the next thread.
+      In user threads the os would switch to another process (and switching between processes is in general quite expensive)
+    * Kernel threads: in Multi-Core CPU's various threads can be distributed among the cores by the us. (not possible in user threads)
+* mixed models:
+  * one-to-one
+  * many-to-many
+  * many-to-one
+* threads: threads share state, which enables faster communication, but introduces multitasking-related difficulties, 
+  like race conditions. (shared state is both an advantage and a disadvantage of threads)
+* processes: they are isolated from each other, but this makes the communication difficult
+* POSIX Pthreads: `pthread_*`. An **API** for creating, deleting and synchronizing threads. (implementation of APIs exist both as user and kernel threads): 
+  * 
+* race conditions: lost updates $\Rightarrow$ process synchronization synchronization (how to solve such problems)
+
+ 
+ 
+ 
