@@ -1,3 +1,6 @@
 ---
 title: Week 3
 ---
+
+## Python Crash Course - 28.04.25
+
