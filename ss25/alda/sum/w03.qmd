@@ -2,5 +2,113 @@
 title: Week 3
 ---
 
-## Python Crash Course - 28.04.25
+## VL 5 - 29.04.25
+
+Review of previous lecture; containers: arrays, stack, dictionary
+
+Stack example: redo / undo stacks: stack. Each time an edit is made, it is pushed on the undo stack.  
+When undo is called, the top of the undo stack is undone, popped, and pushed on the redo stack. 
+When redo is called the converse happens. (What happens when we do not call redo immediately after undo?)
+
+### Containers (Cont.)
+
+
+#### Queue
+
+Queue:
+
+* **Operation**:  initialization: q = queue(), in python simply a list.
+* **Operation**:  `top()`  
+  **python**:  `s[0]`  since the top element is the first of the list, and the last as with stacks. 
+* **Operation**:  `pop()`  
+  **python**:  `s.pop(0)` , since the first element of the queue is the first element of the list. 
+  This is **not** efficient in python, though.
+* **Operation**:  `push(s, v)`  
+  **python**:  `s.append(v)`  
+
+
+#### Deque (pronounced "deck")
+
+double-ended queue:
+
+- efficient both as a stack and as a queue. Remember that pop operation is not efficient for a queue (when list is 
+  treated as a queu)
+- in python: in the `collections` module. 
+
+  ```python
+  import collections
+  d = collections.deque()
+  ```
+- operations:
+    - `d.push(v)`: push at the end
+    - `d.pop_front()` pop first element efficiently
+    - `d.pop_back()` pop last element efficienty
+
+#### **Generalization**: Priority queues
+
+?? 
+
+
+### Sorting Algorithms
+
+* Many algorithms work only, (or much faster) on sorted data
+* Sorting algorihtms are very good example for algorithmic thinking and algorihtm analysis
+  * **algorithmic thinking**: in math there are often "existence" proofs, that say that an object exists,
+  but do not prescribe a method to construct such an object. Algorithmic thinking is on the other hand always
+  constructive in finite steps. Usually based on elementary operations. Using iteration and recursion, and principles
+  of divide and conquer. 
+* Note: learning basic algorithms is valuable, but we should very rarely have to implement them from scratch and use 
+  library functions instead. (better implemented and more thoroughly tested)
+* rules of the game: 
+  1. unterliegende Containerdatenstrukturen: Array (python list)
+     $\Rightarrow$ allowed operations: `len(a)`, `v = a[i]`, `a[i] = v` s.t. `i in [0..len(a) - 1]`
+  2. The elements that are to be sorted can be compared: `a[i] < a[j]` or `a[i] <= a[j]`, elements are
+     **totally ordered**.   
+     **total order**: 
+     * all pairs of elements can be compared.
+     * anti-symmetric: a <= b and b <= a ==> a == b (or equivalently a <= b and b =/= a then not b <= a)
+     * transitiv: a <= b, b <= c ==> a <= c
+     * reflexive: a <= a, for all a.
+* practical problem: The elements support u <= v, but the algorithm requires u < v. How to avert this problem?  
+  a < b <=> not(b <= a)
+* **theorem**: <, >, >=, ==, != all can be implemented with <=, not, and
+  * a < b iff not (b <= a)
+  * a > b iff b < a
+  * a >= b iff b <= a
+  * a == b iff a <= b and b <= a
+  * a != b iff not (a == b)
+
+#### Selection Sort (Sorting by selecting)
+
+principle: 
+
+* sorintg from left to write (left to the current position is all sorted)
+* select the appropriate element in the right-side of the current position.
+
+```{python}
+def selection_sort(a) :
+    N = len(a)
+    # invariant: sorted(a[0..i-1]) and a[0..i-1] <= a[i..N-1]
+    for i in range(N - 1) :  # iteration
+        j = i 
+        # k = i + 1
+        # invariant: a[j] == min(a[i..k-1])
+        for k in range(i + 1, N) : 
+            if a[k] < a[j] : j = k
+        a[i], a[j] = a[j], a[i]
+
+a = [3, -1, 5, 10]
+selection_sort(a)
+print(a)
+```
+
+##### Complexity Analysis of Selection Sort
+
+How many steps does selection sort take? 
+
+- obviously depends on N. 
+
+
+
+
 
