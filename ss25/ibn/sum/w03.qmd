@@ -52,6 +52,9 @@ Process synchronization:
 
 ### Race Conditions (Continued)
 
+race condition: when multiple threads / processes read or write the same variable an update can be lost if
+one of the threads is interrupted before completing the update. 
+
 * The producer - consumer problem: (Slide 8)
   * producer: writes to a buffer.
   * consumer: reads from a buffer.
