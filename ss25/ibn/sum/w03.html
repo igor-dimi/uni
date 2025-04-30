@@ -6,6 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="dcterms.date" content="2025-04-29">
 
 <title>My Uni Notes - Week 3</title>
 <style>
@@ -279,6 +280,10 @@ window.Quarto = {
   <ul class="collapse">
   <li><a href="#threads" id="toc-threads" class="nav-link" data-scroll-target="#threads">Threads</a></li>
   </ul></li>
+  <li><a href="#vl-5---30.04.25" id="toc-vl-5---30.04.25" class="nav-link" data-scroll-target="#vl-5---30.04.25">VL 5 - 30.04.25</a>
+  <ul class="collapse">
+  <li><a href="#race-conditions-continued" id="toc-race-conditions-continued" class="nav-link" data-scroll-target="#race-conditions-continued">Race Conditions (Continued)</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -295,6 +300,12 @@ window.Quarto = {
 <div class="quarto-title-meta">
 
     
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">April 29, 2025</p>
+    </div>
+  </div>
   
     
   </div>
@@ -346,10 +357,88 @@ window.Quarto = {
 <ul>
 <li></li>
 </ul></li>
-<li>race conditions: lost updates <span class="math inline">\(\Rightarrow\)</span> process synchronization synchronization (how to solve such problems)</li>
+<li>race conditions: lost updates <span class="math inline">\(\Rightarrow\)</span> process synchronization (how to solve such problems)</li>
+</ul>
+</section>
+</section>
+<section id="vl-5---30.04.25" class="level2">
+<h2 class="anchored" data-anchor-id="vl-5---30.04.25">VL 5 - 30.04.25</h2>
+<p>Process synchronization:</p>
+<ul>
+<li>how can data be communicated from one process to another?</li>
+<li>taking dependencies into account: if B depends on A, i.e.&nbsp;if B receives data from A, than B should for A to be done, before executing.</li>
+<li>Processes / threads shouldn’t disrupt or block each other.</li>
+</ul>
+<section id="race-conditions-continued" class="level3">
+<h3 class="anchored" data-anchor-id="race-conditions-continued">Race Conditions (Continued)</h3>
+<ul>
+<li>The producer - consumer problem: (Slide 8)
+<ul>
+<li>producer: writes to a buffer.</li>
+<li>consumer: reads from a buffer.</li>
+<li>problem: <code>count</code> variable is global, therefore an update , either <code>count--</code> or <code>count++</code> can get lost, causing <code>count</code> having a wrong final value (<strong>Klausurrelevant</strong>, Slide 9)</li>
+</ul></li>
+<li>Solution: processes or threads should have critical regions where the execution can not be interrupted - other processes or threads are blocked during this time. <span class="math inline">\(\Rightarrow\)</span> <strong>Mutual Exclusion</strong></li>
+</ul>
+<section id="mutual-exclusion" class="level4">
+<h4 class="anchored" data-anchor-id="mutual-exclusion">Mutual Exclusion</h4>
+<ul>
+<li>No two processes / threads can be executing simulatanously in their critical regions. (critical regions exclude each other)</li>
+<li>A process that is not in its critical region can not block other processes / threads.<br>
+</li>
+<li>how is it implemented
+<ul>
+<li>hardware: a hardware switch (a single bit) is set to 1 when a thread is in its critical region which disables Interrupts.</li>
+<li>software:
+<ul>
+<li>primitive solution: a single boolean variable (this allows only two simultanous threads / processes, therefore very limiting) (Slid 17)</li>
+<li>Peterson’s solution: (slide 19)</li>
+</ul></li>
+</ul></li>
+</ul>
+<p>General solution:</p>
+<ul>
+<li>Locks and Lock varaibles</li>
+<li>Semaphores</li>
+</ul>
+<section id="locks" class="level5">
+<h5 class="anchored" data-anchor-id="locks">Locks</h5>
+<p>idea: use a token. The ownership of the token means … (Slide 22)</p>
+<ul>
+<li>hardware solutions:
+<ul>
+<li>test and set lock - <strong>TSL</strong>. (Slide 23)</li>
+<li>instruction swap - <strong>XCHG</strong></li>
+</ul></li>
+</ul>
+<p>These solutions are categorizing under active waiting (or spinlocks) <span class="math inline">\(\Rightarrow\)</span>. Problems: * wasting of processor time. * priority inversoin (Prioritaetsumkehr).</p>
+</section>
+<section id="semaphores" class="level5">
+<h5 class="anchored" data-anchor-id="semaphores">Semaphores</h5>
+<ul>
+<li>introduced by Dijkstra in 1965</li>
+<li>Generalization of locks.</li>
+<li>two operations:
+<ul>
+<li><code>wait()</code></li>
+<li><code>singal()</code></li>
+</ul></li>
+<li>how to implement mutual exclusion with semaphores (slides 29, 30)</li>
+<li>binary semaphores are also called mutexes.</li>
+<li>locks can be simulated with semaphores.</li>
+<li>locks und semaphores (<strong>Klausurrelevant</strong>, Overview Slide 34, 35)</li>
+</ul>
+</section>
+</section>
+<section id="a-common-situation---waiting-for-a-condition-event" class="level4">
+<h4 class="anchored" data-anchor-id="a-common-situation---waiting-for-a-condition-event">A Common Situation - Waiting for a Condition / Event</h4>
+<ul>
+<li>Simple solution - <strong>Polling</strong>: periodically querry the state of a variable in an infinite loop <span class="math inline">\(\Rightarrow\)</span> inefficient.</li>
+<li>better solution - efficient waiting: the thread is switched to ‘waiting’ state.</li>
 </ul>
 
 
+</section>
 </section>
 </section>
 
