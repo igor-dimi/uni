@@ -1,5 +1,6 @@
 ---
 title: Week 3
+date: 04/29/25
 ---
 
 ## VL 5 - 28.04.25
@@ -38,8 +39,75 @@ title: Week 3
 * processes: they are isolated from each other, but this makes the communication difficult
 * POSIX Pthreads: `pthread_*`. An **API** for creating, deleting and synchronizing threads. (implementation of APIs exist both as user and kernel threads): 
   * 
-* race conditions: lost updates $\Rightarrow$ process synchronization synchronization (how to solve such problems)
+* race conditions: lost updates $\Rightarrow$ process synchronization (how to solve such problems)
 
- 
+## VL 5 - 30.04.25
+
+Process synchronization:
+
+* how can data be communicated from one process to another? 
+* taking dependencies into account: if B depends on A, i.e. if B receives
+  data from A, than B should for A to be done, before executing. 
+* Processes / threads shouldn't disrupt or block each other.
+
+### Race Conditions (Continued)
+
+* The producer - consumer problem: (Slide 8)
+  * producer: writes to a buffer.
+  * consumer: reads from a buffer.
+  * problem: `count` variable is global, therefore an update 
+    , either `count--` or `count++` can get lost, causing `count` having a wrong final value (**Klausurrelevant**, Slide 9)
+* Solution: processes or threads should have critical regions where the execution can not be interrupted - other processes or threads are blocked
+  during this time. $\Rightarrow$ **Mutual Exclusion**
+
+#### Mutual Exclusion 
+
+* No two processes / threads can be executing simulatanously in their critical regions. (critical regions
+ exclude each other)
+* A process that is not in its critical region can not block other processes / threads.  
+* how is it implemented 
+  * hardware: a hardware switch (a single bit) is set to 1 when a thread is in its critical region which disables 
+  Interrupts.
+  * software: 
+    * primitive solution: a single boolean variable (this allows only two simultanous threads / processes, therefore very limiting) (Slid 17)
+    * Peterson's solution: (slide 19)
+
+General solution: 
+
+* Locks and Lock varaibles 
+* Semaphores
+
+##### Locks 
+
+idea: use a token. The ownership of the token means ...  (Slide 22)
+
+* hardware solutions: 
+  * test and set lock - **TSL**. (Slide 23)
+  * instruction swap - **XCHG**
+
+These solutions are categorizing under active waiting (or spinlocks) $\Rightarrow$. Problems:
+* wasting of processor time. 
+* priority inversoin (Prioritaetsumkehr). 
+
+##### Semaphores
+
+* introduced by Dijkstra in 1965
+* Generalization of locks. 
+* two operations:
+  * `wait()`
+  * `singal()`
+* how to implement mutual exclusion with semaphores (slides 29, 30) 
+* binary semaphores are also called mutexes. 
+* locks can be simulated with semaphores. 
+* locks und semaphores (**Klausurrelevant**, Overview Slide 34, 35)
+
+#### A Common Situation - Waiting for a Condition / Event
+
+* Simple solution - **Polling**: periodically querry the state of a variable in an infinite loop $\Rightarrow$ inefficient. 
+* better solution - efficient waiting: the thread is switched to 'waiting' state.
+
+
+
+
  
  
