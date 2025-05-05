@@ -1,0 +1,40 @@
+---
+title: Week 4
+date: 05/05/25
+---
+
+## VL 7 - 05.05.25
+
+### posix state variables 
+
+* `pthread_cond_t`, boolean variable `cv`.(it is actually a signalling / triggering variable)
+* posix state variables API: (Slide 11)
+  * `cond_wait(condition, mut)`
+  * `cond_signal(condition)`
+  * `cond_broadcast(condition)`: set condition to true, wake all sleeping 
+* Flow of using cond vars (condition variables) (Slide 12 **important**):
+  * (A)-event producer, (B)-event consumer
+  * example: archive a data automatically (Slide 14 **important**)
+* Semaphores with active waiting - pseudocode. (semaphores require locks, locks require hardware solutions  **Klausurrelevant**)
+  * active waiting: infinite loop (ineffective). instead $\Rightarrow$ **sleeping**. 
+* semaphores toy implementation in C with structs without active waiting, rather with sleep, and block on the system level. 
+
+### Synchronisation in Java
+
+Slide: 29, ...
+
+* keyword `synchronized`. 
+* keywords `wait()` and `notify()`. 
+
+
+Race conditions, synchronization, semaphores, locks, mutexes are all **Klausurrelevant**. 
+
+
+### Interprocess Communication - IPC
+
+* Processes are in general independent and do not have an effect on each other. Nevertheless cooperation 
+  among processes is useful. How to achieve the cooperation between processes $\Rightarrow$ **IPC**. 
+* 2 main IPC families:
+  * message passing - MP (safer)
+  * shared-memory - SM (faster)
+

@@ -41,13 +41,13 @@ date: 04/29/25
   * 
 * race conditions: lost updates $\Rightarrow$ process synchronization (how to solve such problems)
 
-## VL 5 - 30.04.25
+## VL 6 - 30.04.25
 
 Process synchronization:
 
 * how can data be communicated from one process to another? 
 * taking dependencies into account: if B depends on A, i.e. if B receives
-  data from A, than B should for A to be done, before executing. 
+  data from A, than B should wait for A to be done, before executing. 
 * Processes / threads shouldn't disrupt or block each other.
 
 ### Race Conditions (Continued)
