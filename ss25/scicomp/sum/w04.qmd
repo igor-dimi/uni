@@ -1,0 +1,28 @@
+---
+title: Week 04
+date: 06/05/2025
+---
+
+## L7 - 06.05.2025
+
+* classes and structs:
+  * access specifiers. `friend` keyword
+  * conversion operators and delegating constructors, `explicit` keyword.
+  * constructors and destructors: rule of five or zero
+  * `mutable` keyword
+  * `static` members, `static` keyword for functions
+  * input / output stream operators
+* standard library
+  * containers
+    * sequantial containers: `std::aray, std::vector, std::deque, std::list, std::forward_list`. 
+    * `emplace_back()` vs `push_back()`
+    * container adaptors: implement some data structure in terms of others:
+      * `std::stack`, based on `std::deque`
+      * `std::queue` based on `std::deque`
+      * `std::priority_queue` based on `std::vector`
+    * unsorted / sorted associative containers
+    * companion classes: `std::pair<T, U>, std::tuple<T..>` `<T..>`$\Rightarrow$ **variadic template**
+    * iterators: all container types provide an associated iterator. container `T` => `T::iterator`, allowing 
+      iterating over the contents of the container.
+* curly brace initialization
+* forwarding references

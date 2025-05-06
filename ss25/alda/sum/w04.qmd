@@ -1,0 +1,170 @@
+---
+title: Week 4
+date: 05/06/2025
+---
+
+
+## VL 7 - 06.05.25
+
+
+### Selection Sort (Sorting by selecting)
+
+principle: 
+
+* sorintg from left to write (left to the current position is all sorted)
+* select the appropriate element in the right-side of the current position.
+
+```{python}
+def selection_sort(a) :
+    N = len(a)
+    # invariant: sorted(a[0..i-1]) and a[0..i-1] <= a[i..N-1]
+    for i in range(N - 1) :  # iteration
+        j = i 
+        # k = i + 1
+        # invariant: a[j] == min(a[i..k-1])
+        for k in range(i + 1, N) : 
+            if a[k] < a[j] : j = k
+        a[i], a[j] = a[j], a[i]
+
+a = [3, -1, 5, 10]
+selection_sort(a)
+print(a)
+```
+
+#### Complexity Analysis of Selection Sort
+
+How many steps does selection sort take? 
+
+- obviously depends on N. 
+- estimating the runtime: $L(N) \approx c \cdot f(N)$, where $f(N)$ is some simple function
+   (the formally correct versiono later with the $\mathcal{O}(N)$ notation) 
+
+
+The inner loop compares `a[k] < a[j]` for each `k` in `range(i + 1, N)`, so the number of comparisons decreases as `i` increases. Here's the completed table based on the structure of the nested loops:
+
+| i   | k                | number of comparisons |
+| --- | ---------------- | --------------------- |
+| 0   | 1 ... N - 1      | N - 1                 |
+| 1   | 2 ... N - 1      | N - 2                 |
+| 2   | 3 ... N - 1      | N - 3                 |
+| ... | ...              | ...                   |
+| N-3 | N-2 ... N - 1    | 2                     |
+| N-2 | N - 1            | 1                     |
+| N-1 | — (no iteration) | 0                     |
+
+Total number of comparisons:
+
+To find the overall time complexity, sum all the comparisons:
+
+$$
+(N - 1) + (N - 2) + \dots + 1 = \frac{N(N - 1)}{2}
+$$
+
+So, the time complexity of selection sort is **O(N²)** in the worst, average, and best cases (it always does the same number of comparisons).
+
+How to make sorting functions generic so that they can be provided in libraries? $\Rightarrow$ API (Application Programming Interface), 
+so that the user can choose the sorting criteria the following way:
+
+```{python}
+def selection_sort2(a, key = lambda x : x): 
+    N = len(a)
+    # i = 0
+    # invariant sorted(a[0..i]) and a[0..i-1] <= a[]
+    for i in range(N - 1) :
+        m = i
+        for  k in range(i + 1, N) :
+            if key(a[k]) < key(a[m]): m = k
+        a[i], a[m] = a[m], a[i]
+```
+
+Assume we have an array that contains tuples of students:
+
+```{python}
+students = [("andrej", 20, 1.3),
+            ("igor", 22, 2.7),
+            ("olga", 21, 1.7)]
+```
+
+Then, the following way we could sort on different criteria:
+
+```{python}
+selection_sort2(students, lambda x : x[0]) # sort w.r.t. names
+print(students)
+selection_sort2(students, lambda x : x[1]) # sort w.r.t. age
+print(students)
+selection_sort2(students, lambda x : x[2]) # sort w.r.t. grade
+print(students)
+```
+
+### Stable Sorting
+
+Stable sorting preserves the original order of elements with equal keys, which is especially useful when sorting complex objects.
+
+* Example: Given `a = [("Abel", 20), ("Babel", 20), ("Frey", 19)]`, initially sorted by name, sorting again by age using `sort(a, key=lambda x: x[1])` yields `a = [("Frey", 19), ("Abel", 20), ("Babel", 20)]`.
+
+The idea behind stable sorting is that you can first sort by a secondary criterion (e.g., names), then by a primary one (e.g., grades), and the final result will retain the secondary order within groups that share the same primary key. Without stability, you’d need to re-sort each group manually.
+
+### Insertion Sort
+
+* insertion sort is **stable**
+* insertion sort is the **fastest** algorithm for small N. 
+* **Principle**: 
+  * sorts from left to right.
+  * create a hole in the correct position for the element `a[i]`
+
+```{python}
+def insertion_sort(a):
+    N = len(a)
+    # i = 1
+    # sorted(a[0..i-1])
+    for i in range(1, N):
+        k = i
+        while k > 0:
+            if a[k] < a[k - 1]: 
+                a[k - 1], a[k] = a[k], a[k - 1]
+            else: break
+            k = k - 1
+
+a = [1, -3, 4, 10, -99]
+insertion_sort(a)
+print(a)
+```
+
+#### Run-time analysis of Insertion Sort
+
+Runtime of insertion sort depends on whether the array was sorted before hand. (In selection sort run time is always the same formula)
+
+* **Case 1**(Best Case): array is already sorted $\Rightarrow \mathcal{O}(n)$ , since inner while loop always executes the `break`
+statement immediately.
+* **Case 2** (Worst case): array is reverse sorted $\Rightarrow \mathcal{O}(n^2)$ , since each inner while loop always executes the whole
+  range of $i$s. 
+* **Case 3** (Average case): Array is randomly sorted, i.e. intuitively somewhere in between sorted and reversly sorted. In this case 
+  the inner while loop breaks after $\frac{i}{2}$. Then the complexity can be written as 
+
+  $$T(N) = \frac{c}{2}(1 + 2 + \ldots + (N - 1)) \in \mathcal{O}(N^2)$$
+
+
+### Faster Sorting Algorithms
+
+* faster sorter algorithms that run in $\mathcal{O}(N\cdot\log{N})$ and $\mathcal{O}(N)$ (bucket sort). 
+* such algoriths are faster because they employ the "divide and conquer" principle (recursion):
+  * divide the problem to smaller sub-problems and solve the smaller problems
+  * combine the smaller solutions
+* two classic exmples of such algorithms:
+  * merge sort: 
+    * divide the array in two equal parts
+    * sorts the half errays
+    * merge the sorted half arrays
+  * quick sort:
+    * choose a pivot element
+    * divide the array into "smaller than pivot" and "greater than pivot"
+    * sort the individual parts.
+
+
+
+
+
+
+
+
+
