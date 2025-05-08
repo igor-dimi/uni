@@ -3,6 +3,10 @@ title: Week 4
 date: 05/06/2025
 ---
 
+```{python}
+#| echo: false
+import random
+```
 
 ## VL 7 - 06.05.25
 
@@ -161,9 +165,159 @@ statement immediately.
     * sort the individual parts.
 
 
+## VL 8 - 06.05.25
+
+### Efficient Sorting Algorithms (Cont.)
+
+* for small values, $N < 30$ insertion sort is the fastest algorithm
+* for larger $N$ efficient sorting algorithms must be preffered: merge sort and quicksort (divide & conquer)
+
+#### Merge Sort
+
+1. Divide the array into two equal parts
+2. sort the half arrays 
+3. merge the sorted sub parts
+
+```{python}
+def merge_sorted_arrays(l, r): # both l and r are sorted
+  a = [] # sorted array
+  i, k = 0, 0
+  Nl, Nr = len(l), len(r)
+  # a == merged(l[0:i], r[0:k]
+  while i < Nl and k < Nr: 
+    if l[i] <= r[k]: # <= instead of < so that sorting is stablef
+      a.append(l[i]) # append is efficient
+      i += 1
+    else:
+      a.append(r[k])
+      k += 1
+  a += l[i : Nl] # append rest of l
+  a += r[k : Nr] # append rest of r
+  return a
+
+l = [1, 3, 10, 11]
+r = [-1, 2, 20]
+
+a = merge_sorted_arrays(l, r)
+print(a)
+```
+
+the final step
+
+```python
+a += l[i : Nl] # append rest of l
+a += r[k : Nr] # append rest of r
+```
+
+is enabled by the elegant python slicing syntax. The usual way without slicing would be:
+
+```python
+while i < Nl:
+  a.append(l[i])
+  i += 1
+while k < Nr:
+  a.append(r[k])
+  k += 1
+```
 
 
+Now we define merge sort recursively as follows:
 
+
+```{python}
+def merge_sort(a):
+  N = len(a)
+  if N <= 1: return a
+  l = merge_sort(a[: N//2])
+  r = merge_sort(a[N//2:])
+  return merge_sorted_arrays(l, r)
+
+a = list(range(20))
+random.shuffle(a)
+print(a)
+a = merge_sort(a)
+print(a)
+```
+
+* **Disadvantage**: Merge sort is *not* **in-place** $\Rightarrow$ extra memory is necessary for each merge sort call
+* **Advantage**: Merge sort is efficient and stable
+
+
+##### Run-time Analysis of Merge Sort
+
+Runtime of merge sort satisfies the following formula both in worst and best case:
+
+\begin{align*}
+&T(0 || 1) = c_1 \\
+&T(N) = c_2 + 2\cdot T(\frac{N}{2}) + c_3N
+\end{align*}
+
+TODO: tldr diagram and solution of the recurrence relation.
+
+#### Quicksort
+
+* In practice somewhat faster than merge sort (with a good choice of pivot)
+* **not stable** but in place.
+* **idea**: 
+  1. choose an element of the array as "pivot". (naiv, better is to choose pivot randomly)
+  2. partition the array: (incomplete sorting)
+     a) pivot is at the final position. 
+     b) all elements <= pivot are left to the pivot
+     c) all elements > pivot are right the pivot
+     d) the left and right portions are not sorted
+  3. call quicksort recursively on the left and right partitions (divide and conquer)
+
+
+first we define the paritioning function:
+
+```{python}
+def partition(a, l, r):  # l, r are left and right boundaries (inclusive) of a
+  pivot = a[r] # naive choice: Pivot
+  i = l
+  k = r - 1
+  while True:
+    while i < r and a[i] <= pivot: i += 1 # increment until found a misplaced element
+    while k > l and a[k] >= pivot: k -= 1 # decrement until found a misplaced element
+    if i < k : a[i], a[k] = a[k], a[i]
+    else : break
+  a[i], a[r] = a[r], a[i] # bring pivot to the correct position
+  return i # so that recursive calls now where the partitions are
+```
+
+next we define 
+
+```{python}
+def quick_sort_impl(a, l, r):
+  if r <= l: return # no return argument since in-place
+  i = partition(a, l, r)
+  quick_sort_impl(a, l, i-1)
+  quick_sort_impl(a, i+1, r)
+```
+
+finally we define a wrapper function as an interface for the user:
+
+```{python}
+def quick_sort(a):
+  quick_sort_impl(a, 0, len(a) - 1)
+
+a = list(range(20))
+random.shuffle(a)
+print(a)
+quick_sort(a)
+print(a)
+```
+
+Why choosing pivot as the first element is naive?
+
+* if pivot always stays on the first position $\Rightarrow$ $N^2$. This happens if the arrray is already sorted (TODO: understand thus)
+* a naive solution: shuffle the array before sorting (of course doesn't make much sense) $\Rightarrow$ uquivalently: choose the pivot
+  randomly each time. 
+  ```python
+  import random
+  p = random.randint(l, r) 
+  a[p], a[r] = a[r], a[p] # replace right-most element with this random element
+  pivot = a[r]
+  ```
 
 
 
