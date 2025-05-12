@@ -6,8 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="dcterms.date" content="2025-12-05">
 
-<title>My Uni Notes</title>
+<title>My Uni Notes - Week 5</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,6 +20,40 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -69,6 +104,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="../../../styles.css">
 </head>
@@ -129,7 +193,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../ss25/ibn/sum/index.html">Weekly Summary</a></li><li class="breadcrumb-item"><a href="../../../ss25/ibn/sum/w05.html">W05</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../ss25/ibn/sum/index.html">Weekly Summary</a></li><li class="breadcrumb-item"><a href="../../../ss25/ibn/sum/w05.html">Week 5</a></li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -177,7 +241,7 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../ss25/ibn/sum/w05.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">W05</span></a>
+ <span class="menu-text">Week 5</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -242,16 +306,136 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#vl-9---12.05.25" id="toc-vl-9---12.05.25" class="nav-link active" data-scroll-target="#vl-9---12.05.25">VL 9 - 12.05.25</a>
+  <ul class="collapse">
+  <li><a href="#ipc-via-sharem-memory" id="toc-ipc-via-sharem-memory" class="nav-link" data-scroll-target="#ipc-via-sharem-memory">IPC via Sharem Memory</a></li>
+  <li><a href="#swapping" id="toc-swapping" class="nav-link" data-scroll-target="#swapping">Swapping</a></li>
+  <li><a href="#memory-management" id="toc-memory-management" class="nav-link" data-scroll-target="#memory-management">Memory Management</a></li>
+  </ul></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../ss25/ibn/sum/index.html">Weekly Summary</a></li><li class="breadcrumb-item"><a href="../../../ss25/ibn/sum/w05.html">Week 5</a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title">Week 5</h1>
+</div>
 
 
 
+<div class="quarto-title-meta">
+
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">December 5, 2025</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
 
 
+</header>
+
+
+<section id="vl-9---12.05.25" class="level2">
+<h2 class="anchored" data-anchor-id="vl-9---12.05.25">VL 9 - 12.05.25</h2>
+<section id="ipc-via-sharem-memory" class="level3">
+<h3 class="anchored" data-anchor-id="ipc-via-sharem-memory">IPC via Sharem Memory</h3>
+<section id="sm-in-posix" class="level4">
+<h4 class="anchored" data-anchor-id="sm-in-posix">SM in Posix</h4>
+<ul>
+<li><p>process first creates a shared memory segment:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode c code-with-copy"><code class="sourceCode c"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>segment_id <span class="op">=</span> shmget<span class="op">(</span>IPC_PRIVATE<span class="op">,</span> size<span class="op">,</span> S_IRUSR <span class="op">|</span> S_IWSUR<span class="op">);</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+<li><p>processes that want access to this segment have to subscibe / attach to it.</p></li>
+<li><p>after the process is done it detaches from the shared memory with <code>shmdt(shared_memory)</code>.</p></li>
+<li><p>Problem: how other subscibers get this value <code>segment_id</code> <span class="math inline">\(\Rightarrow\)</span> <code>fork()</code></p></li>
+<li><p><em>alternative</em> (in windows): Memory-mapped-data (MMD) are used for IPC</p></li>
+<li><p><strong>handles</strong> (look up)</p></li>
+</ul>
+</section>
+</section>
+<section id="swapping" class="level3">
+<h3 class="anchored" data-anchor-id="swapping">Swapping</h3>
+<ul>
+<li><strong>Swapping</strong>: the complete memory image of a process is backed up / stored in the primary memory in order to protect the RAM and allow more processes.</li>
+<li>Problems:
+<ul>
+<li>when processes are swapped in and out the memory addresses in the RAM change - how to remap or recalculate?</li>
+<li>swapping takes time - seconds</li>
+<li>processes that are currently doing I/O can’t be swapped in / out,
+<ul>
+<li><strong>solution</strong>: prioritize swapping in / out the waiting or blocked processes</li>
+<li>additional process state: <strong>blocked and suspended</strong> means swapped out</li>
+<li>additional process state: <strong>ready and suspended</strong> means ready but still swapped out, needs to be first swapped in</li>
+</ul></li>
+<li>internal fragmentation of RAM.</li>
+</ul></li>
+</ul>
+</section>
+<section id="memory-management" class="level3">
+<h3 class="anchored" data-anchor-id="memory-management">Memory Management</h3>
+<ul>
+<li>In past systems and actual memory and the addressable memory was the same - very limiting.</li>
+<li>General question how to allocate memory to incoming processes ? Various approaches
+<ul>
+<li>fixed-sized parititions: obvious problems - partitions are too small or too large</li>
+<li>variable-sized partition schemes. problems:
+<ul>
+<li>address relocation: without virtual memory the address of the process must be reculculated in the program if swapped in and out</li>
+<li>contigious address: without virtual memory the complete process has to have a contingious memory</li>
+<li>external fragmentation (btw, external fragmentation is worse in primary memory). How to solve this problem:
+<ul>
+<li>Reorganize the RAM <span class="math inline">\(\Rightarrow\)</span> compaction. Problems:
+<ul>
+<li>This is time intensive</li>
+<li>is I/O is happening problematic</li>
+<li>works only for code reallocation in runtime.</li>
+</ul></li>
+<li>use fitting schemes for memory allocation that allocated the memory well
+<ul>
+<li><strong>first fit</strong>:</li>
+<li><strong>best fit</strong></li>
+<li><strong>worst fit</strong> (usually worse than two other solutions)</li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul>
+<section id="intro-to-virtual-memory---logical-vs-physical-memory" class="level4">
+<h4 class="anchored" data-anchor-id="intro-to-virtual-memory---logical-vs-physical-memory">Intro to Virtual Memory - Logical vs Physical Memory</h4>
+<p>previous twe problems:</p>
+<ol type="1">
+<li>P1: illusion of fixed memory address from 0 to max</li>
+<li>P2: illusion of <em>contigious</em> memory</li>
+</ol>
+<p>are solved by introducing the concept logical memory (mapping physical to logical memory):</p>
+<ul>
+<li>The cpu and the processes see (or use) completely different addresses from the actual memory addresses from the ram</li>
+<li>the mapping is implemented directly in hardware by teh memory-management-unit - <strong>MMU</strong>.(usually inside the processor)</li>
+<li>These logical addresses seen by the cpu and proccesses are called <strong>virtual memory / addresses</strong>.</li>
+<li>The addresses in the RAM are <strong>physical memory / addresses</strong></li>
+<li>how is the mapping implemented? The process and the cpu sees the addresses from 0 to max. If the actual process is located in the memory at some address. MMU simply adds the offset to this address.</li>
+<li>second problem of contigious memory is solved with a table but the table is not refined up to bytes, rather up to pages (more rough subdivision of a process) <span class="math inline">\(\Rightarrow\)</span> <strong>page table</strong>
+<ul>
+<li>page index (page = Seite)</li>
+<li>frame index (Frame = Seitenrahmen)</li>
+</ul></li>
+</ul>
+
+
+</section>
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
