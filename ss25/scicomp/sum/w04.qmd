@@ -3,7 +3,7 @@ title: Week 04
 date: 06/05/2025
 ---
 
-## L7 - 06.05.2025
+## L4 - 06.05.2025
 
 * classes and structs:
   * access specifiers. `friend` keyword
