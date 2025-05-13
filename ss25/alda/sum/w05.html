@@ -6,8 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="dcterms.date" content="2025-05-13">
 
-<title>My Uni Notes</title>
+<title>My Uni Notes - Week 5</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -69,6 +70,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="../../../styles.css">
 </head>
@@ -129,7 +159,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../ss25/alda/sum/index.html">Weekly Summary</a></li><li class="breadcrumb-item"><a href="../../../ss25/alda/sum/w05.html">W05</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../ss25/alda/sum/index.html">Weekly Summary</a></li><li class="breadcrumb-item"><a href="../../../ss25/alda/sum/w05.html">Week 5</a></li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -177,7 +207,7 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../ss25/alda/sum/w05.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">W05</span></a>
+ <span class="menu-text">Week 5</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -242,16 +272,221 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#vl-9---13.05.25" id="toc-vl-9---13.05.25" class="nav-link active" data-scroll-target="#vl-9---13.05.25">VL 9 - 13.05.25</a>
+  <ul class="collapse">
+  <li><a href="#review" id="toc-review" class="nav-link" data-scroll-target="#review">Review</a></li>
+  <li><a href="#efficiency-of-randomized-quicksort" id="toc-efficiency-of-randomized-quicksort" class="nav-link" data-scroll-target="#efficiency-of-randomized-quicksort">Efficiency of Randomized Quicksort</a></li>
+  <li><a href="#correctness" id="toc-correctness" class="nav-link" data-scroll-target="#correctness">Correctness</a></li>
+  </ul></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../ss25/alda/sum/index.html">Weekly Summary</a></li><li class="breadcrumb-item"><a href="../../../ss25/alda/sum/w05.html">Week 5</a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title">Week 5</h1>
+</div>
 
 
 
+<div class="quarto-title-meta">
+
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">May 13, 2025</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
 
 
+</header>
+
+
+<section id="vl-9---13.05.25" class="level2">
+<h2 class="anchored" data-anchor-id="vl-9---13.05.25">VL 9 - 13.05.25</h2>
+<section id="review" class="level3">
+<h3 class="anchored" data-anchor-id="review">Review</h3>
+<ul>
+<li>review of quick sort</li>
+</ul>
+</section>
+<section id="efficiency-of-randomized-quicksort" class="level3">
+<h3 class="anchored" data-anchor-id="efficiency-of-randomized-quicksort">Efficiency of Randomized Quicksort</h3>
+<ul>
+<li>choose Pivot randomly <span class="math inline">\(\Rightarrow\)</span> <code>k</code> can be any index in <code>[l, r]</code> with the same probability</li>
+<li><strong>good case</strong> - k ends up in the middle:
+<ul>
+<li>sub arrays for the recursive calls have both size <span class="math inline">\(\frac{r - l}{2}\)</span> <span class="math inline">\(\Rightarrow\)</span> we profit from divide and conquer</li>
+</ul></li>
+<li><strong>bad case</strong> - k ends up on the edge (<code>k == l of k == r</code>) <span class="math inline">\(\Rightarrow\)</span> Recursion is not advantagous, we do not profit from D&amp;C.</li>
+<li><strong>typical case</strong>: typical case is neither the best, nor the best case - it’s the average of those, i.e.&nbsp;<code>k</code> is somewhere between being exactly in the middle or exactly on the edges - what happens here ?</li>
+</ul>
+<p>Before let’s determine the run time of the <strong>best</strong> and the <strong>worst</strong> cases.</p>
+<p>For recursive algorithms the following genera run time formula holds:</p>
+<p><span class="math display">\[L_{\text{total}}(N) = L_{\text{local}}(N) + L_{\text{recursive}}(N)\]</span></p>
+<p>for quicksort <span class="math inline">\(L_{\text{local}}(N) = L_{\text{parition}}(N)\)</span>.</p>
+<section id="bad-case" class="level4">
+<h4 class="anchored" data-anchor-id="bad-case">Bad Case</h4>
+<p><span class="math display">\[\begin{align*}
+L(N) &amp;= (N + 1) + &amp;&amp;\text{// partition} \\
+     &amp;\quad\;\; L(0) + L(N - 1) &amp;&amp;\text{// recursive calls} \\
+     &amp;= N + 1 + 0 + L(N - 1) \quad &amp;&amp;\text{// since } L(0) = 0 \text{ and } L(1) = 0 \\
+     &amp;= (N + 1) + L(N - 1) \\
+     &amp;= (N + 1) + (N) + L(N - 2) \\
+     &amp;\;\;\vdots \\
+     &amp;= (N + 1) + N + \cdots + 2 + 1 \\
+     &amp;= \sum_{k = 1}^{N + 1} k \\
+     &amp;= \frac{(N + 1)(N + 2)}{2} \\
+     &amp;\in \Theta(N^2)
+\end{align*}\]</span></p>
+</section>
+<section id="best-case" class="level4">
+<h4 class="anchored" data-anchor-id="best-case">Best Case</h4>
+<p>Choose N, s.t. both sub arrays are of the same size: N in {1, 3, 7, 15, …, 2^n - 1, …}. Then:</p>
+<p><span class="math display">\[\begin{align*}
+L(2^M - 1) &amp;= 2^M &amp;&amp;\text{partition} \\
+           &amp;\quad +\; 2 \cdot L(2^{M - 1} - 1) &amp;&amp;\text{recursion on two halves} \\
+           &amp;= 2^M + 2 \cdot 2^{M - 1} + 2^2 \cdot 2^{M - 2} + \cdots + 2^{M - 1} \cdot 2 &amp;&amp;\text{expanding recursively} \\
+           &amp;= \sum_{k = 1}^{M - 1} 2^k \cdot 2^{M - k} &amp;&amp;\text{collecting all terms} \\
+           &amp;= (M - 1) \cdot 2^M &amp;&amp;\text{each term simplifies to } 2^M \\
+           &amp;= \log_2(N + 1) \cdot (N + 1) &amp;&amp;\text{since } N = 2^M - 1 \Rightarrow M = \log_2(N + 1) \\
+           &amp;\in \Theta(N \log N) &amp;&amp;\text{best-case runtime}
+\end{align*}\]</span></p>
+</section>
+<section id="average-case" class="level4">
+<h4 class="anchored" data-anchor-id="average-case">Average Case</h4>
+<p>The <strong>average case</strong> of Quicksort involves a recurrence that doesn’t simplify as neatly as the worst and best cases because it includes a <strong>weighted sum</strong> over all possible pivot positions.</p>
+<p>The key recurrence for the <strong>expected number of comparisons</strong> in Quicksort is:</p>
+<p><span class="math display">\[
+L(N) = N + 1 + \frac{1}{N} \sum_{k=0}^{N - 1} \left( L(k) + L(N - 1 - k) \right)
+\]</span></p>
+<p>This models the expected cost when the pivot lands uniformly at random. By symmetry and change of variables, it simplifies to:</p>
+<p><span class="math display">\[
+L(N) = N + 1 + \frac{2}{N} \sum_{k=0}^{N - 1} L(k)
+\]</span></p>
+<p>That leads to a recurrence for <span class="math inline">\(L(N)\)</span> involving cumulative sums, and can be shown (via substitution or using generating functions) that the solution satisfies:</p>
+<p><span class="math display">\[
+L(N) \in \Theta(N \log N)
+\]</span></p>
+<p>Derivation:</p>
+<p><span class="math display">\[\begin{align*}
+L(N) &amp;= N + 1 &amp;&amp;\text{partition step: compares } N \text{ elements to pivot} \\
+     &amp;\quad + \frac{1}{N} \sum_{k=0}^{N-1} \left( L(k) + L(N - 1 - k) \right) &amp;&amp;\text{average over all pivot positions} \\
+     &amp;= N + 1 + \frac{2}{N} \sum_{k=0}^{N-1} L(k) &amp;&amp;\text{by symmetry: } L(k) = L(N - 1 - k) \\
+     \Rightarrow N L(N) &amp;= N(N + 1) + 2 \sum_{k=0}^{N-1} L(k) &amp;&amp;\text{multiply both sides by } N \\
+     \text{Let } A(N) &amp;= \sum_{k=0}^{N} L(k) &amp;&amp;\text{define cumulative sum} \\
+     \Rightarrow N L(N) &amp;= N(N + 1) + 2 A(N - 1) \\
+     \Rightarrow L(N) &amp;= (N + 1) + \frac{2}{N} A(N - 1) \\
+     \text{Now guess: } L(N) &amp;\in \Theta(N \log N) &amp;&amp;\text{solve via master theorem or induction}
+\end{align*}\]</span></p>
+<p>Alternatively:</p>
+<p>Your professor is summarizing a <strong>classic analysis of the average-case comparisons in Quicksort</strong> using a more elegant expression derived from solving the recurrence via <strong>indicator random variables</strong> or <strong>expected value over pivot positions</strong>.</p>
+<ol type="1">
+<li><p><strong>Key Idea</strong>:</p>
+<ul>
+<li>Let <span class="math inline">\(L(N)\)</span> be the expected number of comparisons when sorting <span class="math inline">\(N\)</span> elements with Quicksort.</li>
+<li>Each pair <span class="math inline">\((i, j)\)</span> is compared <strong>at most once</strong>, and only if one of them is chosen as a pivot before any of the elements between them.</li>
+</ul></li>
+<li><p><strong>Probability Argument</strong>:</p>
+<ul>
+<li>For any two distinct elements <span class="math inline">\(a_i\)</span> and <span class="math inline">\(a_j\)</span>, the probability that they are compared is <span class="math inline">\(\frac{2}{|j - i| + 1}\)</span>.</li>
+<li>This is because the first pivot chosen among <span class="math inline">\(a_i, a_{i+1}, ..., a_j\)</span> must be either <span class="math inline">\(a_i\)</span> or <span class="math inline">\(a_j\)</span> for them to be directly compared.</li>
+</ul></li>
+<li><p><strong>Summing Over All Pairs</strong>:</p>
+<ul>
+<li><p>There are <span class="math inline">\(\binom{N+1}{2}\)</span> pairs, and the expected cost is:</p>
+<p><span class="math display">\[
+L(N) = \sum_{1 \le i &lt; j \le N+1} \frac{2}{j - i + 1}
+\]</span></p></li>
+<li><p>This sum can be manipulated into the form:</p>
+<p><span class="math display">\[
+L(N) = 2(N+1) \sum_{k=2}^{N+1} \frac{1}{k}
+= 2(N+1) \left( \sum_{k=1}^{N+1} \frac{1}{k} - 1 \right)
+\]</span></p></li>
+</ul></li>
+<li><p><strong>Harmonic Approximation</strong>:</p>
+<ul>
+<li><p>The harmonic sum <span class="math inline">\(H_{N+1} = \sum_{k=1}^{N+1} \frac{1}{k} \approx \ln(N+1) + \gamma\)</span></p></li>
+<li><p>So:</p>
+<p><span class="math display">\[
+L(N) \approx 2(N+1)(\ln(N+1) + \gamma - 1) \in \Theta(N \log N)
+\]</span></p></li>
+</ul></li>
+</ol>
+<p><span class="math display">\[\begin{align*}
+L(N) &amp;= \sum_{1 \le i &lt; j \le N+1} \mathbb{P}(\text{elements } i \text{ and } j \text{ are compared}) \\
+     &amp;= \sum_{1 \le i &lt; j \le N+1} \frac{2}{j - i + 1} \\
+     &amp;= 2 \sum_{d=1}^{N} (N + 1 - d) \cdot \frac{1}{d + 1} &amp;&amp;\text{substitute } d = j - i \\
+     &amp;= 2(N+1) \sum_{k=2}^{N+1} \frac{1}{k} \\
+     &amp;= 2(N+1) \left( \sum_{k=1}^{N+1} \frac{1}{k} - 1 \right) \\
+     &amp;= 2(N+1) \left( H_{N+1} - 1 \right) &amp;&amp;\text{where } H_n = \sum_{k=1}^{n} \frac{1}{k} \\
+     &amp;\approx 2(N+1) \left( \ln(N+1) + \gamma - 1 \right) \\
+     &amp;\in \Theta(N \log N)
+\end{align*}\]</span></p>
+</section>
+</section>
+<section id="correctness" class="level3">
+<h3 class="anchored" data-anchor-id="correctness">Correctness</h3>
+<ul>
+<li>if an algorithm is not correct, all other properties (elegance, efficiency) are irrelevant. Correctness is therefore a fundamental concept</li>
+<li>two aspecs:
+<ul>
+<li>specification: <strong>what</strong> not <strong>how</strong></li>
+<li>implementation: <strong>how</strong></li>
+</ul></li>
+</ul>
+<p><span class="math inline">\(\Rightarrow\)</span></p>
+<ol type="1">
+<li><strong>validation</strong>: Deos the specification really satisfy our goal?<br>
+</li>
+<li><strong>verification</strong>: Does the algorithms really implement the specification?</li>
+</ol>
+<p>Nothing prevents conceptually the specification to be probability based. I.e. the correct solution is given as a probability and not as a precise value <span class="math inline">\(\Rightarrow\)</span> e.g.&nbsp;Neural networks</p>
+<ul>
+<li><strong>problem</strong>: how are randomized algorithms tested? (open problem)</li>
+</ul>
+<section id="approach-to-correctness" class="level4">
+<h4 class="anchored" data-anchor-id="approach-to-correctness">3 Approach to Correctness</h4>
+<ol type="1">
+<li>Formal proof of Correctness (Royal way - but not practical)</li>
+<li>Assistance by the programming language itself
+<ol type="1">
+<li>Programming language reports errors when something wrong is done</li>
+<li>Programming language prevents from doing errors (strongly typed languages)</li>
+</ol></li>
+<li>Systematic software testing
+<ul>
+<li>in python the module “unittest”</li>
+</ul></li>
+</ol>
+</section>
+<section id="formal-proof-of-correctness" class="level4">
+<h4 class="anchored" data-anchor-id="formal-proof-of-correctness">Formal Proof of Correctness</h4>
+<p>two approaches:</p>
+<ol type="1">
+<li>On the basis of pseudo-code (does the algorithm do the the correct thing in principle, typically in literature)</li>
+<li>On the basis of the implementation (very complicated, usually only applied for critical software)
+<ul>
+<li>bank software</li>
+<li>parts of the operating systems in aircraft <span class="math inline">\(\Rightarrow\)</span> <strong>automated theorem prover</strong>.</li>
+</ul></li>
+</ol>
+
+
+</section>
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
