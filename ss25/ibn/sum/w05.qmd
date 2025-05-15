@@ -1,6 +1,6 @@
 ---
 title: Week 5
-date: 12/05/25
+date: 05/12/25
 ---
 
 ## VL 9 - 12.05.25
@@ -71,3 +71,17 @@ are solved by introducing the concept logical memory (mapping physical to logica
   a process) $\Rightarrow$ **page table**
     * page index (page = Seite)
     * frame index (Frame = Seitenrahmen)
+
+## VL 10 - 14.05.25
+
+### Memory Management
+
+* a page index must be translated to a frame index
+  * page is the virtual thing seen by the process and the processor,
+  * frame is the actual physical location in the RAM. 
+    * Translated with a function: $F_{\text{pid}}(p) = f$
+    * p := page index
+    * f := frame 
+  * how does the translation work ? examples in the lecture
+
+
