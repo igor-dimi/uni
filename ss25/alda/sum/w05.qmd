@@ -253,6 +253,7 @@ class SqrtTest(unittest.TestCase):
     self.assertAlmostEqual(sqrt(1.21)**2, 1.21)
     self.assertEqual(sqrt(4), 2)
     self.assertEqual(sqrt(0), 0) # bug because we divide by zero in the while condition
+```
                                  # fix: while abs(x - y**2) > 1e-15
 
     
