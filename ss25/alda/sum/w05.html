@@ -21,6 +21,40 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -282,6 +316,10 @@ window.Quarto = {
   <li><a href="#efficiency-of-randomized-quicksort" id="toc-efficiency-of-randomized-quicksort" class="nav-link" data-scroll-target="#efficiency-of-randomized-quicksort">Efficiency of Randomized Quicksort</a></li>
   <li><a href="#correctness" id="toc-correctness" class="nav-link" data-scroll-target="#correctness">Correctness</a></li>
   </ul></li>
+  <li><a href="#vl-10---15.05.25" id="toc-vl-10---15.05.25" class="nav-link" data-scroll-target="#vl-10---15.05.25">VL 10 - 15.05.25</a>
+  <ul class="collapse">
+  <li><a href="#correctness-cont." id="toc-correctness-cont." class="nav-link" data-scroll-target="#correctness-cont.">Correctness (Cont.)</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -482,6 +520,73 @@ L(N) &amp;= \sum_{1 \le i &lt; j \le N+1} \mathbb{P}(\text{elements } i \text{ a
 <li>parts of the operating systems in aircraft <span class="math inline">\(\Rightarrow\)</span> <strong>automated theorem prover</strong>.</li>
 </ul></li>
 </ol>
+</section>
+</section>
+</section>
+<section id="vl-10---15.05.25" class="level2">
+<h2 class="anchored" data-anchor-id="vl-10---15.05.25">VL 10 - 15.05.25</h2>
+<section id="correctness-cont." class="level3">
+<h3 class="anchored" data-anchor-id="correctness-cont.">Correctness (Cont.)</h3>
+<section id="correctness-on-the-level-of-pseudocode" class="level4">
+<h4 class="anchored" data-anchor-id="correctness-on-the-level-of-pseudocode">Correctness on the level of pseudocode:</h4>
+<ul>
+<li><p>uses Axioms:</p>
+<ul>
+<li>Pre- and Postconditions</li>
+<li>Loop invariants <span class="math inline">\(\Rightarrow\)</span> Induction proof</li>
+</ul></li>
+<li><p>example: selection sort</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> selection_sort(a):</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  N <span class="op">=</span> <span class="bu">len</span>(a)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  i <span class="op">=</span> <span class="dv">0</span> </span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  <span class="co"># invariant: i &lt;= N and sorted(a[0:i+1])</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  <span class="cf">while</span> i <span class="op">&lt;</span> N <span class="op">-</span> <span class="dv">1</span>:</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>    m <span class="op">=</span> i <span class="op">+</span> <span class="dv">1</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>    <span class="co"># k == i + 1</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>    <span class="co"># invariant: a[m] == min(a[i + 1:k])</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> k <span class="kw">in</span> <span class="bu">range</span>(i <span class="op">+</span> <span class="dv">1</span>, N): </span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>      <span class="cf">if</span> a[k] <span class="op">&lt;</span> a[m]: m <span class="op">=</span> k</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>    <span class="co"># gilt: k == N =&gt; a[m] == min(a[i:N])</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>    a[i], a[m] <span class="op">=</span> a[m], a[i]</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>    i <span class="op">+=</span> <span class="dv">1</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>  <span class="co"># gilt i == N - 1 =&gt; sorted(a[0:N])</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>axioms:</p>
+<ul>
+<li>Pre: -</li>
+<li>Post:
+<ol type="1">
+<li>len(a’) == len(a)</li>
+<li>a’ has the same elements as a</li>
+<li>a’ is sorted, i.e.&nbsp;a[i - 1] &lt;= a[i], for all i in [1..N] …</li>
+</ol></li>
+</ul></li>
+</ul>
+</section>
+<section id="correctness-on-the-basis-of-software-testing" class="level4">
+<h4 class="anchored" data-anchor-id="correctness-on-the-basis-of-software-testing">Correctness on the Basis of Software Testing</h4>
+<p>Example for Testing, babylonian root method for finding square root of a number</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> sqrt(x):</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> x <span class="op">&lt;</span> <span class="dv">0</span>:</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">raise</span> <span class="pp">ValueError</span>(<span class="st">"sqrt(x) with x &lt; 0 not allowed"</span>)</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>  y <span class="op">=</span> x <span class="op">//</span> <span class="dv">2</span> <span class="co"># bug floor division</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>  <span class="cf">while</span> y <span class="op">*</span> y <span class="op">!=</span> x:</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>    y <span class="op">=</span> (y <span class="op">+</span> x <span class="op">/</span> <span class="dv">2</span>) <span class="op">/</span> <span class="dv">2</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> y</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>We use the unit test module:</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> SqrtTest(unittest.TestCase):</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">def</span> testSqrt(Self): <span class="co"># in this function we write the tests</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>    <span class="va">self</span>.assertRaises(<span class="pp">ValueError</span>, sqrt, <span class="op">-</span><span class="dv">1</span>)</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>    <span class="va">self</span>.assertEqual(sqrt(<span class="dv">9</span>), <span class="dv">3</span>)</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>    <span class="va">self</span>.assertEqual(sqrt(<span class="dv">1</span>), <span class="dv">1</span>) <span class="co"># bud =&gt; y = x / 2 instead of y = x // 2</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>    <span class="va">self</span>.assertEqual(sqrt(<span class="fl">1.21</span>)<span class="op">**</span><span class="dv">2</span>, <span class="fl">1.21</span>) <span class="co"># bug because the function never finishes; </span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>                                          <span class="co"># infinite loop due to while loop condition</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>                                          <span class="co"># fix: while abs(y**2 / x - 1) &gt; 1e-15 (relative error)</span></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>                                          <span class="co"># but the error is still there</span></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>                                          <span class="co"># we need a new test that accepts a tolarance</span></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>    <span class="va">self</span>.assertAlmostEqual(sqrt(<span class="fl">1.21</span>)<span class="op">**</span><span class="dv">2</span>, <span class="fl">1.21</span>)</span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>    <span class="va">self</span>.assertEqual(sqrt(<span class="dv">4</span>), <span class="dv">2</span>)</span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>    <span class="va">self</span>.assertEqual(sqrt(<span class="dv">0</span>), <span class="dv">0</span>) <span class="co"># bug because we divide by zero in the while condition</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<pre><code>                             # fix: while abs(x - y**2) &gt; 1e-15</code></pre>
 
 
 </section>
