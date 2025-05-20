@@ -1,0 +1,13 @@
+---
+title: Week 6
+date: 05/19/2025
+---
+
+## VL 10 - 19.05.25
+
+* paging and page tables recap
+* frame tables
+* size of the page table:
+* logical address space is enormous compared to the size of a process (direct page tables are rarely used nowadays)
+  * inverted page tables
+  * hierarchical page tables

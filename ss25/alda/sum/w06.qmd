@@ -1,13 +1,256 @@
 ---
 title: Week 6
-date: 05/19/2025
+date: 05/20/2025
 ---
 
-## VL 10 - 19.05.25
+## VL 11 - 20.05.25
 
-* paging and page tables recap
-* frame tables
-* size of the page table:
-* logical address space is enormous compared to the size of a process (direct page tables are rarely used nowadays)
-  * inverted page tables
-  * hierarchical page tables
+### Efficiency 
+
+* this is the second most important property of an algorithm after correctness.
+* Two aspects of efficiency:
+
+#### Run-time
+
+* run-time: wall-clock time, i.e. actual time. important for end-user, must be sufficiently fast depending 
+  on the requirements. Can be measured with tools like `timeit` for python of Google benchmark for c/c++.  
+  * improving runtime: 
+    * in interpreted languages like python the time critical portions can be delegated to C/C++/Fortran,(think CUDA an vectorization) can also be used for own code via 
+      * `cython`: a python subset. `.pyc` $\Rightarrow$
+        * `.so`: shared libraries in linux / macos
+        * `.pyd`: shared libraries in Windows 
+      * `pybind11`: binds c++
+    * vectorization: very importane technique; instead of repeatedly evaluating (interpreting) the body of the loop, it is delegated
+      to a c function, prevent the intrepretation overhead:
+
+      ```python
+      a = b * c
+      ```
+
+      instead of
+
+      ```python
+      for i in rage(N): a[i] = b[i] * c[i]
+      ```
+
+      * in compiled languages the optimizatin is performed once during the compilation and modern compilers are very good at it:
+        * reorganize the execution order
+          * CPU pipeline:
+            1. Decoding a commnad
+            2. retrive Data
+            3. execute the command
+            4. write the results to memory
+          2nd step can cuase bottlenecks to the pipeline $\Rightarrow$ caches. The optimizer tries to reorder the commands s.t.
+          the result is not changed and bottlenecks are reduced.
+        * computations that are needed in multiple places can be perfomred once by the compiler.   
+
+#### Complexity
+
+* runtime depends on concrete hardware 
+* abstracting away from the hardware details and actual runtime, we turn our attention to general, hardware independent statements about the 
+  approximate number of atomic operations. this simplifies the problem a lot.
+* O-notation:
+  
+  ![runtime](./imgs/w06/run-time.png){width="55%"}
+
+  for all $N \geq N_0$: $f(N) \leq c\cdot g(N)$, for some $c$. 
+
+  definition:
+
+  $$\mathcal{O}(g(N)) = \{f(N) : \exists c, N_0 \text{ s.t. } f(N) \leq c\cdot g(N), \forall N \geq N_0\}$$
+
+  $\mathcal{O}(\bullet)$ is analgous to $\leq$, i.e. $f \in \mathcal{O}(g) \sim f\leq g$, and it indeed satisfies the axioms of a partial order:
+
+  * transitivity: f = O(g) and g = O(h) => f = O(h)
+  * reflexivity: f = O(f)
+  
+#### Summary and overview of axioms and algebraic properties:
+
+
+* $f(n) = O(g(n))$ means:
+
+  $$
+  \exists\, c > 0,\, n_0 \in \mathbb{N} : \forall n \geq n_0,\, |f(n)| \leq c \cdot |g(n)|
+  $$
+
+We assume all functions are eventually non-negative, or we use absolute values for generality.
+
+---
+
+##### 1. Reflexivity
+
+###### Statement:
+
+$$
+f(n) = O(f(n))
+$$
+
+###### Proof:
+
+Take $c = 1$, then for all $n$,
+
+$$
+|f(n)| \leq 1 \cdot |f(n)|
+$$
+
+So the condition for $O(f(n))$ is satisfied with $n_0 = 0$.
+
+---
+
+##### 2. Transitivity
+
+###### Statement:
+
+If $f = O(g)$ and $g = O(h)$, then $f = O(h)$
+
+###### Proof:
+
+* $f(n) \leq c_1 \cdot g(n)$ for all $n \geq n_1$
+* $g(n) \leq c_2 \cdot h(n)$ for all $n \geq n_2$
+
+Then for $n \geq \max(n_1, n_2)$:
+
+$$
+f(n) \leq c_1 \cdot g(n) \leq c_1 c_2 \cdot h(n)
+$$
+
+So $f = O(h)$ with constant $c = c_1 c_2$, and cutoff $n_0 = \max(n_1, n_2)$.
+
+
+##### 3. Additivity
+
+###### Statement:
+
+If $f = O(h)$ and $g = O(h)$, then $f + g = O(h)$
+
+###### Proof:
+
+* $f(n) \leq c_1 \cdot h(n)$ for $n \geq n_1$
+* $g(n) \leq c_2 \cdot h(n)$ for $n \geq n_2$
+
+Then for $n \geq \max(n_1, n_2)$:
+
+$$
+f(n) + g(n) \leq (c_1 + c_2) \cdot h(n)
+$$
+
+So $f + g = O(h)$ with constant $c = c_1 + c_2$
+
+---
+
+##### 4. Scalar Multiplication
+
+###### Statement:
+
+If $f = O(g)$, then $c \cdot f = O(g)$ for any $c > 0$
+
+###### Proof:
+
+* $f(n) \leq c_1 \cdot g(n)$ for $n \geq n_0$
+* Then:
+
+$$
+c \cdot f(n) \leq c \cdot c_1 \cdot g(n)
+$$
+
+So $c \cdot f = O(g)$ with constant $c' = c \cdot c_1$
+
+---
+
+##### 5. Max-Dominance Additivity
+
+###### Statement:
+
+$$
+f(n) + g(n) = O(\max(f(n), g(n)))
+$$
+
+###### Proof:
+
+For all $n$:
+
+$$
+f(n) + g(n) \leq 2 \cdot \max(f(n), g(n))
+$$
+
+So the sum is at most twice the maximum. Thus:
+
+$$
+f + g = O(\max(f, g))
+$$
+
+---
+
+##### 6. Multiplicativity
+
+###### Statement:
+
+If $f = O(h)$ and $g = O(k)$, then $f \cdot g = O(h \cdot k)$
+
+###### Proof:
+
+* $f(n) \leq c_1 \cdot h(n)$, $g(n) \leq c_2 \cdot k(n)$
+* Then:
+
+$$
+f(n) \cdot g(n) \leq c_1 c_2 \cdot h(n) \cdot k(n)
+$$
+
+So $f \cdot g = O(h \cdot k)$
+
+---
+
+##### 7. Monotonicity
+
+###### Statement:
+
+If $f(n) \leq g(n)$ eventually, and $g = O(h)$, then $f = O(h)$
+
+###### Proof:
+
+* $g(n) \leq c \cdot h(n)$, and $f(n) \leq g(n)$
+* Then:
+
+$$
+f(n) \leq g(n) \leq c \cdot h(n)
+$$
+
+So $f = O(h)$
+
+---
+
+##### 8. Invariance under Composition with Linear Functions
+
+###### Statement:
+
+If $f(n) = O(g(n))$, and $h(n) = an + b$, then:
+
+$$
+f(h(n)) = O(g(h(n)))
+$$
+
+###### Proof:
+
+* $f(n) \leq c \cdot g(n)$ for $n \geq n_0$
+* Since $h(n) \to \infty$ as $n \to \infty$, there exists $n_1$ such that $h(n) \geq n_0$
+* Then:
+
+$$
+f(h(n)) \leq c \cdot g(h(n)) \quad \text{for } n \geq n_1
+$$
+
+So $f \circ h = O(g \circ h)$
+
+
+##### Summary Table (with Proofs Provided Above)
+
+| Property                   | Statement                                       |
+| -------------------------- | ----------------------------------------------- |
+| **Reflexivity**            | $f = O(f)$                                      |
+| **Transitivity**           | $f = O(g), g = O(h) \Rightarrow f = O(h)$       |
+| **Additivity**             | $f = O(h), g = O(h) \Rightarrow f + g = O(h)$   |
+| **Scalar Multiplication**  | $f = O(g) \Rightarrow c \cdot f = O(g)$         |
+| **Max-Dominance**          | $f + g = O(\max(f, g))$                         |
+| **Multiplicativity**       | $f = O(h), g = O(k) \Rightarrow fg = O(hk)$     |
+| **Monotonicity**           | $f \leq g, g = O(h) \Rightarrow f = O(h)$       |
+| **Composition Invariance** | $f = O(g) \Rightarrow f(an + b) = O(g(an + b))$ |
