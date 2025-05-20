@@ -247,7 +247,7 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../ss25/alda/sum/w06.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">W06</span></a>
+ <span class="menu-text">Week 6</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -311,9 +311,20 @@ window.Quarto = {
    
   <ul>
   <li><a href="#vl-5---29.04.25" id="toc-vl-5---29.04.25" class="nav-link active" data-scroll-target="#vl-5---29.04.25">VL 5 - 29.04.25</a>
+  <ul>
+  <li><a href="#containers-cont." id="toc-containers-cont." class="nav-link" data-scroll-target="#containers-cont.">Containers (Cont.)</a>
+  <ul>
+  <li><a href="#queue" id="toc-queue" class="nav-link" data-scroll-target="#queue">Queue</a></li>
+  <li><a href="#deque-pronounced-deck" id="toc-deque-pronounced-deck" class="nav-link" data-scroll-target="#deque-pronounced-deck">Deque (pronounced “deck”)</a></li>
+  <li><a href="#generalization-priority-queues" id="toc-generalization-priority-queues" class="nav-link" data-scroll-target="#generalization-priority-queues"><strong>Generalization</strong>: Priority queues</a></li>
+  </ul></li>
+  <li><a href="#sorting-algorithms" id="toc-sorting-algorithms" class="nav-link" data-scroll-target="#sorting-algorithms">Sorting Algorithms</a>
+  <ul>
+  <li><a href="#selection-sort-sorting-by-selecting" id="toc-selection-sort-sorting-by-selecting" class="nav-link" data-scroll-target="#selection-sort-sorting-by-selecting">Selection Sort (Sorting by selecting)</a>
   <ul class="collapse">
-  <li><a href="#containers-cont." id="toc-containers-cont." class="nav-link" data-scroll-target="#containers-cont.">Containers (Cont.)</a></li>
-  <li><a href="#sorting-algorithms" id="toc-sorting-algorithms" class="nav-link" data-scroll-target="#sorting-algorithms">Sorting Algorithms</a></li>
+  <li><a href="#complexity-analysis-of-selection-sort" id="toc-complexity-analysis-of-selection-sort" class="nav-link" data-scroll-target="#complexity-analysis-of-selection-sort">Complexity Analysis of Selection Sort</a></li>
+  </ul></li>
+  </ul></li>
   </ul></li>
   </ul>
 </nav>
@@ -426,7 +437,7 @@ a &lt; b &lt;=&gt; not(b &lt;= a)</li>
 <li>sorintg from left to write (left to the current position is all sorted)</li>
 <li>select the appropriate element in the right-side of the current position.</li>
 </ul>
-<div id="d8745603" class="cell" data-execution_count="1">
+<div id="a2b32cdc" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> selection_sort(a) :</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    N <span class="op">=</span> <span class="bu">len</span>(a)</span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    <span class="co"># invariant: sorted(a[0..i-1]) and a[0..i-1] &lt;= a[i..N-1]</span></span>

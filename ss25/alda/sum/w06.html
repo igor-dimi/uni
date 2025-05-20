@@ -6,8 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="dcterms.date" content="2025-05-20">
 
-<title>My Uni Notes</title>
+<title>My Uni Notes - Week 6</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,6 +20,40 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -69,6 +104,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="../../../styles.css">
 </head>
@@ -129,7 +193,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../ss25/alda/sum/index.html">Weekly Summary</a></li><li class="breadcrumb-item"><a href="../../../ss25/alda/sum/w06.html">W06</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../ss25/alda/sum/index.html">Weekly Summary</a></li><li class="breadcrumb-item"><a href="../../../ss25/alda/sum/w06.html">Week 6</a></li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -183,7 +247,7 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../ss25/alda/sum/w06.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">W06</span></a>
+ <span class="menu-text">Week 6</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -242,16 +306,352 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#vl-11---20.05.25" id="toc-vl-11---20.05.25" class="nav-link active" data-scroll-target="#vl-11---20.05.25">VL 11 - 20.05.25</a>
+  <ul>
+  <li><a href="#efficiency" id="toc-efficiency" class="nav-link" data-scroll-target="#efficiency">Efficiency</a>
+  <ul>
+  <li><a href="#run-time" id="toc-run-time" class="nav-link" data-scroll-target="#run-time">Run-time</a></li>
+  <li><a href="#complexity" id="toc-complexity" class="nav-link" data-scroll-target="#complexity">Complexity</a></li>
+  <li><a href="#summary-and-overview-of-axioms-and-algebraic-properties" id="toc-summary-and-overview-of-axioms-and-algebraic-properties" class="nav-link" data-scroll-target="#summary-and-overview-of-axioms-and-algebraic-properties">Summary and overview of axioms and algebraic properties:</a>
+  <ul class="collapse">
+  <li><a href="#reflexivity" id="toc-reflexivity" class="nav-link" data-scroll-target="#reflexivity">1. Reflexivity</a></li>
+  <li><a href="#transitivity" id="toc-transitivity" class="nav-link" data-scroll-target="#transitivity">2. Transitivity</a></li>
+  <li><a href="#additivity" id="toc-additivity" class="nav-link" data-scroll-target="#additivity">3. Additivity</a></li>
+  <li><a href="#scalar-multiplication" id="toc-scalar-multiplication" class="nav-link" data-scroll-target="#scalar-multiplication">4. Scalar Multiplication</a></li>
+  <li><a href="#max-dominance-additivity" id="toc-max-dominance-additivity" class="nav-link" data-scroll-target="#max-dominance-additivity">5. Max-Dominance Additivity</a></li>
+  <li><a href="#multiplicativity" id="toc-multiplicativity" class="nav-link" data-scroll-target="#multiplicativity">6. Multiplicativity</a></li>
+  <li><a href="#monotonicity" id="toc-monotonicity" class="nav-link" data-scroll-target="#monotonicity">7. Monotonicity</a></li>
+  <li><a href="#invariance-under-composition-with-linear-functions" id="toc-invariance-under-composition-with-linear-functions" class="nav-link" data-scroll-target="#invariance-under-composition-with-linear-functions">8. Invariance under Composition with Linear Functions</a></li>
+  <li><a href="#summary-table-with-proofs-provided-above" id="toc-summary-table-with-proofs-provided-above" class="nav-link" data-scroll-target="#summary-table-with-proofs-provided-above">Summary Table (with Proofs Provided Above)</a></li>
+  </ul></li>
+  </ul></li>
+  </ul></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../ss25/alda/sum/index.html">Weekly Summary</a></li><li class="breadcrumb-item"><a href="../../../ss25/alda/sum/w06.html">Week 6</a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title">Week 6</h1>
+</div>
 
 
 
+<div class="quarto-title-meta">
+
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">May 20, 2025</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
 
 
+</header>
+
+
+<section id="vl-11---20.05.25" class="level2">
+<h2 class="anchored" data-anchor-id="vl-11---20.05.25">VL 11 - 20.05.25</h2>
+<section id="efficiency" class="level3">
+<h3 class="anchored" data-anchor-id="efficiency">Efficiency</h3>
+<ul>
+<li>this is the second most important property of an algorithm after correctness.</li>
+<li>Two aspects of efficiency:</li>
+</ul>
+<section id="run-time" class="level4">
+<h4 class="anchored" data-anchor-id="run-time">Run-time</h4>
+<ul>
+<li>run-time: wall-clock time, i.e.&nbsp;actual time. important for end-user, must be sufficiently fast depending on the requirements. Can be measured with tools like <code>timeit</code> for python of Google benchmark for c/c++.
+<ul>
+<li>improving runtime:
+<ul>
+<li><p>in interpreted languages like python the time critical portions can be delegated to C/C++/Fortran,(think CUDA an vectorization) can also be used for own code via</p>
+<ul>
+<li><code>cython</code>: a python subset. <code>.pyc</code> <span class="math inline">\(\Rightarrow\)</span>
+<ul>
+<li><code>.so</code>: shared libraries in linux / macos</li>
+<li><code>.pyd</code>: shared libraries in Windows</li>
+</ul></li>
+<li><code>pybind11</code>: binds c++</li>
+</ul></li>
+<li><p>vectorization: very importane technique; instead of repeatedly evaluating (interpreting) the body of the loop, it is delegated to a c function, prevent the intrepretation overhead:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> b <span class="op">*</span> c</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>instead of</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> rage(N): a[i] <span class="op">=</span> b[i] <span class="op">*</span> c[i]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ul>
+<li>in compiled languages the optimizatin is performed once during the compilation and modern compilers are very good at it:
+<ul>
+<li>reorganize the execution order
+<ul>
+<li>CPU pipeline:
+<ol type="1">
+<li>Decoding a commnad</li>
+<li>retrive Data</li>
+<li>execute the command</li>
+<li>write the results to memory 2nd step can cuase bottlenecks to the pipeline <span class="math inline">\(\Rightarrow\)</span> caches. The optimizer tries to reorder the commands s.t. the result is not changed and bottlenecks are reduced.</li>
+</ol></li>
+</ul></li>
+<li>computations that are needed in multiple places can be perfomred once by the compiler.</li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul>
+</section>
+<section id="complexity" class="level4">
+<h4 class="anchored" data-anchor-id="complexity">Complexity</h4>
+<ul>
+<li><p>runtime depends on concrete hardware</p></li>
+<li><p>abstracting away from the hardware details and actual runtime, we turn our attention to general, hardware independent statements about the approximate number of atomic operations. this simplifies the problem a lot.</p></li>
+<li><p>O-notation:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./imgs/w06/run-time.png" class="img-fluid figure-img" style="width:55.0%"></p>
+<figcaption>runtime</figcaption>
+</figure>
+</div>
+<p>for all <span class="math inline">\(N \geq N_0\)</span>: <span class="math inline">\(f(N) \leq c\cdot g(N)\)</span>, for some <span class="math inline">\(c\)</span>.</p>
+<p>definition:</p>
+<p><span class="math display">\[\mathcal{O}(g(N)) = \{f(N) : \exists c, N_0 \text{ s.t. } f(N) \leq c\cdot g(N), \forall N \geq N_0\}\]</span></p>
+<p><span class="math inline">\(\mathcal{O}(\bullet)\)</span> is analgous to <span class="math inline">\(\leq\)</span>, i.e.&nbsp;<span class="math inline">\(f \in \mathcal{O}(g) \sim f\leq g\)</span>, and it indeed satisfies the axioms of a partial order:</p>
+<ul>
+<li>transitivity: f = O(g) and g = O(h) =&gt; f = O(h)</li>
+<li>reflexivity: f = O(f)</li>
+</ul></li>
+</ul>
+</section>
+<section id="summary-and-overview-of-axioms-and-algebraic-properties" class="level4">
+<h4 class="anchored" data-anchor-id="summary-and-overview-of-axioms-and-algebraic-properties">Summary and overview of axioms and algebraic properties:</h4>
+<ul>
+<li><p><span class="math inline">\(f(n) = O(g(n))\)</span> means:</p>
+<p><span class="math display">\[
+\exists\, c &gt; 0,\, n_0 \in \mathbb{N} : \forall n \geq n_0,\, |f(n)| \leq c \cdot |g(n)|
+\]</span></p></li>
+</ul>
+<p>We assume all functions are eventually non-negative, or we use absolute values for generality.</p>
+<hr>
+<section id="reflexivity" class="level5">
+<h5 class="anchored" data-anchor-id="reflexivity">1. Reflexivity</h5>
+<section id="statement" class="level6">
+<h6 class="anchored" data-anchor-id="statement">Statement:</h6>
+<p><span class="math display">\[
+f(n) = O(f(n))
+\]</span></p>
+</section>
+<section id="proof" class="level6">
+<h6 class="anchored" data-anchor-id="proof">Proof:</h6>
+<p>Take <span class="math inline">\(c = 1\)</span>, then for all <span class="math inline">\(n\)</span>,</p>
+<p><span class="math display">\[
+|f(n)| \leq 1 \cdot |f(n)|
+\]</span></p>
+<p>So the condition for <span class="math inline">\(O(f(n))\)</span> is satisfied with <span class="math inline">\(n_0 = 0\)</span>.</p>
+<hr>
+</section>
+</section>
+<section id="transitivity" class="level5">
+<h5 class="anchored" data-anchor-id="transitivity">2. Transitivity</h5>
+<section id="statement-1" class="level6">
+<h6 class="anchored" data-anchor-id="statement-1">Statement:</h6>
+<p>If <span class="math inline">\(f = O(g)\)</span> and <span class="math inline">\(g = O(h)\)</span>, then <span class="math inline">\(f = O(h)\)</span></p>
+</section>
+<section id="proof-1" class="level6">
+<h6 class="anchored" data-anchor-id="proof-1">Proof:</h6>
+<ul>
+<li><span class="math inline">\(f(n) \leq c_1 \cdot g(n)\)</span> for all <span class="math inline">\(n \geq n_1\)</span></li>
+<li><span class="math inline">\(g(n) \leq c_2 \cdot h(n)\)</span> for all <span class="math inline">\(n \geq n_2\)</span></li>
+</ul>
+<p>Then for <span class="math inline">\(n \geq \max(n_1, n_2)\)</span>:</p>
+<p><span class="math display">\[
+f(n) \leq c_1 \cdot g(n) \leq c_1 c_2 \cdot h(n)
+\]</span></p>
+<p>So <span class="math inline">\(f = O(h)\)</span> with constant <span class="math inline">\(c = c_1 c_2\)</span>, and cutoff <span class="math inline">\(n_0 = \max(n_1, n_2)\)</span>.</p>
+</section>
+</section>
+<section id="additivity" class="level5">
+<h5 class="anchored" data-anchor-id="additivity">3. Additivity</h5>
+<section id="statement-2" class="level6">
+<h6 class="anchored" data-anchor-id="statement-2">Statement:</h6>
+<p>If <span class="math inline">\(f = O(h)\)</span> and <span class="math inline">\(g = O(h)\)</span>, then <span class="math inline">\(f + g = O(h)\)</span></p>
+</section>
+<section id="proof-2" class="level6">
+<h6 class="anchored" data-anchor-id="proof-2">Proof:</h6>
+<ul>
+<li><span class="math inline">\(f(n) \leq c_1 \cdot h(n)\)</span> for <span class="math inline">\(n \geq n_1\)</span></li>
+<li><span class="math inline">\(g(n) \leq c_2 \cdot h(n)\)</span> for <span class="math inline">\(n \geq n_2\)</span></li>
+</ul>
+<p>Then for <span class="math inline">\(n \geq \max(n_1, n_2)\)</span>:</p>
+<p><span class="math display">\[
+f(n) + g(n) \leq (c_1 + c_2) \cdot h(n)
+\]</span></p>
+<p>So <span class="math inline">\(f + g = O(h)\)</span> with constant <span class="math inline">\(c = c_1 + c_2\)</span></p>
+<hr>
+</section>
+</section>
+<section id="scalar-multiplication" class="level5">
+<h5 class="anchored" data-anchor-id="scalar-multiplication">4. Scalar Multiplication</h5>
+<section id="statement-3" class="level6">
+<h6 class="anchored" data-anchor-id="statement-3">Statement:</h6>
+<p>If <span class="math inline">\(f = O(g)\)</span>, then <span class="math inline">\(c \cdot f = O(g)\)</span> for any <span class="math inline">\(c &gt; 0\)</span></p>
+</section>
+<section id="proof-3" class="level6">
+<h6 class="anchored" data-anchor-id="proof-3">Proof:</h6>
+<ul>
+<li><span class="math inline">\(f(n) \leq c_1 \cdot g(n)\)</span> for <span class="math inline">\(n \geq n_0\)</span></li>
+<li>Then:</li>
+</ul>
+<p><span class="math display">\[
+c \cdot f(n) \leq c \cdot c_1 \cdot g(n)
+\]</span></p>
+<p>So <span class="math inline">\(c \cdot f = O(g)\)</span> with constant <span class="math inline">\(c' = c \cdot c_1\)</span></p>
+<hr>
+</section>
+</section>
+<section id="max-dominance-additivity" class="level5">
+<h5 class="anchored" data-anchor-id="max-dominance-additivity">5. Max-Dominance Additivity</h5>
+<section id="statement-4" class="level6">
+<h6 class="anchored" data-anchor-id="statement-4">Statement:</h6>
+<p><span class="math display">\[
+f(n) + g(n) = O(\max(f(n), g(n)))
+\]</span></p>
+</section>
+<section id="proof-4" class="level6">
+<h6 class="anchored" data-anchor-id="proof-4">Proof:</h6>
+<p>For all <span class="math inline">\(n\)</span>:</p>
+<p><span class="math display">\[
+f(n) + g(n) \leq 2 \cdot \max(f(n), g(n))
+\]</span></p>
+<p>So the sum is at most twice the maximum. Thus:</p>
+<p><span class="math display">\[
+f + g = O(\max(f, g))
+\]</span></p>
+<hr>
+</section>
+</section>
+<section id="multiplicativity" class="level5">
+<h5 class="anchored" data-anchor-id="multiplicativity">6. Multiplicativity</h5>
+<section id="statement-5" class="level6">
+<h6 class="anchored" data-anchor-id="statement-5">Statement:</h6>
+<p>If <span class="math inline">\(f = O(h)\)</span> and <span class="math inline">\(g = O(k)\)</span>, then <span class="math inline">\(f \cdot g = O(h \cdot k)\)</span></p>
+</section>
+<section id="proof-5" class="level6">
+<h6 class="anchored" data-anchor-id="proof-5">Proof:</h6>
+<ul>
+<li><span class="math inline">\(f(n) \leq c_1 \cdot h(n)\)</span>, <span class="math inline">\(g(n) \leq c_2 \cdot k(n)\)</span></li>
+<li>Then:</li>
+</ul>
+<p><span class="math display">\[
+f(n) \cdot g(n) \leq c_1 c_2 \cdot h(n) \cdot k(n)
+\]</span></p>
+<p>So <span class="math inline">\(f \cdot g = O(h \cdot k)\)</span></p>
+<hr>
+</section>
+</section>
+<section id="monotonicity" class="level5">
+<h5 class="anchored" data-anchor-id="monotonicity">7. Monotonicity</h5>
+<section id="statement-6" class="level6">
+<h6 class="anchored" data-anchor-id="statement-6">Statement:</h6>
+<p>If <span class="math inline">\(f(n) \leq g(n)\)</span> eventually, and <span class="math inline">\(g = O(h)\)</span>, then <span class="math inline">\(f = O(h)\)</span></p>
+</section>
+<section id="proof-6" class="level6">
+<h6 class="anchored" data-anchor-id="proof-6">Proof:</h6>
+<ul>
+<li><span class="math inline">\(g(n) \leq c \cdot h(n)\)</span>, and <span class="math inline">\(f(n) \leq g(n)\)</span></li>
+<li>Then:</li>
+</ul>
+<p><span class="math display">\[
+f(n) \leq g(n) \leq c \cdot h(n)
+\]</span></p>
+<p>So <span class="math inline">\(f = O(h)\)</span></p>
+<hr>
+</section>
+</section>
+<section id="invariance-under-composition-with-linear-functions" class="level5">
+<h5 class="anchored" data-anchor-id="invariance-under-composition-with-linear-functions">8. Invariance under Composition with Linear Functions</h5>
+<section id="statement-7" class="level6">
+<h6 class="anchored" data-anchor-id="statement-7">Statement:</h6>
+<p>If <span class="math inline">\(f(n) = O(g(n))\)</span>, and <span class="math inline">\(h(n) = an + b\)</span>, then:</p>
+<p><span class="math display">\[
+f(h(n)) = O(g(h(n)))
+\]</span></p>
+</section>
+<section id="proof-7" class="level6">
+<h6 class="anchored" data-anchor-id="proof-7">Proof:</h6>
+<ul>
+<li><span class="math inline">\(f(n) \leq c \cdot g(n)\)</span> for <span class="math inline">\(n \geq n_0\)</span></li>
+<li>Since <span class="math inline">\(h(n) \to \infty\)</span> as <span class="math inline">\(n \to \infty\)</span>, there exists <span class="math inline">\(n_1\)</span> such that <span class="math inline">\(h(n) \geq n_0\)</span></li>
+<li>Then:</li>
+</ul>
+<p><span class="math display">\[
+f(h(n)) \leq c \cdot g(h(n)) \quad \text{for } n \geq n_1
+\]</span></p>
+<p>So <span class="math inline">\(f \circ h = O(g \circ h)\)</span></p>
+</section>
+</section>
+<section id="summary-table-with-proofs-provided-above" class="level5">
+<h5 class="anchored" data-anchor-id="summary-table-with-proofs-provided-above">Summary Table (with Proofs Provided Above)</h5>
+<table class="table">
+<colgroup>
+<col style="width: 35%">
+<col style="width: 64%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Property</th>
+<th>Statement</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Reflexivity</strong></td>
+<td><span class="math inline">\(f = O(f)\)</span></td>
+</tr>
+<tr class="even">
+<td><strong>Transitivity</strong></td>
+<td><span class="math inline">\(f = O(g), g = O(h) \Rightarrow f = O(h)\)</span></td>
+</tr>
+<tr class="odd">
+<td><strong>Additivity</strong></td>
+<td><span class="math inline">\(f = O(h), g = O(h) \Rightarrow f + g = O(h)\)</span></td>
+</tr>
+<tr class="even">
+<td><strong>Scalar Multiplication</strong></td>
+<td><span class="math inline">\(f = O(g) \Rightarrow c \cdot f = O(g)\)</span></td>
+</tr>
+<tr class="odd">
+<td><strong>Max-Dominance</strong></td>
+<td><span class="math inline">\(f + g = O(\max(f, g))\)</span></td>
+</tr>
+<tr class="even">
+<td><strong>Multiplicativity</strong></td>
+<td><span class="math inline">\(f = O(h), g = O(k) \Rightarrow fg = O(hk)\)</span></td>
+</tr>
+<tr class="odd">
+<td><strong>Monotonicity</strong></td>
+<td><span class="math inline">\(f \leq g, g = O(h) \Rightarrow f = O(h)\)</span></td>
+</tr>
+<tr class="even">
+<td><strong>Composition Invariance</strong></td>
+<td><span class="math inline">\(f = O(g) \Rightarrow f(an + b) = O(g(an + b))\)</span></td>
+</tr>
+</tbody>
+</table>
+
+
+</section>
+</section>
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
