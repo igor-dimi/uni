@@ -11,3 +11,31 @@ date: 05/19/2025
 * logical address space is enormous compared to the size of a process (direct page tables are rarely used nowadays)
   * inverted page tables
   * hierarchical page tables
+
+## VL 11 - 21.05.25
+
+* recap hiererchical page tables
+* CR3 register for address of the page directory
+* contents of a entry in a page table
+
+### Virtual Memory
+
+* virtual memory is improvement of swapping
+* some pages of a process might be stored away in the secondary memory - marked by the valid / invalid bit, and swapped in when needed
+* process of how pages in the secondary memory are swapped in is quite slow and involves operating system 
+    software - can't be done in hardware anymore, therefore much slower. 
+* There is an auxillary to locate the swapped out pages
+* victim: the page that is chosen to be swapped out by the operating system
+* belady anomaly
+
+#### Page Swapping Algorithms
+
+* OPT
+* FIFO (not that good)
+* second chance algorithm: takes advantage of additional information in the page table entries like
+  * R bit: if a page that is tried to be removed was read, it is not removed but appended at the end
+* clock algorithm: same as second chance, but uses circular list instead to avoid the actual appending at the end.
+* using M and R together improves it further.
+
+
+
