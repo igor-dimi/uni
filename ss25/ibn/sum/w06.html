@@ -248,6 +248,13 @@ ul.task-list li input[type="checkbox"] {
    
   <ul>
   <li><a href="#vl-10---19.05.25" id="toc-vl-10---19.05.25" class="nav-link active" data-scroll-target="#vl-10---19.05.25">VL 10 - 19.05.25</a></li>
+  <li><a href="#vl-11---21.05.25" id="toc-vl-11---21.05.25" class="nav-link" data-scroll-target="#vl-11---21.05.25">VL 11 - 21.05.25</a>
+  <ul>
+  <li><a href="#virtual-memory" id="toc-virtual-memory" class="nav-link" data-scroll-target="#virtual-memory">Virtual Memory</a>
+  <ul>
+  <li><a href="#page-swapping-algorithms" id="toc-page-swapping-algorithms" class="nav-link" data-scroll-target="#page-swapping-algorithms">Page Swapping Algorithms</a></li>
+  </ul></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -291,8 +298,40 @@ ul.task-list li input[type="checkbox"] {
 <li>hierarchical page tables</li>
 </ul></li>
 </ul>
+</section>
+<section id="vl-11---21.05.25" class="level2">
+<h2 class="anchored" data-anchor-id="vl-11---21.05.25">VL 11 - 21.05.25</h2>
+<ul>
+<li>recap hiererchical page tables</li>
+<li>CR3 register for address of the page directory</li>
+<li>contents of a entry in a page table</li>
+</ul>
+<section id="virtual-memory" class="level3">
+<h3 class="anchored" data-anchor-id="virtual-memory">Virtual Memory</h3>
+<ul>
+<li>virtual memory is improvement of swapping</li>
+<li>some pages of a process might be stored away in the secondary memory - marked by the valid / invalid bit, and swapped in when needed</li>
+<li>process of how pages in the secondary memory are swapped in is quite slow and involves operating system software - can’t be done in hardware anymore, therefore much slower.</li>
+<li>There is an auxillary to locate the swapped out pages</li>
+<li>victim: the page that is chosen to be swapped out by the operating system</li>
+<li>belady anomaly</li>
+</ul>
+<section id="page-swapping-algorithms" class="level4">
+<h4 class="anchored" data-anchor-id="page-swapping-algorithms">Page Swapping Algorithms</h4>
+<ul>
+<li>OPT</li>
+<li>FIFO (not that good)</li>
+<li>second chance algorithm: takes advantage of additional information in the page table entries like
+<ul>
+<li>R bit: if a page that is tried to be removed was read, it is not removed but appended at the end</li>
+</ul></li>
+<li>clock algorithm: same as second chance, but uses circular list instead to avoid the actual appending at the end.</li>
+<li>using M and R together improves it further.</li>
+</ul>
 
 
+</section>
+</section>
 </section>
 
 </main> <!-- /main -->
