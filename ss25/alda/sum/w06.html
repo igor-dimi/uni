@@ -330,6 +330,24 @@ window.Quarto = {
   </ul></li>
   </ul></li>
   </ul></li>
+  <li><a href="#vl-12---22.05.25" id="toc-vl-12---22.05.25" class="nav-link" data-scroll-target="#vl-12---22.05.25">VL 12 - 22.05.25</a>
+  <ul>
+  <li><a href="#complexity-cont." id="toc-complexity-cont." class="nav-link" data-scroll-target="#complexity-cont.">Complexity (Cont.)</a>
+  <ul>
+  <li><a href="#implications-diagram" id="toc-implications-diagram" class="nav-link" data-scroll-target="#implications-diagram">Implications Diagram:</a></li>
+  <li><a href="#proving-with-mathematical-induction" id="toc-proving-with-mathematical-induction" class="nav-link" data-scroll-target="#proving-with-mathematical-induction">Proving with Mathematical Induction</a>
+  <ul class="collapse">
+  <li><a href="#step-1-choose-constants" id="toc-step-1-choose-constants" class="nav-link" data-scroll-target="#step-1-choose-constants">Step 1: Choose constants</a></li>
+  <li><a href="#step-2-induction-base-ib" id="toc-step-2-induction-base-ib" class="nav-link" data-scroll-target="#step-2-induction-base-ib">Step 2: Induction Base (IB)</a></li>
+  <li><a href="#step-3-induction-step-is" id="toc-step-3-induction-step-is" class="nav-link" data-scroll-target="#step-3-induction-step-is">Step 3: Induction Step (IS)</a></li>
+  <li><a href="#example-prove-fn-5n2-3n-in-on2" id="toc-example-prove-fn-5n2-3n-in-on2" class="nav-link" data-scroll-target="#example-prove-fn-5n2-3n-in-on2">Example: Prove <span class="math inline">\(f(n) = 5n^2 + 3n \in O(n^2)\)</span></a></li>
+  <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion">Conclusion</a></li>
+  </ul></li>
+  <li><a href="#alternative-definitnios-with-limits" id="toc-alternative-definitnios-with-limits" class="nav-link" data-scroll-target="#alternative-definitnios-with-limits">Alternative Definitnios with Limits</a></li>
+  <li><a href="#exmamples-from-sorting" id="toc-exmamples-from-sorting" class="nav-link" data-scroll-target="#exmamples-from-sorting">Exmamples from Sorting</a></li>
+  <li><a href="#example---running-mean" id="toc-example---running-mean" class="nav-link" data-scroll-target="#example---running-mean">Example - Running Mean</a></li>
+  </ul></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -646,9 +664,274 @@ f(h(n)) \leq c \cdot g(h(n)) \quad \text{for } n \geq n_1
 </tr>
 </tbody>
 </table>
-
-
 </section>
+</section>
+</section>
+</section>
+<section id="vl-12---22.05.25" class="level2">
+<h2 class="anchored" data-anchor-id="vl-12---22.05.25">VL 12 - 22.05.25</h2>
+<section id="complexity-cont." class="level3">
+<h3 class="anchored" data-anchor-id="complexity-cont.">Complexity (Cont.)</h3>
+<ul>
+<li><strong>Goal</strong>: find a as simple as possible expression approximating the run time for large <span class="math inline">\(N\)</span>s.
+<ul>
+<li>focus on the relative change: <span class="math inline">\(\frac{f(2N)}{N}\)</span>, s.t. implementation details &amp; wall clock time vernachlaessigt werden koennen</li>
+</ul></li>
+<li><span class="math inline">\(\Rightarrow\)</span> O-notation. More general: Landau Symbols.</li>
+</ul>
+<p>Certainly! Here’s the completed table with the standard <strong>Landau symbols</strong> (asymptotic notations) used in algorithm analysis, including proper mathematical definitions and intuitive interpretations.</p>
+<table class="table">
+<colgroup>
+<col style="width: 13%">
+<col style="width: 60%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Symbol</th>
+<th>Definition</th>
+<th>Intuition</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">\(f(N) \in O(g(N))\)</span></td>
+<td><span class="math inline">\(\exists\, c &gt; 0,\, N_0 \in \mathbb{N},\ \forall N \geq N_0,\ f(N) \leq c \cdot g(N)\)</span></td>
+<td><span class="math inline">\(f(N) \lesssim g(N)\)</span> (eventual upper bound)</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(f(N) \in o(g(N))\)</span></td>
+<td><span class="math inline">\(\forall\, c &gt; 0,\, \exists N_0 \in \mathbb{N},\ \forall N \geq N_0,\ f(N) &lt; c \cdot g(N)\)</span></td>
+<td><span class="math inline">\(f(N) \ll g(N)\)</span> (strictly smaller order)</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(f(N) \in \Omega(g(N))\)</span></td>
+<td><span class="math inline">\(\exists\, c &gt; 0,\, N_0 \in \mathbb{N},\ \forall N \geq N_0,\ f(N) \geq c \cdot g(N)\)</span></td>
+<td><span class="math inline">\(f(N) \gtrsim g(N)\)</span> (eventual lower bound)</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(f(N) \in \omega(g(N))\)</span></td>
+<td><span class="math inline">\(\forall\, c &gt; 0,\, \exists N_0 \in \mathbb{N},\ \forall N \geq N_0,\ f(N) &gt; c \cdot g(N)\)</span></td>
+<td><span class="math inline">\(f(N) \gg g(N)\)</span> (strictly greater order)</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(f(N) \in \Theta(g(N))\)</span></td>
+<td><span class="math inline">\(\exists\, c_1, c_2 &gt; 0,\ N_0 \in \mathbb{N},\ \forall N \geq N_0,\ c_1 g(N) \leq f(N) \leq c_2 g(N)\)</span></td>
+<td><span class="math inline">\(f(N) \sim g(N)\)</span> up to constant factors</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(f(N) \sim g(N)\)</span></td>
+<td><span class="math inline">\(\lim_{N \to \infty} \frac{f(N)}{g(N)} = 1\)</span></td>
+<td><span class="math inline">\(f(N)\)</span> and <span class="math inline">\(g(N)\)</span> grow identically</td>
+</tr>
+</tbody>
+</table>
+<p>There is an analogous landau notation when <span class="math inline">\(N \to 0\)</span> - useful in numerical mathematics to express how fast an approxaton error appraoches 0 w.r.t. the steps of algorithms.</p>
+<section id="implications-diagram" class="level4">
+<h4 class="anchored" data-anchor-id="implications-diagram">Implications Diagram:</h4>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./imgs/w06/implication-diagram.png" class="img-fluid figure-img" style="width:35.0%"></p>
+<figcaption>implications diagram</figcaption>
+</figure>
+</div>
+</section>
+<section id="proving-with-mathematical-induction" class="level4">
+<h4 class="anchored" data-anchor-id="proving-with-mathematical-induction">Proving with Mathematical Induction</h4>
+<p>To prove <span class="math inline">\(f(n) \in O(g(n))\)</span>, we aim to find constants <span class="math inline">\(c &gt; 0\)</span> and <span class="math inline">\(N_0 \in \mathbb{N}\)</span> such that:</p>
+<p><span class="math display">\[
+\forall n \geq N_0:\quad f(n) \leq c \cdot g(n)
+\]</span></p>
+<p>We proceed by <strong>mathematical induction</strong>, starting at <span class="math inline">\(n = N_0\)</span>.</p>
+<section id="step-1-choose-constants" class="level5">
+<h5 class="anchored" data-anchor-id="step-1-choose-constants">Step 1: Choose constants</h5>
+<p>Choose appropriate constants <span class="math inline">\(c &gt; 0\)</span> and <span class="math inline">\(N_0 \in \mathbb{N}\)</span> based on the growth of <span class="math inline">\(f(n)\)</span> and <span class="math inline">\(g(n)\)</span>.</p>
+</section>
+<section id="step-2-induction-base-ib" class="level5">
+<h5 class="anchored" data-anchor-id="step-2-induction-base-ib">Step 2: Induction Base (IB)</h5>
+<p>Show that the inequality holds at the base case <span class="math inline">\(n = N_0\)</span>:</p>
+<p><span class="math display">\[
+f(N_0) \leq c \cdot g(N_0)
+\]</span></p>
+</section>
+<section id="step-3-induction-step-is" class="level5">
+<h5 class="anchored" data-anchor-id="step-3-induction-step-is">Step 3: Induction Step (IS)</h5>
+<p>Assume the inductive hypothesis for some <span class="math inline">\(n \geq N_0\)</span>:</p>
+<p><span class="math display">\[
+f(n) \leq c \cdot g(n)
+\]</span></p>
+<p>Then prove it holds for <span class="math inline">\(n + 1\)</span>:</p>
+<p><span class="math display">\[
+f(n+1) \leq c \cdot g(n+1)
+\]</span></p>
+<p>If both steps succeed, the inequality holds for all <span class="math inline">\(n \geq N_0\)</span>, and hence <span class="math inline">\(f(n) \in O(g(n))\)</span>.</p>
+<hr>
+</section>
+<section id="example-prove-fn-5n2-3n-in-on2" class="level5">
+<h5 class="anchored" data-anchor-id="example-prove-fn-5n2-3n-in-on2">Example: Prove <span class="math inline">\(f(n) = 5n^2 + 3n \in O(n^2)\)</span></h5>
+<section id="goal" class="level6">
+<h6 class="anchored" data-anchor-id="goal">Goal</h6>
+<p>Find constants <span class="math inline">\(c &gt; 0\)</span> and <span class="math inline">\(N_0 \in \mathbb{N}\)</span> such that:</p>
+<p><span class="math display">\[
+f(n) = 5n^2 + 3n \leq c \cdot n^2 \quad \text{for all } n \geq N_0
+\]</span></p>
+</section>
+<section id="step-1-choose-constants-1" class="level6">
+<h6 class="anchored" data-anchor-id="step-1-choose-constants-1">Step 1: Choose constants</h6>
+<p>Try <span class="math inline">\(c = 6\)</span>. We check when:</p>
+<p><span class="math display">\[
+5n^2 + 3n \leq 6n^2
+\quad \iff \quad -n^2 + 3n \leq 0
+\quad \iff \quad n(n - 3) \leq 0
+\]</span></p>
+<p>This holds for <span class="math inline">\(n \leq 3\)</span>, so the inequality is true when <span class="math inline">\(n \geq 3\)</span>. Choose:</p>
+<ul>
+<li><span class="math inline">\(c = 6\)</span></li>
+<li><span class="math inline">\(N_0 = 3\)</span></li>
+</ul>
+</section>
+<section id="step-2-induction-base-ib-1" class="level6">
+<h6 class="anchored" data-anchor-id="step-2-induction-base-ib-1">Step 2: Induction Base (IB)</h6>
+<p>Check at <span class="math inline">\(n = 3\)</span>:</p>
+<p><span class="math display">\[
+f(3) = 5 \cdot 9 + 3 \cdot 3 = 54 \\
+c \cdot 3^2 = 6 \cdot 9 = 54 \\
+\Rightarrow f(3) = c \cdot n^2
+\]</span></p>
+<p>✓ Base case holds.</p>
+</section>
+<section id="step-3-induction-step-is-1" class="level6">
+<h6 class="anchored" data-anchor-id="step-3-induction-step-is-1">Step 3: Induction Step (IS)</h6>
+<p>Assume for some <span class="math inline">\(n \geq 3\)</span>:</p>
+<p><span class="math display">\[
+f(n) \leq 6n^2
+\]</span></p>
+<p>Show:</p>
+<p><span class="math display">\[
+f(n+1) \leq 6(n+1)^2
+\]</span></p>
+<p>Compute:</p>
+<p><span class="math display">\[
+f(n+1) = 5(n+1)^2 + 3(n+1) = 5n^2 + 10n + 5 + 3n + 3 = 5n^2 + 13n + 8
+\]</span></p>
+<p><span class="math display">\[
+6(n+1)^2 = 6n^2 + 12n + 6
+\]</span></p>
+<p>Compare:</p>
+<p><span class="math display">\[
+5n^2 + 13n + 8 \leq 6n^2 + 12n + 6
+\quad \iff \quad 0 \leq n^2 - n - 2
+\quad \iff \quad (n - 2)(n + 1) \geq 0
+\]</span></p>
+<p>This inequality holds for <span class="math inline">\(n \geq 2\)</span>, and our induction starts at <span class="math inline">\(n \geq 3\)</span>, so:</p>
+<p>✓ Induction step verified.</p>
+<hr>
+</section>
+</section>
+<section id="conclusion" class="level5">
+<h5 class="anchored" data-anchor-id="conclusion">Conclusion</h5>
+<p>By mathematical induction, we have shown that:</p>
+<p><span class="math display">\[
+f(n) = 5n^2 + 3n \leq 6n^2 \quad \text{for all } n \geq 3
+\Rightarrow f(n) \in O(n^2)
+\]</span></p>
+<p>with constants <span class="math inline">\(c = 6\)</span>, <span class="math inline">\(N_0 = 3\)</span>. □</p>
+<hr>
+<p>Let me know if you want to adapt this to other asymptotic bounds like <span class="math inline">\(\Omega(n^2)\)</span> or <span class="math inline">\(\Theta(n^2)\)</span>, or if you’d like a PDF-ready version.</p>
+</section>
+</section>
+<section id="alternative-definitnios-with-limits" class="level4">
+<h4 class="anchored" data-anchor-id="alternative-definitnios-with-limits">Alternative Definitnios with Limits</h4>
+<p><span class="math display">\[
+\begin{array}{|c|c|c|c|}
+\hline
+\textbf{Notation} &amp; \textbf{Limit Definition} &amp; \textbf{Quantifier Definition} &amp; \textbf{Intuition} \\
+\hline
+f(n) \in o(g(n)) &amp;
+\displaystyle \lim_{n \to \infty} \frac{f(n)}{g(n)} = 0 &amp;
+\forall c &gt; 0,\ \exists N_0:\ \forall n \geq N_0,\ f(n) &lt; c \cdot g(n) &amp;
+\text{Strictly smaller order} \\
+\hline
+f(n) \in O(g(n)) &amp;
+\displaystyle \limsup_{n \to \infty} \left| \frac{f(n)}{g(n)} \right| &lt; \infty &amp;
+\exists c &gt; 0,\ \exists N_0:\ \forall n \geq N_0,\ f(n) \leq c \cdot g(n) &amp;
+\text{Grows no faster (upper bound)} \\
+\hline
+f(n) \in \Theta(g(n)) &amp;
+\displaystyle \lim_{n \to \infty} \frac{f(n)}{g(n)} = L,\ 0 &lt; L &lt; \infty &amp;
+\exists c_1, c_2 &gt; 0,\ \exists N_0:\ \forall n \geq N_0,\ c_1 g(n) \leq f(n) \leq c_2 g(n) &amp;
+\text{Same order (tight bound)} \\
+\hline
+f(n) \in \Omega(g(n)) &amp;
+\displaystyle \liminf_{n \to \infty} \left| \frac{f(n)}{g(n)} \right| &gt; 0 &amp;
+\exists c &gt; 0,\ \exists N_0:\ \forall n \geq N_0,\ f(n) \geq c \cdot g(n) &amp;
+\text{Grows at least as fast (lower bound)} \\
+\hline
+f(n) \in \omega(g(n)) &amp;
+\displaystyle \lim_{n \to \infty} \frac{f(n)}{g(n)} = \infty &amp;
+\forall c &gt; 0,\ \exists N_0:\ \forall n \geq N_0,\ f(n) &gt; c \cdot g(n) &amp;
+\text{Strictly faster growth} \\
+\hline
+f(n) \sim g(n) &amp;
+\displaystyle \lim_{n \to \infty} \frac{f(n)}{g(n)} = 1 &amp;
+\forall \varepsilon &gt; 0,\ \exists N_0:\ \forall n \geq N_0,\
+(1 - \varepsilon)g(n) &lt; f(n) &lt; (1 + \varepsilon)g(n) &amp;
+\text{Asymptotically equal (same leading term)} \\
+\hline
+\end{array}
+\]</span></p>
+</section>
+<section id="exmamples-from-sorting" class="level4">
+<h4 class="anchored" data-anchor-id="exmamples-from-sorting">Exmamples from Sorting</h4>
+<ul>
+<li>selection sort: <span class="math inline">\(T(N) = \frac{N}{2}(N + 1) \in \mathbb{O}(N^2)\)</span></li>
+<li>insertion sort (typical case): <span class="math inline">\(T(N) = \frac{N}{4}(N + 1) \in \mathcal{O}(N^2)\)</span></li>
+<li>quick sort (typical case): <span class="math inline">\(T(N) = c \cdot (N + 1) \ln{N + 1} \in \mathcal{O}(N \cdot \log{N})\)</span></li>
+</ul>
+</section>
+<section id="example---running-mean" class="level4">
+<h4 class="anchored" data-anchor-id="example---running-mean">Example - Running Mean</h4>
+<div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> running_mean(a, k) <span class="co"># k size of the Window, N = len(a)</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  r <span class="op">=</span> [<span class="dv">0</span>] <span class="op">*</span> <span class="bu">len</span>(a) <span class="co"># output array O(N) </span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> k <span class="op">&gt;</span> <span class="bu">len</span>(a): <span class="co"># O(1)</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">raise</span> <span class="pp">ValueError</span>(<span class="st">"k &gt; N"</span>) <span class="co"># O(1)</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>  <span class="cf">for</span> j <span class="kw">in</span> <span class="bu">range</span>(k <span class="op">-</span> <span class="dv">1</span>, <span class="bu">len</span>(a)): <span class="co"># O(N - k + 1) == O(N)</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(j <span class="op">-</span> k <span class="op">+</span> <span class="dv">1</span>, j <span class="op">+</span> <span class="dv">1</span>): <span class="co"># O(k)</span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>      r[j] <span class="op">+=</span> a[i] <span class="co"># summing up </span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>    r[j] <span class="op">=</span> r[j] <span class="op">/</span> k  <span class="co"># mean</span></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> r</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>How to obtain the complexity of the whole algorithm based on the complexity of individual lines?</p>
+<ul>
+<li><p>algebraic rules of Complexity classes</p></li>
+<li><p><strong>sequence rule</strong>: for consecutive execution the more expensive command decisive.<br>
+Let <code>C := C1; C2</code>, s.t.</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>C1 <span class="co"># O(f1(N))</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>C2 <span class="co"># O(f2(N))</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Then complexity of <code>C</code> is <span class="math inline">\(max(\mathcal{O}(f_1(N)), \mathcal{O}(f_2(N)))\)</span></p></li>
+<li><p><strong>Nesting rule</strong>: complexity is the product</p>
+<p>Let <code>P</code>:</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> k <span class="kw">in</span> <span class="co"># O(f(N)):</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>  C <span class="co"># O(g(N))</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Then complexity of <code>P</code> is <span class="math inline">\(\mathcal{O}(f(N) \cdot g(N))\)</span>.</p>
+<p>But this holds if the body of the loop always has the same complexity. If it’s variable we can take always the worst case <span class="math inline">\(g(N) = max_k(g(N, k))\)</span> (may be too pessimistic) or sum up for each iteration.</p></li>
+</ul>
+<p>Applying these rules to the running mean example from above we get:</p>
+<ul>
+<li>before the loop: <span class="math inline">\(\mathcal{O}(N) + \mathcal{O}(1) + \mathcal{O}(1) \Rightarrow \mathcal{O}(N)\)</span></li>
+<li>after the loop: <span class="math inline">\(\mathcal{O}(1)\)</span></li>
+<li>inner loop:
+<ul>
+<li>number of iterations: <span class="math inline">\(\mathcal{O}(k)\)</span>, loop body: <span class="math inline">\(\mathcal{O}(1) \Rightarrow \mathcal O(1 \cdot k) = \mathcal{O}(k)\)</span></li>
+</ul></li>
+<li>outer loop:
+<ul>
+<li>Number of iterations: N - k + 1, loopbody O(k) + O(1) = O(k)</li>
+<li>=&gt; product: O((N - k + 1)*k) = O(Nk -k^2 + k) = O(kN) = O(N)</li>
+</ul></li>
+<li>alltogether: O(N) + O(1) + O(kN) = O(kN). we have k = cN. if c == 1</li>
+</ul>
+
+
 </section>
 </section>
 </section>
