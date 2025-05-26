@@ -3,7 +3,7 @@ title: Week 6
 date: 05/19/2025
 ---
 
-## VL 10 - 19.05.25
+## VL 11 - 19.05.25
 
 * paging and page tables recap
 * frame tables
@@ -12,7 +12,7 @@ date: 05/19/2025
   * inverted page tables
   * hierarchical page tables
 
-## VL 11 - 21.05.25
+## VL 12 - 21.05.25
 
 * recap hiererchical page tables
 * CR3 register for address of the page directory
