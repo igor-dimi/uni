@@ -1,0 +1,22 @@
+---
+title: Week 07
+date: 05/27/2025
+---
+
+## VL 7 - 27.05.25
+
+* intro to oop
+* inheritence:
+  * public vs private
+  * how it to compisiton
+* SOLID principle
+* inheritence vs composition
+* slicing in polyorphism
+* dipatch tables (virtual tables)
+
+### Object Oriented Programming
+
+* main features: dynamic polymorphism, inheritence and designing / modelling software in terms of objects.
+* further topics: 
+  * resource acquisition is initialization (RAII)
+  * desing patters and design choices
