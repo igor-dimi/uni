@@ -6,8 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="dcterms.date" content="2025-05-27">
 
-<title>My Uni Notes</title>
+<title>My Uni Notes - Week 7</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,6 +20,40 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -69,6 +104,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="../../../styles.css">
 </head>
@@ -129,7 +193,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../ss25/alda/sum/index.html">Weekly Summary</a></li><li class="breadcrumb-item"><a href="../../../ss25/alda/sum/w07.html">W07</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../ss25/alda/sum/index.html">Weekly Summary</a></li><li class="breadcrumb-item"><a href="../../../ss25/alda/sum/w07.html">Week 7</a></li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -189,7 +253,7 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../ss25/alda/sum/w07.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">W07</span></a>
+ <span class="menu-text">Week 7</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -242,16 +306,161 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#vl-13---27.05.25" id="toc-vl-13---27.05.25" class="nav-link active" data-scroll-target="#vl-13---27.05.25">VL 13 - 27.05.25</a>
+  <ul>
+  <li><a href="#complexity-cont." id="toc-complexity-cont." class="nav-link" data-scroll-target="#complexity-cont.">Complexity (Cont.)</a></li>
+  <li><a href="#data-structures" id="toc-data-structures" class="nav-link" data-scroll-target="#data-structures">Data Structures</a>
+  <ul>
+  <li><a href="#linked-list-data-structure" id="toc-linked-list-data-structure" class="nav-link" data-scroll-target="#linked-list-data-structure">Linked List Data Structure</a></li>
+  <li><a href="#dynamic-arrays" id="toc-dynamic-arrays" class="nav-link" data-scroll-target="#dynamic-arrays">Dynamic Arrays</a></li>
+  </ul></li>
+  </ul></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../ss25/alda/sum/index.html">Weekly Summary</a></li><li class="breadcrumb-item"><a href="../../../ss25/alda/sum/w07.html">Week 7</a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title">Week 7</h1>
+</div>
 
 
 
+<div class="quarto-title-meta">
+
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">May 27, 2025</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
 
 
+</header>
+
+
+<section id="vl-13---27.05.25" class="level2">
+<h2 class="anchored" data-anchor-id="vl-13---27.05.25">VL 13 - 27.05.25</h2>
+<section id="complexity-cont." class="level3">
+<h3 class="anchored" data-anchor-id="complexity-cont.">Complexity (Cont.)</h3>
+<ul>
+<li><p>we had <code>running_mean(a, k)</code> in O(k * N) when k = const independent from N.</p></li>
+<li><p>Consider two implementations, one of them uses an inappropriate data structure, and the other one a better one</p>
+<ol type="1">
+<li>:</li>
+</ol>
+<div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>r <span class="op">=</span> [<span class="dv">0</span>] <span class="op">*</span> <span class="bu">len</span>(a)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> j <span class="kw">in</span> <span class="bu">range</span>(k <span class="op">-</span> <span class="dv">1</span>, <span class="bu">len</span>(a)):</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(j <span class="op">-</span> k <span class="op">+</span> <span class="dv">1</span>, j <span class="op">+</span> <span class="dv">1</span>):</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>      r[j] <span class="op">=</span> r[j] <span class="op">+</span> get_item(a, i) <span class="co"># get_item(a, i) = O(i)</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  r[j] <span class="op">/=</span> k</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="cf">return</span> r</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>inner loop: <span class="math inline">\(\mathcal{O}(\Sigma_{i = r - j + k + 1}^{i = j + 1}(i) = \mathcal{O}(k\cdot j - k^2 / 2)) = \mathcal{O}(k\cdot j)\)</span> (k is constant) outer loop: calculating the outer loop we get … this is the real</p>
+<ol start="2" type="1">
+<li><p>when shifting the window there are many elements overlapping elements - recalculating the sum of each window is inefficient. Having calculated the sum of a single window, the next shift is simply obtained by removing the first element from the sum, and adding the first subsequent element outside of the window to the sum:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>r <span class="op">=</span> [<span class="dv">0</span>] <span class="op">*</span> <span class="bu">len</span>(a)</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="bu">range</span>(k): <span class="co"># O(k)</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>   r[k <span class="op">-</span> i] <span class="op">+=</span> a[i] </span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>  <span class="cf">for</span> j <span class="kw">in</span> <span class="bu">range</span>(k, <span class="bu">len</span>(a)):</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>   r[j] <span class="op">=</span> r[j <span class="op">-</span> <span class="dv">1</span>] <span class="op">-</span> a[j <span class="op">-</span> k] <span class="op">+</span> a[j]</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>  <span class="cf">for</span> j <span class="kw">in</span> <span class="bu">range</span>(k <span class="op">-</span> <span class="dv">1</span>, <span class="bu">len</span>(a)):</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>   r[j] <span class="op">/=</span> k</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> r</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+</ol>
+<p>This algorithm is O(N). Slight improvement reducerd the complexity.</p>
+<p>Which data structure is here inappropriate? <span class="math inline">\(\Rightarrow\)</span> linked list</p></li>
+</ul>
+</section>
+<section id="data-structures" class="level3">
+<h3 class="anchored" data-anchor-id="data-structures">Data Structures</h3>
+<section id="linked-list-data-structure" class="level4">
+<h4 class="anchored" data-anchor-id="linked-list-data-structure">Linked List Data Structure</h4>
+<p>a linked or doubliy linked list consists of:</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> Node:</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>    value <span class="co"># data element</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>    <span class="bu">next</span> <span class="co"># reference to another node object</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ul>
+<li><div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./imgs/w07/linked-list.png" class="img-fluid figure-img" style="width:90.0%"></p>
+<figcaption>linked-list</figcaption>
+</figure>
+</div></li>
+<li><div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./imgs/w07/doubly-linked-list.png" class="img-fluid figure-img" style="width:90.0%"></p>
+<figcaption>doubly linked list</figcaption>
+</figure>
+</div></li>
+<li><div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./imgs/w07/linked-list-remove.png" class="img-fluid figure-img" style="width:90.0%"></p>
+<figcaption>adding an element</figcaption>
+</figure>
+</div></li>
+</ul>
+<p>removing an element from or adding to a linked list at an arbitrary known position is <span class="math inline">\(\mathbb{O}(1)\)</span></p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> push_front(l, v):</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>    n <span class="op">=</span> Node()</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>    n.value <span class="op">=</span> v</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>    n.<span class="bu">next</span> <span class="op">=</span> l.start</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>    l.start <span class="op">=</span> n</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ul>
+<li>linked list is good for inserting or removing an element at an arbitrary location</li>
+<li>Observation:
+<ul>
+<li>in practice it is very often sufficient to simply add elements to the end or remove from the end, reducing the importance of linked list (after the element is added at the end of the array the array can be sorted if the order is important, instead of inserting at an arbitrary location)</li>
+<li>adding an element to the end of an array can be done <strong>efficiently</strong> in amortized time using <strong>dynamic arrays</strong></li>
+</ul></li>
+</ul>
+</section>
+<section id="dynamic-arrays" class="level4">
+<h4 class="anchored" data-anchor-id="dynamic-arrays">Dynamic Arrays</h4>
+<ul>
+<li>When appending an element to a full array, a new array with larger capacity is allocated an previous contents are copied over to the new array <span class="math inline">\(\Rightarrow\)</span> <strong>key point</strong>. The new capacity must be a <strong>multiple</strong> of old capacity. (if it is some constant the amortzied time won’t work)</li>
+<li>copying is <span class="math inline">\(\mathcal{O}(N)\)</span> but when capacity is doubled or increased depending on <span class="math inline">\(N\)</span>, this happens rarely. More precisely if the array is full, the first insert costs N. The subsequent N insert each cost 1. Thus in total N + 1 inserts cost 2N time, averaging 2 per insert. (amortized).
+<ul>
+<li>sometimes cheap: <span class="math inline">\(\mathcal{O}(1)\)</span></li>
+<li>sometimes expensive: <span class="math inline">\(\mathcal{O}(N)\)</span></li>
+</ul>
+<span class="math inline">\(\Rightarrow\)</span> amortized complexity. “amortized” comes from industry or econonmics. When an expensive machine is first purchased, or a large inverstment is initially made, there is first a loss. But over time the profit of the products of the machine or the investments covers (amortizes) the initial loss.</li>
+<li>formally calculation with the “accounting mehtod”:
+<ul>
+<li>dynamic array data structure carries around the infomration:
+<ul>
+<li><code>size</code>: amount of elements in the array</li>
+<li><code>capacity</code>: the total number of elements that can be stored in the array</li>
+</ul></li>
+<li>let at a given time <span class="math inline">\(i\)</span> these values be <code>size_i</code> and <code>capacity_i</code></li>
+<li>invariant of the data structure: <code>capacity_i &gt;= size_i</code></li>
+<li>Define <code>phi_i := size_i - capacity_i</code></li>
+<li>Then the costs of an append is: c_i = c~<em>i + (phi_i - phi</em>(i+1))
+<ul>
+<li><p><strong>case 1</strong>: there is free storage <span class="math inline">\(\Rightarrow\)</span> size_(i - 1) &lt; capacity_(i - 1), capacity_i = capacity_(i - 1), size_i = size_(i - 1) + 1.<br>
+c_i = 1 + (size_i - capacity_i) - (size_(i - 1) - capacity_(i - 1)) = 1 + 1 + 2</p></li>
+<li><p><strong>case 2</strong>: capacity is full <span class="math inline">\(\Rightarrow\)</span> double the capacity, and copy over the elements. size_i-1 = capacity_i-1, size_i = size_i-1 + 1.<br>
+c_i~ = 1 + size_i-1, copying the elements and appending the new element</p>
+<p>c_i = 1 + size_i-1 + (size_i - capacity_i) - (size_i-1 - capacity_i - 1) = 1 + 1 + size_i-1 - capacity_i-1</p>
+<p>simplifying we obtain</p></li>
+</ul></li>
+</ul></li>
+</ul>
+
+
+</section>
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
