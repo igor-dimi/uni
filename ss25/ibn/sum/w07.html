@@ -287,6 +287,15 @@ window.Quarto = {
   <li><a href="#paging-and-virtual-memory-applications" id="toc-paging-and-virtual-memory-applications" class="nav-link" data-scroll-target="#paging-and-virtual-memory-applications">Paging and Virtual Memory: Applications</a></li>
   <li><a href="#segmentation" id="toc-segmentation" class="nav-link" data-scroll-target="#segmentation">Segmentation</a></li>
   </ul></li>
+  <li><a href="#vl-14---28.05.25" id="toc-vl-14---28.05.25" class="nav-link" data-scroll-target="#vl-14---28.05.25">VL 14 - 28.05.25</a>
+  <ul>
+  <li><a href="#files-and-file-systems" id="toc-files-and-file-systems" class="nav-link" data-scroll-target="#files-and-file-systems">Files and File Systems</a>
+  <ul>
+  <li><a href="#types-of-files-and-directories" id="toc-types-of-files-and-directories" class="nav-link" data-scroll-target="#types-of-files-and-directories">Types of Files and Directories</a></li>
+  <li><a href="#file-operations" id="toc-file-operations" class="nav-link" data-scroll-target="#file-operations">File Operations</a></li>
+  <li><a href="#how-data-are-stored-on-magnetic-disks" id="toc-how-data-are-stored-on-magnetic-disks" class="nav-link" data-scroll-target="#how-data-are-stored-on-magnetic-disks">How Data are Stored on Magnetic Disks</a></li>
+  </ul></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -398,8 +407,97 @@ window.Quarto = {
 </ul></li>
 </ul></li>
 </ul>
+</section>
+</section>
+<section id="vl-14---28.05.25" class="level2">
+<h2 class="anchored" data-anchor-id="vl-14---28.05.25">VL 14 - 28.05.25</h2>
+<section id="files-and-file-systems" class="level3">
+<h3 class="anchored" data-anchor-id="files-and-file-systems">Files and File Systems</h3>
+<ul>
+<li>data (files) are the third and (final) abstraction that we will consider.</li>
+<li>why data:
+<ul>
+<li>long term storage</li>
+<li>RAM is limited</li>
+<li>persistency</li>
+</ul></li>
+<li>structuring of data
+<ul>
+<li>data as byte sequences</li>
+<li>sequence of data words</li>
+<li>data stored as a tree data structure (not used anymore)</li>
+</ul></li>
+</ul>
+<section id="types-of-files-and-directories" class="level4">
+<h4 class="anchored" data-anchor-id="types-of-files-and-directories">Types of Files and Directories</h4>
+<ul>
+<li>regular files: unstructured byte sequences</li>
+<li>directories: virtual ‘container / box’</li>
+<li>named pipes:</li>
+<li>sockets / socket devices</li>
+<li>virtual device files:</li>
+<li>file attributes
+<ul>
+<li>access rights, password, creator, owner, …</li>
+</ul></li>
+<li>Hierachical Filesystem :Tree like structure organized as nested directories - it is the defacto standard today
+<ul>
+<li>directories:
+<ul>
+<li>names of files and other directories</li>
+<li>I-nodes:</li>
+</ul></li>
+</ul></li>
+<li>Current file ssystems:
+<ul>
+<li>fat, fat32, ntfs</li>
+<li>linux: ext …</li>
+</ul></li>
+<li>links: a reference to a file or a directory
+<ul>
+<li>linux:
+<ul>
+<li>symbolic links</li>
+<li>hard links</li>
+</ul></li>
+</ul></li>
+</ul>
+</section>
+<section id="file-operations" class="level4">
+<h4 class="anchored" data-anchor-id="file-operations">File Operations</h4>
+<ul>
+<li>create, delete, open, close</li>
+<li>read / write</li>
+<li>append</li>
+<li>seek</li>
+</ul>
+</section>
+<section id="how-data-are-stored-on-magnetic-disks" class="level4">
+<h4 class="anchored" data-anchor-id="how-data-are-stored-on-magnetic-disks">How Data are Stored on Magnetic Disks</h4>
+<ul>
+<li>how magnetic disks are addressed:
+<ul>
+<li>sector</li>
+<li>cylinder</li>
+<li>ring number</li>
+</ul></li>
+<li>similar to virtual to physical address mapping, there is a logical to physical address translation</li>
+<li>how is it store in:
+<ul>
+<li>contigious <span class="math inline">\(\Rightarrow\)</span> fragmentation</li>
+<li>linked lists <span class="math inline">\(\Rightarrow\)</span> slow random access / seek
+<ul>
+<li>improvement <span class="math inline">\(\Rightarrow\)</span> FAT: only the ponters are stored in a table in RAM <span class="math inline">\(\Rightarrow\)</span> faster seek
+<ul>
+<li>disadvantages: the table itself might be too large</li>
+</ul></li>
+</ul></li>
+<li>i-nodes (best solution):</li>
+</ul></li>
+</ul>
 
 
+</section>
 </section>
 </section>
 
