@@ -63,3 +63,60 @@ Last memory management topic.
   * each processs has two descriptor tables:
     * **local descriptor table** (LDT)
     * **global descriptor table** (GDT)
+
+## VL 14 - 28.05.25
+
+### Files and File Systems
+
+* data (files) are the third and (final) abstraction that we will consider.
+* why data:
+  * long term storage
+  * RAM is limited
+  * persistency
+* structuring of data
+  * data as byte sequences
+  * sequence of data words
+  * data stored as a tree data structure (not used anymore)
+
+#### Types of Files and Directories
+
+* regular files: unstructured byte sequences
+* directories: virtual 'container / box'
+* named pipes: 
+* sockets / socket devices
+* virtual device files:
+* file attributes 
+  * access rights, password, creator, owner, ...
+* Hierachical Filesystem :Tree like structure organized as nested directories - it is the defacto standard today
+  * directories: 
+    * names of files and other directories
+    * I-nodes:
+* Current file ssystems:
+  * fat, fat32, ntfs
+  * linux: ext ...
+* links: a reference to a file or a directory
+  * linux:
+    * symbolic links
+    * hard links
+
+#### File Operations 
+
+* create, delete, open, close
+* read / write
+* append
+* seek
+
+#### How Data are Stored on Magnetic Disks
+
+* how magnetic disks are addressed:
+  * sector
+  * cylinder
+  * ring number
+* similar to virtual to physical address mapping, there is a logical
+  to physical address translation
+* how is it store in:
+  * contigious $\Rightarrow$ fragmentation
+  * linked lists $\Rightarrow$ slow random access / seek
+    * improvement $\Rightarrow$ FAT: only the ponters are stored in a table in RAM $\Rightarrow$ faster seek
+      * disadvantages: the table itself might be too large
+  * i-nodes (best solution): 
