@@ -6,8 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="dcterms.date" content="2025-06-03">
 
-<title>My Uni Notes</title>
+<title>My Uni Notes - Week 8</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,6 +20,40 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -69,6 +104,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="../../../styles.css">
 </head>
@@ -129,7 +193,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../ss25/alda/sum/index.html">Weekly Summary</a></li><li class="breadcrumb-item"><a href="../../../ss25/alda/sum/w08.html">W08</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../ss25/alda/sum/index.html">Weekly Summary</a></li><li class="breadcrumb-item"><a href="../../../ss25/alda/sum/w08.html">Week 8</a></li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -195,7 +259,7 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../ss25/alda/sum/w08.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">W08</span></a>
+ <span class="menu-text">Week 8</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -242,16 +306,189 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#vl-15---03.06.25" id="toc-vl-15---03.06.25" class="nav-link active" data-scroll-target="#vl-15---03.06.25">VL 15 - 03.06.25</a>
+  <ul>
+  <li><a href="#complexity-cont." id="toc-complexity-cont." class="nav-link" data-scroll-target="#complexity-cont.">Complexity (cont.)</a></li>
+  <li><a href="#complexity-of-recursive-algorithms" id="toc-complexity-of-recursive-algorithms" class="nav-link" data-scroll-target="#complexity-of-recursive-algorithms">Complexity of Recursive Algorithms</a></li>
+  <li><a href="#searching" id="toc-searching" class="nav-link" data-scroll-target="#searching">Searching</a>
+  <ul>
+  <li><a href="#key-search" id="toc-key-search" class="nav-link" data-scroll-target="#key-search">Key search</a>
+  <ul class="collapse">
+  <li><a href="#sequential-search" id="toc-sequential-search" class="nav-link" data-scroll-target="#sequential-search">Sequential search</a></li>
+  <li><a href="#faster-searching-algorithms" id="toc-faster-searching-algorithms" class="nav-link" data-scroll-target="#faster-searching-algorithms">Faster Searching Algorithms</a></li>
+  </ul></li>
+  </ul></li>
+  </ul></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../ss25/alda/sum/index.html">Weekly Summary</a></li><li class="breadcrumb-item"><a href="../../../ss25/alda/sum/w08.html">Week 8</a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title">Week 8</h1>
+</div>
 
 
 
+<div class="quarto-title-meta">
+
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">June 3, 2025</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
 
 
+</header>
+
+
+<section id="vl-15---03.06.25" class="level2">
+<h2 class="anchored" data-anchor-id="vl-15---03.06.25">VL 15 - 03.06.25</h2>
+<section id="complexity-cont." class="level3">
+<h3 class="anchored" data-anchor-id="complexity-cont.">Complexity (cont.)</h3>
+<ul>
+<li><p>wenn <span class="math inline">\(f(n) in \mathcal{O}(g(N))\)</span> dann gilt fuer die meisten ’interessanten” der <strong>Verschiebungsregel</strong> <span class="math inline">\(f(N + k) \in \mathcal{O}(g(N))\)</span> genau dann, wenn <span class="math inline">\(f(N + k) \leq b^k \cdot f(N)\)</span> fuer konstante <span class="math inline">\(b\)</span> und <span class="math inline">\(N \geq N_k\)</span> gilt.</p>
+<p><strong>proof</strong>:</p></li>
+<li><p>Examples:</p>
+<ul>
+<li><span class="math inline">\(f(N) = N^D\)</span> for <span class="math inline">\(D &gt; 0\)</span> (i.e.&nbsp;Monome, roots, …) <span class="math inline">\(f(N + k) = (N + k)^D \leq (2N)^D = 2^D\cdot N^D = 2^D\cdot f(N)\)</span>, (here we set <span class="math inline">\(N \geq k\)</span>)</li>
+<li><span class="math inline">\(f(N) = \log_a N\)</span> <span class="math inline">\(\Rightarrow\)</span> <span class="math inline">\(f(N + k) = \log_a (N + k) = \log_a N \cdot (1 + \frac{k}{N}) \leq ...\)</span></li>
+<li><span class="math inline">\(f(N) = a^N \Rightarrow f(N + k) - a^{N + k} = a^k \cdot a^N \rightarrow b = a\)</span></li>
+</ul></li>
+<li><p>Basically for these functions the shifting N -&gt; N + k doesn’t change the complexity class, (algorihtm will still run longer though)</p></li>
+</ul>
+</section>
+<section id="complexity-of-recursive-algorithms" class="level3">
+<h3 class="anchored" data-anchor-id="complexity-of-recursive-algorithms">Complexity of Recursive Algorithms</h3>
+<p>Runtime: <span class="math inline">\(T(N) = T_{\text{local}}(N) + \sum_{i} T_{\text{recursive}}(N_i)\)</span></p>
+<p>Two solution methods:</p>
+<ol type="1">
+<li><p>recursively substitute the definition of the formula within the sub formulas, until a simpler expression is reached. Even though this might be mathematically not exact it usually allows to guess a formula.</p></li>
+<li><p>master theorem:</p>
+<p>master theorem can be applied when:</p>
+<p><span class="math display">\[T(N) = T_{\text{local}}(N) + a \cdot T_{\text{recursive}}(N / b)\]</span></p>
+<p>i.e.&nbsp;<span class="math inline">\(a\)</span> recursive calls with smaller inputs: <span class="math inline">\(\frac{N}{b}\)</span></p>
+<ul>
+<li><p>recursions exponent: <span class="math inline">\(\rho = \log_b a\)</span></p>
+<p>three cases:</p>
+<ol type="1">
+<li><p><span class="math inline">\(T_{\text{local}}(N) \in \mathcal{O}(N^{\rho - \epsilon}\)</span>, for <span class="math inline">\(\epsilon &gt; 0\)</span>. Here the local computation is a little faster than <span class="math inline">\(N^{\rho}\)</span>. Then the complexity</p>
+<p><span class="math display">\[T(N) \in \Theta(N^{\rho})\]</span></p></li>
+<li><p><span class="math inline">\(T_{\text{local}}(N) \in \Theta(N^{\rho})\)</span>. Local computation as fast as <span class="math inline">\(N^{\rho}\)</span>. Complexity:</p>
+<p><span class="math display">\[T(N) \in \Theta(N^{\rho} \log N)\]</span></p></li>
+<li><p><span class="math inline">\(T_{\text{local}}(N) \in \Omega(N^{\rho + \epsilon})\)</span>, for <span class="math inline">\(\epsilon &gt; 0\)</span> and <span class="math inline">\(a\cdot T_{\text{local}}(\frac{N}{b}) \leq c \cdot T_{\text{local}}(N)\)</span>, s.t. <span class="math inline">\(c \leq 1\)</span>. then local computations dominate and we have:</p>
+<p><span class="math display">\[T(N) \in \Theta(T_{\text{local}}(N))\]</span></p></li>
+</ol></li>
+</ul></li>
+</ol>
+</section>
+<section id="searching" class="level3">
+<h3 class="anchored" data-anchor-id="searching">Searching</h3>
+<ul>
+<li>the most important quality criteria of a large DB is a powerful search function</li>
+<li>fundamnetal search types:
+<ul>
+<li>key search ()</li>
+<li>range search: keys are in an interval</li>
+<li>similarity search: finds elements whose keys are similar to the given key <span class="math inline">\(\Rightarrow\)</span>
+<ul>
+<li>correcting typing mistakes like google does it</li>
+<li>content-based search (?)</li>
+</ul></li>
+<li>Graph search: shortest path (navigation)</li>
+</ul></li>
+</ul>
+<section id="key-search" class="level4">
+<h4 class="anchored" data-anchor-id="key-search">Key search</h4>
+<section id="sequential-search" class="level5">
+<h5 class="anchored" data-anchor-id="sequential-search">Sequential search</h5>
+<ul>
+<li><p>when there is no order, the elements are not order by key</p></li>
+<li><p>advantages:</p>
+<ul>
+<li>no requirements of specifications how the data should be stored</li>
+<li>the keys must only support “<code>==</code>” and don’t have to support <code>&lt;=</code>.</li>
+</ul></li>
+<li><p>disadvantages: slow, <span class="math inline">\(\mathcal{O}(N)\)</span>.</p></li>
+<li><p>general implementation:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> sequential_search(a, target_key, key_function):</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="cf">for</span> i <span class="kw">in</span> ragen(<span class="bu">len</span>(a)):</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>      <span class="cf">if</span> key_function(a[i]) <span class="op">==</span> target_key:</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>          <span class="cf">return</span> i <span class="co"># or return a[i]</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> <span class="va">None</span> <span class="co"># not found</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>to simplify, we will omit the explicit usage of <code>key_function</code>. Then the elements themselves are the keys. But in practice usually a key function is necessary, since elements are objects or structures.</p>
+<p>The simplified version:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> sequential_search(a, target_key):</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(a)):</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>      <span class="cf">if</span> a[i] <span class="op">==</span> target_key: <span class="cf">return</span> i</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> <span class="va">None</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>We want faster searching</p></li>
+</ul>
+</section>
+<section id="faster-searching-algorithms" class="level5">
+<h5 class="anchored" data-anchor-id="faster-searching-algorithms">Faster Searching Algorithms</h5>
+<ul>
+<li>to have faster searching we need more information about the keys - they should support more than <code>==</code>,
+<ul>
+<li><code>&lt;=</code> (total Order): binary search, <span class="math inline">\(\mathcal{O}(\log N)\)</span></li>
+<li>hash-function: hashtable, <span class="math inline">\(\mathcal{O}(1)\)</span></li>
+<li>quantize-function: bucketarray, <span class="math inline">\(\mathcal{O}(1)\)</span> (or Bucket sort)</li>
+</ul></li>
+</ul>
+<hr>
+<ul>
+<li><p>Binary Search: Data are in a sorted array. We need a <code>&lt;</code> function.</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> [...] <span class="co"># define an unsorted array </span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>a.sort()</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>found <span class="op">=</span> binary_search(a, key) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+<li><p>implementation:</p>
+<div id="c6d04d6c" class="cell" data-execution_count="1">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> binary_search_impl(a, key, start, end):</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  size <span class="op">=</span> end <span class="op">-</span> start</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> size <span class="op">&lt;</span> <span class="dv">0</span> : <span class="cf">return</span> <span class="va">None</span> <span class="co"># not found</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>  center <span class="op">=</span> (start <span class="op">+</span> end) <span class="op">//</span> <span class="dv">2</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> a[center] <span class="op">==</span> key: <span class="cf">return</span> center</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> a[center] <span class="op">&lt;</span> key: <span class="cf">return</span> binary_search_impl(a, key, center <span class="op">+</span> <span class="dv">1</span>, end)</span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>  <span class="cf">else</span> : <span class="cf">return</span> binary_search_impl(a, key, start, center <span class="op">-</span> <span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="02b02b9c" class="cell" data-execution_count="2">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> binary_search(a, key):</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> binary_search_impl(a, key, <span class="dv">0</span>, <span class="bu">len</span>(a)) <span class="co"># divide and conquer</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="951e4efe" class="cell" data-execution_count="3">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> [<span class="dv">2</span>, <span class="dv">1</span>, <span class="op">-</span><span class="dv">3</span>, <span class="dv">4</span>]</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>a.sort()</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>binary_search(a, <span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="3">
+<pre><code>1</code></pre>
+</div>
+</div></li>
+<li><p>complexity analsysi - we apply the master theorem: <span class="math inline">\(T(N) = T_{\text{local}}(N) + a T_{\text{recursive}}(\frac{N}{2})\)</span>. Then we have:</p>
+<ul>
+<li><span class="math inline">\(T_l = O(1)\)</span></li>
+<li><span class="math inline">\(a = 1\)</span></li>
+<li><span class="math inline">\(b = 2\)</span></li>
+<li><span class="math inline">\(\rho = \log_2 1 = 0 \Rightarrow L_ ...\)</span></li>
+</ul></li>
+</ul>
+
+
+</section>
+</section>
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
