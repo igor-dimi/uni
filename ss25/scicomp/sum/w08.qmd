@@ -1,0 +1,16 @@
+---
+title: Week 08
+date: 06/03/2025
+---
+
+## VL 8 - 03.06.25
+
+* inheritence (cont.)
+  * private / public inheritence
+  * descructors, inheriting descructors, destruction order
+* SOLID principle discussion
+* dynamic polymorphisdm, virtual methods, vtables
+* interfaces 
+* multiple inheritence - diamong of death
+* RAII - resource allocation is acquisition   
+  * example of a custom smart pointer implementation - should be avoided of course
