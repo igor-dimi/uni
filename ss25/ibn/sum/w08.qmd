@@ -1,0 +1,29 @@
+---
+title: Week 8
+date: 06/02/2025
+---
+
+## VL 15
+
+### File Systems (cont.)
+
+* inodes (cont.) 
+* MBR (booting)
+* FATx - MS-DOS
+* UNIX-V7 
+* structure of a hard disk
+    * shortest seek time first (sstf)
+
+#### RAID Systems
+
+* RAID 0
+* RAID 1 
+    * mirroring
+    * duplexing
+* RAID 2 - bit-level striping, too complicated due to the need
+  to synchronize hard disks 
+* RAID 3 - XOR (reconstructing ), implementation is also very complex
+* RAID 4
+* RAID 5
+* RAID 6 - like RAID 5 but wwith reed-solomon codes instead of XOR. 
+
