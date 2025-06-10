@@ -144,7 +144,7 @@ Two solution methods:
   * $b = 2$
   * $\rho = \log_2 1 = 0 \Rightarrow L_ ...$
 
-## VL 18 - 05.06.25
+## VL 16 - 05.06.25
 
 Sorting is O(nlog(n)), sequential searching of unsorted structures is O(n), which is faster.
 Binary search is O(log(n)) and hash table search is O(1). Binary search must be performed on a sorted 
