@@ -6,9 +6,15 @@ date: 06/10/2025
 ## VL 9 - 10.06.25
 
 * desing patterns:
-  * singleton
-  * factory pattern - factory objects
-  * factory pattern - extensible factory objects (used in Google Test)
-  * builder pattern - constructing complex objects
-  * combining builder pattern with factories
-  * 
+  * creational patterns:
+    * singleton
+    * factory pattern - factory objects
+    * factory pattern - extensible factory objects (used in Google Test)
+    * builder pattern - constructing complex objects
+    * combining builder pattern with factories
+    * builder pattern - dynamic polymorphism through lambdas
+  * behavioral patterns: next time
+* program design outline: 
+* template metaprogramming:
+  * function template specialization
+  * class template specialization
