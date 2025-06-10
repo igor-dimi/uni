@@ -405,7 +405,7 @@ window.Quarto = {
 <li>the memory is initialized to a valid initial state. (otherwise we can’t be sure if operations performed on this object will deliver correct results)</li>
 <li>in python the constructor has the same name as the data type:
 <ul>
-<li><div id="4c94cb07" class="cell" data-execution_count="1">
+<li><div id="3d5425cf" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>i <span class="op">=</span> <span class="bu">int</span>()<span class="op">;</span> f <span class="op">=</span> <span class="bu">float</span>()<span class="op">;</span> a <span class="op">=</span> <span class="bu">list</span>()</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>i2 <span class="op">=</span> <span class="bu">int</span>(<span class="dv">7</span>)<span class="op">;</span> f2 <span class="op">=</span> <span class="bu">float</span>(<span class="dv">10</span>)<span class="op">;</span> b <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">2</span>]</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"i:"</span>, i, <span class="st">"f:"</span>, f, <span class="st">"a: "</span>, a)</span>
@@ -425,7 +425,7 @@ i2: 7 f2: 10.0 b:  [1, 2]</code></pre>
 <li><p>equal: same value / contents</p></li>
 <li><p>identical: same object in the memory</p></li>
 <li><p>comparing the identity of objects with <code>id()</code> or with <code>is</code></p>
-<div id="f351eb2c" class="cell" data-execution_count="2">
+<div id="d1de2b0f" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">2</span>]</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>b <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">2</span>]</span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>c <span class="op">=</span> b</span>
@@ -473,7 +473,7 @@ i2: 7 f2: 10.0 b:  [1, 2]</code></pre>
 <li>In python all assignments use reference semantics, and in general python uses reference semantics
 <ul>
 <li><p>Example</p>
-<div id="2d6a599e" class="cell" data-execution_count="3">
+<div id="2bbd663d" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">2</span>]</span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>b <span class="op">=</span> a</span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>a[<span class="dv">0</span>] <span class="op">=</span> <span class="op">-</span><span class="dv">1</span></span>
@@ -485,7 +485,7 @@ i2: 7 f2: 10.0 b:  [1, 2]</code></pre>
 </div>
 </div>
 <p>if we want to create another list object with a different identity but same value as <code>a</code> we use <code>.copy()</code> operator:</p>
-<div id="89522c5c" class="cell" data-execution_count="4">
+<div id="a5368b8a" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">2</span>]</span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>b <span class="op">=</span> a.copy()</span>
 <span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"1:"</span>, a <span class="op">==</span> b)</span>
@@ -499,7 +499,7 @@ i2: 7 f2: 10.0 b:  [1, 2]</code></pre>
 </div>
 </div>
 <p>Elementary data-types like numbers or booleans are immutable by default, which gives the ‘illusion’ of reference semantics.</p>
-<div id="c71e0041" class="cell" data-execution_count="5">
+<div id="21ddaa81" class="cell" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> <span class="dv">1</span></span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>b <span class="op">=</span> a</span>
 <span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"1:"</span>, a <span class="kw">is</span> b)</span>
@@ -553,7 +553,7 @@ i2: 7 f2: 10.0 b:  [1, 2]</code></pre>
 <li><strong>postcondition</strong>: <code>len(a) == size</code> and <code>for all i in [0,..., size - 1]: get(a, i) == initial_value</code></li>
 </ul></li>
 <li><p><strong>python</strong>:</p>
-<div id="d6b2e01c" class="cell" data-execution_count="6">
+<div id="3324ec55" class="cell" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> <span class="bu">list</span>() <span class="co"># empty array with size == 0</span></span>
 <span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>b <span class="op">=</span> [<span class="dv">3</span>] <span class="op">*</span> <span class="dv">10</span></span>
 <span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>c <span class="op">=</span> [<span class="op">-</span><span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="st">'c'</span>]</span>
@@ -574,7 +574,7 @@ i2: 7 f2: 10.0 b:  [1, 2]</code></pre>
 <li><strong>postcondition</strong>: <code>k == size</code></li>
 </ul></li>
 <li><p><strong>python</strong>:</p>
-<div id="1c0181f1" class="cell" data-execution_count="7">
+<div id="c543eb9a" class="cell" data-execution_count="7">
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> [<span class="va">None</span>] <span class="op">*</span> <span class="dv">10</span></span>
 <span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="bu">len</span>(a)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="7">
@@ -591,7 +591,7 @@ i2: 7 f2: 10.0 b:  [1, 2]</code></pre>
 <li><strong>postcondition</strong>: <code>len(a) == size</code> and <code>for all i in [0,..., size - 1]: get(a, i) == initial_value</code></li>
 </ul></li>
 <li><p><strong>python</strong>:</p>
-<div id="2c9f572a" class="cell" data-execution_count="8">
+<div id="f8bfdf3a" class="cell" data-execution_count="8">
 <div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>]</span>
 <span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>v <span class="op">=</span> a.<span class="fu">__getitem__</span>(<span class="dv">2</span>)</span>
 <span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>v <span class="op">=</span> a[<span class="dv">2</span>]</span>
@@ -610,7 +610,7 @@ i2: 7 f2: 10.0 b:  [1, 2]</code></pre>
 <li><strong>postcondition</strong>: <code>get(a, i) == v</code></li>
 </ul></li>
 <li><p><strong>python</strong>:</p>
-<div id="71763aad" class="cell" data-execution_count="9">
+<div id="c0fd4d3e" class="cell" data-execution_count="9">
 <div class="sourceCode cell-code" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> [<span class="op">-</span><span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>]</span>
 <span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>a.<span class="fu">__setitem__</span>(<span class="dv">1</span>, <span class="st">'c'</span>)</span>
 <span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>a[<span class="dv">2</span>] <span class="op">=</span> <span class="st">'d'</span></span>

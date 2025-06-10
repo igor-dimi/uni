@@ -323,6 +323,16 @@ window.Quarto = {
   </ul></li>
   </ul></li>
   </ul></li>
+  <li><a href="#vl-18---05.06.25" id="toc-vl-18---05.06.25" class="nav-link" data-scroll-target="#vl-18---05.06.25">VL 18 - 05.06.25</a>
+  <ul>
+  <li><a href="#search-trees" id="toc-search-trees" class="nav-link" data-scroll-target="#search-trees">Search Trees</a>
+  <ul>
+  <li><a href="#tree-data-structure" id="toc-tree-data-structure" class="nav-link" data-scroll-target="#tree-data-structure">Tree Data Structure</a>
+  <ul class="collapse">
+  <li><a href="#implementation" id="toc-implementation" class="nav-link" data-scroll-target="#implementation">Implementation</a></li>
+  </ul></li>
+  </ul></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -454,7 +464,7 @@ window.Quarto = {
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>a.sort()</span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>found <span class="op">=</span> binary_search(a, key) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
 <li><p>implementation:</p>
-<div id="ebe3bc5e" class="cell" data-execution_count="1">
+<div id="31f077d0" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> binary_search_impl(a, key, start, end):</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  size <span class="op">=</span> end <span class="op">-</span> start</span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> size <span class="op">&lt;</span> <span class="dv">0</span> : <span class="cf">return</span> <span class="va">None</span> <span class="co"># not found</span></span>
@@ -463,11 +473,11 @@ window.Quarto = {
 <span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> a[center] <span class="op">&lt;</span> key: <span class="cf">return</span> binary_search_impl(a, key, center <span class="op">+</span> <span class="dv">1</span>, end)</span>
 <span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>  <span class="cf">else</span> : <span class="cf">return</span> binary_search_impl(a, key, start, center <span class="op">-</span> <span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="6c23c156" class="cell" data-execution_count="2">
+<div id="9aa48305" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> binary_search(a, key):</span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> binary_search_impl(a, key, <span class="dv">0</span>, <span class="bu">len</span>(a)) <span class="co"># divide and conquer</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="f17a42a7" class="cell" data-execution_count="3">
+<div id="b15c13fe" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> [<span class="dv">2</span>, <span class="dv">1</span>, <span class="op">-</span><span class="dv">3</span>, <span class="dv">4</span>]</span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>a.sort()</span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>binary_search(a, <span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -483,6 +493,136 @@ window.Quarto = {
 <li><span class="math inline">\(\rho = \log_2 1 = 0 \Rightarrow L_ ...\)</span></li>
 </ul></li>
 </ul>
+</section>
+</section>
+</section>
+</section>
+<section id="vl-18---05.06.25" class="level2">
+<h2 class="anchored" data-anchor-id="vl-18---05.06.25">VL 18 - 05.06.25</h2>
+<p>Sorting is O(nlog(n)), sequential searching of unsorted structures is O(n), which is faster. Binary search is O(log(n)) and hash table search is O(1). Binary search must be performed on a sorted structure. So if we were to resort every time we insert an element it would be less effective than sequential searching. Therefore we need a better way to keep the data structure sorted <span class="math inline">\(\Rightarrow\)</span> Search trees</p>
+<section id="search-trees" class="level3">
+<h3 class="anchored" data-anchor-id="search-trees">Search Trees</h3>
+<ul>
+<li><strong>Goal</strong>: inserting, removing, sorting all O(log(N))</li>
+<li><strong>Def</strong>:
+<ul>
+<li><strong>Graph</strong>:
+<ul>
+<li>nodes: data elements</li>
+<li>edges: connections</li>
+</ul></li>
+<li><strong>path</strong>: a sequence of nodes where each node in the sequence are connected by an edge.</li>
+<li><strong>Tree</strong>:: any arbitrary pair of nodes are connected with a unique path. In such graphs there are no cycles.</li>
+<li><strong>Root</strong>: an arbitrarily selected node.</li>
+</ul></li>
+</ul>
+<section id="tree-data-structure" class="level4">
+<h4 class="anchored" data-anchor-id="tree-data-structure">Tree Data Structure</h4>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./imgs/w08/tree.png" class="img-fluid figure-img" style="width:60.0%"></p>
+<figcaption>tree ds</figcaption>
+</figure>
+</div>
+<ul>
+<li><strong>Binary Tree</strong>: a node has at most three neighbors
+<ul>
+<li><strong>parent</strong>: every node other than the root node (that was chosen arbitrarily) has a unique parent</li>
+<li><strong>child</strong>: every node other than the leave nodes have children</li>
+<li><strong>leaf</strong>: nodes that don’t have children</li>
+<li><strong>interior node</strong>:</li>
+<li><strong>sub-tree</strong>: in a binary tree the sub-trees get exponentially smaller (each time they are <em>halved</em>).</li>
+</ul></li>
+</ul>
+<section id="implementation" class="level5">
+<h5 class="anchored" data-anchor-id="implementation">Implementation</h5>
+<div class="sourceCode" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> Node:</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, key, value):</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>    <span class="va">self</span>.key <span class="op">=</span> key</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>    <span class="va">self</span>.value <span class="op">=</span> value</span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>    <span class="va">self</span>.left <span class="op">=</span> <span class="va">self</span>.right <span class="op">=</span> <span class="va">None</span> <span class="co"># a node is initially a leaf</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Example construction of a tree (to simplify we omit value, i.e.&nbsp;keys are values themselves):</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>root <span class="op">=</span>  Node(<span class="st">"R"</span>)</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>root.left <span class="op">=</span> Node(<span class="st">"A"</span>)</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>root.right <span class="op">=</span> Node(<span class="st">"B"</span>)</span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>root.right.left <span class="op">=</span> Node(<span class="st">"C"</span>)</span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>root.right.right <span class="op">=</span> Node(<span class="st">"D"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ul>
+<li>binary tree <span class="math inline">\(\Rightarrow\)</span> <strong>binary <em>search</em> Tree</strong> when Search tree conditions are satisfied. Search tree conditions:
+<ol type="1">
+<li>keys are <strong>totally</strong> ordered</li>
+<li>for each node holds:
+<ol type="1">
+<li>all the nodes in the left substree are smaller or equal</li>
+<li>all the nodes in right substree are greater</li>
+</ol></li>
+</ol></li>
+<li><strong>tree search</strong>: recursively:
+<ul>
+<li>if the <code>target_key</code> is greater than the ucrrent node: search in right subtree</li>
+<li>otherwise search in the left subtree</li>
+</ul></li>
+</ul>
+<p>implementation:</p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> tree_serch(node, target_key):</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> node <span class="kw">is</span> <span class="va">None</span>: <span class="cf">return</span> <span class="va">None</span></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> node.key <span class="op">==</span> target_key: <span class="cf">return</span> node</span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> target_key <span class="op">&lt;</span> node.key: <span class="cf">return</span> tree_search(node.left, target_key)</span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>  <span class="cf">else</span> <span class="cf">return</span> tree_search(node.right, target_key)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>The tree should be maintained s.t. the search tree condition is always true and the tree is balanced. If the tree is not balanced it deteriorates to a linear search.</p>
+<ul>
+<li><p><strong>Insertion</strong>: Elements should be inserted s.t. the search tree condition is always satisfied.</p>
+<ul>
+<li>if target key larger / smaller then current key: insert in right / left subtree</li>
+<li>what to do when the key is already there?
+<ul>
+<li>option1: raise error (not a good solution)</li>
+<li>overwrite the data value with the new data value (this is what’s done in arrays anyways. )</li>
+</ul></li>
+</ul></li>
+<li><p><strong>Implementation</strong>:</p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> tree_insert(node, key, value):</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> node <span class="kw">is</span> <span class="va">None</span>: <span class="cf">return</span> Node(key, value)</span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> node.key <span class="op">==</span> key:</span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>    node.value <span class="op">=</span> value <span class="co"># return value </span></span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> node</span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> key <span class="op">&lt;</span> node.key:</span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a>    node.left <span class="op">=</span> tree_insert(node.left, key, value)</span>
+<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a>  <span class="cf">else</span>:</span>
+<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a>    node.right <span class="op">=</span> tree_inssert(node.right, key, value)</span>
+<span id="cb11-10"><a href="#cb11-10" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> node</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+<li><p>bad sequnces of insertions cna cause a tree to detoriarete to a linked list:</p></li>
+</ul>
+<div class="sourceCode" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="co"># good sequence</span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>root <span class="op">=</span> <span class="va">None</span></span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>root <span class="op">=</span>  tree_insert(root, <span class="dv">4</span>)</span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>root <span class="op">=</span> tree_insert(root, <span class="dv">2</span>)</span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>root <span class="op">=</span> tree_insert(root, <span class="dv">3</span>)</span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a>root <span class="op">=</span> tree_insert(root, <span class="dv">3</span>)</span>
+<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a>root <span class="op">=</span> tree_insert(root, <span class="dv">6</span>)</span>
+<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a><span class="co"># bad sequence: 2, 3, 4, 6</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./imgs/w08/good-bad-sequence.png" class="img-fluid figure-img" style="width:65.0%"></p>
+<figcaption>good &amp; bad sequences</figcaption>
+</figure>
+</div>
+<ul>
+<li><strong>Deletion</strong>: deletion should preserve the search condition:
+<ul>
+<li>case 0: key doesn’t exist: raise error or don’t do anything</li>
+<li>case 1: key is a leaf: remove the leaf (set it to None)</li>
+<li>case 2: node has a single child: replace the none</li>
+<li>case 3: node has two children (difficult case)
+<ul>
+<li>search for neighbors (predeccessor or successor) of the node in the order and replace it</li>
+<li>remove the neighbors of its children form the prefvious posisiont</li>
+</ul></li>
+</ul></li>
+</ul>
+<p>```python # hilfsfunction for predecossor def tree_predecessor(node): node = node.left while node right is not None: node = node.right return node</p>
+<p>def tree_remove(node, key): if node is None: return None # 0th case if key &lt; node.key: node.left = tree_remove(node.left, key) # elif key &gt; node.key: node.right = tree_remove(node.right, key) else: # key == node.key if node.left is None and node.right is None: return None # 1st case if node.left is None: return node.right if node.right is None: return node.left pred = tree_predecessor(node) node.key = pred.key; node.value = pred.value # copy the predecessor node.left = tree_remove(node.left, pred.key) # remove old predecessor return node</p>
 
 
 </section>
