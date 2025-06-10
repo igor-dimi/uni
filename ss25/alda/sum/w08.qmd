@@ -281,4 +281,5 @@ def tree_remove(node, key):
     node.key = pred.key; node.value = pred.value # copy the predecessor
     node.left = tree_remove(node.left, pred.key) # remove old predecessor
     return node
+```
 
