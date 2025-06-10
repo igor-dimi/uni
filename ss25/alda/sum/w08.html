@@ -323,7 +323,7 @@ window.Quarto = {
   </ul></li>
   </ul></li>
   </ul></li>
-  <li><a href="#vl-18---05.06.25" id="toc-vl-18---05.06.25" class="nav-link" data-scroll-target="#vl-18---05.06.25">VL 18 - 05.06.25</a>
+  <li><a href="#vl-16---05.06.25" id="toc-vl-16---05.06.25" class="nav-link" data-scroll-target="#vl-16---05.06.25">VL 16 - 05.06.25</a>
   <ul>
   <li><a href="#search-trees" id="toc-search-trees" class="nav-link" data-scroll-target="#search-trees">Search Trees</a>
   <ul>
@@ -464,7 +464,7 @@ window.Quarto = {
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>a.sort()</span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>found <span class="op">=</span> binary_search(a, key) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
 <li><p>implementation:</p>
-<div id="0cf9874e" class="cell" data-execution_count="1">
+<div id="785aeb63" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> binary_search_impl(a, key, start, end):</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  size <span class="op">=</span> end <span class="op">-</span> start</span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> size <span class="op">&lt;</span> <span class="dv">0</span> : <span class="cf">return</span> <span class="va">None</span> <span class="co"># not found</span></span>
@@ -473,11 +473,11 @@ window.Quarto = {
 <span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> a[center] <span class="op">&lt;</span> key: <span class="cf">return</span> binary_search_impl(a, key, center <span class="op">+</span> <span class="dv">1</span>, end)</span>
 <span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>  <span class="cf">else</span> : <span class="cf">return</span> binary_search_impl(a, key, start, center <span class="op">-</span> <span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="6a4adcfd" class="cell" data-execution_count="2">
+<div id="fdadc285" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> binary_search(a, key):</span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> binary_search_impl(a, key, <span class="dv">0</span>, <span class="bu">len</span>(a)) <span class="co"># divide and conquer</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="32fe502b" class="cell" data-execution_count="3">
+<div id="2680ded6" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> [<span class="dv">2</span>, <span class="dv">1</span>, <span class="op">-</span><span class="dv">3</span>, <span class="dv">4</span>]</span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>a.sort()</span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>binary_search(a, <span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -497,8 +497,8 @@ window.Quarto = {
 </section>
 </section>
 </section>
-<section id="vl-18---05.06.25" class="level2">
-<h2 class="anchored" data-anchor-id="vl-18---05.06.25">VL 18 - 05.06.25</h2>
+<section id="vl-16---05.06.25" class="level2">
+<h2 class="anchored" data-anchor-id="vl-16---05.06.25">VL 16 - 05.06.25</h2>
 <p>Sorting is O(nlog(n)), sequential searching of unsorted structures is O(n), which is faster. Binary search is O(log(n)) and hash table search is O(1). Binary search must be performed on a sorted structure. So if we were to resort every time we insert an element it would be less effective than sequential searching. Therefore we need a better way to keep the data structure sorted <span class="math inline">\(\Rightarrow\)</span> Search trees</p>
 <section id="search-trees" class="level3">
 <h3 class="anchored" data-anchor-id="search-trees">Search Trees</h3>
