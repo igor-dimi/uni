@@ -107,7 +107,9 @@ Two solution methods:
 
 ---
 
-* Binary Search: Data are in a sorted array. We need a `<` function.
+###### Binary Search
+
+Data are in a sorted array. We need a `<` function.
   
   ```python
   a = [...] # define an unsorted array 
@@ -137,6 +139,31 @@ Two solution methods:
   a.sort()
   binary_search(a, 1)
   ```
+
+###### Binary Search Iterative
+
+* implementation:
+
+```{python}
+def binary_search_it_impl(a, key, begin, end):
+    size = end - begin
+    center = (begin + end) // 2
+    # invariant: key possibly in a[begin : end]
+    while size != 0 :
+        if a[center] == key: return center
+        if key > a[center]: begin = center + 1
+        if key < a[center]: end = center
+        center = (begin + end) // 2
+        size = end - begin
+    # size == 0
+    return None 
+
+def binary_search_it(a, key):
+    return binary_search_it_impl(a, key, 0, len(a))
+
+print(a)
+print(binary_search_it([3, 4], 4))
+```
 
 * complexity analsysi - we apply the master theorem: $T(N) = T_{\text{local}}(N) + a T_{\text{recursive}}(\frac{N}{2})$. Then we have:
   * $T_l = O(1)$
