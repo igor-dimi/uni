@@ -1,0 +1,14 @@
+---
+title: Week 09
+date: 06/10/2025
+---
+
+## VL 9 - 10.06.25
+
+* desing patterns:
+  * singleton
+  * factory pattern - factory objects
+  * factory pattern - extensible factory objects (used in Google Test)
+  * builder pattern - constructing complex objects
+  * combining builder pattern with factories
+  * 
