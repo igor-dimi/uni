@@ -21,6 +21,40 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -31,7 +65,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../../">
-<link href="../../../ss25/alda/sum/w11.html" rel="next">
+<link href="../../../ss25/alda/sum/w10.html" rel="next">
 <link href="../../../ss25/alda/sum/w08.html" rel="prev">
 <script src="../../../site_libs/quarto-html/quarto.js"></script>
 <script src="../../../site_libs/quarto-html/popper.min.js"></script>
@@ -70,6 +104,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="../../../styles.css">
 </head>
@@ -207,6 +270,12 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="../../../ss25/alda/sum/w10.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">W10</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="../../../ss25/alda/sum/w11.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">W11</span></a>
   </div>
@@ -247,7 +316,17 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#vl-17---10.06.25" id="toc-vl-17---10.06.25" class="nav-link active" data-scroll-target="#vl-17---10.06.25">VL 17 - 10.06.25</a></li>
+  <li><a href="#vl-17---10.06.25" id="toc-vl-17---10.06.25" class="nav-link active" data-scroll-target="#vl-17---10.06.25">VL 17 - 10.06.25</a>
+  <ul>
+  <li><a href="#search-trees-cont." id="toc-search-trees-cont." class="nav-link" data-scroll-target="#search-trees-cont.">Search Trees (Cont.)</a>
+  <ul>
+  <li><a href="#data-structures-for-balanced-trees-not-necessarily-perfect" id="toc-data-structures-for-balanced-trees-not-necessarily-perfect" class="nav-link" data-scroll-target="#data-structures-for-balanced-trees-not-necessarily-perfect">Data Structures for Balanced Trees (Not Necessarily Perfect)</a>
+  <ul class="collapse">
+  <li><a href="#fundamental-operation-rotation" id="toc-fundamental-operation-rotation" class="nav-link" data-scroll-target="#fundamental-operation-rotation">Fundamental Operation: Rotation</a></li>
+  <li><a href="#anderson-trees" id="toc-anderson-trees" class="nav-link" data-scroll-target="#anderson-trees">Anderson Trees</a></li>
+  </ul></li>
+  </ul></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -281,8 +360,150 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="vl-17---10.06.25" class="level2">
 <h2 class="anchored" data-anchor-id="vl-17---10.06.25">VL 17 - 10.06.25</h2>
+<section id="search-trees-cont." class="level3">
+<h3 class="anchored" data-anchor-id="search-trees-cont.">Search Trees (Cont.)</h3>
+<ul>
+<li>complexity of the tree-search:
+<ul>
+<li>T(tree) = O(number of comparisons)</li>
+<li>number of comparisons = length of the path from the root to the target, or “not found”</li>
+</ul></li>
+<li>extreme cases:
+<ul>
+<li><strong>degenerate tree</strong>: all nodes have at most one child <span class="math inline">\(\Rightarrow\)</span> the tree is a linear list <span class="math inline">\(\Rightarrow\)</span> O(N)</li>
+<li><strong>complete tree</strong>:
+<ul>
+<li>first we define depth of a node as the length of the path from the root to the node.</li>
+<li>then a complete tree is defined as a tree s.t.
+<ul>
+<li>every non-leaf node has two children</li>
+<li>all nodes that have the same depth have the same amount of children</li>
+<li><span class="math inline">\(\Rightarrow\)</span> <span class="math inline">\(N = 2^d - 1\)</span>, O(d) = O(log(N))</li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./imgs/w09/complete-tree.png" class="img-fluid figure-img" style="width:55.0%"></p>
+<figcaption>complete-tree</figcaption>
+</figure>
+</div>
+<ul>
+<li><strong>sentinel</strong>:
+<ul>
+<li>obervation: all invalid (empty) children point to None</li>
+<li>idea: insert <code>None</code> as an actual node, a so-called “sentinel” in the graph:</li>
+</ul></li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./imgs/w09/sentinel.png" class="img-fluid figure-img" style="width:75.0%"></p>
+<figcaption>sentinel</figcaption>
+</figure>
+</div>
+<ul>
+<li>RS-path (root-sentinel path): any path from root to None (sentinel)
+<ul>
+<li>m := min(|RS|)</li>
+<li>M := max(|RS|)</li>
+</ul></li>
+<li>given these, the definition of a complete tree can be simplified as a tree s.t. m = M</li>
+<li><strong>perfect balanced tree</strong>: M &lt;= m + 1, or nodes with less than two children only in the last or forelast levels</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./imgs/w09/perfectly-balanced.png" class="img-fluid figure-img" style="width:55.0%"></p>
+<figcaption>perfectly-balanced</figcaption>
+</figure>
+</div>
+<ul>
+<li>search in worst case does M - 1 comparisons which is approx log(N).</li>
+<li>In order for the tree-search to be efficient, the balance sof the tree should be preserved during the insert / remove operations</li>
+<li>Oldest idea: AVL-trees - always pefectly balanced, but this is complicated and actually <strong>unneccesary</strong>.</li>
+<li>We weaken the condition of <strong>perfectly</strong> balanced and instead only require balanced <span class="math inline">\(\Rightarrow\)</span> Number of comparisons = M - 1 = k * log(N), where k &gt;= 1 is a constant that is independent from N.</li>
+</ul>
+<section id="data-structures-for-balanced-trees-not-necessarily-perfect" class="level4">
+<h4 class="anchored" data-anchor-id="data-structures-for-balanced-trees-not-necessarily-perfect">Data Structures for Balanced Trees (Not Necessarily Perfect)</h4>
+<ul>
+<li>Red-Black Trees: standard implementation</li>
+<li>Anderson Trees: simplification of Red-Black Trees, later</li>
+<li>Treap: combination with priority search-trees, i.e.&nbsp;Heaps
+<ul>
+<li>Heaps are trees where the the least or largest element are searched.</li>
+</ul></li>
+</ul>
+<section id="fundamental-operation-rotation" class="level5">
+<h5 class="anchored" data-anchor-id="fundamental-operation-rotation">Fundamental Operation: Rotation</h5>
+<ul>
+<li>Goal: a simple re-structuring of the tree s.t.
+<ol type="1">
+<li>search-tree condition is preserved</li>
+<li>balance is improved (M - m is reduced, or at least doesn’t get larger, because sometimes multiple subsequent rotations are necessary)</li>
+</ol></li>
+<li>Two types of rotation:
+<ul>
+<li>RS-path of the left sub-tree is longer <span class="math inline">\(\Rightarrow\)</span> right-rotation</li>
+<li>RS-path of the right sub-tree is longer <span class="math inline">\(\Rightarrow\)</span> left-rotation</li>
+</ul></li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./imgs/w09/rotation.png" class="img-fluid figure-img" style="width:75.0%"></p>
+<figcaption>rotatoin</figcaption>
+</figure>
+</div>
+<ul>
+<li><p>naive idea is the simply assign “5” as the new root, but this won’t always work when new node is inserted, but the core idea is stil correct immediately</p></li>
+<li><p>let’s consider a general situation:</p></li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./imgs/w09/rotation-2.png" class="img-fluid figure-img" style="width:75.0%"></p>
+<figcaption>general rotation</figcaption>
+</figure>
+</div>
+<ul>
+<li>advantage of rotation: local operation: you only have to ‘know’ the root and its children, not the whole tree</li>
+<li>implementation:</li>
+</ul>
+<div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> tree_rotate_right(node):</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    new_root <span class="op">=</span> node.left</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    node.left <span class="op">=</span> new_root.right</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    new_root.right <span class="op">=</span> node</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> new_root <span class="co"># inform Roots parent aboaut change</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> tree_rotate_left(node):</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>    new_root <span class="op">=</span> node.right</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>    node.right <span class="op">=</span> new_root.left</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>    new_root.left <span class="op">=</span> node</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> new_root</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ul>
+<li>we haven’t yet implemented when and where the rotation is performed, only how. Various implementations of Red-black Tree address this in different ways. We will come to this later</li>
+</ul>
+</section>
+<section id="anderson-trees" class="level5">
+<h5 class="anchored" data-anchor-id="anderson-trees">Anderson Trees</h5>
+<ul>
+<li>differnetiate between horizontal and vertical edges</li>
+<li>only right children can be connected horizontally</li>
+<li>two horizontal edges can follow each other subsequently</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./imgs/w09/anderson-tree.png" class="img-fluid figure-img" style="width:85.0%"></p>
+<figcaption>anderson-tree</figcaption>
+</figure>
+</div>
+<ul>
+<li>if we include only the vertical edges wenn calculating the length of the RS-paths then min(|RS|) = max(|RS|), which is virtually perfectly balanced</li>
+<li>the “actual” depth is at most twice as much as the “virtual” / “effective” one, since at most every 2nd edge horizontal the factor 2 is absorbed in O().</li>
+</ul>
 
 
+</section>
+</section>
+</section>
 </section>
 
 </main> <!-- /main -->
@@ -702,8 +923,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../../../ss25/alda/sum/w11.html" class="pagination-link" aria-label="W11">
-        <span class="nav-page-text">W11</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../../../ss25/alda/sum/w10.html" class="pagination-link" aria-label="W10">
+        <span class="nav-page-text">W10</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
