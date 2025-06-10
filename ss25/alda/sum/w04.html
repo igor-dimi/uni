@@ -374,7 +374,7 @@ window.Quarto = {
 <li>sorintg from left to write (left to the current position is all sorted)</li>
 <li>select the appropriate element in the right-side of the current position.</li>
 </ul>
-<div id="f0a342ee" class="cell" data-execution_count="2">
+<div id="0f140f9b" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> selection_sort(a) :</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    N <span class="op">=</span> <span class="bu">len</span>(a)</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    <span class="co"># invariant: sorted(a[0..i-1]) and a[0..i-1] &lt;= a[i..N-1]</span></span>
@@ -454,7 +454,7 @@ window.Quarto = {
 \]</span></p>
 <p>So, the time complexity of selection sort is <strong>O(N²)</strong> in the worst, average, and best cases (it always does the same number of comparisons).</p>
 <p>How to make sorting functions generic so that they can be provided in libraries? <span class="math inline">\(\Rightarrow\)</span> API (Application Programming Interface), so that the user can choose the sorting criteria the following way:</p>
-<div id="ddf5aa88" class="cell" data-execution_count="3">
+<div id="a9715871" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> selection_sort2(a, key <span class="op">=</span> <span class="kw">lambda</span> x : x): </span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>    N <span class="op">=</span> <span class="bu">len</span>(a)</span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>    <span class="co"># i = 0</span></span>
@@ -466,13 +466,13 @@ window.Quarto = {
 <span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>        a[i], a[m] <span class="op">=</span> a[m], a[i]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Assume we have an array that contains tuples of students:</p>
-<div id="44658e3e" class="cell" data-execution_count="4">
+<div id="b212063e" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>students <span class="op">=</span> [(<span class="st">"andrej"</span>, <span class="dv">20</span>, <span class="fl">1.3</span>),</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>            (<span class="st">"igor"</span>, <span class="dv">22</span>, <span class="fl">2.7</span>),</span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>            (<span class="st">"olga"</span>, <span class="dv">21</span>, <span class="fl">1.7</span>)]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Then, the following way we could sort on different criteria:</p>
-<div id="3780366b" class="cell" data-execution_count="5">
+<div id="d5df1250" class="cell" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>selection_sort2(students, <span class="kw">lambda</span> x : x[<span class="dv">0</span>]) <span class="co"># sort w.r.t. names</span></span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(students)</span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>selection_sort2(students, <span class="kw">lambda</span> x : x[<span class="dv">1</span>]) <span class="co"># sort w.r.t. age</span></span>
@@ -506,7 +506,7 @@ window.Quarto = {
 <li>create a hole in the correct position for the element <code>a[i]</code></li>
 </ul></li>
 </ul>
-<div id="fd8baa41" class="cell" data-execution_count="6">
+<div id="c7452ce6" class="cell" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> insertion_sort(a):</span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>    N <span class="op">=</span> <span class="bu">len</span>(a)</span>
 <span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>    <span class="co"># i = 1</span></span>
@@ -579,7 +579,7 @@ window.Quarto = {
 <li>sort the half arrays</li>
 <li>merge the sorted sub parts</li>
 </ol>
-<div id="f5f2fc88" class="cell" data-execution_count="7">
+<div id="0e04bb82" class="cell" data-execution_count="7">
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> merge_sorted_arrays(l, r): <span class="co"># both l and r are sorted</span></span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>  a <span class="op">=</span> [] <span class="co"># sorted array</span></span>
 <span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>  i, k <span class="op">=</span> <span class="dv">0</span>, <span class="dv">0</span></span>
@@ -616,7 +616,7 @@ window.Quarto = {
 <span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>  a.append(r[k])</span>
 <span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a>  k <span class="op">+=</span> <span class="dv">1</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Now we define merge sort recursively as follows:</p>
-<div id="5d7fc89f" class="cell" data-execution_count="8">
+<div id="8c8fc45a" class="cell" data-execution_count="8">
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> merge_sort(a):</span>
 <span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>  N <span class="op">=</span> <span class="bu">len</span>(a)</span>
 <span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> N <span class="op">&lt;=</span> <span class="dv">1</span>: <span class="cf">return</span> a</span>
@@ -630,7 +630,7 @@ window.Quarto = {
 <span id="cb13-11"><a href="#cb13-11" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> merge_sort(a)</span>
 <span id="cb13-12"><a href="#cb13-12" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(a)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1, 14, 2, 11, 3, 5, 18, 12, 8, 19, 4, 16, 10, 13, 17, 7, 9, 6, 15, 0]
+<pre><code>[10, 19, 2, 15, 0, 7, 18, 6, 5, 3, 8, 11, 9, 1, 16, 13, 4, 12, 14, 17]
 [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]</code></pre>
 </div>
 </div>
@@ -667,7 +667,7 @@ window.Quarto = {
 </ol></li>
 </ul>
 <p>first we define the paritioning function:</p>
-<div id="fd8946f5" class="cell" data-execution_count="9">
+<div id="c6972930" class="cell" data-execution_count="9">
 <div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> partition(a, l, r):  <span class="co"># l, r are left and right boundaries (inclusive) of a</span></span>
 <span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>  pivot <span class="op">=</span> a[r] <span class="co"># naive choice: Pivot</span></span>
 <span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>  i <span class="op">=</span> l</span>
@@ -681,7 +681,7 @@ window.Quarto = {
 <span id="cb15-11"><a href="#cb15-11" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> i <span class="co"># so that recursive calls now where the partitions are</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>next we define</p>
-<div id="6004f4bc" class="cell" data-execution_count="10">
+<div id="3cd0751d" class="cell" data-execution_count="10">
 <div class="sourceCode cell-code" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> quick_sort_impl(a, l, r):</span>
 <span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> r <span class="op">&lt;=</span> l: <span class="cf">return</span> <span class="co"># no return argument since in-place</span></span>
 <span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>  i <span class="op">=</span> partition(a, l, r)</span>
@@ -689,7 +689,7 @@ window.Quarto = {
 <span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a>  quick_sort_impl(a, i<span class="op">+</span><span class="dv">1</span>, r)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>finally we define a wrapper function as an interface for the user:</p>
-<div id="8fa45e1b" class="cell" data-execution_count="11">
+<div id="640c20ed" class="cell" data-execution_count="11">
 <div class="sourceCode cell-code" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> quick_sort(a):</span>
 <span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>  quick_sort_impl(a, <span class="dv">0</span>, <span class="bu">len</span>(a) <span class="op">-</span> <span class="dv">1</span>)</span>
 <span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -699,7 +699,7 @@ window.Quarto = {
 <span id="cb17-7"><a href="#cb17-7" aria-hidden="true" tabindex="-1"></a>quick_sort(a)</span>
 <span id="cb17-8"><a href="#cb17-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(a)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[15, 1, 16, 18, 10, 6, 7, 13, 11, 3, 17, 0, 9, 8, 5, 4, 2, 19, 12, 14]
+<pre><code>[5, 4, 3, 2, 19, 17, 13, 10, 8, 14, 12, 15, 18, 11, 6, 9, 7, 1, 16, 0]
 [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]</code></pre>
 </div>
 </div>

@@ -464,7 +464,7 @@ window.Quarto = {
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>a.sort()</span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>found <span class="op">=</span> binary_search(a, key) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
 <li><p>implementation:</p>
-<div id="31f077d0" class="cell" data-execution_count="1">
+<div id="0cf9874e" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> binary_search_impl(a, key, start, end):</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  size <span class="op">=</span> end <span class="op">-</span> start</span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> size <span class="op">&lt;</span> <span class="dv">0</span> : <span class="cf">return</span> <span class="va">None</span> <span class="co"># not found</span></span>
@@ -473,11 +473,11 @@ window.Quarto = {
 <span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> a[center] <span class="op">&lt;</span> key: <span class="cf">return</span> binary_search_impl(a, key, center <span class="op">+</span> <span class="dv">1</span>, end)</span>
 <span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>  <span class="cf">else</span> : <span class="cf">return</span> binary_search_impl(a, key, start, center <span class="op">-</span> <span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="9aa48305" class="cell" data-execution_count="2">
+<div id="6a4adcfd" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> binary_search(a, key):</span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> binary_search_impl(a, key, <span class="dv">0</span>, <span class="bu">len</span>(a)) <span class="co"># divide and conquer</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="b15c13fe" class="cell" data-execution_count="3">
+<div id="32fe502b" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> [<span class="dv">2</span>, <span class="dv">1</span>, <span class="op">-</span><span class="dv">3</span>, <span class="dv">4</span>]</span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>a.sort()</span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>binary_search(a, <span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -621,8 +621,25 @@ window.Quarto = {
 </ul></li>
 </ul></li>
 </ul>
-<p>```python # hilfsfunction for predecossor def tree_predecessor(node): node = node.left while node right is not None: node = node.right return node</p>
-<p>def tree_remove(node, key): if node is None: return None # 0th case if key &lt; node.key: node.left = tree_remove(node.left, key) # elif key &gt; node.key: node.right = tree_remove(node.right, key) else: # key == node.key if node.left is None and node.right is None: return None # 1st case if node.left is None: return node.right if node.right is None: return node.left pred = tree_predecessor(node) node.key = pred.key; node.value = pred.value # copy the predecessor node.left = tree_remove(node.left, pred.key) # remove old predecessor return node</p>
+<div class="sourceCode" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co"># hilfsfunction for predecossor</span></span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> tree_predecessor(node): </span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>  node <span class="op">=</span> node.left</span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>  <span class="cf">while</span> node right <span class="kw">is</span> <span class="kw">not</span> <span class="va">None</span>:</span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>    node <span class="op">=</span> node.right</span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> node</span>
+<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> tree_remove(node, key):</span>
+<span id="cb13-9"><a href="#cb13-9" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> node <span class="kw">is</span> <span class="va">None</span>: <span class="cf">return</span> <span class="va">None</span> <span class="co"># 0th case</span></span>
+<span id="cb13-10"><a href="#cb13-10" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> key <span class="op">&lt;</span> node.key: node.left <span class="op">=</span> tree_remove(node.left, key) <span class="co"># </span></span>
+<span id="cb13-11"><a href="#cb13-11" aria-hidden="true" tabindex="-1"></a>  <span class="cf">elif</span> key <span class="op">&gt;</span> node.key: node.right <span class="op">=</span> tree_remove(node.right, key)</span>
+<span id="cb13-12"><a href="#cb13-12" aria-hidden="true" tabindex="-1"></a>  <span class="cf">else</span>: <span class="co"># key == node.key</span></span>
+<span id="cb13-13"><a href="#cb13-13" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> node.left <span class="kw">is</span> <span class="va">None</span> <span class="kw">and</span> node.right <span class="kw">is</span> <span class="va">None</span>: <span class="cf">return</span> <span class="va">None</span> <span class="co"># 1st case</span></span>
+<span id="cb13-14"><a href="#cb13-14" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> node.left <span class="kw">is</span> <span class="va">None</span>: <span class="cf">return</span> node.right</span>
+<span id="cb13-15"><a href="#cb13-15" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> node.right <span class="kw">is</span> <span class="va">None</span>: <span class="cf">return</span> node.left</span>
+<span id="cb13-16"><a href="#cb13-16" aria-hidden="true" tabindex="-1"></a>    pred <span class="op">=</span> tree_predecessor(node)</span>
+<span id="cb13-17"><a href="#cb13-17" aria-hidden="true" tabindex="-1"></a>    node.key <span class="op">=</span> pred.key<span class="op">;</span> node.value <span class="op">=</span> pred.value <span class="co"># copy the predecessor</span></span>
+<span id="cb13-18"><a href="#cb13-18" aria-hidden="true" tabindex="-1"></a>    node.left <span class="op">=</span> tree_remove(node.left, pred.key) <span class="co"># remove old predecessor</span></span>
+<span id="cb13-19"><a href="#cb13-19" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> node</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 
 </section>
