@@ -99,3 +99,83 @@ def tree_rotate_left(node):
   perfectly balanced
 * the "actual" depth is at most twice as much as the "virtual" / "effective" one, since at most every 2nd edge horizontal the factor 2 is 
   absorbed in O(). 
+
+
+## VL 18 - 12.05.25
+
+* revision of: complete tree, perfectly balanced tree, balanced tree.
+
+### Self Balancing Trees
+
+**principle**: 
+
+1. In 'forward' (form root towards the leaves) recursive run insert the elements 
+    the usual way, i.e. same as with unbalanced trees
+2. On the way back we repair the balance. 
+
+**Anderson Trees** solve this problem especially simply and elegantly:
+
+* each node stores additional information about the balance: the max distance to `None`
+  = length of the max RS-path
+* implementation
+  
+  ```python
+  class AndersonNode:
+    def __init__(self, key, value):
+      self.key = key
+      self.value = value
+      self.left = self.right = None
+      self.dist = 2
+  ```
+
+Bedingungen fuer gueltigen Anderson-Baum
+
+0. Search-tree Condition
+1. There are vertical edges (distance of a node = distance of the child + 1)   
+   There are horizontal edges (distance of a node = distance of a child)
+2. Only right children are allowed to be horizontal (if `node.left != None` then `dist = node.left.dist + 1)
+3. subsequnet edges are never allowed to be horizontal:  
+   if `node.right != None` and `node.right.right != None` then `node.dist >= node.right.right.dist + 1`
+
+$\Rightarrow$ repair balance s.t. 0) is always satisfied by using rotations, 1-3 will then hold again
+
+Implementation:
+
+```python
+def anderson_insert(node, key, value):
+  if node is None: return AndersonNode(key, value)
+  if key == node.key: 
+    node.value = value
+    return node
+  if key < node.key:
+    node.left = anderson_insert(node.left, key, value)
+  else: 
+    node.right = anderson_insert_node.right, key, value)
+  # balance condition can possibly be violated
+  if node.left is not None and nodeist == node.left.dist: # horizontal after left is not allowed
+    # transform into horizontal right
+    note = tree_rotate_right(node)
+  if node.right is not None and node.right.right is not None and node.ist == node.right.right.dist:
+    # two subsequent right horizontal => right rotation and lift up
+    node = tree_rotate_left(node)
+    node.dist += 1
+  return node
+  ```
+
+**Examples**: To differentiate from the `dist`, keys are letters.  
+
+* ![anderson insert a](./imgs/w09/anderson-insert-a.png){width="65%"}
+* ![anderson insert c](./imgs/w09/anderson-insert-c.png){width="65%"}
+
+
+
+#### Complexity of `anderson_insert()`
+
+* all instructions other than the recursion are O(1)
+  if the tree is balanced, then the right and left recursion is equally expensive on average
+* the depth of an anderson tree (also of every sub-tree) is at most twice as much as an equally 
+  large perfectly balanced tree
+  * **without proof**: if all horizontally connected nodes are united into one, this results in a 
+    perfectly balanced tree
+
+
