@@ -327,6 +327,13 @@ window.Quarto = {
   </ul></li>
   </ul></li>
   </ul></li>
+  <li><a href="#vl-18---12.05.25" id="toc-vl-18---12.05.25" class="nav-link" data-scroll-target="#vl-18---12.05.25">VL 18 - 12.05.25</a>
+  <ul>
+  <li><a href="#self-balancing-trees" id="toc-self-balancing-trees" class="nav-link" data-scroll-target="#self-balancing-trees">Self Balancing Trees</a>
+  <ul>
+  <li><a href="#complexity-of-anderson_insert" id="toc-complexity-of-anderson_insert" class="nav-link" data-scroll-target="#complexity-of-anderson_insert">Complexity of <code>anderson_insert()</code></a></li>
+  </ul></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -499,9 +506,88 @@ window.Quarto = {
 <li>if we include only the vertical edges wenn calculating the length of the RS-paths then min(|RS|) = max(|RS|), which is virtually perfectly balanced</li>
 <li>the “actual” depth is at most twice as much as the “virtual” / “effective” one, since at most every 2nd edge horizontal the factor 2 is absorbed in O().</li>
 </ul>
-
-
 </section>
+</section>
+</section>
+</section>
+<section id="vl-18---12.05.25" class="level2">
+<h2 class="anchored" data-anchor-id="vl-18---12.05.25">VL 18 - 12.05.25</h2>
+<ul>
+<li>revision of: complete tree, perfectly balanced tree, balanced tree.</li>
+</ul>
+<section id="self-balancing-trees" class="level3">
+<h3 class="anchored" data-anchor-id="self-balancing-trees">Self Balancing Trees</h3>
+<p><strong>principle</strong>:</p>
+<ol type="1">
+<li>In ‘forward’ (form root towards the leaves) recursive run insert the elements the usual way, i.e.&nbsp;same as with unbalanced trees</li>
+<li>On the way back we repair the balance.</li>
+</ol>
+<p><strong>Anderson Trees</strong> solve this problem especially simply and elegantly:</p>
+<ul>
+<li><p>each node stores additional information about the balance: the max distance to <code>None</code> = length of the max RS-path</p></li>
+<li><p>implementation</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> AndersonNode:</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, key, value):</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    <span class="va">self</span>.key <span class="op">=</span> key</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>    <span class="va">self</span>.value <span class="op">=</span> value</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>    <span class="va">self</span>.left <span class="op">=</span> <span class="va">self</span>.right <span class="op">=</span> <span class="va">None</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>    <span class="va">self</span>.dist <span class="op">=</span> <span class="dv">2</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+</ul>
+<p>Bedingungen fuer gueltigen Anderson-Baum</p>
+<ol start="0" type="1">
+<li>Search-tree Condition</li>
+<li>There are vertical edges (distance of a node = distance of the child + 1)<br>
+There are horizontal edges (distance of a node = distance of a child)</li>
+<li>Only right children are allowed to be horizontal (if <code>node.left != None</code> then `dist = node.left.dist + 1)</li>
+<li>subsequnet edges are never allowed to be horizontal:<br>
+if <code>node.right != None</code> and <code>node.right.right != None</code> then <code>node.dist &gt;= node.right.right.dist + 1</code></li>
+</ol>
+<p><span class="math inline">\(\Rightarrow\)</span> repair balance s.t. 0) is always satisfied by using rotations, 1-3 will then hold again</p>
+<p>Implementation:</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> anderson_insert(node, key, value):</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> node <span class="kw">is</span> <span class="va">None</span>: <span class="cf">return</span> AndersonNode(key, value)</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> key <span class="op">==</span> node.key: </span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>    node.value <span class="op">=</span> value</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> node</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> key <span class="op">&lt;</span> node.key:</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>    node.left <span class="op">=</span> anderson_insert(node.left, key, value)</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>  <span class="cf">else</span>: </span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>    node.right <span class="op">=</span> anderson_insert_node.right, key, value)</span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>  <span class="co"># balance condition can possibly be violated</span></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> node.left <span class="kw">is</span> <span class="kw">not</span> <span class="va">None</span> <span class="kw">and</span> nodeist <span class="op">==</span> node.left.dist: <span class="co"># horizontal after left is not allowed</span></span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>    <span class="co"># transform into horizontal right</span></span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>    note <span class="op">=</span> tree_rotate_right(node)</span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> node.right <span class="kw">is</span> <span class="kw">not</span> <span class="va">None</span> <span class="kw">and</span> node.right.right <span class="kw">is</span> <span class="kw">not</span> <span class="va">None</span> <span class="kw">and</span> node.ist <span class="op">==</span> node.right.right.dist:</span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>    <span class="co"># two subsequent right horizontal =&gt; right rotation and lift up</span></span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>    node <span class="op">=</span> tree_rotate_left(node)</span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>    node.dist <span class="op">+=</span> <span class="dv">1</span></span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> node</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><strong>Examples</strong>: To differentiate from the <code>dist</code>, keys are letters.</p>
+<ul>
+<li><div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./imgs/w09/anderson-insert-a.png" class="img-fluid figure-img" style="width:65.0%"></p>
+<figcaption>anderson insert a</figcaption>
+</figure>
+</div></li>
+<li><div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./imgs/w09/anderson-insert-c.png" class="img-fluid figure-img" style="width:65.0%"></p>
+<figcaption>anderson insert c</figcaption>
+</figure>
+</div></li>
+</ul>
+<section id="complexity-of-anderson_insert" class="level4">
+<h4 class="anchored" data-anchor-id="complexity-of-anderson_insert">Complexity of <code>anderson_insert()</code></h4>
+<ul>
+<li>all instructions other than the recursion are O(1) if the tree is balanced, then the right and left recursion is equally expensive on average</li>
+<li>the depth of an anderson tree (also of every sub-tree) is at most twice as much as an equally large perfectly balanced tree
+<ul>
+<li><strong>without proof</strong>: if all horizontally connected nodes are united into one, this results in a perfectly balanced tree</li>
+</ul></li>
+</ul>
+
+
 </section>
 </section>
 </section>

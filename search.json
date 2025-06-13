@@ -254,6 +254,39 @@
     ]
   },
   {
+    "objectID": "ss25/ibn/sum/w09.html",
+    "href": "ss25/ibn/sum/w09.html",
+    "title": "Week 9",
+    "section": "",
+    "text": "holiday",
+    "crumbs": [
+      "Weekly Summary",
+      "Week 9"
+    ]
+  },
+  {
+    "objectID": "ss25/ibn/sum/w09.html#vl-17---09.06.25",
+    "href": "ss25/ibn/sum/w09.html#vl-17---09.06.25",
+    "title": "Week 9",
+    "section": "",
+    "text": "holiday",
+    "crumbs": [
+      "Weekly Summary",
+      "Week 9"
+    ]
+  },
+  {
+    "objectID": "ss25/ibn/sum/w09.html#vl-18---11.06.25",
+    "href": "ss25/ibn/sum/w09.html#vl-18---11.06.25",
+    "title": "Week 9",
+    "section": "VL 18 - 11.06.25",
+    "text": "VL 18 - 11.06.25\n\nDeadlocks (cont)\n\nprevention of deadlocks\n\n\n\nScheduling of Processes\n\ndifferentiate between types of processes\n\nI/O intensive\nCPU intensive (CPU bound)\n\n\n\nscudulnig strategies\n\nfirst-come first-served (FCFS): simsple solution first requested process is executed until the end\n\nproblems: convoy effect\n\nshortest-job first (SJF):\nshortest-remaining time first (SRTF)",
+    "crumbs": [
+      "Weekly Summary",
+      "Week 9"
+    ]
+  },
+  {
     "objectID": "ss25/ibn/sum/w07.html",
     "href": "ss25/ibn/sum/w07.html",
     "title": "Week 7",
@@ -488,7 +521,7 @@
     "href": "ss25/alda/sum/w04.html#vl-8---06.05.25",
     "title": "Week 4",
     "section": "VL 8 - 06.05.25",
-    "text": "VL 8 - 06.05.25\n\nEfficient Sorting Algorithms (Cont.)\n\nfor small values, \\(N &lt; 30\\) insertion sort is the fastest algorithm\nfor larger \\(N\\) efficient sorting algorithms must be preffered: merge sort and quicksort (divide & conquer)\n\n\nMerge Sort\n\nDivide the array into two equal parts\nsort the half arrays\nmerge the sorted sub parts\n\n\ndef merge_sorted_arrays(l, r): # both l and r are sorted\n  a = [] # sorted array\n  i, k = 0, 0\n  Nl, Nr = len(l), len(r)\n  # a == merged(l[0:i], r[0:k]\n  while i &lt; Nl and k &lt; Nr: \n    if l[i] &lt;= r[k]: # &lt;= instead of &lt; so that sorting is stablef\n      a.append(l[i]) # append is efficient\n      i += 1\n    else:\n      a.append(r[k])\n      k += 1\n  a += l[i : Nl] # append rest of l\n  a += r[k : Nr] # append rest of r\n  return a\n\nl = [1, 3, 10, 11]\nr = [-1, 2, 20]\n\na = merge_sorted_arrays(l, r)\nprint(a)\n\n[-1, 1, 2, 3, 10, 11, 20]\n\n\nthe final step\na += l[i : Nl] # append rest of l\na += r[k : Nr] # append rest of r\nis enabled by the elegant python slicing syntax. The usual way without slicing would be:\nwhile i &lt; Nl:\n  a.append(l[i])\n  i += 1\nwhile k &lt; Nr:\n  a.append(r[k])\n  k += 1\nNow we define merge sort recursively as follows:\n\ndef merge_sort(a):\n  N = len(a)\n  if N &lt;= 1: return a\n  l = merge_sort(a[: N//2])\n  r = merge_sort(a[N//2:])\n  return merge_sorted_arrays(l, r)\n\na = list(range(20))\nrandom.shuffle(a)\nprint(a)\na = merge_sort(a)\nprint(a)\n\n[8, 0, 12, 2, 5, 11, 1, 6, 14, 9, 16, 18, 13, 4, 10, 7, 3, 19, 17, 15]\n[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]\n\n\n\nDisadvantage: Merge sort is not in-place \\(\\Rightarrow\\) extra memory is necessary for each merge sort call\nAdvantage: Merge sort is efficient and stable\n\n\nRun-time Analysis of Merge Sort\nRuntime of merge sort satisfies the following formula both in worst and best case:\n\\[\\begin{align*}\n&T(0 || 1) = c_1 \\\\\n&T(N) = c_2 + 2\\cdot T(\\frac{N}{2}) + c_3N\n\\end{align*}\\]\nTODO: tldr diagram and solution of the recurrence relation.\n\n\n\nQuicksort\n\nIn practice somewhat faster than merge sort (with a good choice of pivot)\nnot stable but in place.\nidea:\n\nchoose an element of the array as “pivot”. (naiv, better is to choose pivot randomly)\npartition the array: (incomplete sorting)\n\npivot is at the final position.\nall elements &lt;= pivot are left to the pivot\nall elements &gt; pivot are right the pivot\nthe left and right portions are not sorted\n\ncall quicksort recursively on the left and right partitions (divide and conquer)\n\n\nfirst we define the paritioning function:\n\ndef partition(a, l, r):  # l, r are left and right boundaries (inclusive) of a\n  pivot = a[r] # naive choice: Pivot\n  i = l\n  k = r - 1\n  while True:\n    while i &lt; r and a[i] &lt;= pivot: i += 1 # increment until found a misplaced element\n    while k &gt; l and a[k] &gt;= pivot: k -= 1 # decrement until found a misplaced element\n    if i &lt; k : a[i], a[k] = a[k], a[i]\n    else : break\n  a[i], a[r] = a[r], a[i] # bring pivot to the correct position\n  return i # so that recursive calls now where the partitions are\n\nnext we define\n\ndef quick_sort_impl(a, l, r):\n  if r &lt;= l: return # no return argument since in-place\n  i = partition(a, l, r)\n  quick_sort_impl(a, l, i-1)\n  quick_sort_impl(a, i+1, r)\n\nfinally we define a wrapper function as an interface for the user:\n\ndef quick_sort(a):\n  quick_sort_impl(a, 0, len(a) - 1)\n\na = list(range(20))\nrandom.shuffle(a)\nprint(a)\nquick_sort(a)\nprint(a)\n\n[2, 15, 6, 17, 14, 1, 13, 18, 19, 5, 11, 4, 3, 0, 9, 10, 7, 12, 8, 16]\n[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]\n\n\nWhy choosing pivot as the first element is naive?\n\nif pivot always stays on the first position \\(\\Rightarrow\\) \\(N^2\\). This happens if the arrray is already sorted (TODO: understand thus)\na naive solution: shuffle the array before sorting (of course doesn’t make much sense) \\(\\Rightarrow\\) uquivalently: choose the pivot randomly each time.\nimport random\np = random.randint(l, r) \na[p], a[r] = a[r], a[p] # replace right-most element with this random element\npivot = a[r]",
+    "text": "VL 8 - 06.05.25\n\nEfficient Sorting Algorithms (Cont.)\n\nfor small values, \\(N &lt; 30\\) insertion sort is the fastest algorithm\nfor larger \\(N\\) efficient sorting algorithms must be preffered: merge sort and quicksort (divide & conquer)\n\n\nMerge Sort\n\nDivide the array into two equal parts\nsort the half arrays\nmerge the sorted sub parts\n\n\ndef merge_sorted_arrays(l, r): # both l and r are sorted\n  a = [] # sorted array\n  i, k = 0, 0\n  Nl, Nr = len(l), len(r)\n  # a == merged(l[0:i], r[0:k]\n  while i &lt; Nl and k &lt; Nr: \n    if l[i] &lt;= r[k]: # &lt;= instead of &lt; so that sorting is stablef\n      a.append(l[i]) # append is efficient\n      i += 1\n    else:\n      a.append(r[k])\n      k += 1\n  a += l[i : Nl] # append rest of l\n  a += r[k : Nr] # append rest of r\n  return a\n\nl = [1, 3, 10, 11]\nr = [-1, 2, 20]\n\na = merge_sorted_arrays(l, r)\nprint(a)\n\n[-1, 1, 2, 3, 10, 11, 20]\n\n\nthe final step\na += l[i : Nl] # append rest of l\na += r[k : Nr] # append rest of r\nis enabled by the elegant python slicing syntax. The usual way without slicing would be:\nwhile i &lt; Nl:\n  a.append(l[i])\n  i += 1\nwhile k &lt; Nr:\n  a.append(r[k])\n  k += 1\nNow we define merge sort recursively as follows:\n\ndef merge_sort(a):\n  N = len(a)\n  if N &lt;= 1: return a\n  l = merge_sort(a[: N//2])\n  r = merge_sort(a[N//2:])\n  return merge_sorted_arrays(l, r)\n\na = list(range(20))\nrandom.shuffle(a)\nprint(a)\na = merge_sort(a)\nprint(a)\n\n[0, 14, 12, 7, 18, 6, 19, 10, 13, 11, 5, 15, 8, 17, 4, 2, 9, 16, 1, 3]\n[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]\n\n\n\nDisadvantage: Merge sort is not in-place \\(\\Rightarrow\\) extra memory is necessary for each merge sort call\nAdvantage: Merge sort is efficient and stable\n\n\nRun-time Analysis of Merge Sort\nRuntime of merge sort satisfies the following formula both in worst and best case:\n\\[\\begin{align*}\n&T(0 || 1) = c_1 \\\\\n&T(N) = c_2 + 2\\cdot T(\\frac{N}{2}) + c_3N\n\\end{align*}\\]\nTODO: tldr diagram and solution of the recurrence relation.\n\n\n\nQuicksort\n\nIn practice somewhat faster than merge sort (with a good choice of pivot)\nnot stable but in place.\nidea:\n\nchoose an element of the array as “pivot”. (naiv, better is to choose pivot randomly)\npartition the array: (incomplete sorting)\n\npivot is at the final position.\nall elements &lt;= pivot are left to the pivot\nall elements &gt; pivot are right the pivot\nthe left and right portions are not sorted\n\ncall quicksort recursively on the left and right partitions (divide and conquer)\n\n\nfirst we define the paritioning function:\n\ndef partition(a, l, r):  # l, r are left and right boundaries (inclusive) of a\n  pivot = a[r] # naive choice: Pivot\n  i = l\n  k = r - 1\n  while True:\n    while i &lt; r and a[i] &lt;= pivot: i += 1 # increment until found a misplaced element\n    while k &gt; l and a[k] &gt;= pivot: k -= 1 # decrement until found a misplaced element\n    if i &lt; k : a[i], a[k] = a[k], a[i]\n    else : break\n  a[i], a[r] = a[r], a[i] # bring pivot to the correct position\n  return i # so that recursive calls now where the partitions are\n\nnext we define\n\ndef quick_sort_impl(a, l, r):\n  if r &lt;= l: return # no return argument since in-place\n  i = partition(a, l, r)\n  quick_sort_impl(a, l, i-1)\n  quick_sort_impl(a, i+1, r)\n\nfinally we define a wrapper function as an interface for the user:\n\ndef quick_sort(a):\n  quick_sort_impl(a, 0, len(a) - 1)\n\na = list(range(20))\nrandom.shuffle(a)\nprint(a)\nquick_sort(a)\nprint(a)\n\n[17, 5, 8, 10, 4, 14, 3, 11, 0, 15, 9, 13, 19, 12, 2, 6, 18, 1, 7, 16]\n[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]\n\n\nWhy choosing pivot as the first element is naive?\n\nif pivot always stays on the first position \\(\\Rightarrow\\) \\(N^2\\). This happens if the arrray is already sorted (TODO: understand thus)\na naive solution: shuffle the array before sorting (of course doesn’t make much sense) \\(\\Rightarrow\\) uquivalently: choose the pivot randomly each time.\nimport random\np = random.randint(l, r) \na[p], a[r] = a[r], a[p] # replace right-most element with this random element\npivot = a[r]",
     "crumbs": [
       "Weekly Summary",
       "Week 4"
@@ -1196,11 +1229,22 @@
     ]
   },
   {
+    "objectID": "ss25/alda/sum/w09.html#vl-18---12.05.25",
+    "href": "ss25/alda/sum/w09.html#vl-18---12.05.25",
+    "title": "Week 9",
+    "section": "VL 18 - 12.05.25",
+    "text": "VL 18 - 12.05.25\n\nrevision of: complete tree, perfectly balanced tree, balanced tree.\n\n\nSelf Balancing Trees\nprinciple:\n\nIn ‘forward’ (form root towards the leaves) recursive run insert the elements the usual way, i.e. same as with unbalanced trees\nOn the way back we repair the balance.\n\nAnderson Trees solve this problem especially simply and elegantly:\n\neach node stores additional information about the balance: the max distance to None = length of the max RS-path\nimplementation\nclass AndersonNode:\n  def __init__(self, key, value):\n    self.key = key\n    self.value = value\n    self.left = self.right = None\n    self.dist = 2\n\nBedingungen fuer gueltigen Anderson-Baum\n\nSearch-tree Condition\nThere are vertical edges (distance of a node = distance of the child + 1)\nThere are horizontal edges (distance of a node = distance of a child)\nOnly right children are allowed to be horizontal (if node.left != None then `dist = node.left.dist + 1)\nsubsequnet edges are never allowed to be horizontal:\nif node.right != None and node.right.right != None then node.dist &gt;= node.right.right.dist + 1\n\n\\(\\Rightarrow\\) repair balance s.t. 0) is always satisfied by using rotations, 1-3 will then hold again\nImplementation:\ndef anderson_insert(node, key, value):\n  if node is None: return AndersonNode(key, value)\n  if key == node.key: \n    node.value = value\n    return node\n  if key &lt; node.key:\n    node.left = anderson_insert(node.left, key, value)\n  else: \n    node.right = anderson_insert_node.right, key, value)\n  # balance condition can possibly be violated\n  if node.left is not None and nodeist == node.left.dist: # horizontal after left is not allowed\n    # transform into horizontal right\n    note = tree_rotate_right(node)\n  if node.right is not None and node.right.right is not None and node.ist == node.right.right.dist:\n    # two subsequent right horizontal =&gt; right rotation and lift up\n    node = tree_rotate_left(node)\n    node.dist += 1\n  return node\nExamples: To differentiate from the dist, keys are letters.\n\n\n\n\nanderson insert a\n\n\n\n\n\nanderson insert c\n\n\n\n\nComplexity of anderson_insert()\n\nall instructions other than the recursion are O(1) if the tree is balanced, then the right and left recursion is equally expensive on average\nthe depth of an anderson tree (also of every sub-tree) is at most twice as much as an equally large perfectly balanced tree\n\nwithout proof: if all horizontally connected nodes are united into one, this results in a perfectly balanced tree",
+    "crumbs": [
+      "Weekly Summary",
+      "Week 9"
+    ]
+  },
+  {
     "objectID": "ss25/ibn/sum/index.html",
     "href": "ss25/ibn/sum/index.html",
     "title": "Weekly Summary",
     "section": "",
-    "text": "Order By\n       Default\n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Title\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\nTitle\n\n\nDate\n\n\n\n\n\n\nWeek 1\n\n\nApr 14, 2025\n\n\n\n\nWeek 2\n\n\nApr 22, 2025\n\n\n\n\nWeek 3\n\n\nApr 29, 2025\n\n\n\n\nWeek 4\n\n\nMay 5, 2025\n\n\n\n\nWeek 5\n\n\nMay 12, 2025\n\n\n\n\nWeek 6\n\n\nMay 19, 2025\n\n\n\n\nWeek 7\n\n\nMay 26, 2025\n\n\n\n\nWeek 8\n\n\nJun 2, 2025\n\n\n\n\n \n\n\n \n\n\n\n\n \n\n\n \n\n\n\n\n \n\n\n \n\n\n\n\n \n\n\n \n\n\n\n\n \n\n\n \n\n\n\n\n \n\n\n \n\n\n\n\n \n\n\n \n\n\n\n\n\nNo matching items",
+    "text": "Order By\n       Default\n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Title\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\nTitle\n\n\nDate\n\n\n\n\n\n\nWeek 1\n\n\nApr 14, 2025\n\n\n\n\nWeek 2\n\n\nApr 22, 2025\n\n\n\n\nWeek 3\n\n\nApr 29, 2025\n\n\n\n\nWeek 4\n\n\nMay 5, 2025\n\n\n\n\nWeek 5\n\n\nMay 12, 2025\n\n\n\n\nWeek 6\n\n\nMay 19, 2025\n\n\n\n\nWeek 7\n\n\nMay 26, 2025\n\n\n\n\nWeek 8\n\n\nJun 2, 2025\n\n\n\n\nWeek 9\n\n\nJun 11, 2025\n\n\n\n\n \n\n\n \n\n\n\n\n \n\n\n \n\n\n\n\n \n\n\n \n\n\n\n\n \n\n\n \n\n\n\n\n \n\n\n \n\n\n\n\n \n\n\n \n\n\n\n\n\nNo matching items",
     "crumbs": [
       "Weekly Summary"
     ]
