@@ -1,0 +1,49 @@
+---
+title: Week 10
+date: 06/16/2025
+---
+
+## VL 19 - 16.06.25
+
+#### process scheduling (cont.)
+
+* scheduling is relevant for the process group "ready"
+* Scheduling in Interactive Systems
+  * reactive and fast
+  * concurring processes have to be managed fairly
+* round-robin scheduling:
+  * a queue for process scheduling
+  * quantum: the 
+  * adventages of short quanta: higher reaction time
+  * disadvantages of short quanta: process switching is costly
+  * modern OS's: 10 - 100 ms
+  * multiple queues - multilevel queue scheduling
+* Lottery-Scheduling
+* scheduling in real time systems (RTS)
+* evaluating scheduling strategies:
+  * we need an evalution criteria 
+    * throughput
+    * turnaround time
+    * cpu efficiency
+* $\Rightarrow$ queuing theory / server theory:
+  * basic:
+    * arrivals
+    * queue
+    * server 
+    * departures
+  * variations
+    * multiple queues, 
+    * some clients leave the system before being served
+    * ...
+  * definitnions:
+    * T1 < T2 < T3 < ... < Tn are the random arrival times of the clients
+        * we define a random variable tk := Tk - T_{k - 1}. it's called the **interarrivel time**, IAT
+        * what is the distribution of this random variable? poisson-distribution (?)
+    * Service or processing time S1, S2, ... 
+  * which configuration is the best according to scheduling theory? 
+
+#### I/O Hardware
+
+* modern chips have special chips for communication between components
+  * northbridge
+  * southbridge
