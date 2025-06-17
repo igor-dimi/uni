@@ -6,8 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="dcterms.date" content="2025-06-16">
 
-<title>My Uni Notes</title>
+<title>My Uni Notes - Week 10</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -69,6 +70,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="../../../styles.css">
 </head>
@@ -129,7 +159,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../ss25/ibn/sum/index.html">Weekly Summary</a></li><li class="breadcrumb-item"><a href="../../../ss25/ibn/sum/w10.html">W10</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../ss25/ibn/sum/index.html">Weekly Summary</a></li><li class="breadcrumb-item"><a href="../../../ss25/ibn/sum/w10.html">Week 10</a></li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -207,7 +237,7 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../ss25/ibn/sum/w10.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">W10</span></a>
+ <span class="menu-text">Week 10</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -248,16 +278,118 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#vl-19---16.06.25" id="toc-vl-19---16.06.25" class="nav-link active" data-scroll-target="#vl-19---16.06.25">VL 19 - 16.06.25</a>
+  <ul>
+  <li><a href="#process-scheduling-cont." id="toc-process-scheduling-cont." class="nav-link" data-scroll-target="#process-scheduling-cont.">process scheduling (cont.)</a></li>
+  <li><a href="#io-hardware" id="toc-io-hardware" class="nav-link" data-scroll-target="#io-hardware">I/O Hardware</a></li>
+  </ul></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../ss25/ibn/sum/index.html">Weekly Summary</a></li><li class="breadcrumb-item"><a href="../../../ss25/ibn/sum/w10.html">Week 10</a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title">Week 10</h1>
+</div>
 
 
 
+<div class="quarto-title-meta">
+
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">June 16, 2025</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
 
 
+</header>
+
+
+<section id="vl-19---16.06.25" class="level2">
+<h2 class="anchored" data-anchor-id="vl-19---16.06.25">VL 19 - 16.06.25</h2>
+<section id="process-scheduling-cont." class="level4">
+<h4 class="anchored" data-anchor-id="process-scheduling-cont.">process scheduling (cont.)</h4>
+<ul>
+<li>scheduling is relevant for the process group “ready”</li>
+<li>Scheduling in Interactive Systems
+<ul>
+<li>reactive and fast</li>
+<li>concurring processes have to be managed fairly</li>
+</ul></li>
+<li>round-robin scheduling:
+<ul>
+<li>a queue for process scheduling</li>
+<li>quantum: the</li>
+<li>adventages of short quanta: higher reaction time</li>
+<li>disadvantages of short quanta: process switching is costly</li>
+<li>modern OS’s: 10 - 100 ms</li>
+<li>multiple queues - multilevel queue scheduling</li>
+</ul></li>
+<li>Lottery-Scheduling</li>
+<li>scheduling in real time systems (RTS)</li>
+<li>evaluating scheduling strategies:
+<ul>
+<li>we need an evalution criteria
+<ul>
+<li>throughput</li>
+<li>turnaround time</li>
+<li>cpu efficiency</li>
+</ul></li>
+</ul></li>
+<li><span class="math inline">\(\Rightarrow\)</span> queuing theory / server theory:
+<ul>
+<li>basic:
+<ul>
+<li>arrivals</li>
+<li>queue</li>
+<li>server</li>
+<li>departures</li>
+</ul></li>
+<li>variations
+<ul>
+<li>multiple queues,</li>
+<li>some clients leave the system before being served</li>
+<li>…</li>
+</ul></li>
+<li>definitnions:
+<ul>
+<li>T1 &lt; T2 &lt; T3 &lt; … &lt; Tn are the random arrival times of the clients
+<ul>
+<li>we define a random variable tk := Tk - T_{k - 1}. it’s called the <strong>interarrivel time</strong>, IAT</li>
+<li>what is the distribution of this random variable? poisson-distribution (?)</li>
+</ul></li>
+<li>Service or processing time S1, S2, …</li>
+</ul></li>
+<li>which configuration is the best according to scheduling theory?</li>
+</ul></li>
+</ul>
+</section>
+<section id="io-hardware" class="level4">
+<h4 class="anchored" data-anchor-id="io-hardware">I/O Hardware</h4>
+<ul>
+<li>modern chips have special chips for communication between components
+<ul>
+<li>northbridge</li>
+<li>southbridge</li>
+</ul></li>
+</ul>
+
+
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
