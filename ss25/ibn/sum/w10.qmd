@@ -47,3 +47,33 @@ date: 06/16/2025
 * modern chips have special chips for communication between components
   * northbridge
   * southbridge
+
+## VL 20 - 18.06.25
+
+### Internetworking
+
+* introduction and terms:
+  * hosts
+  * communication lines
+  * router and switches
+  * protocolls 
+    * tcp, ip, http, ethernet, skype
+  * internet-standards
+    * format rfc: request for comments
+    * ietf: internet engineering task force
+  * internet applications
+  * dns
+* History of Internet 
+  * various networks needed to be connected which lead to the internet:
+  * principles of internetworking:
+    * minimalism, autonomy
+    * best effort model
+    * stateless router
+    * decentralized control
+  * tcp, udp, ip
+  * ethernet
+  * ftp - a simple file transfer protocol
+  * OSI
+* packet switching vs 'leitungsvermittlung'
+* protocoll stack
+
