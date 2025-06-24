@@ -1,0 +1,159 @@
+---
+title: Week 11
+date: 06/23/2025
+---
+
+## VL 20 - 23.06.25
+
+
+* revision of previous lecture: definition of a heap
+  * for the heap tree and als its subtrees: root has the highest priority (max heap)  $\Rightarrow$ parent has higher priority than its children
+  * the heap tree is perfectly balanced & left-leaning $\Rightarrow$ **flattening** as Array is possible
+  * for any node k
+    * parent: (k - 1) // 2
+    * left child: 2 * k + 1
+    * right child 2 * k + 2
+  * insert operation:
+    1. append new elements at the end of the array (O(1))
+    2. whenever necessary repair the heap-condition with `upheap()` after inserting
+  * implementation
+    
+    ```python
+    class Heap:
+        def __init__(self):
+            self.data = []
+        
+        def  push(self, priority):
+            self.data.apipend(priority)
+            upheap(self.data, len(self.data) - 1)
+        
+        def upheap(a, k):
+            while True:
+                if k == 0: # repair has ended
+                    break
+                parent = (k - 1) // 2
+                if a[parent] > a[k]: # heap-cond holds
+                    break
+                a[parent], a[k] = a[k], a[parent] # swap
+                k = parent
+    ```
+### Heap Data Structure (Cont)
+
+* deleting an element:
+    * deleting the largest element (the first element):
+    1. replace last element (the smallest) with the first element (the largest) and delete 
+        the last element. (now the first element is violating the heap cond because it is the smallest)
+    2. repair the heap condition starting from the root, successively pushing node down
+
+    ```python
+    def pop(self):
+        last = len(self.data) - 1
+        self.data[0] = self[last]
+        del self.data[last]
+        downheap(self.data, last - 1)
+    
+    def downheap(a, last):
+        k = 0 # 
+        while True:
+            left, right = 2 * k + 1, 2 * k + 2 
+            if left > last: # repair has ended, because k is a leaf
+                break
+            if right <= last and a[right] > a[left]: 
+                child = right
+            else: 
+                child = left
+            if a[k] > a[child]: break # heap cond  holds
+            a[k], a[child] = a[child], a[k] # swap
+            k = child
+    ```
+
+    number of comparisons O(d) = O(logN)
+
+#### Heapsort - Sorting with the Heap Techniques
+
+the idea is to first create a heap from the array
+
+implementation:
+
+```python
+def heap_sort(a):
+    N = len(a)
+    for k in range(1, N):
+        upheap(a, k)
+    # a is sorted a a sa heap
+    for k in range(N - 1, 0, - 1): # loop iteration backwards
+        a[0], a[k] = a[k], a[0] # bring the currently largest element to the position k
+        downheap(a, k - 1) # repair the heap condition in the remaining heap 
+```
+
+
+### Treap Data Structure
+
+Treap is a simultaneously both
+
+- a search tree
+- a heap
+
+implementation:
+
+```python
+class TreapNode:
+    def __init__(self, key, priority, value):
+        self.key = key
+        self.value = value
+        self.priority = priority
+        self.left = self.right = None
+```
+
+* idea:
+  1) The tree satisfies the search tree condition w.r.t the key
+  2) The tree satisfies the heap condition w.r.t. the priority
+* The inventor of the Treap DS showed that it is possible and feasible to satisfies both conditions at the same time
+  * e.g. **insert**:
+    1. normal `tree_insert` w.r.t the `key` (priority is ignored) $\Rightarrow$ search tree condition is satisfied
+    2. repair the heap condition on the way back of the recursive call stack, if the current node has lower priority than its child
+       (**important**: the heap-condition can be only violated w.r.t to one of the children, namely in the subtree in which it was inserted)
+       i. if the left child has higher priority $\Rightarrow$ right-rotation
+       ii. if the right child has higher priority $\Rightarrow$ left-rotation
+
+* **possible appropriate priorities**: 
+  * random numbers $\Rightarrow$ the tree is balanced on average
+  * access counter $\Rightarrow$ rotate the element upwards if more often access than the parent (access optimized tree, i.e. important elements
+    are closer to the root - and this is faster.)
+    
+### Index Sort / Indirect Sort
+
+given: 
+
+* `a` - an unsorted array
+* `p` - array,  where the indices are stored in a sorted order. 
+* `p[i] -> k` (index). k is the index of an element before the sorting, s.t. `i` is the index after the sorting.
+  (`p` is a permutation of the numbers 0, ..., N - 1)
+* applications:
+  * iff a read-only, in-place is not possible
+  * if multiple arrays have to be sorted in the same way (?)
+* implementation
+
+  ```python
+  def index_sort(a, p):
+    r = [None] * len(a)
+    for i in range(len(a)):
+        r[i] = a[p[i]]
+    return r
+  ```
+
+* `p` can be obtained by any sorting algorithm, where the key-functoin accesses the original Array
+
+  ```python
+  a = [...] # read-only array, to be sorted 
+  p = list(range(len(a))) # indices 0, ..., N - 1
+  quick_sort(p, key_function = lambda k: a[k])
+  r = index_sort(a, p)
+  ```
+
+
+
+
+
+
+
