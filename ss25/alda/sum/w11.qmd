@@ -151,9 +151,146 @@ given:
   r = index_sort(a, p)
   ```
 
+## VL 21 - 26.06.25
 
 
+### Graphs & Graph Theory
+
+Origins of graph theory: Solution to the **Kongisberg Problem**:
+
+* is it possible to make a city tour without crossing any bridge ever twice? 
+
+Euler's answer: **No**. 
+
+![Koniegsberg](./imgs/w11/kongisberg.png){width="85%"}
+
+**Solution**: An Euler path exist only if all nodes (other than start and end nodes) have an even number edges incident to them
+(i.e. the degree of the nodes is even)
 
 
+#### Definitions for Graphs:
+
+* Graph G = (V, E)
+  * V: set of all nodes / vertices\
+  * E: Set of all edges, $E \subseteq V \times V$
+
+* This is a normal graph: at most one edge between any two nodes. Initially we also exclude self loops, i.e. $(u, u) \notin E$
+* Multigraph: multiple edges between nodes are allowed (Like in the Konigsberg example)
+* undirected graph: $(v, u) \in E \Rightarrow (u, v) \in E$
+* directed graph: not undirected. 
+* Degree of a node: 
+  * undirected: number of edges incident to a node (we don't count twice)
+  * directed: 
+    * out degree: number of outgoing edges
+    * in degree: numb of inocming edges
+
+* **Complete Graph**:
+
+![complete-graph](./imgs/w11/complete-graphs.png){width="80%"}
+
+Let $N := |V|, M := |E|$. For a complete graph we have:
+
+* $degree(u) = N - 1$
+* handshaking lemma: $M = \frac{N(N - 1)}{2}$
+
+* **Subgraph**: $G' = (V', E'), V' \subseteq V, E' \subseteq E$ and $(u, v) \in E' \Rightarrow V'$
+  * induced subgraph: for an arbitrary $V' \subseteq V$, $E' := E \\ \{(u, v) : u \notin V' \text{or} v \notin V'\}$
+  * spanning subtree: $V' = V, E' \subset E$
+* **Walks** (Weg) in graphs: 
+  * trivial walk of length 0: individual node
+  * walk of length 1: a single edge of a graph
+  * a generalized walk of a graph: a sequence of nodes $(v_1, v_2, ... v_k)$, s.t. $(v_i, v_{i + 1}) \in E, \forall i$
+    $\Rightarrow$ **length**:= $k - 1$
+* **Path**: A Walk where each individual node is distinct (other than possibly start and end)
+* **Cycle** (Zyklus): a Walk with $v_1 = v_k$
+* **Circuit** (sometimes Cycle) (Kreis): a path with $v_1 = v_k$
+* **Reachability** (Erreichbarkeit): $u \rightsquigarrow v \Leftrightarrow u \rightsquigarrow v :\Leftrightarrow$ there is a Walk between the nodes $u, v$
+* **Euler walk**: each edge is contained exactly once. (example: Haus of Niklaus)
+* **Hamilton path**: each node is contained eactly once
+* **Hamilton Circuit**: A Hamilton path, s.t. start = end.
+  * This definition is relevant to the problem of the "**Traveling Salesman**": find the hamilton circuit with the least weight (for graphs with weighted edges). Best known algorithm is $\mathcal{O}(2^N)$. 
+  * This is the standard example of a "NP-hard problem" $\Rightarrow$ no efficient algorithm is known. 
+
+![euler-hamilton](./imgs/w11/euler-hamilton.png){width="85%"}
+
+* **weighted graphs**: 
+  * node-weighted: a number (weight) is assigned to every node
+  * edge-weighted: a number (weight) is assigned to every edge
+  * or both
+  * example: a graph of streets: edge weights = length of the roads
+
+* **Planar Graphs**: 
+  * a planar graph can be drawn in 2D, s.t. no edges intersect.
+  * ex.: Haus of Niklaus
+  * euler's formula for any planar graph drawn without crossings: $V - E + F = 2$
+* **Dual Graphs**: 
+  * each surface gets a node
+  * each edge defines a border between surfaces - each surface seperated by an edge is connected with an edge
+![planar dual](./imgs/w11/dual-and-planar.png){width="75%"}
+
+##### Euler’s Formula (Primal Form)
+
+For any connected planar graph drawn without edge crossings:
+
+$$
+V - E + F = 2
+$$
+
+Where:
+
+* $V$ = number of vertices
+* $E$ = number of edges
+* $F$ = number of faces, including the outer (infinite) face
 
 
+##### Dual Graphs and Euler’s Formula
+
+The dual graph $G^*$ of a planar graph $G$ is constructed by:
+
+* Placing a vertex in each face of $G$
+* Connecting two vertices in $G^*$ if their corresponding faces in $G$ are adjacent (i.e., separated by an edge in $G$)
+
+In the dual:
+
+* The number of vertices in $G^*$ is equal to the number of faces in $G$: $V^* = F$
+* The number of edges remains the same: $E^* = E$
+* The number of faces in $G^*$ equals the number of vertices in $G$: $F^* = V$
+
+---
+
+##### Euler's Formula Applied to the Dual
+
+Since the dual $G^*$ is also planar and connected (if $G$ is), Euler’s formula also holds:
+
+$$
+V^* - E^* + F^* = 2
+$$
+
+Substituting the dual identities:
+
+$$
+F - E + V = 2
+$$
+
+This shows that Euler's formula is preserved under duality, with $V \leftrightarrow F$, and $E$ unchanged.
+
+
+##### Summary Table
+
+| Property        | Original Graph $G$ | Dual Graph $G^*$      |
+| --------------- | ------------------ | --------------------- |
+| Vertices        | $V$                | $V^* = F$             |
+| Edges           | $E$                | $E^* = E$             |
+| Faces           | $F$                | $F^* = V$             |
+| Euler's Formula | $V - E + F = 2$    | $V^* - E^* + F^* = 2$ |
+
+#### Connected Graph
+
+any two nodes $u, v$ are connected $u \rightsquigarrow v$. 
+
+* **connected components**: maximal subgraphs of the graph that are connected. 
+* **tree**: connected graph, s.t. no cucles exist
+  * for a tree: $|E| = |V| - 1$
+* **forest**: a not connected graph, s.t. each connected component is a tree
+* **spanning tree**: a subgraph of a connected graph that is a tree, s.t. all nodes are touched.
+  * $\Rightarrow$ **theorem**: for a connected graph such a spanning tree always exists.
