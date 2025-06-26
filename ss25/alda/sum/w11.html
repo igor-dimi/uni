@@ -322,6 +322,20 @@ window.Quarto = {
   <li><a href="#treap-data-structure" id="toc-treap-data-structure" class="nav-link" data-scroll-target="#treap-data-structure">Treap Data Structure</a></li>
   <li><a href="#index-sort-indirect-sort" id="toc-index-sort-indirect-sort" class="nav-link" data-scroll-target="#index-sort-indirect-sort">Index Sort / Indirect Sort</a></li>
   </ul></li>
+  <li><a href="#vl-21---26.06.25" id="toc-vl-21---26.06.25" class="nav-link" data-scroll-target="#vl-21---26.06.25">VL 21 - 26.06.25</a>
+  <ul>
+  <li><a href="#graphs-graph-theory" id="toc-graphs-graph-theory" class="nav-link" data-scroll-target="#graphs-graph-theory">Graphs &amp; Graph Theory</a>
+  <ul>
+  <li><a href="#definitions-for-graphs" id="toc-definitions-for-graphs" class="nav-link" data-scroll-target="#definitions-for-graphs">Definitions for Graphs:</a>
+  <ul class="collapse">
+  <li><a href="#eulers-formula-primal-form" id="toc-eulers-formula-primal-form" class="nav-link" data-scroll-target="#eulers-formula-primal-form">Euler’s Formula (Primal Form)</a></li>
+  <li><a href="#dual-graphs-and-eulers-formula" id="toc-dual-graphs-and-eulers-formula" class="nav-link" data-scroll-target="#dual-graphs-and-eulers-formula">Dual Graphs and Euler’s Formula</a></li>
+  <li><a href="#eulers-formula-applied-to-the-dual" id="toc-eulers-formula-applied-to-the-dual" class="nav-link" data-scroll-target="#eulers-formula-applied-to-the-dual">Euler’s Formula Applied to the Dual</a></li>
+  <li><a href="#summary-table" id="toc-summary-table" class="nav-link" data-scroll-target="#summary-table">Summary Table</a></li>
+  </ul></li>
+  <li><a href="#connected-graph" id="toc-connected-graph" class="nav-link" data-scroll-target="#connected-graph">Connected Graph</a></li>
+  </ul></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -496,8 +510,200 @@ number of comparisons O(d) = O(logN)</li>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>quick_sort(p, key_function <span class="op">=</span> <span class="kw">lambda</span> k: a[k])</span>
 <span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>r <span class="op">=</span> index_sort(a, p)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
 </ul>
+</section>
+</section>
+<section id="vl-21---26.06.25" class="level2">
+<h2 class="anchored" data-anchor-id="vl-21---26.06.25">VL 21 - 26.06.25</h2>
+<section id="graphs-graph-theory" class="level3">
+<h3 class="anchored" data-anchor-id="graphs-graph-theory">Graphs &amp; Graph Theory</h3>
+<p>Origins of graph theory: Solution to the <strong>Kongisberg Problem</strong>:</p>
+<ul>
+<li>is it possible to make a city tour without crossing any bridge ever twice?</li>
+</ul>
+<p>Euler’s answer: <strong>No</strong>.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./imgs/w11/kongisberg.png" class="img-fluid figure-img" style="width:85.0%"></p>
+<figcaption>Koniegsberg</figcaption>
+</figure>
+</div>
+<p><strong>Solution</strong>: An Euler path exist only if all nodes (other than start and end nodes) have an even number edges incident to them (i.e.&nbsp;the degree of the nodes is even)</p>
+<section id="definitions-for-graphs" class="level4">
+<h4 class="anchored" data-anchor-id="definitions-for-graphs">Definitions for Graphs:</h4>
+<ul>
+<li>Graph G = (V, E)
+<ul>
+<li>V: set of all nodes / vertices<br>
+</li>
+<li>E: Set of all edges, <span class="math inline">\(E \subseteq V \times V\)</span></li>
+</ul></li>
+<li>This is a normal graph: at most one edge between any two nodes. Initially we also exclude self loops, i.e.&nbsp;<span class="math inline">\((u, u) \notin E\)</span></li>
+<li>Multigraph: multiple edges between nodes are allowed (Like in the Konigsberg example)</li>
+<li>undirected graph: <span class="math inline">\((v, u) \in E \Rightarrow (u, v) \in E\)</span></li>
+<li>directed graph: not undirected.</li>
+<li>Degree of a node:
+<ul>
+<li>undirected: number of edges incident to a node (we don’t count twice)</li>
+<li>directed:
+<ul>
+<li>out degree: number of outgoing edges</li>
+<li>in degree: numb of inocming edges</li>
+</ul></li>
+</ul></li>
+<li><strong>Complete Graph</strong>:</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./imgs/w11/complete-graphs.png" class="img-fluid figure-img" style="width:80.0%"></p>
+<figcaption>complete-graph</figcaption>
+</figure>
+</div>
+<p>Let <span class="math inline">\(N := |V|, M := |E|\)</span>. For a complete graph we have:</p>
+<ul>
+<li><p><span class="math inline">\(degree(u) = N - 1\)</span></p></li>
+<li><p>handshaking lemma: <span class="math inline">\(M = \frac{N(N - 1)}{2}\)</span></p></li>
+<li><p><strong>Subgraph</strong>: <span class="math inline">\(G' = (V', E'), V' \subseteq V, E' \subseteq E\)</span> and <span class="math inline">\((u, v) \in E' \Rightarrow V'\)</span></p>
+<ul>
+<li>induced subgraph: for an arbitrary <span class="math inline">\(V' \subseteq V\)</span>, <span class="math inline">\(E' := E \\ \{(u, v) : u \notin V' \text{or} v \notin V'\}\)</span></li>
+<li>spanning subtree: <span class="math inline">\(V' = V, E' \subset E\)</span></li>
+</ul></li>
+<li><p><strong>Walks</strong> (Weg) in graphs:</p>
+<ul>
+<li>trivial walk of length 0: individual node</li>
+<li>walk of length 1: a single edge of a graph</li>
+<li>a generalized walk of a graph: a sequence of nodes <span class="math inline">\((v_1, v_2, ... v_k)\)</span>, s.t. <span class="math inline">\((v_i, v_{i + 1}) \in E, \forall i\)</span> <span class="math inline">\(\Rightarrow\)</span> <strong>length</strong>:= <span class="math inline">\(k - 1\)</span></li>
+</ul></li>
+<li><p><strong>Path</strong>: A Walk where each individual node is distinct (other than possibly start and end)</p></li>
+<li><p><strong>Cycle</strong> (Zyklus): a Walk with <span class="math inline">\(v_1 = v_k\)</span></p></li>
+<li><p><strong>Circuit</strong> (sometimes Cycle) (Kreis): a path with <span class="math inline">\(v_1 = v_k\)</span></p></li>
+<li><p><strong>Reachability</strong> (Erreichbarkeit): <span class="math inline">\(u \rightsquigarrow v \Leftrightarrow u \rightsquigarrow v :\Leftrightarrow\)</span> there is a Walk between the nodes <span class="math inline">\(u, v\)</span></p></li>
+<li><p><strong>Euler walk</strong>: each edge is contained exactly once. (example: Haus of Niklaus)</p></li>
+<li><p><strong>Hamilton path</strong>: each node is contained eactly once</p></li>
+<li><p><strong>Hamilton Circuit</strong>: A Hamilton path, s.t. start = end.</p>
+<ul>
+<li>This definition is relevant to the problem of the “<strong>Traveling Salesman</strong>”: find the hamilton circuit with the least weight (for graphs with weighted edges). Best known algorithm is <span class="math inline">\(\mathcal{O}(2^N)\)</span>.</li>
+<li>This is the standard example of a “NP-hard problem” <span class="math inline">\(\Rightarrow\)</span> no efficient algorithm is known.</li>
+</ul></li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./imgs/w11/euler-hamilton.png" class="img-fluid figure-img" style="width:85.0%"></p>
+<figcaption>euler-hamilton</figcaption>
+</figure>
+</div>
+<ul>
+<li><strong>weighted graphs</strong>:
+<ul>
+<li>node-weighted: a number (weight) is assigned to every node</li>
+<li>edge-weighted: a number (weight) is assigned to every edge</li>
+<li>or both</li>
+<li>example: a graph of streets: edge weights = length of the roads</li>
+</ul></li>
+<li><strong>Planar Graphs</strong>:
+<ul>
+<li>a planar graph can be drawn in 2D, s.t. no edges intersect.</li>
+<li>ex.: Haus of Niklaus</li>
+<li>euler’s formula for any planar graph drawn without crossings: <span class="math inline">\(V - E + F = 2\)</span></li>
+</ul></li>
+<li><strong>Dual Graphs</strong>:
+<ul>
+<li>each surface gets a node</li>
+<li>each edge defines a border between surfaces - each surface seperated by an edge is connected with an edge <img src="./imgs/w11/dual-and-planar.png" class="img-fluid" style="width:75.0%" alt="planar dual"></li>
+</ul></li>
+</ul>
+<section id="eulers-formula-primal-form" class="level5">
+<h5 class="anchored" data-anchor-id="eulers-formula-primal-form">Euler’s Formula (Primal Form)</h5>
+<p>For any connected planar graph drawn without edge crossings:</p>
+<p><span class="math display">\[
+V - E + F = 2
+\]</span></p>
+<p>Where:</p>
+<ul>
+<li><span class="math inline">\(V\)</span> = number of vertices</li>
+<li><span class="math inline">\(E\)</span> = number of edges</li>
+<li><span class="math inline">\(F\)</span> = number of faces, including the outer (infinite) face</li>
+</ul>
+</section>
+<section id="dual-graphs-and-eulers-formula" class="level5">
+<h5 class="anchored" data-anchor-id="dual-graphs-and-eulers-formula">Dual Graphs and Euler’s Formula</h5>
+<p>The dual graph <span class="math inline">\(G^*\)</span> of a planar graph <span class="math inline">\(G\)</span> is constructed by:</p>
+<ul>
+<li>Placing a vertex in each face of <span class="math inline">\(G\)</span></li>
+<li>Connecting two vertices in <span class="math inline">\(G^*\)</span> if their corresponding faces in <span class="math inline">\(G\)</span> are adjacent (i.e., separated by an edge in <span class="math inline">\(G\)</span>)</li>
+</ul>
+<p>In the dual:</p>
+<ul>
+<li>The number of vertices in <span class="math inline">\(G^*\)</span> is equal to the number of faces in <span class="math inline">\(G\)</span>: <span class="math inline">\(V^* = F\)</span></li>
+<li>The number of edges remains the same: <span class="math inline">\(E^* = E\)</span></li>
+<li>The number of faces in <span class="math inline">\(G^*\)</span> equals the number of vertices in <span class="math inline">\(G\)</span>: <span class="math inline">\(F^* = V\)</span></li>
+</ul>
+<hr>
+</section>
+<section id="eulers-formula-applied-to-the-dual" class="level5">
+<h5 class="anchored" data-anchor-id="eulers-formula-applied-to-the-dual">Euler’s Formula Applied to the Dual</h5>
+<p>Since the dual <span class="math inline">\(G^*\)</span> is also planar and connected (if <span class="math inline">\(G\)</span> is), Euler’s formula also holds:</p>
+<p><span class="math display">\[
+V^* - E^* + F^* = 2
+\]</span></p>
+<p>Substituting the dual identities:</p>
+<p><span class="math display">\[
+F - E + V = 2
+\]</span></p>
+<p>This shows that Euler’s formula is preserved under duality, with <span class="math inline">\(V \leftrightarrow F\)</span>, and <span class="math inline">\(E\)</span> unchanged.</p>
+</section>
+<section id="summary-table" class="level5">
+<h5 class="anchored" data-anchor-id="summary-table">Summary Table</h5>
+<table class="table">
+<thead>
+<tr class="header">
+<th>Property</th>
+<th>Original Graph <span class="math inline">\(G\)</span></th>
+<th>Dual Graph <span class="math inline">\(G^*\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Vertices</td>
+<td><span class="math inline">\(V\)</span></td>
+<td><span class="math inline">\(V^* = F\)</span></td>
+</tr>
+<tr class="even">
+<td>Edges</td>
+<td><span class="math inline">\(E\)</span></td>
+<td><span class="math inline">\(E^* = E\)</span></td>
+</tr>
+<tr class="odd">
+<td>Faces</td>
+<td><span class="math inline">\(F\)</span></td>
+<td><span class="math inline">\(F^* = V\)</span></td>
+</tr>
+<tr class="even">
+<td>Euler’s Formula</td>
+<td><span class="math inline">\(V - E + F = 2\)</span></td>
+<td><span class="math inline">\(V^* - E^* + F^* = 2\)</span></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="connected-graph" class="level4">
+<h4 class="anchored" data-anchor-id="connected-graph">Connected Graph</h4>
+<p>any two nodes <span class="math inline">\(u, v\)</span> are connected <span class="math inline">\(u \rightsquigarrow v\)</span>.</p>
+<ul>
+<li><strong>connected components</strong>: maximal subgraphs of the graph that are connected.</li>
+<li><strong>tree</strong>: connected graph, s.t. no cucles exist
+<ul>
+<li>for a tree: <span class="math inline">\(|E| = |V| - 1\)</span></li>
+</ul></li>
+<li><strong>forest</strong>: a not connected graph, s.t. each connected component is a tree</li>
+<li><strong>spanning tree</strong>: a subgraph of a connected graph that is a tree, s.t. all nodes are touched.
+<ul>
+<li><span class="math inline">\(\Rightarrow\)</span> <strong>theorem</strong>: for a connected graph such a spanning tree always exists.</li>
+</ul></li>
+</ul>
 
 
+</section>
 </section>
 </section>
 
