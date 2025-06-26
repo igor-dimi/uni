@@ -8,3 +8,11 @@ date: 06/23/2025
 * OSI
 * http
 * ips, hosts, ports
+
+## VL 24 - 25.06.25
+
+* wireshark
+* format of an IP Datagram
+* fragmentation of packets
+* Network Interfaces and IP Addresses 
+* Netid / Hostid, subnets. Subnet masks
