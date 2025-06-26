@@ -1,0 +1,122 @@
+---
+title: Week 7
+date: 05/26/2025
+---
+
+## VL 13 - 26.05.25
+
+* page swapping - revision of algorithms
+  * fifo
+  * second-chance
+  * improvement of second-chance ds $\Rightarrow$ clock algorithm
+
+### Page Swapping Algorithms (Cont.)
+
+#### Improved Clock-Algorithm
+
+* in addition to the `R-bit` also `M-bit`: M-bit: the page has been modified
+
+#### LRU Algorithm
+
+* the least recently used page is chosen as the victim to be swapped out
+* pragmatic problem: page access happens extremely frequently and there are millions of pages - how to track the access data / implement LRU realistically? $\Rightarrow$ epochs and bit sequences whether the page was used during the epoch.
+
+#### Other Options: Counting Algorithms
+
+* number of accesses to each page is counted
+
+### Paging and Virtual Memory: Applications
+
+* demand paging (used in all modern operating systems):
+  * pages are initially mostly in the secondary memory and loaded dynamically when page faults occure
+* **copy-on-write**: when `fork()` is initially called and a child process is created, the child process gets
+  exactly all the same page table and frames in memory (instead of copying all the frames completely). 
+  The frames are copied when one of the processes tries to write
+* Why does demand paging work well ? $\Rightarrow$ **localicty of reference**. 
+  * **working set**: set of pages that are used by the process in the last time period $\Delta$.  
+    * whne a new "context" is used there is initally a spike in page faults - but it subsides quickly as the pages
+        are loaded 
+    * Working sets can be used for **page swapping** in combination with **LRU**. 
+  * **trashing**: 
+
+### Segmentation 
+
+Last memory management topic. 
+
+* so far we assumed that a process has a linear, contigious logical address space. 
+* in reality the logical address space of a process is divided (segmented) in various spaces
+  corresponding to different functional parts of the program:
+    * parse tree
+    * constant table
+    * source text
+    * symbol table
+    * heap
+    * shared memory
+    * shared library
+    * stacks (sometimes two staks for a thread)
+* The programmer doesn't have to manage these semgents manually. 
+* **Segment**: for completely independent parts of the program, independent logical spaces are introduced
+  * realised with the introduction of another level of abstraction on top of the logical address space where 
+    for each segment number the base address and the limit address is stored in a segment table. T
+  * Translation if also done in hardware. 
+  * but since nowadays we have huge logical address space the segments don't collide 
+  * each processs has two descriptor tables:
+    * **local descriptor table** (LDT)
+    * **global descriptor table** (GDT)
+
+## VL 14 - 28.05.25
+
+### Files and File Systems
+
+* data (files) are the third and (final) abstraction that we will consider.
+* why data:
+  * long term storage
+  * RAM is limited
+  * persistency
+* structuring of data
+  * data as byte sequences
+  * sequence of data words
+  * data stored as a tree data structure (not used anymore)
+
+#### Types of Files and Directories
+
+* regular files: unstructured byte sequences
+* directories: virtual 'container / box'
+* named pipes: 
+* sockets / socket devices
+* virtual device files:
+* file attributes 
+  * access rights, password, creator, owner, ...
+* Hierachical Filesystem :Tree like structure organized as nested directories - it is the defacto standard today
+  * directories: 
+    * names of files and other directories
+    * I-nodes:
+* Current file ssystems:
+  * fat, fat32, ntfs
+  * linux: ext ...
+* links: a reference to a file or a directory
+  * linux:
+    * symbolic links
+    * hard links
+
+#### File Operations 
+
+* create, delete, open, close
+* read / write
+* append
+* seek
+
+#### How Data are Stored on Magnetic Disks
+
+* how magnetic disks are addressed:
+  * sector
+  * cylinder
+  * ring number
+* similar to virtual to physical address mapping, there is a logical
+  to physical address translation
+* how is it store in:
+  * contigious $\Rightarrow$ fragmentation
+  * linked lists $\Rightarrow$ slow random access / seek
+    * improvement $\Rightarrow$ FAT: only the ponters are stored in a table in RAM $\Rightarrow$ faster seek
+      * disadvantages: the table itself might be too large
+  * i-nodes (best solution): 

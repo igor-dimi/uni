@@ -1,0 +1,13 @@
+---
+title: Week 11
+date: 06/23/2025
+---
+
+## VL 11 - 23.06.25
+  
+* template metaprogramming (cont)
+  * dependent base classes
+  * curiously recurring template pattern (**CRTP**)
+  * compile time computations:
+    * classic implementation vs more modern was done with constexpr
+    * SFINAE

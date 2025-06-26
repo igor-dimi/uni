@@ -1,0 +1,23 @@
+---
+title: Week 06
+date: 05/20/2025
+---
+
+## Lecture 6 - 20.05.25
+
+* Standard Functionality
+  * random number generation: C `rand()` is not that good (Pseudo-random) $\Rightarrow$ `<random>` in C++11+ is better
+  * algorithms header
+    * `for_each`
+    * `transform`
+    * `count_if`
+    * `find_if`
+    * `copy_if`
+    * `shuffle`
+    * `sort`
+    * ...
+  * exceptions
+    * `noexcept` (for compiler optimizations)
+    * move semantics (short overview)
+  * time measurements
+    * ex.: benchmarking move semantics

@@ -1,0 +1,87 @@
+---
+title: Week 5
+date: 05/12/25
+---
+
+## VL 9 - 12.05.25
+
+### IPC via Sharem Memory
+
+#### SM in Posix 
+
+* process first creates a shared memory segment:
+  
+  ```c
+  segment_id = shmget(IPC_PRIVATE, size, S_IRUSR | S_IWSUR);
+  ```
+
+* processes that want access to this segment have to subscibe / attach to it. 
+* after the process is done it detaches from the shared memory with `shmdt(shared_memory)`. 
+* Problem: how other subscibers get this value `segment_id` $\Rightarrow$ `fork()`
+* *alternative* (in windows): Memory-mapped-data (MMD) are used for IPC
+* **handles** (look up)
+
+### Swapping 
+
+* **Swapping**: the complete memory image of a process is backed up / stored in the primary memory
+  in order to protect the RAM and allow more processes.
+* Problems:
+  * when processes are swapped in and out the memory addresses in the RAM change - how to remap or recalculate?
+  * swapping takes time - seconds
+  * processes that are currently doing I/O can't be swapped in / out, 
+    * **solution**: prioritize swapping in / out the waiting or blocked processes
+    * additional process state: **blocked and suspended** means swapped out
+    * additional process state: **ready and suspended** means ready but still swapped out, needs to be first swapped in 
+  * internal fragmentation of RAM. 
+
+### Memory Management
+
+* In past systems and actual memory and the addressable memory was the same - very limiting. 
+* General question how to allocate memory to incoming processes ? Various approaches
+  * fixed-sized parititions: obvious problems - partitions are too small or too large
+  * variable-sized partition schemes. problems:
+    * address relocation: without virtual memory the address of the process must be reculculated in the program if swapped in and out
+    * contigious address: without virtual memory the complete process has to have a contingious memory 
+    * external fragmentation (btw, external fragmentation is worse in primary memory). How to solve this problem:
+      * Reorganize the RAM $\Rightarrow$ compaction. Problems: 
+        * This is time intensive
+        * is I/O is happening problematic
+        * works only for code reallocation in runtime. 
+      * use fitting schemes for memory allocation that allocated the memory well
+        * **first fit**: 
+        * **best fit**
+        * **worst fit** (usually worse than two other solutions)
+
+#### Intro to Virtual Memory - Logical vs Physical Memory
+
+previous twe problems:
+
+1. P1: illusion of fixed memory address from 0 to max
+2. P2: illusion of *contigious* memory
+
+are solved by introducing the concept logical memory (mapping physical to logical memory):
+
+* The cpu and the processes see (or use) completely different addresses from the actual memory addresses from the ram
+* the mapping is implemented directly in hardware by teh memory-management-unit - **MMU**.(usually inside the processor)
+* These logical addresses seen by the cpu and proccesses are called **virtual memory / addresses**. 
+* The addresses in the RAM are **physical memory / addresses**
+* how is the mapping implemented? The process and the cpu sees the addresses from 0 to max. If the actual process
+  is located in the memory at some address. MMU simply adds the offset to this address. 
+* second problem of contigious memory is solved with a table but the table is not refined up to bytes, rather up to pages (more rough subdivision of 
+  a process) $\Rightarrow$ **page table**
+    * page index (page = Seite)
+    * frame index (Frame = Seitenrahmen)
+
+## VL 10 - 14.05.25
+
+### Memory Management
+
+* a page index must be translated to a frame index
+  * page is the virtual thing seen by the process and the processor,
+  * frame is the actual physical location in the RAM. 
+    * Translated with a function: $F_{\text{pid}}(p) = f$
+    * p := page index
+    * f := frame 
+  * how does the translation work ? examples in the lecture
+
+

@@ -54,6 +54,11 @@ website:
 
     - title: "IBN VL Notes SS25"
       contents: ss25/ibn/sum/
+
+    - title: "SciComp VL Notes SS25"
+      contents: ss25/scicomp/sum/
+    
+
         
         
 
@@ -63,6 +68,7 @@ format:
     theme: cosmo
     css: styles.css
     toc: true
+    toc-depth: 5
 
 
 

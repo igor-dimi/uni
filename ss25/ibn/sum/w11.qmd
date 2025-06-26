@@ -1,0 +1,10 @@
+---
+title: Week 11
+date: 06/23/2025
+---
+
+## VL 23 - 23.06.25
+
+* OSI
+* http
+* ips, hosts, ports

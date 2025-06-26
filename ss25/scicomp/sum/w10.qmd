@@ -1,0 +1,19 @@
+---
+title: Week 10
+date: 06/17/2025
+---
+
+## VL 10 - 17.06.25
+
+* desing patterns (cont.)
+  * strategy pattern: example activation in neural networks
+  * command pattern
+  * adapter pattern
+  * composite pattern (not very relevant for the lecture)
+  * decorator pattern (very useful)
+  * design pattern generally adhere to SOLID
+* program desing concepts
+
+### Template Metaprogramming
+
+* dependent and independent base classes

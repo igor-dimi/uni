@@ -1,0 +1,29 @@
+---
+title: Week 9
+date: 06/11/2025
+---
+
+## VL 17 - 09.06.25
+
+* holiday
+
+## VL 18 - 11.06.25
+
+### Deadlocks (cont)
+
+* prevention of deadlocks 
+
+### Scheduling of Processes
+
+* differentiate between types of processes
+  * I/O intensive
+  * CPU intensive (CPU bound)
+
+
+#### scudulnig strategies
+
+* **first-come first-served** (FCFS): simsple solution
+  first requested process is executed until the end
+  * problems: **convoy effect** 
+* **shortest-job first** (SJF): 
+* **shortest-remaining time first** (SRTF)

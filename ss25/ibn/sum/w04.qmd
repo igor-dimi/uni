@@ -38,3 +38,71 @@ Race conditions, synchronization, semaphores, locks, mutexes are all **Klausurre
   * message passing - MP (safer)
   * shared-memory - SM (faster)
 
+
+## VL 8 - 07.05.25
+
+### IPC (cont.)
+
+IPC has variouis APIs / Implementations 
+
+* data streams: pipes, sockets, message queues, terminal, ... 
+* events 
+* remote procedure call
+* shared memory
+
+#### Message Passing 
+
+message passing can be blocking and non-blocking; 
+
+* blocking = **synchronous**,
+* non-blocking = **asynchronous**. 
+
+Distributed IPC: communication between distinct computers
+
+* sockets: they imitate data systems
+* remote proecedure calls
+* web services: 
+
+#### Message Passing via Pipes
+
+##### Anonymous pipes 
+
+instead of 
+
+```bash
+ls -R >tmp-file.txt
+grep -ci '\.jpg$' tmp-file.txt
+````
+
+we can do:
+
+```bash
+ls -R | grep -ci '\.jpg$' 
+```
+
+* communication is realized by `fork()`: all the data etc is inherited by the child process. 
+* closely related is: producer / consumer problem
+
+
+##### Named Pipes 
+
+bi-directional communication
+
+
+##### Data descriptors / handles
+
+DD (file descriptor) is an integer (an index to a file data structure) and **not** a pointer. 
+
+There are standard DD values. Any time a process is started in Linux, three "files" are automatically opened that have the following
+DD values:
+
+* 0: stdin
+* 1: stdout
+* 2: stderr
+
+These can be **redirected** in the shell. In order to achidve this the "hard-coded" DDs must "overwritten" $\Rightarrow$ `dup2()`:
+
+```c
+int dup2(int srcDD, int targetDD)
+```
+
