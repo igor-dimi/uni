@@ -1,0 +1,13 @@
+---
+title: Week 12
+date: 06/30/2025
+---
+
+## VL 25 - 30.06.25
+
+* subnets / subnet masks(cont.)
+* Routers
+  * forwarding and routing
+  * longest-prefix-matching:  
+* routing algorithms
+  * Dijkstra shortest path
