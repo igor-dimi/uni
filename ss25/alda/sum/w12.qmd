@@ -1,0 +1,131 @@
+---
+title: Week 12
+date: 07/1/2025
+---
+
+## VL 22 - 01.07.25
+
+### How to Represent Graphs 
+
+* **Nodes**: whole numbers 0, ..., N - 1 (or keys related to the application, e.g. Names)
+* **Edges**: Two options
+  1. **Adjacency matrix**:  
+     $A \in \{0, 1\}^{|V| \times |V|}$, s.t. $a_{i, j} = 1 \Leftrightarrow \text{edge} i \rightarrow j \text{exixts}$ 
+
+     for an undirected graph: $A = A^T$ (matri has to be symmetric)
+
+     example:
+
+     ![adjecency matrix](./imgs/w12/adjacency-matrix.png){width="75%"}
+
+     advantages:
+
+     * concepts and techniques can be directly applied
+     * storage efficient for direct graphs that are not sparse, i.e. $|E| \in \mathcal{O}(|V|^2)$, (but not for sparse graphs $|E| \in \mathcal{O(|V|)}$)
+
+  2. **Adjacency list**: Array of arrays, an array for each node, where the arrays containes the neighbors
+
+     above graph can be represented as:
+
+     graph = [[1, 3], [0, 2, 3], [1, 3], [0, 1, 2]]
+
+     * advantage: storage efficient for sparse matrices, e.g. navigation graphs
+     
+     an elegant pythonic code for a looping over all neighbours of all nodes:
+
+     ```python
+     for node, neighbors in enumerate(graph): # looping over all nodes
+      for neighbor in neighbors:
+         ... # do something interesting
+     ```
+
+#### Calculating the Transpose of a Graph
+
+This means reversing all nodes. 
+
+- for undirected graphs: $G^T = G \Rightarrow A^T = A, \text{graph}^T = \text{graph}$ (graph is the adjacency list representation)
+- for directed graphs: $A_{G^T} = A_G^T$ (for adjacency matrix, tranpose it.)
+  Below we give how to tranpose the adjacency list representation of a graph:
+
+  ```python
+  def tranpose_graph(graph): 
+   gt = [[] for i in graph]
+   for node, neighbors in enumerate(graph) :
+      for neighbor in neighbors :
+         gt[neighbor].append(node) # reverse edges
+   return gt
+  ```
+
+#### Traversing Graphs
+
+Visiting all nodes (or a subset of all nodes) in a specific order.
+
+* Basics:
+   * **Depth First Search (DFS)**: first traverse the depth, and then move to other neighbors
+   * **Breadth First Search (BFS)**: First visit all neighbors and then go to the deeper level
+* Advanced:
+  * shortest path (dijkstra shortest path, A*-Alg): visit nodes in an increasing weight order
+
+
+##### DFS
+
+implementation:
+
+```python
+def dfs(graph, start_node):
+   visited = [False] * len(graph)
+   def visit(node):
+      if visited[node] return # node is already visited, do nothing
+      visited[node] = True # register the visit
+      print("discovered", node)
+      for neighbor in graph[node]:
+         visit[neighbor]
+      print("finished", node)
+   visit[start_node]
+```
+
+
+* **Example**: 
+
+![dfs-example](./imgs/w12/dfs-example.png){width="85%"}
+
+recursive implementation is elegant, but for large graphs stack depth (overflow) can be reached very easily, e.g. for graphs with thousands of nodes.
+But it is possible to re-write any recursive algorithm iteratively using stack data structure, and this is what we can do for DFS - we can implement it
+using stack data structure:
+
+**stack implementation**:
+
+```python
+from collections import deque # simultaneously a stack and a queue
+def dfs(graph, start_node):
+   d = deque()
+   d.append(start_node)
+   visited = [False] * len(graph)
+   while len(d) != 0 : # there are still elements in the stack
+      node = d.popright() # LIFO (for BFS we will simply replace with popleft)
+      if visited[node]: continue
+      visited[node] = True
+      print("discovered", node)
+      for neighbor in graph[node]:
+         d.append(neighbor)
+```
+   
+`print("finished", node)` is now not in post-order. As indicated in the comment above, to get BFS instead of DFS the only necessary difference is 
+to change `node = d.popright()` to `node = d.popleft()`. 
+
+
+##### BFS
+
+In BFS first all the neighbors are visited, and then the deeper levels. It means
+
+- replacing stack witha  queue (or if a deque is used, replace popright() with popleft()). 
+
+![bfs-example](./imgs/w12/bfs-example.png){width="85%"}
+
+
+
+
+   
+
+
+
