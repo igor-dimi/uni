@@ -1,0 +1,11 @@
+---
+title: Week 12
+date: 07/1/2025
+---
+
+## 01.07.25 - Lecture 12
+
+* variadic templates,
+* modern c++:
+  * `constexpr`
+  * compile time branching instead of template specialization
