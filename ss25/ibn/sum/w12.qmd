@@ -11,3 +11,12 @@ date: 06/30/2025
   * longest-prefix-matching:  
 * routing algorithms
   * Dijkstra shortest path
+
+
+## VL 26 - 02.07.25
+
+* dijkstra algorithm (cont), example walkthrough
+  * distance vector
+* DHCP client-server exchange
+* NAT
+* ICMP
