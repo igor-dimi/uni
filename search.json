@@ -178,6 +178,28 @@
     ]
   },
   {
+    "objectID": "ss25/scicomp/sum/w12.html",
+    "href": "ss25/scicomp/sum/w12.html",
+    "title": "Week 12",
+    "section": "",
+    "text": "variadic templates,\nmodern c++:\n\nconstexpr\ncompile time branching instead of template specialization",
+    "crumbs": [
+      "Weekly Summary",
+      "Week 12"
+    ]
+  },
+  {
+    "objectID": "ss25/scicomp/sum/w12.html#lecture-12",
+    "href": "ss25/scicomp/sum/w12.html#lecture-12",
+    "title": "Week 12",
+    "section": "",
+    "text": "variadic templates,\nmodern c++:\n\nconstexpr\ncompile time branching instead of template specialization",
+    "crumbs": [
+      "Weekly Summary",
+      "Week 12"
+    ]
+  },
+  {
     "objectID": "ss25/scicomp/sum/w10.html",
     "href": "ss25/scicomp/sum/w10.html",
     "title": "Week 10",
@@ -292,7 +314,7 @@
     "href": "ss25/scicomp/sum/index.html",
     "title": "Weekly Summary",
     "section": "",
-    "text": "Order By\n       Default\n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Title\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\nTitle\n\n\nDate\n\n\n\n\n\n\nWeek 03\n\n\nApr 29, 2025\n\n\n\n\nWeek 04\n\n\nMay 6, 2025\n\n\n\n\nWeek 05\n\n\nMay 13, 2025\n\n\n\n\nWeek 06\n\n\nMay 20, 2025\n\n\n\n\nWeek 07\n\n\nMay 27, 2025\n\n\n\n\nWeek 08\n\n\nJun 3, 2025\n\n\n\n\nWeek 09\n\n\nJun 10, 2025\n\n\n\n\nWeek 1\n\n\n \n\n\n\n\nWeek 10\n\n\nJun 17, 2025\n\n\n\n\nWeek 11\n\n\nJun 23, 2025\n\n\n\n\nWeek 2\n\n\n \n\n\n\n\n \n\n\n \n\n\n\n\n \n\n\n \n\n\n\n\n \n\n\n \n\n\n\n\n \n\n\n \n\n\n\n\n\nNo matching items",
+    "text": "Order By\n       Default\n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Title\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\nTitle\n\n\nDate\n\n\n\n\n\n\nWeek 03\n\n\nApr 29, 2025\n\n\n\n\nWeek 04\n\n\nMay 6, 2025\n\n\n\n\nWeek 05\n\n\nMay 13, 2025\n\n\n\n\nWeek 06\n\n\nMay 20, 2025\n\n\n\n\nWeek 07\n\n\nMay 27, 2025\n\n\n\n\nWeek 08\n\n\nJun 3, 2025\n\n\n\n\nWeek 09\n\n\nJun 10, 2025\n\n\n\n\nWeek 1\n\n\n \n\n\n\n\nWeek 10\n\n\nJun 17, 2025\n\n\n\n\nWeek 11\n\n\nJun 23, 2025\n\n\n\n\nWeek 12\n\n\nJul 1, 2025\n\n\n\n\nWeek 2\n\n\n \n\n\n\n\n \n\n\n \n\n\n\n\n \n\n\n \n\n\n\n\n \n\n\n \n\n\n\n\n\nNo matching items",
     "crumbs": [
       "Weekly Summary"
     ]
@@ -339,6 +361,39 @@
     "crumbs": [
       "Bachelor",
       "SS 25"
+    ]
+  },
+  {
+    "objectID": "ss25/ibn/sum/w12.html",
+    "href": "ss25/ibn/sum/w12.html",
+    "title": "Week 12",
+    "section": "",
+    "text": "subnets / subnet masks(cont.)\nRouters\n\nforwarding and routing\nlongest-prefix-matching:\n\n\nrouting algorithms\n\nDijkstra shortest path",
+    "crumbs": [
+      "Weekly Summary",
+      "Week 12"
+    ]
+  },
+  {
+    "objectID": "ss25/ibn/sum/w12.html#vl-25---30.06.25",
+    "href": "ss25/ibn/sum/w12.html#vl-25---30.06.25",
+    "title": "Week 12",
+    "section": "",
+    "text": "subnets / subnet masks(cont.)\nRouters\n\nforwarding and routing\nlongest-prefix-matching:\n\n\nrouting algorithms\n\nDijkstra shortest path",
+    "crumbs": [
+      "Weekly Summary",
+      "Week 12"
+    ]
+  },
+  {
+    "objectID": "ss25/ibn/sum/w12.html#vl-26---02.07.25",
+    "href": "ss25/ibn/sum/w12.html#vl-26---02.07.25",
+    "title": "Week 12",
+    "section": "VL 26 - 02.07.25",
+    "text": "VL 26 - 02.07.25\n\ndijkstra algorithm (cont), example walkthrough\n\ndistance vector\n\nDHCP client-server exchange\nNAT\nICMP",
+    "crumbs": [
+      "Weekly Summary",
+      "Week 12"
     ]
   },
   {
@@ -500,7 +555,7 @@
     "href": "ss25/ibn/sum/index.html",
     "title": "Weekly Summary",
     "section": "",
-    "text": "Order By\n       Default\n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Title\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\nTitle\n\n\nDate\n\n\n\n\n\n\nWeek 1\n\n\nApr 14, 2025\n\n\n\n\nWeek 10\n\n\nJun 16, 2025\n\n\n\n\nWeek 11\n\n\nJun 23, 2025\n\n\n\n\nWeek 2\n\n\nApr 22, 2025\n\n\n\n\nWeek 3\n\n\nApr 29, 2025\n\n\n\n\nWeek 4\n\n\nMay 5, 2025\n\n\n\n\nWeek 5\n\n\nMay 12, 2025\n\n\n\n\nWeek 6\n\n\nMay 19, 2025\n\n\n\n\nWeek 7\n\n\nMay 26, 2025\n\n\n\n\nWeek 8\n\n\nJun 2, 2025\n\n\n\n\nWeek 9\n\n\nJun 11, 2025\n\n\n\n\n \n\n\n \n\n\n\n\n \n\n\n \n\n\n\n\n \n\n\n \n\n\n\n\n \n\n\n \n\n\n\n\n\nNo matching items",
+    "text": "Order By\n       Default\n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Title\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\nTitle\n\n\nDate\n\n\n\n\n\n\nWeek 1\n\n\nApr 14, 2025\n\n\n\n\nWeek 10\n\n\nJun 16, 2025\n\n\n\n\nWeek 11\n\n\nJun 23, 2025\n\n\n\n\nWeek 12\n\n\nJun 30, 2025\n\n\n\n\nWeek 2\n\n\nApr 22, 2025\n\n\n\n\nWeek 3\n\n\nApr 29, 2025\n\n\n\n\nWeek 4\n\n\nMay 5, 2025\n\n\n\n\nWeek 5\n\n\nMay 12, 2025\n\n\n\n\nWeek 6\n\n\nMay 19, 2025\n\n\n\n\nWeek 7\n\n\nMay 26, 2025\n\n\n\n\nWeek 8\n\n\nJun 2, 2025\n\n\n\n\nWeek 9\n\n\nJun 11, 2025\n\n\n\n\n \n\n\n \n\n\n\n\n \n\n\n \n\n\n\n\n \n\n\n \n\n\n\n\n\nNo matching items",
     "crumbs": [
       "Weekly Summary"
     ]
@@ -1212,7 +1267,7 @@
     "href": "ss25/alda/sum/index.html",
     "title": "Weekly Summary",
     "section": "",
-    "text": "Order By\n       Default\n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Title\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\nTitle\n\n\nDate\n\n\n\n\n\n\nWeek 1\n\n\nApr 15, 2025\n\n\n\n\nWeek 10\n\n\nJun 17, 2025\n\n\n\n\nWeek 11\n\n\nJun 23, 2025\n\n\n\n\nWeek 2\n\n\nApr 22, 2025\n\n\n\n\nWeek 3\n\n\nApr 29, 2025\n\n\n\n\nWeek 4\n\n\nMay 6, 2025\n\n\n\n\nWeek 5\n\n\nMay 13, 2025\n\n\n\n\nWeek 6\n\n\nMay 20, 2025\n\n\n\n\nWeek 7\n\n\nMay 27, 2025\n\n\n\n\nWeek 8\n\n\nJun 3, 2025\n\n\n\n\nWeek 9\n\n\nJun 10, 2025\n\n\n\n\n \n\n\n \n\n\n\n\n \n\n\n \n\n\n\n\n \n\n\n \n\n\n\n\n \n\n\n \n\n\n\n\n\nNo matching items",
+    "text": "Order By\n       Default\n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Title\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\nTitle\n\n\nDate\n\n\n\n\n\n\nWeek 1\n\n\nApr 15, 2025\n\n\n\n\nWeek 10\n\n\nJun 17, 2025\n\n\n\n\nWeek 11\n\n\nJun 23, 2025\n\n\n\n\nWeek 12\n\n\nJul 1, 2025\n\n\n\n\nWeek 2\n\n\nApr 22, 2025\n\n\n\n\nWeek 3\n\n\nApr 29, 2025\n\n\n\n\nWeek 4\n\n\nMay 6, 2025\n\n\n\n\nWeek 5\n\n\nMay 13, 2025\n\n\n\n\nWeek 6\n\n\nMay 20, 2025\n\n\n\n\nWeek 7\n\n\nMay 27, 2025\n\n\n\n\nWeek 8\n\n\nJun 3, 2025\n\n\n\n\nWeek 9\n\n\nJun 10, 2025\n\n\n\n\n \n\n\n \n\n\n\n\n \n\n\n \n\n\n\n\n \n\n\n \n\n\n\n\n\nNo matching items",
     "crumbs": [
       "Weekly Summary"
     ]
@@ -1277,7 +1332,7 @@
     "href": "ss25/alda/sum/w04.html#vl-8---06.05.25",
     "title": "Week 4",
     "section": "VL 8 - 06.05.25",
-    "text": "VL 8 - 06.05.25\n\nEfficient Sorting Algorithms (Cont.)\n\nfor small values, \\(N &lt; 30\\) insertion sort is the fastest algorithm\nfor larger \\(N\\) efficient sorting algorithms must be preffered: merge sort and quicksort (divide & conquer)\n\n\nMerge Sort\n\nDivide the array into two equal parts\nsort the half arrays\nmerge the sorted sub parts\n\n\ndef merge_sorted_arrays(l, r): # both l and r are sorted\n  a = [] # sorted array\n  i, k = 0, 0\n  Nl, Nr = len(l), len(r)\n  # a == merged(l[0:i], r[0:k]\n  while i &lt; Nl and k &lt; Nr: \n    if l[i] &lt;= r[k]: # &lt;= instead of &lt; so that sorting is stablef\n      a.append(l[i]) # append is efficient\n      i += 1\n    else:\n      a.append(r[k])\n      k += 1\n  a += l[i : Nl] # append rest of l\n  a += r[k : Nr] # append rest of r\n  return a\n\nl = [1, 3, 10, 11]\nr = [-1, 2, 20]\n\na = merge_sorted_arrays(l, r)\nprint(a)\n\n[-1, 1, 2, 3, 10, 11, 20]\n\n\nthe final step\na += l[i : Nl] # append rest of l\na += r[k : Nr] # append rest of r\nis enabled by the elegant python slicing syntax. The usual way without slicing would be:\nwhile i &lt; Nl:\n  a.append(l[i])\n  i += 1\nwhile k &lt; Nr:\n  a.append(r[k])\n  k += 1\nNow we define merge sort recursively as follows:\n\ndef merge_sort(a):\n  N = len(a)\n  if N &lt;= 1: return a\n  l = merge_sort(a[: N//2])\n  r = merge_sort(a[N//2:])\n  return merge_sorted_arrays(l, r)\n\na = list(range(20))\nrandom.shuffle(a)\nprint(a)\na = merge_sort(a)\nprint(a)\n\n[13, 7, 0, 11, 2, 14, 19, 17, 3, 12, 8, 1, 5, 4, 10, 6, 15, 16, 18, 9]\n[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]\n\n\n\nDisadvantage: Merge sort is not in-place \\(\\Rightarrow\\) extra memory is necessary for each merge sort call\nAdvantage: Merge sort is efficient and stable\n\n\nRun-time Analysis of Merge Sort\nRuntime of merge sort satisfies the following formula both in worst and best case:\n\\[\\begin{align*}\n&T(0 || 1) = c_1 \\\\\n&T(N) = c_2 + 2\\cdot T(\\frac{N}{2}) + c_3N\n\\end{align*}\\]\nTODO: tldr diagram and solution of the recurrence relation.\n\n\n\nQuicksort\n\nIn practice somewhat faster than merge sort (with a good choice of pivot)\nnot stable but in place.\nidea:\n\nchoose an element of the array as “pivot”. (naiv, better is to choose pivot randomly)\npartition the array: (incomplete sorting)\n\npivot is at the final position.\nall elements &lt;= pivot are left to the pivot\nall elements &gt; pivot are right the pivot\nthe left and right portions are not sorted\n\ncall quicksort recursively on the left and right partitions (divide and conquer)\n\n\nfirst we define the paritioning function:\n\ndef partition(a, l, r):  # l, r are left and right boundaries (inclusive) of a\n  pivot = a[r] # naive choice: Pivot\n  i = l\n  k = r - 1\n  while True:\n    while i &lt; r and a[i] &lt;= pivot: i += 1 # increment until found a misplaced element\n    while k &gt; l and a[k] &gt;= pivot: k -= 1 # decrement until found a misplaced element\n    if i &lt; k : a[i], a[k] = a[k], a[i]\n    else : break\n  a[i], a[r] = a[r], a[i] # bring pivot to the correct position\n  return i # so that recursive calls now where the partitions are\n\nnext we define\n\ndef quick_sort_impl(a, l, r):\n  if r &lt;= l: return # no return argument since in-place\n  i = partition(a, l, r)\n  quick_sort_impl(a, l, i-1)\n  quick_sort_impl(a, i+1, r)\n\nfinally we define a wrapper function as an interface for the user:\n\ndef quick_sort(a):\n  quick_sort_impl(a, 0, len(a) - 1)\n\na = list(range(20))\nrandom.shuffle(a)\nprint(a)\nquick_sort(a)\nprint(a)\n\n[8, 5, 17, 13, 16, 9, 15, 14, 19, 12, 18, 2, 10, 7, 1, 3, 6, 0, 11, 4]\n[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]\n\n\nWhy choosing pivot as the first element is naive?\n\nif pivot always stays on the first position \\(\\Rightarrow\\) \\(N^2\\). This happens if the arrray is already sorted (TODO: understand thus)\na naive solution: shuffle the array before sorting (of course doesn’t make much sense) \\(\\Rightarrow\\) uquivalently: choose the pivot randomly each time.\nimport random\np = random.randint(l, r) \na[p], a[r] = a[r], a[p] # replace right-most element with this random element\npivot = a[r]",
+    "text": "VL 8 - 06.05.25\n\nEfficient Sorting Algorithms (Cont.)\n\nfor small values, \\(N &lt; 30\\) insertion sort is the fastest algorithm\nfor larger \\(N\\) efficient sorting algorithms must be preffered: merge sort and quicksort (divide & conquer)\n\n\nMerge Sort\n\nDivide the array into two equal parts\nsort the half arrays\nmerge the sorted sub parts\n\n\ndef merge_sorted_arrays(l, r): # both l and r are sorted\n  a = [] # sorted array\n  i, k = 0, 0\n  Nl, Nr = len(l), len(r)\n  # a == merged(l[0:i], r[0:k]\n  while i &lt; Nl and k &lt; Nr: \n    if l[i] &lt;= r[k]: # &lt;= instead of &lt; so that sorting is stablef\n      a.append(l[i]) # append is efficient\n      i += 1\n    else:\n      a.append(r[k])\n      k += 1\n  a += l[i : Nl] # append rest of l\n  a += r[k : Nr] # append rest of r\n  return a\n\nl = [1, 3, 10, 11]\nr = [-1, 2, 20]\n\na = merge_sorted_arrays(l, r)\nprint(a)\n\n[-1, 1, 2, 3, 10, 11, 20]\n\n\nthe final step\na += l[i : Nl] # append rest of l\na += r[k : Nr] # append rest of r\nis enabled by the elegant python slicing syntax. The usual way without slicing would be:\nwhile i &lt; Nl:\n  a.append(l[i])\n  i += 1\nwhile k &lt; Nr:\n  a.append(r[k])\n  k += 1\nNow we define merge sort recursively as follows:\n\ndef merge_sort(a):\n  N = len(a)\n  if N &lt;= 1: return a\n  l = merge_sort(a[: N//2])\n  r = merge_sort(a[N//2:])\n  return merge_sorted_arrays(l, r)\n\na = list(range(20))\nrandom.shuffle(a)\nprint(a)\na = merge_sort(a)\nprint(a)\n\n[15, 18, 13, 12, 1, 5, 6, 17, 3, 2, 8, 14, 9, 16, 19, 10, 11, 4, 7, 0]\n[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]\n\n\n\nDisadvantage: Merge sort is not in-place \\(\\Rightarrow\\) extra memory is necessary for each merge sort call\nAdvantage: Merge sort is efficient and stable\n\n\nRun-time Analysis of Merge Sort\nRuntime of merge sort satisfies the following formula both in worst and best case:\n\\[\\begin{align*}\n&T(0 || 1) = c_1 \\\\\n&T(N) = c_2 + 2\\cdot T(\\frac{N}{2}) + c_3N\n\\end{align*}\\]\nTODO: tldr diagram and solution of the recurrence relation.\n\n\n\nQuicksort\n\nIn practice somewhat faster than merge sort (with a good choice of pivot)\nnot stable but in place.\nidea:\n\nchoose an element of the array as “pivot”. (naiv, better is to choose pivot randomly)\npartition the array: (incomplete sorting)\n\npivot is at the final position.\nall elements &lt;= pivot are left to the pivot\nall elements &gt; pivot are right the pivot\nthe left and right portions are not sorted\n\ncall quicksort recursively on the left and right partitions (divide and conquer)\n\n\nfirst we define the paritioning function:\n\ndef partition(a, l, r):  # l, r are left and right boundaries (inclusive) of a\n  pivot = a[r] # naive choice: Pivot\n  i = l\n  k = r - 1\n  while True:\n    while i &lt; r and a[i] &lt;= pivot: i += 1 # increment until found a misplaced element\n    while k &gt; l and a[k] &gt;= pivot: k -= 1 # decrement until found a misplaced element\n    if i &lt; k : a[i], a[k] = a[k], a[i]\n    else : break\n  a[i], a[r] = a[r], a[i] # bring pivot to the correct position\n  return i # so that recursive calls now where the partitions are\n\nnext we define\n\ndef quick_sort_impl(a, l, r):\n  if r &lt;= l: return # no return argument since in-place\n  i = partition(a, l, r)\n  quick_sort_impl(a, l, i-1)\n  quick_sort_impl(a, i+1, r)\n\nfinally we define a wrapper function as an interface for the user:\n\ndef quick_sort(a):\n  quick_sort_impl(a, 0, len(a) - 1)\n\na = list(range(20))\nrandom.shuffle(a)\nprint(a)\nquick_sort(a)\nprint(a)\n\n[6, 13, 10, 18, 7, 3, 5, 2, 0, 14, 11, 12, 8, 9, 15, 17, 4, 16, 19, 1]\n[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]\n\n\nWhy choosing pivot as the first element is naive?\n\nif pivot always stays on the first position \\(\\Rightarrow\\) \\(N^2\\). This happens if the arrray is already sorted (TODO: understand thus)\na naive solution: shuffle the array before sorting (of course doesn’t make much sense) \\(\\Rightarrow\\) uquivalently: choose the pivot randomly each time.\nimport random\np = random.randint(l, r) \na[p], a[r] = a[r], a[p] # replace right-most element with this random element\npivot = a[r]",
     "crumbs": [
       "Weekly Summary",
       "Week 4"
@@ -1369,6 +1424,39 @@
     "crumbs": [
       "Weekly Summary",
       "Week 10"
+    ]
+  },
+  {
+    "objectID": "ss25/alda/sum/w12.html",
+    "href": "ss25/alda/sum/w12.html",
+    "title": "Week 12",
+    "section": "",
+    "text": "Nodes: whole numbers 0, …, N - 1 (or keys related to the application, e.g. Names)\nEdges: Two options\n\nAdjacency matrix:\n\\(A \\in \\{0, 1\\}^{|V| \\times |V|}\\), s.t. \\(a_{i, j} = 1 \\Leftrightarrow \\text{edge} i \\rightarrow j \\text{exixts}\\)\nfor an undirected graph: \\(A = A^T\\) (matri has to be symmetric)\nexample:\n\n\n\nadjecency matrix\n\n\nadvantages:\n\nconcepts and techniques can be directly applied\nstorage efficient for direct graphs that are not sparse, i.e. \\(|E| \\in \\mathcal{O}(|V|^2)\\), (but not for sparse graphs \\(|E| \\in \\mathcal{O(|V|)}\\))\n\nAdjacency list: Array of arrays, an array for each node, where the arrays containes the neighbors\nabove graph can be represented as:\ngraph = [[1, 3], [0, 2, 3], [1, 3], [0, 1, 2]]\n\nadvantage: storage efficient for sparse matrices, e.g. navigation graphs\n\nan elegant pythonic code for a looping over all neighbours of all nodes:\nfor node, neighbors in enumerate(graph): # looping over all nodes\n for neighbor in neighbors:\n    ... # do something interesting\n\n\n\n\nThis means reversing all nodes.\n\nfor undirected graphs: \\(G^T = G \\Rightarrow A^T = A, \\text{graph}^T = \\text{graph}\\) (graph is the adjacency list representation)\nfor directed graphs: \\(A_{G^T} = A_G^T\\) (for adjacency matrix, tranpose it.) Below we give how to tranpose the adjacency list representation of a graph:\ndef tranpose_graph(graph): \n gt = [[] for i in graph]\n for node, neighbors in enumerate(graph) :\n    for neighbor in neighbors :\n       gt[neighbor].append(node) # reverse edges\n return gt\n\n\n\n\nVisiting all nodes (or a subset of all nodes) in a specific order.\n\nBasics:\n\nDepth First Search (DFS): first traverse the depth, and then move to other neighbors\nBreadth First Search (BFS): First visit all neighbors and then go to the deeper level\n\nAdvanced:\n\nshortest path (dijkstra shortest path, A*-Alg): visit nodes in an increasing weight order\n\n\n\n\nimplementation:\ndef dfs(graph, start_node):\n   visited = [False] * len(graph)\n   def visit(node):\n      if visited[node] return # node is already visited, do nothing\n      visited[node] = True # register the visit\n      print(\"discovered\", node)\n      for neighbor in graph[node]:\n         visit[neighbor]\n      print(\"finished\", node)\n   visit[start_node]\n\nExample:\n\n\n\n\ndfs-example\n\n\nrecursive implementation is elegant, but for large graphs stack depth (overflow) can be reached very easily, e.g. for graphs with thousands of nodes. But it is possible to re-write any recursive algorithm iteratively using stack data structure, and this is what we can do for DFS - we can implement it using stack data structure:\nstack implementation:\nfrom collections import deque # simultaneously a stack and a queue\ndef dfs(graph, start_node):\n   d = deque()\n   d.append(start_node)\n   visited = [False] * len(graph)\n   while len(d) != 0 : # there are still elements in the stack\n      node = d.popright() # LIFO (for BFS we will simply replace with popleft)\n      if visited[node]: continue\n      visited[node] = True\n      print(\"discovered\", node)\n      for neighbor in graph[node]:\n         d.append(neighbor)\nprint(\"finished\", node) is now not in post-order. As indicated in the comment above, to get BFS instead of DFS the only necessary difference is to change node = d.popright() to node = d.popleft().\n\n\n\nIn BFS first all the neighbors are visited, and then the deeper levels. It means\n\nreplacing stack witha queue (or if a deque is used, replace popright() with popleft()).\n\n\n\n\nbfs-example",
+    "crumbs": [
+      "Weekly Summary",
+      "Week 12"
+    ]
+  },
+  {
+    "objectID": "ss25/alda/sum/w12.html#vl-22---01.07.25",
+    "href": "ss25/alda/sum/w12.html#vl-22---01.07.25",
+    "title": "Week 12",
+    "section": "",
+    "text": "Nodes: whole numbers 0, …, N - 1 (or keys related to the application, e.g. Names)\nEdges: Two options\n\nAdjacency matrix:\n\\(A \\in \\{0, 1\\}^{|V| \\times |V|}\\), s.t. \\(a_{i, j} = 1 \\Leftrightarrow \\text{edge} i \\rightarrow j \\text{exixts}\\)\nfor an undirected graph: \\(A = A^T\\) (matri has to be symmetric)\nexample:\n\n\n\nadjecency matrix\n\n\nadvantages:\n\nconcepts and techniques can be directly applied\nstorage efficient for direct graphs that are not sparse, i.e. \\(|E| \\in \\mathcal{O}(|V|^2)\\), (but not for sparse graphs \\(|E| \\in \\mathcal{O(|V|)}\\))\n\nAdjacency list: Array of arrays, an array for each node, where the arrays containes the neighbors\nabove graph can be represented as:\ngraph = [[1, 3], [0, 2, 3], [1, 3], [0, 1, 2]]\n\nadvantage: storage efficient for sparse matrices, e.g. navigation graphs\n\nan elegant pythonic code for a looping over all neighbours of all nodes:\nfor node, neighbors in enumerate(graph): # looping over all nodes\n for neighbor in neighbors:\n    ... # do something interesting\n\n\n\n\nThis means reversing all nodes.\n\nfor undirected graphs: \\(G^T = G \\Rightarrow A^T = A, \\text{graph}^T = \\text{graph}\\) (graph is the adjacency list representation)\nfor directed graphs: \\(A_{G^T} = A_G^T\\) (for adjacency matrix, tranpose it.) Below we give how to tranpose the adjacency list representation of a graph:\ndef tranpose_graph(graph): \n gt = [[] for i in graph]\n for node, neighbors in enumerate(graph) :\n    for neighbor in neighbors :\n       gt[neighbor].append(node) # reverse edges\n return gt\n\n\n\n\nVisiting all nodes (or a subset of all nodes) in a specific order.\n\nBasics:\n\nDepth First Search (DFS): first traverse the depth, and then move to other neighbors\nBreadth First Search (BFS): First visit all neighbors and then go to the deeper level\n\nAdvanced:\n\nshortest path (dijkstra shortest path, A*-Alg): visit nodes in an increasing weight order\n\n\n\n\nimplementation:\ndef dfs(graph, start_node):\n   visited = [False] * len(graph)\n   def visit(node):\n      if visited[node] return # node is already visited, do nothing\n      visited[node] = True # register the visit\n      print(\"discovered\", node)\n      for neighbor in graph[node]:\n         visit[neighbor]\n      print(\"finished\", node)\n   visit[start_node]\n\nExample:\n\n\n\n\ndfs-example\n\n\nrecursive implementation is elegant, but for large graphs stack depth (overflow) can be reached very easily, e.g. for graphs with thousands of nodes. But it is possible to re-write any recursive algorithm iteratively using stack data structure, and this is what we can do for DFS - we can implement it using stack data structure:\nstack implementation:\nfrom collections import deque # simultaneously a stack and a queue\ndef dfs(graph, start_node):\n   d = deque()\n   d.append(start_node)\n   visited = [False] * len(graph)\n   while len(d) != 0 : # there are still elements in the stack\n      node = d.popright() # LIFO (for BFS we will simply replace with popleft)\n      if visited[node]: continue\n      visited[node] = True\n      print(\"discovered\", node)\n      for neighbor in graph[node]:\n         d.append(neighbor)\nprint(\"finished\", node) is now not in post-order. As indicated in the comment above, to get BFS instead of DFS the only necessary difference is to change node = d.popright() to node = d.popleft().\n\n\n\nIn BFS first all the neighbors are visited, and then the deeper levels. It means\n\nreplacing stack witha queue (or if a deque is used, replace popright() with popleft()).\n\n\n\n\nbfs-example",
+    "crumbs": [
+      "Weekly Summary",
+      "Week 12"
+    ]
+  },
+  {
+    "objectID": "ss25/alda/sum/w12.html#vl-23---03.07.25",
+    "href": "ss25/alda/sum/w12.html#vl-23---03.07.25",
+    "title": "Week 12",
+    "section": "VL 23 - 03.07.25",
+    "text": "VL 23 - 03.07.25\n\nApplications of DFS and BFS\n\nCopying a graph: Depth search with pre-order traversal, copying a node as soon as a node is discovered\nDeleting a graph: DFS with post-order traversal\ndetecting whether a graph is a tree. Graph is a tree \\(\\Leftrightarrow\\) there are no cycles\n\nThere is a cycle \\(\\Rightarrow\\) there exists a node that can be reached in multiple ways.\nA node is reached second time \\(\\Rightarrow\\) visited[node] Flag is already True\nTrivial cycles are not considered as cycles: n -&gt; m -&gt; n is not a cycle\nimplementation:\nreturn True, is there is a cycle\ndef undirected_cycle_test(graph): # graph given as adjecency list\n  visited = [False] * len(graph)\n  def visit(node, parent):\n     if not visited[node]: # no cycle\n        visited[node] = True\n        for neighbor in gaph[node]:\n           if neighbor == parent: continue # skip trivial cycles\n           if visit(neighbor, node): \n              return True\n        return False\n     else: return True\n  return visit(0, None)\n\n\n\n8 Queens Problem\nSimplification: 4x4 chessboard with 4 queens.\n\n\n\n8 queens\n\n\nEach square is a node.\nAbove graph is represented as:\ngraph = [[1, 2, 3, 4],\n         [7, 8],\n         [8], ...]\nAssume that we have a function check_capture(queens) solved queens: list of nodes, where the\nSolution using depth search:\ndef place_queens(graph): \n   queens = []\n   def visit(node, queens):\n      if node == 17: return True # solution found\n      queens.append(node) # \n      if check_capture(queens[1:]): # \n         def queens[-1]\n         return False\n      for neighbor in graph[node]:\n         if visit[neighbor, queens]: return True\n      del queens[-1]\n      return False\n      if visit(0, queens): return queens[1:]\n      else: return None\nonly a single solution is found with this implementation.\nAll solutions\ndef place_quuens(graph):\n   solutions = []\n   queens = []\n   def visit(node, queens):\n      if node == 17:\n         solutions.append(queens[-1])\n         return\n      queens.append(node)\n      if not check_capture(queens[1:]): # valid partial solution\n         for neightobr in graph[node]:\n            visit(neighbor, queens)\n      del queens[-1] # backtracking towards the next solution\n   visit(0, queens)\n\n\nSearching and Identifying Connected Components\n\na graph is connected, if \\(\\forall u, v \\in V\\) there is a path \\(u \\rightsquigarrow v\\)\nif the graph is not connected: \\(C \\subset G\\) is a connected component, if \\(C\\) is connected and \\(\\forall u \\in V \\\\ C \\neg u \\rightsquigarrow C\\)\n\n\n\n\nconnected components",
+    "crumbs": [
+      "Weekly Summary",
+      "Week 12"
     ]
   },
   {

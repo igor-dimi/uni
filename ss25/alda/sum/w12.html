@@ -6,8 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="dcterms.date" content="2025-07-01">
 
-<title>My Uni Notes</title>
+<title>My Uni Notes - Week 12</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,6 +20,40 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -69,6 +104,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="../../../styles.css">
 </head>
@@ -129,7 +193,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../ss25/alda/sum/index.html">Weekly Summary</a></li><li class="breadcrumb-item"><a href="../../../ss25/alda/sum/w12.html">W12</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../ss25/alda/sum/index.html">Weekly Summary</a></li><li class="breadcrumb-item"><a href="../../../ss25/alda/sum/w12.html">Week 12</a></li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -219,7 +283,7 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../ss25/alda/sum/w12.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">W12</span></a>
+ <span class="menu-text">Week 12</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -248,16 +312,269 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#vl-22---01.07.25" id="toc-vl-22---01.07.25" class="nav-link active" data-scroll-target="#vl-22---01.07.25">VL 22 - 01.07.25</a>
+  <ul>
+  <li><a href="#how-to-represent-graphs" id="toc-how-to-represent-graphs" class="nav-link" data-scroll-target="#how-to-represent-graphs">How to Represent Graphs</a>
+  <ul>
+  <li><a href="#calculating-the-transpose-of-a-graph" id="toc-calculating-the-transpose-of-a-graph" class="nav-link" data-scroll-target="#calculating-the-transpose-of-a-graph">Calculating the Transpose of a Graph</a></li>
+  <li><a href="#traversing-graphs" id="toc-traversing-graphs" class="nav-link" data-scroll-target="#traversing-graphs">Traversing Graphs</a>
+  <ul class="collapse">
+  <li><a href="#dfs" id="toc-dfs" class="nav-link" data-scroll-target="#dfs">DFS</a></li>
+  <li><a href="#bfs" id="toc-bfs" class="nav-link" data-scroll-target="#bfs">BFS</a></li>
+  </ul></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#vl-23---03.07.25" id="toc-vl-23---03.07.25" class="nav-link" data-scroll-target="#vl-23---03.07.25">VL 23 - 03.07.25</a>
+  <ul>
+  <li><a href="#applications-of-dfs-and-bfs" id="toc-applications-of-dfs-and-bfs" class="nav-link" data-scroll-target="#applications-of-dfs-and-bfs">Applications of DFS and BFS</a>
+  <ul>
+  <li><a href="#queens-problem" id="toc-queens-problem" class="nav-link" data-scroll-target="#queens-problem">8 Queens Problem</a></li>
+  <li><a href="#searching-and-identifying-connected-components" id="toc-searching-and-identifying-connected-components" class="nav-link" data-scroll-target="#searching-and-identifying-connected-components">Searching and Identifying Connected Components</a></li>
+  </ul></li>
+  </ul></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../ss25/alda/sum/index.html">Weekly Summary</a></li><li class="breadcrumb-item"><a href="../../../ss25/alda/sum/w12.html">Week 12</a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title">Week 12</h1>
+</div>
 
 
 
+<div class="quarto-title-meta">
+
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">July 1, 2025</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
 
 
+</header>
+
+
+<section id="vl-22---01.07.25" class="level2">
+<h2 class="anchored" data-anchor-id="vl-22---01.07.25">VL 22 - 01.07.25</h2>
+<section id="how-to-represent-graphs" class="level3">
+<h3 class="anchored" data-anchor-id="how-to-represent-graphs">How to Represent Graphs</h3>
+<ul>
+<li><strong>Nodes</strong>: whole numbers 0, …, N - 1 (or keys related to the application, e.g.&nbsp;Names)</li>
+<li><strong>Edges</strong>: Two options
+<ol type="1">
+<li><p><strong>Adjacency matrix</strong>:<br>
+<span class="math inline">\(A \in \{0, 1\}^{|V| \times |V|}\)</span>, s.t. <span class="math inline">\(a_{i, j} = 1 \Leftrightarrow \text{edge} i \rightarrow j \text{exixts}\)</span></p>
+<p>for an undirected graph: <span class="math inline">\(A = A^T\)</span> (matri has to be symmetric)</p>
+<p>example:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./imgs/w12/adjacency-matrix.png" class="img-fluid figure-img" style="width:75.0%"></p>
+<figcaption>adjecency matrix</figcaption>
+</figure>
+</div>
+<p>advantages:</p>
+<ul>
+<li>concepts and techniques can be directly applied</li>
+<li>storage efficient for direct graphs that are not sparse, i.e.&nbsp;<span class="math inline">\(|E| \in \mathcal{O}(|V|^2)\)</span>, (but not for sparse graphs <span class="math inline">\(|E| \in \mathcal{O(|V|)}\)</span>)</li>
+</ul></li>
+<li><p><strong>Adjacency list</strong>: Array of arrays, an array for each node, where the arrays containes the neighbors</p>
+<p>above graph can be represented as:</p>
+<p>graph = [[1, 3], [0, 2, 3], [1, 3], [0, 1, 2]]</p>
+<ul>
+<li>advantage: storage efficient for sparse matrices, e.g.&nbsp;navigation graphs</li>
+</ul>
+<p>an elegant pythonic code for a looping over all neighbours of all nodes:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> node, neighbors <span class="kw">in</span> <span class="bu">enumerate</span>(graph): <span class="co"># looping over all nodes</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a> <span class="cf">for</span> neighbor <span class="kw">in</span> neighbors:</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    ... <span class="co"># do something interesting</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+</ol></li>
+</ul>
+<section id="calculating-the-transpose-of-a-graph" class="level4">
+<h4 class="anchored" data-anchor-id="calculating-the-transpose-of-a-graph">Calculating the Transpose of a Graph</h4>
+<p>This means reversing all nodes.</p>
+<ul>
+<li><p>for undirected graphs: <span class="math inline">\(G^T = G \Rightarrow A^T = A, \text{graph}^T = \text{graph}\)</span> (graph is the adjacency list representation)</p></li>
+<li><p>for directed graphs: <span class="math inline">\(A_{G^T} = A_G^T\)</span> (for adjacency matrix, tranpose it.) Below we give how to tranpose the adjacency list representation of a graph:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> tranpose_graph(graph): </span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a> gt <span class="op">=</span> [[] <span class="cf">for</span> i <span class="kw">in</span> graph]</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a> <span class="cf">for</span> node, neighbors <span class="kw">in</span> <span class="bu">enumerate</span>(graph) :</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> neighbor <span class="kw">in</span> neighbors :</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>       gt[neighbor].append(node) <span class="co"># reverse edges</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a> <span class="cf">return</span> gt</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+</ul>
+</section>
+<section id="traversing-graphs" class="level4">
+<h4 class="anchored" data-anchor-id="traversing-graphs">Traversing Graphs</h4>
+<p>Visiting all nodes (or a subset of all nodes) in a specific order.</p>
+<ul>
+<li>Basics:
+<ul>
+<li><strong>Depth First Search (DFS)</strong>: first traverse the depth, and then move to other neighbors</li>
+<li><strong>Breadth First Search (BFS)</strong>: First visit all neighbors and then go to the deeper level</li>
+</ul></li>
+<li>Advanced:
+<ul>
+<li>shortest path (dijkstra shortest path, A*-Alg): visit nodes in an increasing weight order</li>
+</ul></li>
+</ul>
+<section id="dfs" class="level5">
+<h5 class="anchored" data-anchor-id="dfs">DFS</h5>
+<p>implementation:</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> dfs(graph, start_node):</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>   visited <span class="op">=</span> [<span class="va">False</span>] <span class="op">*</span> <span class="bu">len</span>(graph)</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>   <span class="kw">def</span> visit(node):</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>      <span class="cf">if</span> visited[node] <span class="cf">return</span> <span class="co"># node is already visited, do nothing</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>      visited[node] <span class="op">=</span> <span class="va">True</span> <span class="co"># register the visit</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>      <span class="bu">print</span>(<span class="st">"discovered"</span>, node)</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>      <span class="cf">for</span> neighbor <span class="kw">in</span> graph[node]:</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>         visit[neighbor]</span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>      <span class="bu">print</span>(<span class="st">"finished"</span>, node)</span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>   visit[start_node]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ul>
+<li><strong>Example</strong>:</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./imgs/w12/dfs-example.png" class="img-fluid figure-img" style="width:85.0%"></p>
+<figcaption>dfs-example</figcaption>
+</figure>
+</div>
+<p>recursive implementation is elegant, but for large graphs stack depth (overflow) can be reached very easily, e.g.&nbsp;for graphs with thousands of nodes. But it is possible to re-write any recursive algorithm iteratively using stack data structure, and this is what we can do for DFS - we can implement it using stack data structure:</p>
+<p><strong>stack implementation</strong>:</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> collections <span class="im">import</span> deque <span class="co"># simultaneously a stack and a queue</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> dfs(graph, start_node):</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>   d <span class="op">=</span> deque()</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>   d.append(start_node)</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>   visited <span class="op">=</span> [<span class="va">False</span>] <span class="op">*</span> <span class="bu">len</span>(graph)</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>   <span class="cf">while</span> <span class="bu">len</span>(d) <span class="op">!=</span> <span class="dv">0</span> : <span class="co"># there are still elements in the stack</span></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>      node <span class="op">=</span> d.popright() <span class="co"># LIFO (for BFS we will simply replace with popleft)</span></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>      <span class="cf">if</span> visited[node]: <span class="cf">continue</span></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>      visited[node] <span class="op">=</span> <span class="va">True</span></span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>      <span class="bu">print</span>(<span class="st">"discovered"</span>, node)</span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>      <span class="cf">for</span> neighbor <span class="kw">in</span> graph[node]:</span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>         d.append(neighbor)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><code>print("finished", node)</code> is now not in post-order. As indicated in the comment above, to get BFS instead of DFS the only necessary difference is to change <code>node = d.popright()</code> to <code>node = d.popleft()</code>.</p>
+</section>
+<section id="bfs" class="level5">
+<h5 class="anchored" data-anchor-id="bfs">BFS</h5>
+<p>In BFS first all the neighbors are visited, and then the deeper levels. It means</p>
+<ul>
+<li>replacing stack witha queue (or if a deque is used, replace popright() with popleft()).</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./imgs/w12/bfs-example.png" class="img-fluid figure-img" style="width:85.0%"></p>
+<figcaption>bfs-example</figcaption>
+</figure>
+</div>
+</section>
+</section>
+</section>
+</section>
+<section id="vl-23---03.07.25" class="level2">
+<h2 class="anchored" data-anchor-id="vl-23---03.07.25">VL 23 - 03.07.25</h2>
+<section id="applications-of-dfs-and-bfs" class="level3">
+<h3 class="anchored" data-anchor-id="applications-of-dfs-and-bfs">Applications of DFS and BFS</h3>
+<ul>
+<li>Copying a graph: Depth search with pre-order traversal, copying a node as soon as a node is discovered</li>
+<li>Deleting a graph: DFS with post-order traversal</li>
+<li>detecting whether a graph is a tree. Graph is a tree <span class="math inline">\(\Leftrightarrow\)</span> there are no cycles
+<ul>
+<li><p>There is a cycle <span class="math inline">\(\Rightarrow\)</span> there exists a node that can be reached in multiple ways.</p></li>
+<li><p>A node is reached second time <span class="math inline">\(\Rightarrow\)</span> <code>visited[node]</code> Flag is already <code>True</code></p></li>
+<li><p>Trivial cycles are not considered as cycles: n -&gt; m -&gt; n is not a cycle</p></li>
+<li><p>implementation:</p>
+<p>return <code>True</code>, is there is a cycle</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> undirected_cycle_test(graph): <span class="co"># graph given as adjecency list</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>  visited <span class="op">=</span> [<span class="va">False</span>] <span class="op">*</span> <span class="bu">len</span>(graph)</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">def</span> visit(node, parent):</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>     <span class="cf">if</span> <span class="kw">not</span> visited[node]: <span class="co"># no cycle</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>        visited[node] <span class="op">=</span> <span class="va">True</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> neighbor <span class="kw">in</span> gaph[node]:</span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>           <span class="cf">if</span> neighbor <span class="op">==</span> parent: <span class="cf">continue</span> <span class="co"># skip trivial cycles</span></span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>           <span class="cf">if</span> visit(neighbor, node): </span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>              <span class="cf">return</span> <span class="va">True</span></span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="va">False</span></span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>     <span class="cf">else</span>: <span class="cf">return</span> <span class="va">True</span></span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> visit(<span class="dv">0</span>, <span class="va">None</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+</ul></li>
+</ul>
+<section id="queens-problem" class="level4">
+<h4 class="anchored" data-anchor-id="queens-problem">8 Queens Problem</h4>
+<p>Simplification: 4x4 chessboard with 4 queens.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./imgs/w12/8-queens.png" class="img-fluid figure-img" style="width:75.0%"></p>
+<figcaption>8 queens</figcaption>
+</figure>
+</div>
+<p>Each square is a node.</p>
+<p>Above graph is represented as:</p>
+<pre><code>graph = [[1, 2, 3, 4],
+         [7, 8],
+         [8], ...]</code></pre>
+<p>Assume that we have a function <code>check_capture(queens)</code> solved queens: list of nodes, where the</p>
+<p>Solution using depth search:</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> place_queens(graph): </span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>   queens <span class="op">=</span> []</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>   <span class="kw">def</span> visit(node, queens):</span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>      <span class="cf">if</span> node <span class="op">==</span> <span class="dv">17</span>: <span class="cf">return</span> <span class="va">True</span> <span class="co"># solution found</span></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>      queens.append(node) <span class="co"># </span></span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>      <span class="cf">if</span> check_capture(queens[<span class="dv">1</span>:]): <span class="co"># </span></span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>         <span class="kw">def</span> queens[<span class="op">-</span><span class="dv">1</span>]</span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>         <span class="cf">return</span> <span class="va">False</span></span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>      <span class="cf">for</span> neighbor <span class="kw">in</span> graph[node]:</span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>         <span class="cf">if</span> visit[neighbor, queens]: <span class="cf">return</span> <span class="va">True</span></span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a>      <span class="kw">del</span> queens[<span class="op">-</span><span class="dv">1</span>]</span>
+<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a>      <span class="cf">return</span> <span class="va">False</span></span>
+<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a>      <span class="cf">if</span> visit(<span class="dv">0</span>, queens): <span class="cf">return</span> queens[<span class="dv">1</span>:]</span>
+<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a>      <span class="cf">else</span>: <span class="cf">return</span> <span class="va">None</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>only a single solution is found with this implementation.</p>
+<p>All solutions</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> place_quuens(graph):</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>   solutions <span class="op">=</span> []</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>   queens <span class="op">=</span> []</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>   <span class="kw">def</span> visit(node, queens):</span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>      <span class="cf">if</span> node <span class="op">==</span> <span class="dv">17</span>:</span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>         solutions.append(queens[<span class="op">-</span><span class="dv">1</span>])</span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>         <span class="cf">return</span></span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>      queens.append(node)</span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a>      <span class="cf">if</span> <span class="kw">not</span> check_capture(queens[<span class="dv">1</span>:]): <span class="co"># valid partial solution</span></span>
+<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a>         <span class="cf">for</span> neightobr <span class="kw">in</span> graph[node]:</span>
+<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a>            visit(neighbor, queens)</span>
+<span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a>      <span class="kw">del</span> queens[<span class="op">-</span><span class="dv">1</span>] <span class="co"># backtracking towards the next solution</span></span>
+<span id="cb8-13"><a href="#cb8-13" aria-hidden="true" tabindex="-1"></a>   visit(<span class="dv">0</span>, queens)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="searching-and-identifying-connected-components" class="level4">
+<h4 class="anchored" data-anchor-id="searching-and-identifying-connected-components">Searching and Identifying Connected Components</h4>
+<ul>
+<li>a graph is connected, if <span class="math inline">\(\forall u, v \in V\)</span> there is a path <span class="math inline">\(u \rightsquigarrow v\)</span></li>
+<li>if the graph is not connected: <span class="math inline">\(C \subset G\)</span> is a connected component, if <span class="math inline">\(C\)</span> is connected and <span class="math inline">\(\forall u \in V \\ C \neg u \rightsquigarrow C\)</span></li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./imgs/w12/connected-components.png" class="img-fluid figure-img" style="width:65.0%"></p>
+<figcaption>connected components</figcaption>
+</figure>
+</div>
+
+
+</section>
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
