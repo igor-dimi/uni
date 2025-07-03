@@ -122,10 +122,102 @@ In BFS first all the neighbors are visited, and then the deeper levels. It means
 
 ![bfs-example](./imgs/w12/bfs-example.png){width="85%"}
 
+## VL 23 - 03.07.25
+
+### Applications of DFS and BFS
+
+* Copying a graph: Depth search with pre-order traversal, copying a node as soon as a node is discovered
+* Deleting a graph: DFS with post-order traversal
+* detecting whether a graph is a tree. Graph is a tree $\Leftrightarrow$ there are no cycles
+  * There is a cycle $\Rightarrow$  there exists a node that can be reached in multiple ways. 
+  * A node is reached second time $\Rightarrow$ `visited[node]` Flag is already `True`
+  * Trivial cycles are not considered as cycles: n -> m -> n is not a cycle
+  * implementation:
+
+    return `True`, is there is a cycle     
+
+    ```python
+    def undirected_cycle_test(graph): # graph given as adjecency list
+      visited = [False] * len(graph)
+      def visit(node, parent):
+         if not visited[node]: # no cycle
+            visited[node] = True
+            for neighbor in gaph[node]:
+               if neighbor == parent: continue # skip trivial cycles
+               if visit(neighbor, node): 
+                  return True
+            return False
+         else: return True
+      return visit(0, None)
+    ```
+
+#### 8 Queens Problem
+
+Simplification: 4x4 chessboard with 4 queens. 
+
+![8 queens](./imgs/w12/8-queens.png){width="75%"}
+
+Each square is a node. 
+
+Above graph is represented as:
+
+```
+graph = [[1, 2, 3, 4],
+         [7, 8],
+         [8], ...]
+```
+
+Assume that we have a function `check_capture(queens)`
+solved queens: list of nodes, where the 
 
 
+Solution using depth search:
 
-   
+```python
+def place_queens(graph): 
+   queens = []
+   def visit(node, queens):
+      if node == 17: return True # solution found
+      queens.append(node) # 
+      if check_capture(queens[1:]): # 
+         def queens[-1]
+         return False
+      for neighbor in graph[node]:
+         if visit[neighbor, queens]: return True
+      del queens[-1]
+      return False
+      if visit(0, queens): return queens[1:]
+      else: return None
+```
+
+only a single solution is found with this implementation.
+
+All solutions
+
+```python
+def place_quuens(graph):
+   solutions = []
+   queens = []
+   def visit(node, queens):
+      if node == 17:
+         solutions.append(queens[-1])
+         return
+      queens.append(node)
+      if not check_capture(queens[1:]): # valid partial solution
+         for neightobr in graph[node]:
+            visit(neighbor, queens)
+      del queens[-1] # backtracking towards the next solution
+   visit(0, queens)
+```
+
+#### Searching and Identifying Connected Components
+
+* a graph is connected, if $\forall u, v \in V$ there is a path $u \rightsquigarrow v$
+* if the graph is not connected: $C \subset G$ is a connected component, if $C$ is connected and 
+  $\forall u \in V \\ C \neg u \rightsquigarrow C$
+
+![connected components](./imgs/w12/connected-components.png){width="65%"}
+
 
 
 
