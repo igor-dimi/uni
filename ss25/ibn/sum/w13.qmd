@@ -1,0 +1,13 @@
+---
+title: Week 13
+date: 07/07/2025
+---
+
+## VL 27 - 07.07.25
+
+### Data Link Layer (Sicherungsschicht)
+
+* communication between network interfaces
+* mac addresses (media access control)
+* arp (address resolution protocol)
+* hubs and switches

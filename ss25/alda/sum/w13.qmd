@@ -1,0 +1,122 @@
+---
+title: Week 13
+date: 07/8/2025
+---
+
+## VL 24 - 08.07.25
+
+### Connected Components
+
+#### Searching and Identifying Connected Components
+
+1. **Idea**: each component has a label (a running number) and an anchor (representative of the equivalence class)
+2. Scan the nodes in increasing order, until a new anchor is found. This is a node whose connected component is not known
+3. DFS or BFS starting from an anchor, in order to find the other nodes in the equivalence class.
+
+* Homework: Segmentation of a microscope image with connected components
+* how to represent additional properties of nodes and edges?
+  * `visited[node]`: was the node visited? 
+  * `anchor[node], label[node]`: anchor and the label of the connected component to which the node belongs
+  * `brightness[node]`: the brightness of a pixel
+  * `distance[(node1, node2)]: shortest paths frmo node1 to node2
+* above are called 'property maps' via containers like arrays, dictionaries. It is a lightweight approach.
+  A separate property map for each property. 
+
+First we will look at the **recursive** version
+
+```python
+def connected_component(graph) : # graph given as an adjecency list
+    labels = [None] * len(graph)
+    anchors = [None] * len(graph)
+    def visit(node, anchor):
+        if anchors[node] is not None: return # already visited / known component
+        labels[node] = labels[anchor]
+        anchors[node] = anchor
+        for neighbor in graph[node] :
+            visit(neighbor, anchor)
+    current_label = 0
+    for node in range(len(graph)) :
+        if labels[node] is not None: continue
+        labels[node] = current_label
+        visit(node, node) # a compnent is now complete
+        current_label += 1
+    return labels, anchors
+```
+
+Problem "Maximum Recursion Depth Exceeded" $\Rightarrow$ a variant with **iteration** and a **stack** DS:
+
+```python
+def connected_components(graph):
+    labels = [None] * len(graph)
+    anchors = [None] * len(graph)
+    current_label = 0
+    for node in range(len(graph)) :
+        if labels[node] is not None : continue
+        stack = deque() # from collections
+        stack.append(node)
+        while len(stack) != 0 :
+            new_node = stack.popright() # pop() in newer python
+            if labels[new_node] is not None: continue
+            labels[new_node] = current_label
+            anchors[new_node] = node
+            for neighbor in graph[new_node] : 
+                if labels[neighbor] is not None: continue
+                stack.append(neighbor)
+        # end while: stack is now empty, DFS for the component is complete.
+        current_label += 1 # proceed to the next label
+    # end for: all components are complete
+    return labels, anchors
+```
+
+Next problem we will take on is **shortest path**
+
+### Shortest Path
+
+* 3 types of SP problems:
+  1. unweighted graph (ungewichtet): all edges are equally expensive: shortest path = the least number of edges $\Rightarrow$ BFS
+  2. weighted graph, all weights are positive ($w_{uv}> 0$), Path length = Sum of the weights $\Rightarrow$ **Dijsktra Algorithm**, or
+     **A\*** algorithm
+  3. weighted graph with arbitrary weights (positive and negative) $\Rightarrow$ length = sum of weights. **Danger** of an infinite loop
+     when the sum of weights of a cycle is negative. **solution**: Bellman-Ford Algorithm (this algorithm terminates when a negative cycle is detected)
+
+**Example**: negative cycle in Arbtrage-companies: 
+
+![arbitrage](./imgs/w13/arbitrage.png){width="55%"}
+
+
+what happens:
+
+* we have x$, 
+  *  exhnage to Eu => y yen = $w_{\$eu}$ x$.
+  *  exchange to Yen => z yen = w_{eu, yen}w_{$,eu} x $
+  *  exhnage to $ => w_{yen, $} w_{eu, yen} w_{$, eu} x $
+* there is profit when w1*w2*w3 > 1
+* shortest paht: -log(x') < -log(x) <=> -log(w1 * w2 * w3) < negative cycle
+
+Now we need ne property maps for shortest paths. Each node knows it's predecessor in the path $\Rightarrow$ parents[node]
+
+```python
+def shortest_path(graph, start, target): # graph is undirected
+    parents = [None] * len(graph)
+    parents[start] = start
+    queue = deque()
+    queue.append(start)
+    while len(queue) != 0 :
+        node = queue.popleft()
+        if node == target : break # success 
+        for neighbor in graph[node] : 
+            if parents[neighbor] is None :
+                parents[neighbor] = node
+                queue.append(neighbor)
+    if parents[target] is None : 
+        return None # start & target are in the same connected component
+    path = [target]
+    while path[-1] != start : # not yet finished
+        path.append(parents[path[-1]])
+    path.reverse() # target not 
+    return path
+```
+
+Why doesn't shortest path work with DFS? 
+
+
