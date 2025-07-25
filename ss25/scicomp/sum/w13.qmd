@@ -1,0 +1,15 @@
+---
+title: Week 13
+date: 07/8/2025
+---
+
+## Lecture 13 - 08.08.25
+
+* compile time branching (very relevant)
+  * deducing a property from a template parameter
+* variable templates 
+* fold expressoins
+* guaranteed copy elision
+* depracated warnings
+* mathematical functions `<cmath>` 
+* concepts and ranges

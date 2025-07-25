@@ -119,4 +119,109 @@ def shortest_path(graph, start, target): # graph is undirected
 
 Why doesn't shortest path work with DFS? 
 
+## VL 25 - 10.07.25
+
+###  BFS (cont)
+
+Why does BFS find the shortest path? 
+
+* undirected & unweighted graph
+
+![bfs propagation](./imgs/w13/bfs-propagation.png){width="85%"}
+
+
+**Obersvations**: 
+
+* BFS expands / propagates in phases around the start node.
+* BFS doesn't only find the shortest path from start to target, but 
+  all shortest paths with length $l < \text{length}(\text{start}\rightsquigarrow\text{target})$
+  (shortest paths to all nodes that are closer to start than the target)
+
+
+### Shortest Paths in Weighted Graphs (Dijkstra & A* - Alg)
+
+* Edge weights represent the lenghts of edges $w_{uv} > 0$ 
+* Property maps: `weights[(u,v)]` with node pairs as keys
+
+Alternatively adjacency matrix. Entries are weights of the edges:
+
+$$
+\begin{bmatrix}
+0 & 4 & 7 \\
+4 & 0 & 2 \\
+7 & 2 & 0 \\
+\end{bmatrix}
+$$
+
+But we will use adjacency lists and property maps .
+
+**Idea**: Replace the queue in BFS by a MinHeap (priority queue), where the priority of a node = length(start -> node).
+(in the lecture we had max heaps, but now we need a min heap - in python this is already the case in the module `haepq` ). 
+
+**algorithm**:
+
+```python
+def dijkstra(graph, weights, start, target) :
+    parents = [None] * len(graph) #
+    heap = []
+    heapq.heappush(heap, (0.0, start, start)) # 0.0 = priority, start = current, start = parent
+    while len(heap) != 0 :
+        length, node, parent = heapq.heappop(heap)
+        if parents[node] is not None : continue 
+        parents[node] = parent
+        if node == target: break # success 
+        for neighbor in graph[node] : 
+            if parents[neighbor] is not None: continue
+            new.length = length + weights[(node, neighbor)]
+            heapq.heappush(heap, (new_length, neighbor, node))
+    # end while
+    if parents[target] is None : return None, None
+    path = [target]
+    while path[-1] != start : path.append(parents[path[-1]])
+    path.reverse()
+    return path, length
+```
+
+
+#### Complexity of Dijkstra Shorteste Path
+
+
+`while len(heap) != 0`:
+
+* In the `heap` we add edges, and we do not re-add edges multiple times. Therefore the number of iterations is $\mathcal{O}(|E|)$
+
+`heappop()`: $\log{len(heap)} \Rightarrow \mathcal{O}(|E|)$:
+
+* in usual graphs (no multiedges): $|E| \in \mathcal{O}(|V|^2) = \mathcal{O}(\log({|V|})$
+
+`for neighbor`: $\mathcal{O}(degree(node)) \in \mathcal{O}(|V|)$
+
+$\Rightarrow$ overall complexity: $\mathcal{O}(|E|\log{|V|})$
+
+
+#### Correctness of Dijkstra Shortest Path
+
+* **Lemma**: in the (i + 1)-st iteration of the `while`-Loop: $length_{i + 1} \geq length_{i}$ 
+* **Proof** (indirect, proof by contradiction): asssume $l_{i + 1} < l_i$ for some $i$. This means that
+  $l_i$ was at the Top in the heap at the iteration $i$, $l_{i + 1}$ was at the top at the iteration $i+1$
+
+  * **case 1**: the path with the length $l_{i+1}$ was already known during the iteration $\Rightarrow$ $l_i$ could not have been top
+    $\Rightarrow \quad \bot$
+  * **case 2**: path of length $l_{i + 1}$ was discovered during the itration $i$.
+    Then we have $l_{i + 1} = l_i + W_{parent_i, node_i} > l_i$ $\Rightarrow \quad \bot$ $\Rightarrow l_{i + 1} < l_{i}$  is **impossible**. 
+
+* **Theorem**: Dijstras response: $node \rightarrow parent \rightsquigarrow start$ is the shortest path from $node \rightsquigarrow start$, 
+  length $l_D$. 
+
+  True shortest path: $node \rightarrow x \rightsquigarrow start$ with length $l_N < l_D$ shows that is impssible via a contradiction.
+  we know who $(l_{D}, node, parent)$ at the top of the heap is
+
+  * **case 1**: $x \rightsquigarrow start$ is already in heap, if $w_{node, x} + len(x \rightsquigarrow start) = l_w < l_D$, would have been
+  already found in an earlier iteration $\Rightarrow \quad \bot$ 
+  * **case 2**: $x \rightsquigarrow
+
+
+
+
+
 

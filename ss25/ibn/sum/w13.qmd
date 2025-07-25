@@ -11,3 +11,18 @@ date: 07/07/2025
 * mac addresses (media access control)
 * arp (address resolution protocol)
 * hubs and switches
+
+## VL 28 - 09.07.25
+
+* exam topics
+* transport layer: TCP / UDP 
+* UDP:
+  * structure
+  * connectionless
+  * no guarantee / best effort
+  * good for video, audio
+* TCP:
+  * structure of a TCP segment
+  * ack numbers 
+  * sockets, sockets programming with TCP
+

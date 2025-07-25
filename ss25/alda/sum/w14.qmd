@@ -1,0 +1,96 @@
+---
+title: Week 14
+date: 07/15/25
+---
+
+## Shortest Path A* Algorithm
+
+* Observation: shortest paths to all the nodes are found that are nearer to the start than the target
+* e.g.: Frankfurt $\Rightarrow$ Dresden, following are also found
+  * Frankfurt $\Rightarrow$ Erfurt
+  * Frankfurt $\Rightarrow$ Suhl
+  * Frankfurt $\Rightarrow$ Stuttgart
+  * Frankfurt $\Rightarrow$ Saarbruecken
+* how does the algorithm detect reasonable interim golas and ignores 'wrong' directions? 
+* **Idea**: In addition to the property map 'weights' proide an additional property map for the estimated 
+  remaining distance.
+* **Theorem**: If the estimation is never larger than the actual remaining path, the correct shortest paths are 
+  always delivered (+ `guess(target, target) = 0)
+
+For trams the usual choice is the air distance. 
+
+Implementation:
+
+```python
+def a_star(graph, weights, guesses, start, target):
+    parents = [None] * len(graph)
+    heap = []
+    guessed_length = guesses[(start, target)]
+    heapq.heappush(heap, (guessed_length, 0.0, start, start))
+    while len(heap) != 0:
+        _, length, node, parent = heapq.heappop(heap)
+        if parents[node] is not None: continue
+        parents[node] = parent
+        if node == target: break
+        for neighbor in graph[node]:
+            if parents[neighbor] is not None: continue
+            new_length = length + weights[(node, neighbor)]
+            new_guess = new_length + guesses[(neighbor, target)]
+            heapq.heappush(heap, (new_guess, new_length, neighbor, node))
+    if parents[target] is None return None, None
+    path = [target]
+    while path[-1] != start: path.append(parents[path[-1]])
+    path.reverse()
+    return path, length
+```
+
+### Correctness of A*
+
+A* and Dijstra deliver the same solutions
+
+1. `guesses[(target, target)] = 0`:
+    if `neighbor == target`: `new_length == new_guess`, target comes up always with "Priority == actual distance"
+2. for all interim targets in the actual path: start -> node -> target we have:
+   * priority == length(start, node) + guesses([node, target]) <= length(start, target) = length(start, node) + length(node, target)
+   * all intermediate targets are found before the target is popped of the heap
+   * the processing order for correct intermediate goals is the same for Dijkstra and A* but the intermediate targets often have
+     priority = length(start, node) + guesses = [(node, target)] > length(start, target)
+
+### Complexity of A*
+
+In worst case same as Dijkstra: $\mathcal{O}(|E|\log{|V|})$ (e.g. guesses = 0). But typically A* is much faster than Dijsktra
+
+...
+
+
+## Minimal Spanning Trees (MST)
+
+* in weighted graphs
+  * spanning tree contains all the nodes and $|V| - 1$ edges
+  * minimal: The smallest sum of the Edge weights
+* Prim's Algorithm: Similar to Dijstra but `priority = weight[(node, neighbor)]` (instead of weight([node, neighbor]) + length(start, node)
+* Kruskal's Algorithm: ... 
+
+## Algorithms for Directed Graphs 
+
+* DAGs: Directed Acyclic Graphs = cycle oriented directed graphs = hierarchies
+* "dependency graph", e.g. which python modules are imported? 
+* any DAG defines a **partial order**
+* topological sorting: total order, that is compatible with the partial order. This always exists, but not 
+* couldn't concentrate :( ... 
+
+
+## Hash Tables 
+
+Hash tables implement the abstract data type "associative array" or "dictionary", exactly as search trees. 
+
+...
+
+* bernstein algorithm
+* modified bernstein
+* shift-add-xor
+* fowler/noll/v0
+
+### Managing Collisions 
+
+#### Hash Table with Open Addressing
