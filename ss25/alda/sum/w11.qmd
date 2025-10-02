@@ -294,3 +294,586 @@ any two nodes $u, v$ are connected $u \rightsquigarrow v$.
 * **forest**: a not connected graph, s.t. each connected component is a tree
 * **spanning tree**: a subgraph of a connected graph that is a tree, s.t. all nodes are touched.
   * $\Rightarrow$ **theorem**: for a connected graph such a spanning tree always exists.
+
+## Trees Code
+
+### bintree
+
+```python
+ from collections import deque
+
+
+def ls(a, key):
+    for i in range(len(a)):
+        if a[i] == key: return i
+    return None # key not found
+
+def bs(a, key):
+    def bs_inner(a, l, r):
+        if l >= r: return None
+        m = (l + r) // 2
+        if key == a[m]: return m
+        if key < a[m]: return bs_inner(a, l, m)
+        return bs_inner(a, m+1, r)
+    return bs_inner(a, 0, len(a))
+
+def bs_iter(a, key):
+    i, j = 0, len(a)
+    # invariant: key possibly in a[i:j]
+    m = (i + j) // 2
+    while i < j:
+        if key == a[m]: return m
+        if key < a[m]: 
+            j = m
+            m = (i + j) // 2
+        else:
+            i = m + 1
+            m = (i + j) // 2
+    return None
+
+
+class Node:
+    def __init__(self, key, value = None):
+        self.key = key
+        self.value = value # if no value provided, keys are considered values
+        self.left = self.right = None # node initially a leaf
+    
+    def __str__(self):
+        return f"({str(self.key)}: {str(self.value)})"
+
+    __repr__ = __str__
+
+class BinTree:
+    def __init__(self):
+        self.root = None # binary tree initially empty
+
+
+    def insert(self, key, value = None): # if no value provided, default to None, keys are values
+        self.root = self._insert(self.root, key, value)
+
+    def _insert(self, node, key, value):
+        if node is None: 
+            return Node(key, value)
+        if key == node.key:
+            node.value = value
+            return node
+        if key < node.key:
+            node.left = self._insert(node.left, key, value)
+        else:
+            node.right = self._insert(node.right, key, value)
+        return node
+
+    def _predecessor(self, node):
+        node = node.left
+        while node.right is not None:
+            node = node.right
+        return node
+
+    def _remove(self, node, key):
+        """Return to caller up the stack the modified tree, where
+        the node with key is removed"""
+
+        if node is None: # tree empty. return empty tree
+            return None
+        if key < node.key: # recurse to left sub-tree
+            node.left = self._remove(node.left, key)
+            return node
+        elif key > node.key: # recurse to right sub-tree
+            node.right = self._remove(node.right, key)
+            return node
+        # key == node.key
+        if node.right is None and node.left is None: # node is a leaf
+            return None
+        if node.right is None: 
+            return node.left
+        if node.left is None:
+            return node.right
+        pred = self._predecessor(node)
+        node.key, node.value = pred.key, pred.value
+        node.left = self._remove(node.left, pred.key)
+        return node
+
+    def remove(self, key):
+        self.root = self._remove(self.root, key)
+    
+    def _search(self, node, key):
+        if node is None: return None
+        if key == node.key: return node
+        if key < node.key: return self._search(node.left, key)
+        return self._search(node.right, key)
+
+    def search(self, key):
+        return self._search(self.root, key)
+
+
+    # Manual attach helpers
+    def add_root(self, key, value = None):
+        if self.root is not None:
+            raise ValueError("Root already exists")
+        self.root = Node(key, value)
+        return self.root
+
+    def attach_left(self, node, key, value = None):
+        if node.left is not None:
+            raise ValueError("Left child already present")
+        node.left = Node(key, value)
+        return node.left
+
+    def attach_right(self, node, key, value = None):
+        if node.right is not None:
+            raise ValueError("right child already present")
+        node.right = Node(key, value)
+        return node.right
+
+    # validation of the tree
+    def validate_bst(self):
+        def dfs(n, lo, hi):
+            if n is None: 
+                return True
+            if (lo is not None and lo >= n.key) or \
+               (hi is not None and hi < n.key):
+                return False
+            return dfs(n.left, lo, n.key) and dfs(n.right, n.key, hi)
+        return dfs(self.root, None, None)
+    
+
+    # rotation operations
+    def _rotate_right(self, node):
+        if node is None or node.left is None: # nothing to rotate
+            return node
+        new_root = node.left
+        node.left = new_root.right
+        new_root.right = node
+        return new_root
+
+    def _rotate_left(self, node):
+        if node is None or node.right is None: # nothing to rotate
+            return node
+        new_root = node.right
+        node.right = new_root.left
+        new_root.left = node
+        return new_root
+
+    def rotate_right(self):
+        self.root = self._rotate_right(self.root)
+    
+    def rotate_left(self):
+        self.root = self._rotate_left(self.root)
+
+    def _copy(self, n):
+        if n is None: 
+            return None
+        m = Node(n.key, n.value)
+        m.left = self._copy(n.left)
+        m.right = self._copy(n.right)
+        return m
+
+    def copy(self):
+        t = BinTree()
+        t.root = self._copy(self.root)
+        return t
+
+    # understand bfs later
+    def copy_bfs(self):
+        if not self.root:
+            return BinTree()
+        t = BinTree()
+        t.root = Node(self.root.key, self.root.value)
+
+        q = deque([(self.root, t.root)])
+        while q:
+            old, new = q.popleft()
+            if old.left:
+                new_val = old.left.value
+                new.left = Node(old.left.key, new_val)
+                q.append((old.left, new.left))
+            if old.right:
+                new_val = old.right.value
+                new.right = Node(old.right.key, new_val)
+                q.append((old.right, new.right))
+        return t
+
+    def max(self):
+        def _max(n):
+            if n is None: return None
+            while n.right is not None:
+                n = n.right
+            return n
+        return _max(self.root)
+    
+    def min(self):
+        def _min(n):
+            if n is None: return None
+            while n.left is not None:
+                n = n.left
+            return n
+        return _min(self.root)
+        
+
+    def to_sorted_list(self):
+        l = []
+        def dfs(node):
+            if node is None: return
+            dfs(node.left)
+            l.append(node.key)
+            dfs(node.right)
+        dfs(self.root)
+        return l
+    
+    def inorder(self):
+        def gen(node):
+            if node is not None:
+                yield from gen(node.left)
+                yield node.key
+                yield from gen(node.right)
+        return gen(self.root)
+
+    def __iter__(self):
+        yield from self.inorder()
+
+
+    def _str_rotated(self, node, level=0):
+        if node is None: return ""
+        s = self._str_rotated(node.right, level + 1)
+        s += "   " * level + str(node.key) + "\n"
+        s += self._str_rotated(node.left, level + 1)
+        return s
+
+    def to_string_preorder(self):
+        """Preorder (root, left, right), with indentation showing depth"""
+        lines = []
+        def dfs(n, depth):
+            if not n: return
+            lines.append("  " * depth + str(n.key))
+            dfs(n.left, depth + 1)
+            dfs(n.right, depth + 1)
+        dfs(self.root, 0)
+        return "\n".join(lines)
+
+
+    def __str__(self):
+        return self._str_rotated(self.root)
+
+    __repr__ = __str__
+
+    @classmethod
+    def from_list(cls, items):
+        t = cls()
+        for it in items:
+            if isinstance(it, tuple) and len(it) == 2:
+                k, v= it
+                t.insert(k, v)
+            else: t.insert(it)
+        return t
+
+
+def print_tree_rotated(node, level=0):
+    if node is not None:
+        print_tree_rotated(node.right, level + 1)
+        print("   " * level + str(node.key))
+        print_tree_rotated(node.left, level + 1)
+
+def tree_insert(node, key, value=None):
+    # inserts (key, value) and returns the tree
+
+    # 1) Empty tree? Create a new node and return it. This will be root of the of the caller
+    if node is None: return Node(key, value)
+
+    # 2) Key already present? Update the value in-place,
+    if node.key == key:
+        node.value = value
+        return node
+    
+    # 3) recursive steps
+    if key < node.key:
+        node.left = tree_insert(node.left, key, value)
+    else:
+        node.right = tree_insert(node.right, key, value)
+
+    return node
+```
+
+### Anderson Tree
+
+```python
+from bintree import BinTree, Node
+
+from collections import deque
+
+class AANode(Node):
+    def __init__(self, key, value=None, level=1):
+        super().__init__(key, value)
+        self.level = level  # leaf level = 1
+
+class AnderssonTree(BinTree):
+    # --- utilities ---
+    @staticmethod
+    def _level(n):
+        return 0 if n is None else getattr(n, "level", 1)
+
+    def _make_node(self, key, value=None):
+        return AANode(key, value, level=1)
+
+    # --- AA primitives: skew & split ---
+    def _skew(self, x):
+        """Fix a left horizontal link: if level(left) == level(x), rotate right."""
+        if x and x.left and self._level(x.left) == self._level(x):
+            x = self._rotate_right(x)
+        return x
+
+    def _split(self, x):
+        """
+        Fix two consecutive right horizontal links:
+        if level(right.right) == level(x), rotate left and bump level of new root.
+        """
+        if x and x.right and x.right.right and self._level(x.right.right) == self._level(x):
+            x = self._rotate_left(x)
+            x.level += 1
+        return x
+
+    # --- insert (BST insert + AA fixes bottom-up) ---
+    def insert(self, key, value=None):
+        self.root = self._insert(self.root, key, value)
+
+    def _insert(self, n, key, value=None):
+        if n is None:
+            return self._make_node(key, value)
+        if key == n.key:
+            n.value = value  # update
+            return n
+        if key < n.key:
+            n.left = self._insert(n.left, key, value)
+        else:
+            n.right = self._insert(n.right, key, value)
+        n = self._skew(n)
+        n = self._split(n)
+        return n
+
+    # --- delete (BST delete + AA level fixes + skew/split passes) ---
+    def remove(self, key):
+        self.root = self._remove(self.root, key)
+
+    def _remove(self, x, key):
+        if x is None:
+            return None
+        if key < x.key:
+            x.left = self._remove(x.left, key)
+        elif key > x.key:
+            x.right = self._remove(x.right, key)
+        else:
+            # delete this node
+            if x.left is None:
+                return x.right
+            if x.right is None:
+                return x.left
+            # replace with predecessor (max of left)
+            pred = x.left
+            while pred.right:
+                pred = pred.right
+            x.key, x.value = pred.key, pred.value
+            x.left = self._remove(x.left, pred.key)
+
+        # --- AA delete fix: possibly lower level, then skew/split passes ---
+        x = self._decrease_level_if_needed(x)
+        x = self._skew(x)
+        if x and x.right:
+            x.right = self._skew(x.right)
+            if x.right and x.right.right:
+                x.right.right = self._skew(x.right.right)
+        x = self._split(x)
+        if x and x.right:
+            x.right = self._split(x.right)
+        return x
+
+    def _decrease_level_if_needed(self, x):
+        """After deletion, if a child level is too small, lower x’s level and clamp right child’s level."""
+        if x is None:
+            return None
+        expected = min(self._level(x.left), self._level(x.right)) + 1
+        if x.level > expected:
+            x.level = expected
+            if x.right and self._level(x.right) > expected:
+                x.right.level = expected
+        return x
+
+    # --- override node-creation sites that must preserve AA nodes ---
+    def _copy(self, n):
+        if n is None:
+            return None
+        m = AANode(n.key, n.value, getattr(n, "level", 1))
+        m.left = self._copy(n.left)
+        m.right = self._copy(n.right)
+        return m
+
+    def copy(self):
+        t = AnderssonTree()
+        t.root = self._copy(self.root)
+        return t
+
+    @classmethod
+    def from_list(cls, items):
+        t = cls()
+        for it in items:
+            if isinstance(it, tuple) and len(it) == 2:
+                k, v = it
+                t.insert(k, v)
+            else:
+                t.insert(it)
+        return t
+
+    # --- AA validator (optional but very helpful) ---
+    def validate_aa(self):
+        def ok(x):
+            if x is None:
+                return True, 0  # True, level=0
+            # BST property reused from parent class if you like; we do local checks here:
+            ll = self._level(x.left)
+            lr = self._level(x.right)
+            # invariant: no left horizontal link; right link is horizontal or down by one
+            if ll != x.level - 1:
+                return False, 0
+            if not (lr == x.level or lr == x.level - 1):
+                return False, 0
+            # no two consecutive right horizontals
+            if x.right and x.right.right and self._level(x.right.right) == x.level:
+                return False, 0
+            # recursive check
+            vl, _ = ok(x.left)
+            if not vl:
+                return False, 0
+            vr, _ = ok(x.right)
+            if not vr:
+                return False, 0
+            return True, x.level
+        good, _ = ok(self.root)
+        # also ensure BST order (reuse your validate_bst):
+        return good and self.validate_bst()
+```
+
+### Heap
+
+```python
+class MaxHeap: 
+    """Simple binary max-heap (0-based array)"""
+
+    def __init__(self, items=None):
+        self._A = []
+        if items:
+            self.build_from_list(items)
+
+    def __len__(self): 
+        return len(self._A)
+
+    def peek(self):
+        if not self._A:
+            raise IndexError("peek from empty heap")
+        return self._A[0]
+    
+    def push(self, value):
+        """append value and sift up"""
+        self._A.append(value)
+        self._sift_up(len(self._A) - 1)
+
+    def pop(self):
+        """Remove and return max (root)"""
+        if not self._A:
+            raise IndexError("pop from empty heap")
+        root = self._A[0]
+        last = self._A.pop()
+        if self._A:
+            self._A[0] = last
+            self._sift_down(0)
+        return root
+
+    def build_from_list(self, items):
+        """Floyd's build-heap in O(n)"""
+        self._A = list(items)
+        n = len(self._A)
+        # all nodes with children are indices < n // 2
+        for i in range(n // 2 - 1, -1, -1):
+            self._sift_down(i)
+
+    # --- internal helpers ---
+    def _sift_up(self, i):
+        A = self._A
+        v = A[i]
+        while i > 0:
+            p = (i - 1) // 2
+            if A[p] >= A[i]:
+                break
+            A[p], A[i] = A[i], A[p]
+            i = p
+    
+    @staticmethod
+    def _sift_down_range(A, i, heap_size):
+        """Sift-down on raw list A up to heap_size (exclusive)
+        This is the reusable array-based sifting routine
+        """
+        while True:
+            left = 2 * i + 1
+            right = left + 1
+            if left >= heap_size: 
+                break
+            larger = left
+            if right < heap_size and A[right] > A[left]:
+                larger = right
+            if A[i] >= A[larger]:
+                break
+            A[i], A[larger] = A[larger], A[i]
+            i = larger
+
+    def _sift_down(self, i):
+        # instance wrapper that reuses the static helper
+        self._sift_down_range(self._A, i, len(self._A))
+
+    # def _sift_down(self, i):
+    #     A = self._A
+    #     n = len(A)
+    #     while True:
+    #         left = 2 * i + 1
+    #         right = left + 1
+    #         if left >= n: # leaf node
+    #             break
+    #         larger = left
+    #         if right < n and A[right] > A[left]: # right child exists and is larger
+    #             larger = right
+    #         if A[i] >= A[larger]: # heap condition satisfied
+    #             break
+    #         A[i], A[larger] = A[larger], A[i]
+    #         i = larger
+
+
+    def __str__(self):
+        return str(self._A)
+    
+    __repr__ = __str__
+
+    # --- heapsort as a namespaced "free" function ---
+    @classmethod
+    def heapsort(cls, seq, in_place=True, reverse=False):
+        """
+        Heapsort implemented using the class's sifting routine.
+        - if in_place is True (default) the input list is sorted in place and returned
+        - if in_place is False, a new list is returned and input not mutated
+        - reverse=False -> ascending output
+        """
+        if in_place:
+            A = seq
+        else:
+            A = list(seq)
+
+        n = len(A)
+        # build max-heap (heapify)
+        for i in range(n // 2 - 1, -1, -1):
+            cls._sift_down_range(A, i, n)
+        
+        # extract max repeadedly: place it at the end ans shrink heap
+        for end in range(n-1, 0, -1):
+            A[0], A[end] = A[end], A[0]
+            cls._sift_down_range(A, 0, end)
+
+        if reverse:
+            A.reverse()
+        
+        return A
+```

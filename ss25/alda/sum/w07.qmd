@@ -107,4 +107,58 @@ def push_front(l, v):
 
 
 
+## Notes 
+
+```python
+class Node:
+    def __init__(self):
+        self.value = None
+        self.next = None
+    def __init__(self, v):
+        self.value = v
+        self.next = None
     
+
+class LL:
+    def __init__(self):
+        self.capacity = 0
+        self.head : Node = None
+    def push_front(self, v):
+        n = Node(v)
+        n.next = self.head
+        self.head = n
+        self.capacity += 1
+    def push_back(self, v):
+        n = Node(v)
+
+        el = self.head
+        if el is None: self.head = n
+        else:  
+            while el.next is not None:
+                el = el.next
+            # el is last
+            el.next = n
+        self.capacity += 1
+    def __str__(self):
+        el = self.head
+        if el is None: return "[]"
+        s = "["
+        while el.next is not None:
+            s += f"{str(el.value)}, "
+            el = el.next
+        # el is last element
+        s += f"{el.value}]"
+        return s
+
+    def __repr__(self):
+        el = self.head
+        if el is None: return "[]"
+        s = "["
+        while el.next is not None:
+            s += f"{str(el.value)}, "
+            el = el.next
+        # el is last element
+        s += f"{el.value}]"
+        return s
+```
+
