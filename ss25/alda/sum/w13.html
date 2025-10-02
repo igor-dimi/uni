@@ -1035,7 +1035,42 @@ window.Quarto = {
 <span id="cb5-463"><a href="#cb5-463" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> x <span class="op">==</span> start: <span class="cf">break</span></span>
 <span id="cb5-464"><a href="#cb5-464" aria-hidden="true" tabindex="-1"></a>        x <span class="op">=</span> parent[x]</span>
 <span id="cb5-465"><a href="#cb5-465" aria-hidden="true" tabindex="-1"></a>    path.reverse()</span>
-<span id="cb5-466"><a href="#cb5-466" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> path, dist[target]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb5-466"><a href="#cb5-466" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> path, dist[target]</span>
+<span id="cb5-467"><a href="#cb5-467" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-468"><a href="#cb5-468" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-469"><a href="#cb5-469" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-470"><a href="#cb5-470" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> prim_mst(gw, start<span class="op">=</span><span class="dv">0</span>):</span>
+<span id="cb5-471"><a href="#cb5-471" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""</span></span>
+<span id="cb5-472"><a href="#cb5-472" aria-hidden="true" tabindex="-1"></a><span class="co">    gw: adjacency list where gw[u] = [(v, weight), ...] for an undirected graph.</span></span>
+<span id="cb5-473"><a href="#cb5-473" aria-hidden="true" tabindex="-1"></a><span class="co">    Returns (edges, total_weight) where edges are (u, v, w) in the MST.</span></span>
+<span id="cb5-474"><a href="#cb5-474" aria-hidden="true" tabindex="-1"></a><span class="co">    """</span></span>
+<span id="cb5-475"><a href="#cb5-475" aria-hidden="true" tabindex="-1"></a>    n <span class="op">=</span> <span class="bu">len</span>(gw)</span>
+<span id="cb5-476"><a href="#cb5-476" aria-hidden="true" tabindex="-1"></a>    INF <span class="op">=</span> <span class="bu">float</span>(<span class="st">'inf'</span>)</span>
+<span id="cb5-477"><a href="#cb5-477" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-478"><a href="#cb5-478" aria-hidden="true" tabindex="-1"></a>    key     <span class="op">=</span> [INF] <span class="op">*</span> n      <span class="co"># cheapest edge weight connecting v into the tree</span></span>
+<span id="cb5-479"><a href="#cb5-479" aria-hidden="true" tabindex="-1"></a>    parent  <span class="op">=</span> [<span class="op">-</span><span class="dv">1</span>]  <span class="op">*</span> n      <span class="co"># parent[v] = u that gives that cheapest edge</span></span>
+<span id="cb5-480"><a href="#cb5-480" aria-hidden="true" tabindex="-1"></a>    in_tree <span class="op">=</span> [<span class="va">False</span>] <span class="op">*</span> n</span>
+<span id="cb5-481"><a href="#cb5-481" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-482"><a href="#cb5-482" aria-hidden="true" tabindex="-1"></a>    key[start] <span class="op">=</span> <span class="fl">0.0</span></span>
+<span id="cb5-483"><a href="#cb5-483" aria-hidden="true" tabindex="-1"></a>    pq <span class="op">=</span> [(<span class="fl">0.0</span>, start)]      <span class="co"># (key, vertex)</span></span>
+<span id="cb5-484"><a href="#cb5-484" aria-hidden="true" tabindex="-1"></a>    edges <span class="op">=</span> []</span>
+<span id="cb5-485"><a href="#cb5-485" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-486"><a href="#cb5-486" aria-hidden="true" tabindex="-1"></a>    <span class="cf">while</span> pq:</span>
+<span id="cb5-487"><a href="#cb5-487" aria-hidden="true" tabindex="-1"></a>        k, u <span class="op">=</span> heapq.heappop(pq)</span>
+<span id="cb5-488"><a href="#cb5-488" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> in_tree[u]:</span>
+<span id="cb5-489"><a href="#cb5-489" aria-hidden="true" tabindex="-1"></a>            <span class="cf">continue</span></span>
+<span id="cb5-490"><a href="#cb5-490" aria-hidden="true" tabindex="-1"></a>        in_tree[u] <span class="op">=</span> <span class="va">True</span></span>
+<span id="cb5-491"><a href="#cb5-491" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> parent[u] <span class="op">!=</span> <span class="op">-</span><span class="dv">1</span>:                 <span class="co"># skip root (no incoming edge)</span></span>
+<span id="cb5-492"><a href="#cb5-492" aria-hidden="true" tabindex="-1"></a>            edges.append((parent[u], u, k)) <span class="co"># k == key[u]</span></span>
+<span id="cb5-493"><a href="#cb5-493" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-494"><a href="#cb5-494" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> v, w <span class="kw">in</span> gw[u]:</span>
+<span id="cb5-495"><a href="#cb5-495" aria-hidden="true" tabindex="-1"></a>            <span class="cf">if</span> <span class="kw">not</span> in_tree[v] <span class="kw">and</span> w <span class="op">&lt;</span> key[v]:</span>
+<span id="cb5-496"><a href="#cb5-496" aria-hidden="true" tabindex="-1"></a>                key[v] <span class="op">=</span> w</span>
+<span id="cb5-497"><a href="#cb5-497" aria-hidden="true" tabindex="-1"></a>                parent[v] <span class="op">=</span> u</span>
+<span id="cb5-498"><a href="#cb5-498" aria-hidden="true" tabindex="-1"></a>                heapq.heappush(pq, (key[v], v))</span>
+<span id="cb5-499"><a href="#cb5-499" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-500"><a href="#cb5-500" aria-hidden="true" tabindex="-1"></a>    total <span class="op">=</span> <span class="bu">sum</span>(w <span class="cf">for</span> _, _, w <span class="kw">in</span> edges)</span>
+<span id="cb5-501"><a href="#cb5-501" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> edges, total</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 
 </section>
