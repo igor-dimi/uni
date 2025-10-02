@@ -690,6 +690,41 @@ def dijkstra_gpt(g, weights, start, target=None):
         x = parent[x]
     path.reverse()
     return path, dist[target]
+
+
+
+def prim_mst(gw, start=0):
+    """
+    gw: adjacency list where gw[u] = [(v, weight), ...] for an undirected graph.
+    Returns (edges, total_weight) where edges are (u, v, w) in the MST.
+    """
+    n = len(gw)
+    INF = float('inf')
+
+    key     = [INF] * n      # cheapest edge weight connecting v into the tree
+    parent  = [-1]  * n      # parent[v] = u that gives that cheapest edge
+    in_tree = [False] * n
+
+    key[start] = 0.0
+    pq = [(0.0, start)]      # (key, vertex)
+    edges = []
+
+    while pq:
+        k, u = heapq.heappop(pq)
+        if in_tree[u]:
+            continue
+        in_tree[u] = True
+        if parent[u] != -1:                 # skip root (no incoming edge)
+            edges.append((parent[u], u, k)) # k == key[u]
+
+        for v, w in gw[u]:
+            if not in_tree[v] and w < key[v]:
+                key[v] = w
+                parent[v] = u
+                heapq.heappush(pq, (key[v], v))
+
+    total = sum(w for _, _, w in edges)
+    return edges, total
 ```
 
 
