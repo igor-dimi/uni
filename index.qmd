@@ -10,4 +10,5 @@ title: "Uni Notes"
 * [SS 24](ss24/index.qmd)
 * [WS 24/25](ws24-25/index.qmd)
 * [SS 25](ss25/index.qmd)
+* [WS 25/26](ws25-26/index.qmd)
 

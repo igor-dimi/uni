@@ -23,6 +23,7 @@ website:
             - ss24/index.qmd
             - ws24-25/index.qmd
             - ss25/index.qmd
+            - ws25-26/index.qmd
 
     - title: "WS 23/24"
       style: "docked"
@@ -48,6 +49,15 @@ website:
           href: ss25/ibn/index.qmd
         - text: "scicomp"
           href: ss25/scicomp/index.qmd
+
+    - title: "WS 25/26"
+      contents:
+        - text: "num"
+          href: ws25-26/num/index.qmd
+        - text: "its"
+          href: ws25-26/its/index.qmd
+        - text: "spn"
+          href: ws25-26/spn/index.qmd
     
     - title: "Alda VL Notes SS25"
       contents: ss25/alda/sum/

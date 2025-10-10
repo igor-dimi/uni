@@ -1,0 +1,7 @@
+---
+title: IT Security
+---
+
+* [notes](https://igor-dimi.github.io/its-notes-ws2526/)
+* [solutions](https://igor-dimi.github.io/its-sol-ws2526/)
+* [weekly summary](./sum/index.qmd)

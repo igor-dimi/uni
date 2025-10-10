@@ -1,0 +1,18 @@
+---
+title: WS 25/26
+---
+
+## Schedule
+
+```{=html}
+<iframe width="780" height="440" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRt8zAxoOgaR8BgbyWCm5Lc6vCoBrKomJ85Thk9K2L4E0pU7rBQVK3sHgCkKk-gZb1ucEzKdFraiRyT/pubhtml?gid=0&single=true"></iframe>
+```
+
+<!-- * detailed [plan](https://docs.google.com/spreadsheets/d/e/2PACX-1vRMRrM18WqK_iUuCsj6jx4YbixDTOIozv9O87CeD52qRrw8-T5ILyMBa6Thl597Zk7BqYH5-SnFYexX/pubhtml) -->
+
+## Courses 
+
+* [NUM](./num/index.qmd)
+* [ITS](./its/index.qmd)
+* [SPN](./spn/index.qmd)
+

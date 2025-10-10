@@ -1,0 +1,7 @@
+---
+title: Numerical Methods 0
+---
+
+* [notes](https://igor-dimi.github.io/num-notes-ws2526/)
+* [solutions](https://igor-dimi.github.io/num-sol-ws2526/)
+* [weekly sum](./sum/index.qmd)
