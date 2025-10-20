@@ -1,0 +1,25 @@
+---
+title: Week 2
+date: 10/20/25
+---
+
+## Vorlesung
+
+* CIA review.
+* ISO / OSI layered Model
+  * review of lower level protocols is important: IP, TCP, UDP
+  * exmamples of layer 1 (physical) device:
+    *  repeater / hub
+  * examples of layer 2 device
+    * bridge
+    * switch
+* IP: 
+  * **IANA**: internet assigned number authority
+* **ARP** (Address Resolution Protocol)
+  * **DMAC**: destination mac address
+  * **SMAC**: source mac address
+  * arp-request: a broadcasting message
+  * $\Rightarrow$ spoofing, man-in-the middle attack (MITM)
+
+## Tut
+

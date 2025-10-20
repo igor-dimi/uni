@@ -1,0 +1,45 @@
+---
+title: Week 1
+date: 10/14/25
+---
+
+## VL 1 - 14/10/25
+
+* Orga
+
+### Intro
+
+* computation of
+  * mathematical expressions, e.g. $\sqrt{2}$
+  * integrals: 
+  * equations
+  * differential equations
+
+* Computation Mathematical Expressions:
+
+The Babylonian (Heron’s) method for $\sqrt{2}$ uses the recurrence
+
+$$
+x_{n+1} = \frac{1}{2}\left(x_n + \frac{2}{x_n}\right), \qquad x_0>0.
+$$
+
+A common choice is $x_0=1$, giving the sequence
+$$
+1,; 1.5,; 1.416666\ldots,; 1.414215686\ldots,; 1.41421356237\ldots ;\to; \sqrt{2}.
+$$
+
+* Scientific Computing: 
+* Interpolation: 
+  * corona-virus example: linear approaximatin of parameters
+  * non-linear approximation
+
+
+## VL 1 - 14/10/25
+
+* Floating point number representation
+* Numerical data types in c++
+* motivating example: computing $e^x$ 
+* newer forms used in ML with less precision:
+  * bfloat16
+  * float16
+  * fg8
