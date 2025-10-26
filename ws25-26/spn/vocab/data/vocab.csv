@@ -1,0 +1,12 @@
+id,es,display_article,lemma,gender,pos,meaning_en,meaning_de,meaning_es,example_es,example_src,date_added,tags,source,theme,note
+S00001,el dibujo,el,dibujo,m,noun,drawing,,,,,,,,,
+S00002,la letra,la,letra,f,noun,letter,,,,,,,,,
+S00003,el número,el,número,m,noun,number,,,,,,,,,
+S00004,la palabra,la,palabra,f,noun,word,,,,,,,,,
+S00005,la frase,la,frase,f,noun,phrase,,,,,,,,,
+S00006,el compañero,el,compañero,m,noun,the companion,,,rápidamente estableció conversación con su compañero de viaje.,,,,,,
+S00007,el libro,el,libro,m,noun,book,,,,,,,,,
+S00008,la libreta,la,libreta,f,noun,notebook,,,,,,,,,
+S00009,el texto,el,texto,m,noun,text,,,,,,,,,
+S00010,la tarjeta,la,tarjeta,f,noun,card,,,,,,,,,
+S00011,el ejercicio,el,ejercicio,m,noun,exercise,,,,,,,,,
