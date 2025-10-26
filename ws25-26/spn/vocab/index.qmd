@@ -1,0 +1,30 @@
+
+## Vocabulary
+
+* [vocab](./vocab_list.html)
+
+```{python}
+import pandas as pd
+
+df = pd.read_csv("data/vocab.csv", dtype=str).fillna("")
+df = df.sort_values(["es", "pos"], kind="mergesort")
+df_display = df[["es","pos","gender","meaning_de","meaning_en","theme","tags","example_es"]]
+
+# Quarto/Jupyter will render this as an HTML table automatically
+df_display
+```
+
+## index
+
+```{python}
+import pandas as pd
+df = pd.read_csv("data/vocab.csv", dtype=str).fillna("")
+df["letter"] = df["es"].str.normalize("NFKD").str.lower().str.replace(r"[^a-zñáéíóúü]", "", regex=True).str[0].fillna("#")
+
+out = []
+for letter in sorted(df["letter"].unique()):
+    block = df[df["letter"]==letter].sort_values("es")[["es","pos","meaning_de","meaning_en","example_es"]]
+    out.append(f"### {letter.upper()}\n\n" + block.to_markdown(index=False) + "\n")
+print("\n".join(out))
+```
+

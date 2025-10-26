@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <title>Vocab</title>
+  </head>
+<body>
+  <div>
+    <input id="q" placeholder="Search…" />
+    <div id="groups"></div>
+  </div>
+  <script>
+  const coll = new Intl.Collator('es'); // locale-aware sort
+
+  function norm(s){
+    return (s||"")
+      .normalize("NFD")                 // split accents
+      .replace(/[\u0300-\u036f]/g,"")   // strip accents
+      .toLowerCase();
+  }
+
+  async function load() {
+    // adjust path if your site root differs (e.g., "./data/vocab.json")
+    const res = await fetch("./data/vocab.json");
+    const all = await res.json();
+    let current = all;
+    const q = document.getElementById("q");
+
+    q.addEventListener("input", () => {
+      const s = norm(q.value);
+      current = all.filter(w =>
+        norm(w.es).includes(s) ||
+        norm(w.lemma).includes(s) ||
+        norm(w.meaning_de).includes(s) ||
+        norm(w.meaning_en).includes(s) ||
+        norm(w.tags).includes(s)
+      );
+      render(current);
+    });
+
+    render(current);
+  }
+
+  function render(list) {
+    const byLetter = {};
+    for (const w of list) {
+      // group by lemma initial; fall back to es
+      const base = (w.lemma || w.es || "#")
+        .normalize("NFKD").toLowerCase()
+        .replace(/[^a-zñáéíóúü]/g,"");
+      const l = base[0] || "#";
+      (byLetter[l] ||= []).push(w);
+    }
+
+    const groups = document.getElementById("groups");
+    groups.innerHTML = "";
+
+    for (const l of Object.keys(byLetter).sort(coll.compare)) {
+      const sec = document.createElement("section");
+
+      const h = document.createElement("h3");
+      h.textContent = l.toUpperCase();
+      sec.appendChild(h);
+
+      const ul = document.createElement("ul");
+      for (const w of byLetter[l].sort((a,b)=>coll.compare(a.es, b.es))) {
+        const pos = w.pos || "?";
+        const g = w.gender ? `, ${w.gender}` : "";
+        const gloss = w.meaning_de || w.meaning_en || "";
+        const li = document.createElement("li");
+        li.textContent = `${w.es} (${pos}${g}) — ${gloss}`;
+        ul.appendChild(li);
+      }
+
+      sec.appendChild(ul);
+      groups.appendChild(sec);
+    }
+  }
+
+  load();
+  </script>
+  </body>
+</html>

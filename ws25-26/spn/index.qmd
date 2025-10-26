@@ -5,3 +5,4 @@ title: Spanish A1
 * [notes](https://igor-dimi.github.io/spanish-a1-notes-ws2526/)
 * [solutions]()
 * [weekly-summary](./sum/index.qmd)
+* [vocabulary](./vocab/index.qmd)
