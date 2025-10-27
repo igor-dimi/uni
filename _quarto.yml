@@ -3,6 +3,9 @@ project:
   render: 
     - "*.qmd"
     - "!ws23-24/zeitplan/"
+  resources:
+    - ws25-26/spn/vocab/data/**
+    - ws25-26/spn/vocab/vocab_list.html
 
 website:
   title: "My Uni Notes"
