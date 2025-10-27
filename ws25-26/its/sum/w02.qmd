@@ -21,5 +21,7 @@ date: 10/20/25
   * arp-request: a broadcasting message
   * $\Rightarrow$ spoofing, man-in-the middle attack (MITM)
 
+* cryptography intro: 
+
 ## Tut
 

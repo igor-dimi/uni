@@ -1,0 +1,36 @@
+---
+title: Week 3
+date: 10/27/25
+---
+
+## Vorlesung - 27/10/25
+
+### chapter 2: cryptography
+  
+* basic notions
+* classification
+* cryptographic hash functions
+
+#### Basic Notions & Motivation
+
+* why encryption (Verschluesselung)? 
+* cryptology: kyrptos = hidden, logos = word. how to 
+  communicate securly
+  * cryptography: hidden, graphein = writing. Creating encrypted text
+  * cryptoanalysis: "solving" encrypted text
+* basic notions of cryptoanalysis:
+  * classical cryptoanalysis
+  * imiplementation attacks
+  * social-engineering attacks
+  * **Kerckhoff's Principle**: system should be secure even if everything about
+    the encyrpiton algorithm is known, except the key. (opposite of security by obscurity)
+  * symmetric cryptographic algorithms vs assymetric cryptographic analysis
+    * symmetric = there's only one key to encrypt the text
+    * assymetric = there're two different keys. $\Rightarrow$ 
+  * cryptographic hash-function (the actual encryption)
+    1) compression
+    2) computation cost must be low
+    3) inverse function resistence
+    4) weak collision resistence (second inverse function resistence property)
+    5) strong collision resistence (collision resistence)
+    

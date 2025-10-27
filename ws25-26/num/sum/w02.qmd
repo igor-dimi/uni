@@ -1,0 +1,13 @@
+---
+title: Week 2
+date: 10/21/25
+---
+
+## VL 3 - 21/10/25
+
+* Rounding
+
+## VL 4 - 23/10/25
+
+* condition analysis
+* Taylow expansion 
