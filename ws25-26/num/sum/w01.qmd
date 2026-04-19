@@ -34,7 +34,7 @@ $$
   * non-linear approximation
 
 
-## VL 1 - 14/10/25
+## VL 2 - 14/10/25
 
 * Floating point number representation
 * Numerical data types in c++
