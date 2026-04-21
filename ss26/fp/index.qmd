@@ -1,0 +1,6 @@
+---
+title: Advanced Practica - Multiple Precision Numerical Algorithms
+---
+
+* [notes](https://igor-dimi.github.io/fp-Sose26-Notes/)
+* [weekly sum]

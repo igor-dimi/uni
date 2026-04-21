@@ -1,0 +1,6 @@
+---
+title: Ashyralyev Thesis
+---
+
+* [notes](https://igor-dimi.github.io/ashyralyev-thesis/)
+

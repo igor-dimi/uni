@@ -1,0 +1,7 @@
+---
+title: "Weekly Summary"
+listing: 
+    contents: w*.qmd
+    type: table
+    fields: [title, date]
+---

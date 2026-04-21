@@ -1,0 +1,7 @@
+---
+title: Type Theory, Logic & Functional Programming
+---
+
+* [notes](https://igor-dimi.github.io/type-theory-SoSe26-notes/)
+* [solutions](https://igor-dimi.github.io/type-theory-SoSe26-sol/)
+* [weekly sum](./sum/index.qmd)

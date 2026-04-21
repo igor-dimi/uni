@@ -27,6 +27,7 @@ website:
             - ws24-25/index.qmd
             - ss25/index.qmd
             - ws25-26/index.qmd
+            - ss26/index.qmd
 
     - title: "WS 23/24"
       style: "docked"
@@ -61,6 +62,15 @@ website:
           href: ws25-26/its/index.qmd
         - text: "spn"
           href: ws25-26/spn/index.qmd
+
+    - title: "SS 26"
+      contents:
+        - text: "cg"
+          href: ss26/cg/index.qmd
+        - text: "fp"
+          href: ss26/fp/index.qmd
+        - text: "type"
+          href: ss26/type/index.qmd
     
     - title: "Alda VL Notes SS25"
       contents: ss25/alda/sum/

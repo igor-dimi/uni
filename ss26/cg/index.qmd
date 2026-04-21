@@ -1,0 +1,7 @@
+---
+title: Computer Graphics
+---
+
+* [notes](https://igor-dimi.github.io/cg-SoSe26-notes/)
+* [solutions](https://igor-dimi.github.io/cg-SoSe26-sol/)
+* [weekly sum](./sum/index.qmd)

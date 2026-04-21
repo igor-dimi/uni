@@ -1,0 +1,20 @@
+---
+title: SoSe 26
+---
+
+## Schedule
+
+```{=html}
+<iframe width="780" height="440" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQc_LoqickWnJzEplAoBgLHiGvGZfgAqExVA5U2J3GzEWOZ6Y2cl09CuV2lUB7tLOe5HA8zAEHC243O/pubhtml"></iframe>
+```
+
+## Courses 
+
+* [CG](./cg/index.qmd)
+* [FP](./fp/index.qmd)
+* [TT](./type/index.qmd)
+
+## Projects
+
+* [thesis](./thesis/index.qmd)
+
