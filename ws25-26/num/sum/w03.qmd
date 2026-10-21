@@ -1,0 +1,20 @@
+---
+title: Week 3
+date: 10/28/25
+---
+
+## VL 5 - 28/10/25
+
+* Ausloeschung
+* linear algebra concepts review
+  * norms
+  * convergence of vectors 
+  * triangle and inverse triangle inequalities
+
+## VL 6 - 30/10/25
+
+* Matrix norms 
+  * properties of matrix norms 
+* linear algebra concepts
+  * eigenvalues
+  * ...
