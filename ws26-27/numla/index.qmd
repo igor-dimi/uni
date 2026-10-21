@@ -1,0 +1,4 @@
+# Numerical Linear Algebra
+
+* [notes](https://igor-dimi.github.io/ws2627-numla-notes/)
+

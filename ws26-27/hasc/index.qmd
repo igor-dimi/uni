@@ -1,0 +1,3 @@
+# Hardware Aware Scientific Computing
+
+* [notes](https://igor-dimi.github.io/ws2627-hasc-notes/)

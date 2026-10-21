@@ -1,0 +1,17 @@
+---
+title: WS 26/27
+---
+
+## Schedule
+
+```{=html}
+<iframe width="780" height="440" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRqpE3LWyKXCg8rvFkSurJp3y4nHQ1YTs4OFSPH7JvcRrWlNieE3Z28fVSpv0xRjQSC0OOK-G8GV4LB/pubhtml"></iframe>
+```
+
+## Courses 
+
+* [exphy](./exphy/index.qmd)
+* [numla](./numla/index.qmd)
+* [hasc](./hasc/index.qmd)
+* [ssmm](./ssmm/index.qmd)
+

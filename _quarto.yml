@@ -28,6 +28,7 @@ website:
             - ss25/index.qmd
             - ws25-26/index.qmd
             - ss26/index.qmd
+            - ws26-27/index.qmd
 
     - title: "WS 23/24"
       style: "docked"
@@ -71,6 +72,15 @@ website:
           href: ss26/fp/index.qmd
         - text: "type"
           href: ss26/type/index.qmd
+
+    - title: "WS 26/27"
+      contents:
+        - text: "NumLA"
+          href: ws26-27/numla/index.qmd
+        - text: "ExPhy"
+          href: ws26-27/exphy/index.qmd
+        - text: "HASC"
+          href: ws26-27/hasc/index.qmd
     
     - title: "Alda VL Notes SS25"
       contents: ss25/alda/sum/
@@ -81,10 +91,6 @@ website:
     - title: "SciComp VL Notes SS25"
       contents: ss25/scicomp/sum/
     
-
-        
-        
-
 
 format:
   html:
